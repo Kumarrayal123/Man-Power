@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
+import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
 
 const OilAndGas = () => {
   return (
@@ -169,10 +170,258 @@ const OilAndGas = () => {
             </div>
           </section>
 
+          {/* Request a Quote Section */}
+          <div className="quote-section">
+            <div className="quote-container">
+              <div className="quote-label">Request a Quote</div>
+              <h2 className="quote-title">Get a quick follow up!</h2>
+              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
+              <Link to="/contact" className="quote-btn">Book Now</Link>
+            </div>
+          </div>
+
+          <div className="insights-section">
+                         <h2 className="insights-title">Contract Staffing Insights</h2>
+             
+                         <div className="insights-grid">
+                           <div className="insight-card">
+                             <div className="insight-image-wrap">
+                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+                             </div>
+                             <div className="insight-content">
+                               <h3>Brief Introduction to Contract Staffing</h3>
+                               <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                               <Link to="/insights" className="insight-btn">
+                                 Read More <ChevronRight size={18} />
+                               </Link>
+                             </div>
+                           </div>
+             
+                           <div className="insight-card">
+                             <div className="insight-image-wrap">
+                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+                             </div>
+                             <div className="insight-content">
+                               <h3>Need of Contract Staffing</h3>
+                               <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
+                               <Link to="/insights" className="insight-btn">
+                                 Read More <ChevronRight size={18} />
+                               </Link>
+                             </div>
+                           </div>
+             
+                           <div className="insight-card">
+                             <div className="insight-image-wrap">
+                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+                             </div>
+                             <div className="insight-content">
+                               <h3>Benefits of getting Contract Staffing</h3>
+                               <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
+                               <Link to="/insights" className="insight-btn">
+                                 Read More <ChevronRight size={18} />
+                               </Link>
+                             </div>
+                           </div>
+             
+                           <div className="insight-card">
+                             <div className="insight-image-wrap">
+                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+                             </div>
+                             <div className="insight-content">
+                               <h3>How can Contract Staffing work at Your Advantage?</h3>
+                               <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
+                               <Link to="/insights" className="insight-btn">
+                                 Read More <ChevronRight size={18} />
+                               </Link>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+          
+
         </div>
       </div>
 
+      {/* Contract Staffing Insights Styles */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+        /* Quote Section Styles */
+        .quote-section {
+          background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+          border-radius: 24px;
+          padding: 50px;
+          margin: 80px 0;
+          margin-top: 60px;
+        }
+        .quote-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 40px;
+        }
+        .quote-label {
+          position: absolute;
+          top: -15px;
+          left: 30px;
+          background: #001a4d;
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .quote-section {
+          position: relative;
+        }
+        .quote-title {
+          font-size: clamp(2rem, 5vw, 3rem);
+          color: #fff;
+          font-weight: 700;
+          margin: 0;
+          line-height: 1.2;
+        }
+        .quote-text {
+          color: #fff;
+          font-size: 1.05rem;
+          line-height: 1.6;
+          margin: 20px 0 30px;
+          max-width: 600px;
+        }
+        .quote-btn {
+          display: inline-block;
+          background: #fff;
+          color: #001a4d;
+          padding: 14px 40px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+        }
+        .quote-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+          .quote-section {
+            padding: 40px 25px;
+            margin: 60px 0;
+          }
+          .quote-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+          }
+          .quote-label {
+            position: static;
+            display: inline-block;
+            margin-bottom: 20px;
+          }
+          .quote-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
 
+        .insights-section {
+          margin-top: 60px;
+          margin-bottom: 100px;
+          padding: 0 5%;
+        }
+        .insights-title {
+          text-align: center;
+          font-size: 2.5rem;
+          color: #555;
+          margin-bottom: 60px;
+          font-weight: 500;
+        }
+        .insights-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 25px;
+        }
+        .insight-card {
+          background: #f8f9fa;
+          border-radius: 25px;
+          overflow: hidden;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          display: flex;
+          flex-direction: column;
+        }
+        .insight-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .insight-image-wrap {
+          height: 250px;
+          background: #fa3e52;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .insight-image-wrap img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+        .insight-card:hover .insight-image-wrap img {
+          transform: scale(1.1);
+        }
+        .insight-content {
+          padding: 30px 25px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        }
+        .insight-content h3 {
+          font-size: 1.3rem;
+          color: #333;
+          margin-bottom: 20px;
+          line-height: 1.4;
+          font-weight: 600;
+          min-height: 3.5rem;
+        }
+        .insight-content p {
+          color: #777;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          margin-bottom: 25px;
+          flex-grow: 1;
+        }
+        .insight-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px 20px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          color: #555;
+          text-decoration: none;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          background: #fff;
+        }
+        .insight-btn:hover {
+          border-color: #f23346;
+          color: #f23346;
+          background: #fdf2f3;
+        }
+        @media (max-width: 1200px) {
+          .insights-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+          .insights-grid { grid-template-columns: 1fr; }
+          .insights-title { font-size: 2rem; }
+        }
+      `}} />
     </div>
   );
 };

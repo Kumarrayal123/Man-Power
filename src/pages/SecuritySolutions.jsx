@@ -152,7 +152,39 @@ const SecuritySolutions = () => {
           </div>
 
           {/* Security Solutions Insights Section */}
-          <div className="insights-section">
+       
+        </div>
+      </div>
+
+
+      {/* FAQ Section */}
+      <section className="faq-section">
+        <div className="container">
+          <h2 className="faq-main-title">FAQ</h2>
+          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+
+          <div className="faq-list">
+            {faqs.map((faq, index) => (
+              <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                <div
+                  className="faq-question-btn"
+                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                >
+                  <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                  <span className="faq-question-text">{faq.question}</span>
+                </div>
+                <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                  <div className="faq-answer-content">
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+         <div className="insights-section">
             <h2 className="insights-title">Security Solutions Insights</h2>
 
             <div className="insights-grid">
@@ -209,35 +241,6 @@ const SecuritySolutions = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <section className="faq-section">
-        <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
-
-          <div className="faq-list">
-            {faqs.map((faq, index) => (
-              <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
-                <div
-                  className="faq-question-btn"
-                  onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
-                >
-                  <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
-                  <span className="faq-question-text">{faq.question}</span>
-                </div>
-                <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
-                  <div className="faq-answer-content">
-                    <p>{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <style dangerouslySetInnerHTML={{
         __html: `
