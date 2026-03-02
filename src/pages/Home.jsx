@@ -8,6 +8,7 @@ import img4 from "../assest/mp-4.jpg";
 import img5 from "../assest/mp-5.jpg";
 import img6 from "../assest/mp-6.jpg";
 import img7 from "../assest/mp-7.jpg";
+import heroImage from "../assest/manpower-supply-meadia/homepagehero.png";
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(0);
 
@@ -40,7 +41,7 @@ const Home = () => {
                     </div>
                     <div className="home-hero__image">
                         <img
-                            src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+                            src={heroImage}
                             alt="Manpower Workers"
                             className="hero-workers-img"
                         />

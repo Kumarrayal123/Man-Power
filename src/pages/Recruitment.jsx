@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/recruitment-hero.png";
 
 const Recruitment = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -46,7 +47,7 @@ const Recruitment = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Recruitment Experts"
               className="hero-workers-img"
             />
