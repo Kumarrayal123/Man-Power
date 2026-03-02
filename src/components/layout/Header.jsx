@@ -73,12 +73,12 @@ const Header = () => {
                                 <Link to="/sectors">Sectors We Serve <ChevronDown size={14} /></Link>
                                 <ul className="dropdown">
                                     <li><Link to="/oil-gas">Oil and Gas</Link></li>
-                                    <li><Link to="/oil-gas">Civil Construction</Link></li>
-                                    <li><Link to="/oil-gas">Facility Management</Link></li>
-                                    <li><Link to="/oil-gas">Infrastructure</Link></li>
-                                    <li><Link to="/oil-gas">Logistics</Link></li>
-                                    <li><Link to="/oil-gas">Manufacture</Link></li>
-                                    <li><Link to="/oil-gas">Mechanical, Electrical & Plumbing- MEP</Link></li>
+                                    <li><Link to="/civil-construction">Civil Construction</Link></li>
+                                    <li><Link to="/facility-management">Facility Management</Link></li>
+                                    {/* <li><Link to="/oil-gas">Infrastructure</Link></li> */}
+                                    <li><Link to="/logistics">Logistics</Link></li>
+                                    <li><Link to="/manufacture">Manufacture</Link></li>
+                                    <li><Link to="/mep">Mechanical, Electrical & Plumbing- MEP</Link></li>
                                 </ul>
                             </li>
                             <li className="main-nav__item">
@@ -120,11 +120,11 @@ const Header = () => {
                                 </div>
                                 <ul className="mobile-dropdown">
                                     <li><Link to="/oil-gas">Oil and Gas</Link></li>
-                                    <li><Link to="/oil-gas">Civil Construction</Link></li>
-                                    <li><Link to="/oil-gas">Facility Management</Link></li>
-                                    <li><Link to="/oil-gas">Logistics</Link></li>
-                                    <li><Link to="/oil-gas">Manufacture</Link></li>
-                                    <li><Link to="/oil-gas">Mechanical, Electrical & Plumbing- MEP</Link></li>
+                                    <li><Link to="/civil-construction">Civil Construction</Link></li>
+                                    <li><Link to="/facility-management">Facility Management</Link></li>
+                                    <li><Link to="/logistics">Logistics</Link></li>
+                                    <li><Link to="/manufacture">Manufacture</Link></li>
+                                    <li><Link to="/mep">Mechanical, Electrical & Plumbing- MEP</Link></li>
                                 </ul>
                             </li>
                             <li><Link to="/about">About Us</Link></li>
