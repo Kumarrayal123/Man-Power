@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import btsGroup7Img from "../assest/manpower-supply-meadia/project_bts.jpg";
 
 const Project = () => {
   return (
@@ -17,7 +18,7 @@ const Project = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={btsGroup7Img}
               alt="Manpower Projects Team"
               className="hero-workers-img"
               style={{ width: '100%', maxWidth: '550px', height: 'auto', display: 'block', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.2))' }}

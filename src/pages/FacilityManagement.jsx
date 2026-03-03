@@ -31,18 +31,7 @@ const FacilityManagement = () => {
             </div>
           </div>
           <div className="home-hero__image">
-            <img
-              src={heroImage}
-              alt="Facility Management Staff"
-              className="hero-workers-img"
-              style={{
-                width: '100%',
-                maxWidth: '550px',
-                height: 'auto',
-                display: 'block',
-                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.2))'
-              }}
-            />
+            <img src={heroImage} alt="Facility Management Staff" className="hero-workers-img" />
           </div>
         </section>
       </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/recruitment-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/recruitment_bts.jpg";
+import btsGroup7Img from "../assest/manpower-supply-meadia/recruitment_bts_new.jpg";
 
 const Recruitment = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -100,7 +101,7 @@ const Recruitment = () => {
             <div className="bts-left">
               <div className="bts-workers-container">
                 <img
-                  src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+                  src={btsGroup7Img}
                   alt="Team of Workers"
                   className="bts-workers-img"
                 />
@@ -246,6 +247,30 @@ const Recruitment = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
+        .home-hero { background: #dc2626; border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
+        .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
+        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .hero-btn-main { background: #ffffff; color: #000; border: none; padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: 0.3s; text-decoration: none; }
+        .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }
+        .hero-workers-img { width: 550px; max-width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2)); }
+        
+        @media (max-width: 1200px) { 
+            .home-hero { padding: 60px 60px; } 
+            .hero-workers-img { width: 450px; } 
+        }
+        @media (max-width: 992px) { 
+            .home-hero { flex-direction: column; text-align: center; padding: 60px 30px; min-height: auto; border-radius: 20px; } 
+            .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; } 
+            .home-hero__image { position: static; justify-content: center; left: auto; right: auto; bottom: auto; } 
+            .hero-workers-img { width: 100%; max-width: 400px; } 
+        }
+        @media (max-width: 576px) { 
+            .home-hero { padding: 40px 25px; border-radius: 20px; } 
+            .hero-workers-img { max-width: 100%; } 
+        }
+
         /* Choose Best For You Split Design */
         .choose-best-split {
             display: flex;
@@ -354,21 +379,10 @@ const Recruitment = () => {
         
         /* Hero Section (from Home) */
         .hero-wrapper { padding-top: 20px; padding-bottom: 20px; }
-        .home-hero { 
-            background: #dc2626; 
-            border-radius: 40px; 
-            color: white; 
-            padding: 80px 100px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-            min-height: 500px;
-        }
-        .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        
+        
+        
+        
         
         .hero-btn-main { 
             background: #ffffff; color: #000; border: none; 
@@ -377,7 +391,7 @@ const Recruitment = () => {
         }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         
-        .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }
+        
         .hero-workers-img { width: 550px; max-width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2)); }
 
         /* Content Section */

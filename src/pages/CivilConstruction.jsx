@@ -42,18 +42,7 @@ const CivilConstruction = () => {
             </div>
           </div>
           <div className="home-hero__image">
-            <img
-              src={heroImage}
-              alt="Construction Workers"
-              className="hero-workers-img"
-              style={{
-                width: '100%',
-                maxWidth: '550px',
-                height: 'auto',
-                display: 'block',
-                filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.2))'
-              }}
-            />
+            <img src={heroImage} alt="Civil Construction Workers" className="hero-workers-img" />
           </div>
         </section>
       </div>

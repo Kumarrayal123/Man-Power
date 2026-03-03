@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import btsGroup7Img from "../assest/manpower-supply-meadia/contact_bts.jpg";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
@@ -19,7 +20,7 @@ const ContactUs = () => {
           </div>
           <div className="home-hero__image-wrapper">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={btsGroup7Img}
               alt="Contact Manpower UAE"
               className="home-hero__image"
             />
