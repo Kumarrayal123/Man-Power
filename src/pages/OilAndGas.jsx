@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/OilGasSector-hero.png";
-import insight1Img from "../assest/manpower-supply-meadia/insight-1.jpg";
-import insight2Img from "../assest/manpower-supply-meadia/insight-2.jpg";
-import insight3Img from "../assest/manpower-supply-meadia/insight-3.jpg";
-import insight4Img from "../assest/manpower-supply-meadia/insight-4.jpg";
+import sectorInsight1Img from "../assest/manpower-supply-meadia/oilandgas_insight_1.jpg";
+import sectorInsight2Img from "../assest/manpower-supply-meadia/oilandgas_insight_2.jpg";
+import sectorInsight3Img from "../assest/manpower-supply-meadia/oilandgas_insight_3.jpg";
+import sectorInsight4Img from "../assest/manpower-supply-meadia/oilandgas_insight_4.jpg";
 
 const OilAndGas = () => {
   return (
@@ -190,7 +190,7 @@ const OilAndGas = () => {
             <div className="insights-grid">
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src={insight1Img} alt="Insight 1" />
+                  <img src={sectorInsight1Img} alt="Insight 1" />
                 </div>
                 <div className="insight-content">
                   <h3>Brief Introduction to Contract Staffing</h3>
@@ -203,7 +203,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src={insight2Img} alt="Insight 2" />
+                  <img src={sectorInsight2Img} alt="Insight 2" />
                 </div>
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
@@ -216,7 +216,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src={insight3Img} alt="Insight 3" />
+                  <img src={sectorInsight3Img} alt="Insight 3" />
                 </div>
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
@@ -229,7 +229,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src={insight4Img} alt="Insight 4" />
+                  <img src={sectorInsight4Img} alt="Insight 4" />
                 </div>
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>

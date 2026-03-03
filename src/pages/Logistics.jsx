@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/logistics-hero.png";
+import sectorInsight1Img from "../assest/manpower-supply-meadia/logistics_insight_1.jpg";
+import sectorInsight2Img from "../assest/manpower-supply-meadia/logistics_insight_2.jpg";
+import sectorInsight3Img from "../assest/manpower-supply-meadia/logistics_insight_3.jpg";
+import sectorInsight4Img from "../assest/manpower-supply-meadia/logistics_insight_4.jpg";
 
 const Logistics = () => {
   return (
@@ -246,7 +250,7 @@ const Logistics = () => {
             <div className="insights-grid">
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+                  <img src={sectorInsight1Img} alt="Insight 1" />
                 </div>
                 <div className="insight-content">
                   <h3>Brief Introduction to Contract Staffing</h3>
@@ -256,7 +260,7 @@ const Logistics = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+                  <img src={sectorInsight2Img} alt="Insight 2" />
                 </div>
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
@@ -269,7 +273,7 @@ const Logistics = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+                  <img src={sectorInsight3Img} alt="Insight 3" />
                 </div>
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
@@ -282,7 +286,7 @@ const Logistics = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+                  <img src={sectorInsight4Img} alt="Insight 4" />
                 </div>
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>
