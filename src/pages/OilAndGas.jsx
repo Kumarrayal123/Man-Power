@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/OilGasSector-hero.png";
+import insight1Img from "../assest/manpower-supply-meadia/insight-1.jpg";
+import insight2Img from "../assest/manpower-supply-meadia/insight-2.jpg";
+import insight3Img from "../assest/manpower-supply-meadia/insight-3.jpg";
+import insight4Img from "../assest/manpower-supply-meadia/insight-4.jpg";
 
 const OilAndGas = () => {
   return (
@@ -186,7 +190,7 @@ const OilAndGas = () => {
             <div className="insights-grid">
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+                  <img src={insight1Img} alt="Insight 1" />
                 </div>
                 <div className="insight-content">
                   <h3>Brief Introduction to Contract Staffing</h3>
@@ -199,7 +203,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+                  <img src={insight2Img} alt="Insight 2" />
                 </div>
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
@@ -212,7 +216,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+                  <img src={insight3Img} alt="Insight 3" />
                 </div>
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
@@ -225,7 +229,7 @@ const OilAndGas = () => {
 
               <div className="insight-card">
                 <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+                  <img src={insight4Img} alt="Insight 4" />
                 </div>
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>
