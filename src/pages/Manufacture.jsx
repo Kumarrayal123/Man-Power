@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector-hero.png";
 
 const Manufacture = () => {
   return (
@@ -25,7 +26,7 @@ const Manufacture = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Manufacturing Workers"
               className="hero-workers-img"
               style={{
