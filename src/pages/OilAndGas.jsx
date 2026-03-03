@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/OilGasSector-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/oilandgas_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/oilandgas_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/oilandgas_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/oilandgas_insight_3.jpg";
@@ -65,7 +66,7 @@ const OilAndGas = () => {
           <div className="build-team-split">
             <div className="bts-left">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop"
+                src={btsImg}
                 alt="Oil & Gas Technical Staff"
                 className="bts-workers-img"
               />
@@ -80,15 +81,15 @@ const OilAndGas = () => {
 
           {/* ── Focus on Domains Section (From User Image) ── */}
           <div className="domains-container">
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>Upstream Extraction</h3>
                 <p>Skilled personnel for exploration and production, including drilling engineers, rig operators, geoscientists, and offshore survival-certified crews.</p>
               </div>
             </div>
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1471623817296-aa07ae5c9ec4?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>Midstream Logistics</h3>
                 <p>Expertise in storage and transportation with pipeline technicians, terminal operators, and logistics coordinators ensuring seamless energy distribution.</p>
@@ -96,8 +97,8 @@ const OilAndGas = () => {
             </div>
 
             {/* New Card 3 */}
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516246843873-9d12356b6fab?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>Downstream Refining</h3>
                 <p>We provide chemical engineers, process operators, and maintenance technicians specialized in refinery production, petrochemicals, and facility turnarounds.</p>
@@ -105,8 +106,8 @@ const OilAndGas = () => {
             </div>
 
             {/* New Card 4 */}
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>Shutdowns & Turnarounds</h3>
                 <p>Rapid mobilization of large, multi-disciplinary workforces for scheduled plant maintenance, ensuring minimal downtime and strict operational safety.</p>
@@ -114,8 +115,8 @@ const OilAndGas = () => {
             </div>
 
             {/* New Card 5 */}
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>HSE & Compliance</h3>
                 <p>Dedicated Safety Officers, QA/QC Inspectors, and Environmental Engineers ensuring your operations meet all local and international energy sector regulations.</p>
@@ -123,8 +124,8 @@ const OilAndGas = () => {
             </div>
 
             {/* New Card 6 */}
-            <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165833767-027eeed15b3b?q=80&w=800&auto=format&fit=crop')" }}>
-              <div className="domain-overlay"></div>
+            <div className="domain-box">
+              
               <div className="domain-content">
                 <h3>Technical Maintenance</h3>
                 <p>Supplying certified welders, pipefitters, electricians, and mechanical fitters experienced in maintaining complex oilfield and plant machinery.</p>

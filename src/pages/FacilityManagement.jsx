@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector.png";
+import btsImg from "../assest/manpower-supply-meadia/facilitymanagement_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_3.jpg";
@@ -91,7 +92,7 @@ const FacilityManagement = () => {
           <div className="build-team-split">
             <div className="bts-left">
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                src={btsImg}
                 alt="Facility Management Team"
                 className="bts-workers-img"
               />
@@ -119,7 +120,7 @@ const FacilityManagement = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Hard Services (MEP)</h3>
                 <p>
@@ -130,7 +131,7 @@ const FacilityManagement = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Soft Services (Cleaning)</h3>
                 <p>
@@ -141,7 +142,7 @@ const FacilityManagement = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Security & Safety</h3>
                 <p>
@@ -152,7 +153,7 @@ const FacilityManagement = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Front of House & Admin</h3>
                 <p>

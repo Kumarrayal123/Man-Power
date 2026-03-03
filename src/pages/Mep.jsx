@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/plumbing-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/mep_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/mep_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/mep_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/mep_insight_3.jpg";
@@ -89,7 +90,7 @@ const Mep = () => {
           <div className="build-team-split">
             <div className="bts-left">
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                src={btsImg}
                 alt="MEP Team"
                 className="bts-workers-img"
               />
@@ -117,7 +118,7 @@ const Mep = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Mechanical & HVAC</h3>
                 <p>
@@ -128,7 +129,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Electrical Engineering</h3>
                 <p>
@@ -139,7 +140,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Plumbing & Piping</h3>
                 <p>
@@ -150,7 +151,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Fire & Life Safety</h3>
                 <p>

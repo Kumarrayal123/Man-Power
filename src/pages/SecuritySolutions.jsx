@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/security-solutions-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
 
 const SecuritySolutions = () => {
   const [openFaq, setOpenFaq] = useState(0);

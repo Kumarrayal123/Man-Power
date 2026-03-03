@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/executive-search-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/executivesearch_bts.jpg";
 
 const ExecutiveSearch = () => {
   const [openFaq, setOpenFaq] = useState(0);

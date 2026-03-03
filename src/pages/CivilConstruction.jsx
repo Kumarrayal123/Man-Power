@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/civilconstructionsector-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/civilconstruction_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/civilconstruction_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/civilconstruction_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/civilconstruction_insight_3.jpg";
@@ -103,7 +104,7 @@ const CivilConstruction = () => {
           <div className="build-team-split">
             <div className="bts-left">
               <img
-                src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop"
+                src={btsImg}
                 alt="Civil Construction Team"
                 className="bts-workers-img"
               />
@@ -131,7 +132,7 @@ const CivilConstruction = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Infrastructure & Earthworks</h3>
                 <p>
@@ -142,7 +143,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>High-Rise & Commercial</h3>
                 <p>
@@ -153,7 +154,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Finishing & Fit-Out</h3>
                 <p>
@@ -164,7 +165,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              <div className="domain-overlay"></div>
+              
               <div className="domain-content">
                 <h3>Heavy Machinery Operators</h3>
                 <p>

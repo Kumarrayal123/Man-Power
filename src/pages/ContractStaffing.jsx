@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/contract-staffing-hero.png";
+import btsImg from "../assest/manpower-supply-meadia/contractstaffing_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/contractstaffing_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/contractstaffing_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/contractstaffing_insight_3.jpg";
