@@ -14,8 +14,8 @@ const Manufacture = () => {
               Manufacturing<br />Sector
             </h1>
             <p className="home-hero__text">
-              Supplying skilled manpower for manufacturing plants, assembly
-              lines and industrial production facilities across the UAE.
+              Supplying high-performance, skilled manpower for heavy manufacturing, assembly
+              lines, and precision industrial production facilities across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -49,16 +49,16 @@ const Manufacture = () => {
             <div className="cbs-left">
               <h2>Manufacturing Manpower Solutions</h2>
               <p>
-                We provide experienced technicians, operators, and assembly
-                line staff to keep production lines running efficiently.
+                As industrial zones and smart manufacturing hubs expand across the UAE,
+                having a reliable, technically proficient workforce is the key to scalability.
               </p>
               <p>
-                Our personnel cover machining, fabrication, quality control, and
-                process engineering roles.
+                We provide certified CNC operators, industrial electricians, QA/QC inspectors,
+                and seasoned assembly line supervisors to keep your production operating around the clock.
               </p>
               <p>
-                Staff are trained to meet industry safety standards and are
-                familiar with modern manufacturing systems.
+                Our personnel are meticulously trained to adhere strictly to
+                modern manufacturing methodologies, lean principles, and uncompromising factory safety standards.
               </p>
             </div>
 
@@ -72,10 +72,10 @@ const Manufacture = () => {
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">PRODUCING</span>
-                <span className="cbs-ordinary">PERFORMANCE</span>
+                <span className="cbs-go-beyond">ACCELERATING</span>
+                <span className="cbs-ordinary">PRODUCTION</span>
                 <span className="cbs-find">WITH</span>
-                <span className="cbs-executives">SKILLED WORKERS</span>
+                <span className="cbs-executives">EXPERT LABOR</span>
               </div>
             </div>
           </div>
@@ -92,12 +92,12 @@ const Manufacture = () => {
             <div className="bts-right">
               <h3>Build Your Manufacturing Team</h3>
               <p>
-                Whether you need machine operators, technicians or supervisors,
-                we have ready candidates.
+                Whether launching a new production shift or supplementing your core
+                machining team, we provide precisely matched industrial talent.
               </p>
               <p>
-                All recruits undergo strict vetting to ensure productivity and
-                safety on site.
+                All recruits undergo strict technical vetting and practical skills
+                assessments to ensure immediate on-site productivity and safety awareness.
               </p>
               <Link
                 to="/contact"
@@ -116,8 +116,8 @@ const Manufacture = () => {
               <div className="domain-content">
                 <h3>Assembly & Production</h3>
                 <p>
-                  Skilled assemblers and line operators for high-volume
-                  environments.
+                  High-volume assembly line workers, packaging staff, and
+                  production supervisors ensuring output targets are consistently met.
                 </p>
               </div>
             </div>
@@ -125,10 +125,10 @@ const Manufacture = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Quality Control</h3>
+                <h3>Machining & Fabrication</h3>
                 <p>
-                  Inspectors and technicians ensuring standards are met at every
-                  stage.
+                  Certified CNC programmers, welders (TIG/MIG), metal fabricators,
+                  and tool/die makers for precision engineering tasks.
                 </p>
               </div>
             </div>
@@ -136,10 +136,10 @@ const Manufacture = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Maintenance & Engineering</h3>
+                <h3>Quality Assurance (QC)</h3>
                 <p>
-                  Maintenance crews and engineers keeping equipment running
-                  reliably.
+                  Detail-oriented inspectors and metrology technicians ensuring zero
+                  defects and strict adherence to ISO manufacturing standards.
                 </p>
               </div>
             </div>
@@ -147,10 +147,10 @@ const Manufacture = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Logistics & Handling</h3>
+                <h3>Industrial Maintenance</h3>
                 <p>
-                  Forklift operators and material handlers for seamless supply
-                  within the plant.
+                  Preventative and reactive maintenance crews, including millwrights
+                  and heavy equipment mechanics, maximizing plant uptime.
                 </p>
               </div>
             </div>
@@ -184,7 +184,7 @@ const Manufacture = () => {
             </div>
           </section>
 
-            <section className="clients-section">
+          <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>

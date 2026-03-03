@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector.png";
 
 const FacilityManagement = () => {
   return (
@@ -14,8 +15,9 @@ const FacilityManagement = () => {
               Facility Management<br />Sector
             </h1>
             <p className="home-hero__text">
-              Delivering efficient and reliable facility management manpower
-              solutions across the UAE for commercial, residential, and industrial sites.
+              Delivering premium, tailored facility management manpower
+              solutions to maximize asset lifespan and operational uptime across
+              commercial, residential, and corporate ecosystems in the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -25,7 +27,7 @@ const FacilityManagement = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Facility Management Staff"
               className="hero-workers-img"
               style={{
@@ -49,16 +51,17 @@ const FacilityManagement = () => {
             <div className="cbs-left">
               <h2>Professional Facility Management Teams</h2>
               <p>
-                We provide skilled personnel to keep your facilities running
-                smoothly, from maintenance technicians to site supervisors.
+                Maintaining the modern infrastructure of the UAE requires a proactive
+                and highly skilled workforce. We provide the personnel needed to keep your facilities
+                running at peak performance.
               </p>
               <p>
-                Our workforce handles cleaning, security, mechanical repairs,
-                and day-to-day operational support tailored to your needs.
+                From preventative maintenance technicians to hospitality-trained soft services staff,
+                our workforce is designed to enhance the end-user experience and protect your physical assets.
               </p>
               <p>
-                With an emphasis on sustainability and uptime, our teams
-                ensure facilities meet regulatory and performance standards.
+                With an unwavering focus on sustainability, hygiene, and continuous uptime, our teams
+                ensure your properties exceed regulatory and occupant expectations.
               </p>
             </div>
 
@@ -72,10 +75,10 @@ const FacilityManagement = () => {
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">MAINTAINING</span>
-                <span className="cbs-ordinary">EFFICIENCY</span>
-                <span className="cbs-find">WITH</span>
-                <span className="cbs-executives">RELIABLE STAFF</span>
+                <span className="cbs-go-beyond">ELEVATING</span>
+                <span className="cbs-ordinary">ASSETS</span>
+                <span className="cbs-find">OPTIMIZED</span>
+                <span className="cbs-executives">PERFORMANCE</span>
               </div>
             </div>
           </div>
@@ -92,12 +95,12 @@ const FacilityManagement = () => {
             <div className="bts-right">
               <h3>Build Your Facility Management Crew</h3>
               <p>
-                From janitorial staff to HVAC technicians, we have the
-                personnel ready to support your operations.
+                Whether you need a dedicated hard services engineering team or a discreet
+                soft services crew for a luxury property, we deploy the right talent.
               </p>
               <p>
-                Every candidate undergoes thorough vetting and skill assessments
-                to guarantee quality service delivery.
+                Every candidate undergoes rigorous background checks and customer-service
+                oriented training to guarantee seamless service delivery.
               </p>
               <Link
                 to="/contact"
@@ -114,10 +117,10 @@ const FacilityManagement = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Maintenance & Repairs</h3>
+                <h3>Hard Services (MEP)</h3>
                 <p>
-                  Skilled technicians for electrical, plumbing, and mechanical
-                  upkeep.
+                  Specialized technicians for predictive and reactive maintenance
+                  of electrical, HVAC, and plumbing systems.
                 </p>
               </div>
             </div>
@@ -125,10 +128,10 @@ const FacilityManagement = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Cleaning & Janitorial</h3>
+                <h3>Soft Services (Cleaning)</h3>
                 <p>
-                  Professional cleaning crews ensuring hygienic, presentable
-                  environments.
+                  BICS-trained cleaning crews, housekeepers, and deep-cleaning
+                  specialists ensuring immaculate environments.
                 </p>
               </div>
             </div>
@@ -136,10 +139,10 @@ const FacilityManagement = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Security Services</h3>
+                <h3>Security & Safety</h3>
                 <p>
-                  Trained guards and surveillance teams to protect your
-                  premises.
+                  SIRA-certified security guards, CCTV operators, and life-safety
+                  personnel protecting your people and property.
                 </p>
               </div>
             </div>
@@ -147,10 +150,10 @@ const FacilityManagement = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Administrative Support</h3>
+                <h3>Front of House & Admin</h3>
                 <p>
-                  Receptionists, coordinators, and facility managers to keep
-                  things organised.
+                  Polished receptionists, concierge staff, and facility coordinators
+                  acting as the welcoming face of your organization.
                 </p>
               </div>
             </div>
@@ -187,7 +190,7 @@ const FacilityManagement = () => {
             </div>
           </section>
 
-            <section className="clients-section">
+          <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>

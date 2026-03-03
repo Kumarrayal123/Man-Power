@@ -13,11 +13,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/civilconstructionsector-hero.png";
 
 const CivilConstruction = () => {
   return (
     <div className="oil-gas-page">
-      
+
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">
@@ -26,8 +27,8 @@ const CivilConstruction = () => {
               Civil Construction<br />Sector
             </h1>
             <p className="home-hero__text">
-              Delivering highly skilled manpower for infrastructure, commercial,
-              residential, and industrial construction projects across the UAE.
+              Delivering highly skilled and semi-skilled manpower for major infrastructure, commercial,
+              residential, and industrial construction mega-projects across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -37,7 +38,7 @@ const CivilConstruction = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Construction Workers"
               className="hero-workers-img"
               style={{
@@ -61,9 +62,9 @@ const CivilConstruction = () => {
             <div className="cbs-left">
               <h2>Expert Manpower for Civil Construction</h2>
               <p>
-                The Civil Construction industry demands precision, safety,
-                and technical expertise. We provide qualified manpower that
-                ensures projects are delivered on time and within budget.
+                The UAE's rapidly expanding skyline demands construction teams built on precision, safety,
+                and deep technical expertise. We provide qualified manpower that
+                ensures your projects are delivered on time, within budget, and to the highest standards.
               </p>
               <p>
                 From foundations and structural works to finishing and
@@ -71,8 +72,8 @@ const CivilConstruction = () => {
                 development.
               </p>
               <p>
-                We supply certified engineers, supervisors, safety officers,
-                and skilled labor tailored to UAE construction standards.
+                We supply certified civil engineers, site supervisors, NEBOSH-certified safety officers,
+                and specialized trade labor perfectly aligned with UAE construction regulations and climatic conditions.
               </p>
             </div>
 
@@ -87,9 +88,9 @@ const CivilConstruction = () => {
               </div>
               <div className="cbs-text-block">
                 <span className="cbs-go-beyond">BUILDING THE</span>
-                <span className="cbs-ordinary">FUTURE</span>
-                <span className="cbs-find">RELIABLE</span>
-                <span className="cbs-executives">WORKFORCE</span>
+                <span className="cbs-ordinary">SKYLINE</span>
+                <span className="cbs-find">UNMATCHED</span>
+                <span className="cbs-executives">WORKFORCE EXPERTISE</span>
               </div>
             </div>
           </div>
@@ -110,8 +111,8 @@ const CivilConstruction = () => {
                 facility — we provide skilled manpower ready to deploy.
               </p>
               <p>
-                Our vetting process guarantees trained, safety-compliant,
-                and experienced professionals for every role.
+                Our rigorous vetting process guarantees that every mason, carpenter, steel fixer, and site engineer
+                is safety-compliant, trade-tested, and experienced in heavy civil works.
               </p>
               <Link
                 to="/contact"
@@ -128,10 +129,10 @@ const CivilConstruction = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Infrastructure & Structural Works</h3>
+                <h3>Infrastructure & Earthworks</h3>
                 <p>
-                  Skilled manpower for bridges, roads, foundations,
-                  and reinforced concrete structures.
+                  Specialized crews for highway construction, bridges, deep utility trenching,
+                  foundations, and heavy civil earthmoving operations.
                 </p>
               </div>
             </div>
@@ -139,10 +140,10 @@ const CivilConstruction = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Commercial & Residential Projects</h3>
+                <h3>High-Rise & Commercial</h3>
                 <p>
-                  Professional teams for towers, villas,
-                  malls, and residential communities.
+                  Experienced concrete workers, formwork carpenters, and steel fixers
+                  dedicated to towers, malls, and large commercial developments.
                 </p>
               </div>
             </div>
@@ -150,10 +151,10 @@ const CivilConstruction = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>MEP & Finishing Support</h3>
+                <h3>Finishing & Fit-Out</h3>
                 <p>
-                  Experienced workforce for electrical,
-                  plumbing, HVAC, and finishing works.
+                  Master painters, tile masons, block workers, and skilled decorators
+                  delivering premium interior and exterior finishing works.
                 </p>
               </div>
             </div>
@@ -161,10 +162,10 @@ const CivilConstruction = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Heavy Equipment Operators</h3>
+                <h3>Heavy Machinery Operators</h3>
                 <p>
-                  Certified operators for cranes,
-                  excavators, loaders, and construction machinery.
+                  Third-party certified operators for tower cranes, mobile cranes,
+                  excavators, bulldozers, and heavy transport vehicles.
                 </p>
               </div>
             </div>
@@ -201,7 +202,7 @@ const CivilConstruction = () => {
             </div>
           </section>
 
-            <section className="clients-section">
+          <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>
@@ -242,14 +243,14 @@ const CivilConstruction = () => {
           </section>
 
           {/* Request a Quote Section */}
-            <div className="quote-section">
-                      <div className="quote-container">
-                        <div className="quote-label">Request a Quote</div>
-                        <h2 className="quote-title">Get a quick follow up!</h2>
-                        <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-                        <Link to="/contact" className="quote-btn">Book Now</Link>
-                      </div>
-                    </div>
+          <div className="quote-section">
+            <div className="quote-container">
+              <div className="quote-label">Request a Quote</div>
+              <h2 className="quote-title">Get a quick follow up!</h2>
+              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
+              <Link to="/contact" className="quote-btn">Book Now</Link>
+            </div>
+          </div>
 
           {/* Contract Staffing Insights Section */}
           <div className="insights-section">
@@ -308,7 +309,7 @@ const CivilConstruction = () => {
           </div>
 
           {/* ── FAQ Section ── */}
-        
+
 
           {/* ── Clients Section (Same) ── */}
           {/* <section className="clients-section">

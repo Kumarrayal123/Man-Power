@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/OilGasSector-hero.png";
 
 const OilAndGas = () => {
   return (
@@ -11,14 +12,14 @@ const OilAndGas = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Oil & Gas<br />Sector</h1>
-            <p className="home-hero__text">Expert manpower solutions powering the energy sector with specialized engineering, technical, and operational staff across the UAE.</p>
+            <p className="home-hero__text">Empowering the UAE energy sector with specialized engineering, technical, and operational experts. We provide reliable manpower solutions for upstream, midstream, and downstream operations.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Manpower Workers Staff"
               className="hero-workers-img"
               style={{ width: '100%', maxWidth: '550px', height: 'auto', display: 'block', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.2))' }}
@@ -67,8 +68,8 @@ const OilAndGas = () => {
             </div>
             <div className="bts-right">
               <h3>Build Your Expert Oil & Gas Team</h3>
-              <p>Whether you need a full crew for an offshore rig, specialized engineers for a refinery, or safety officers for a new project, we have the talent you need.</p>
-              <p>Our rigorous vetting process ensures that every professional we provide is not only highly skilled but also deeply committed to safety and operational excellence.</p>
+              <p>Whether you need a full crew for an offshore rig, specialized engineers for a refinery, or safety officers for a new pipeline project, we have the talent you need.</p>
+              <p>Our rigorous vetting process ensures that every professional we provide is not only highly skilled but also deeply committed to HSE (Health, Safety, and Environment) zero-harm policies and operational excellence.</p>
               <Link to="/contact" className="hero-btn-main" style={{ background: '#fff', color: '#1f2937' }}>Request Staff</Link>
             </div>
           </div>
@@ -78,16 +79,15 @@ const OilAndGas = () => {
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Focus On Required Domains</h3>
-                <p>When your company or business doesn't need to spend time and resources on unwanted processes, it can focus on the most crucial practices. Our Oil and Gas manpower supply services make sure that you don't get into the hassle of this domain.</p>
+                <h3>Upstream Extraction</h3>
+                <p>Skilled personnel for exploration and production, including drilling engineers, rig operators, geoscientists, and offshore survival-certified crews.</p>
               </div>
             </div>
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1471623817296-aa07ae5c9ec4?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <p style={{ fontSize: '1.25rem', lineHeight: '1.8', fontWeight: '500' }}>
-                  Manpower.ae has been providing its high-quality services in Oil and Gas industry for years. We hold the position of top manpower supply company in UAE. To know more about our services, contact us now!
-                </p>
+                <h3>Midstream Logistics</h3>
+                <p>Expertise in storage and transportation with pipeline technicians, terminal operators, and logistics coordinators ensuring seamless energy distribution.</p>
               </div>
             </div>
 
@@ -95,8 +95,8 @@ const OilAndGas = () => {
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516246843873-9d12356b6fab?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Our Manpower Supply Services in Oil & Gas</h3>
-                <p>We provide end-to-end staffing solutions covering drilling operations, technical maintenance, refinery processing, and pipeline engineering. Our specialized recruitment team ensures every technical role is filled with certified experts who understand the critical nuances of energy production in the UAE.</p>
+                <h3>Downstream Refining</h3>
+                <p>We provide chemical engineers, process operators, and maintenance technicians specialized in refinery production, petrochemicals, and facility turnarounds.</p>
               </div>
             </div>
 
@@ -104,8 +104,8 @@ const OilAndGas = () => {
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Why Choose manpower.ae for Labor Supply?</h3>
-                <p>With a robust track record in the energy sector, we offer unmatched speed of mobilization, strict HSE compliance, and a vast database of pre-vetted technical talent. Our focus is on reducing your operational downtime and maximizing on-site productivity through reliable workforce deployment.</p>
+                <h3>Shutdowns & Turnarounds</h3>
+                <p>Rapid mobilization of large, multi-disciplinary workforces for scheduled plant maintenance, ensuring minimal downtime and strict operational safety.</p>
               </div>
             </div>
 
@@ -113,8 +113,8 @@ const OilAndGas = () => {
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Highly Skilled</h3>
-                <p>We perform intense research and screening processes to find the right individuals. Our workforce recruitment process involves managing various aspects of the candidate together to find the right one. They are further trained and oriented to polish their skills according to the industry requirements. They are also experienced in working on different Oil and Gas projects.</p>
+                <h3>HSE & Compliance</h3>
+                <p>Dedicated Safety Officers, QA/QC Inspectors, and Environmental Engineers ensuring your operations meet all local and international energy sector regulations.</p>
               </div>
             </div>
 
@@ -122,8 +122,8 @@ const OilAndGas = () => {
             <div className="domain-box" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1454165833767-027eeed15b3b?q=80&w=800&auto=format&fit=crop')" }}>
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Specialized in Oil and Gas Industry Support</h3>
-                <p>Our workforce is specialized in working Oil and Gas industry. Manpower.ae has been providing manpower supply services in the oil and gas industry for years. Our quality workforce and high-grade focus on industry trends proffer one of the best manpower supply services. In addition, we have experience in the Oil and Gas industry, so you get an expert view of all your manpower supply services from our end.</p>
+                <h3>Technical Maintenance</h3>
+                <p>Supplying certified welders, pipefitters, electricians, and mechanical fitters experienced in maintaining complex oilfield and plant machinery.</p>
               </div>
             </div>
           </div>
@@ -181,64 +181,64 @@ const OilAndGas = () => {
           </div>
 
           <div className="insights-section">
-                         <h2 className="insights-title">Contract Staffing Insights</h2>
-             
-                         <div className="insights-grid">
-                           <div className="insight-card">
-                             <div className="insight-image-wrap">
-                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
-                             </div>
-                             <div className="insight-content">
-                               <h3>Brief Introduction to Contract Staffing</h3>
-                               <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-                               <Link to="/insights" className="insight-btn">
-                                 Read More <ChevronRight size={18} />
-                               </Link>
-                             </div>
-                           </div>
-             
-                           <div className="insight-card">
-                             <div className="insight-image-wrap">
-                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
-                             </div>
-                             <div className="insight-content">
-                               <h3>Need of Contract Staffing</h3>
-                               <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                               <Link to="/insights" className="insight-btn">
-                                 Read More <ChevronRight size={18} />
-                               </Link>
-                             </div>
-                           </div>
-             
-                           <div className="insight-card">
-                             <div className="insight-image-wrap">
-                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
-                             </div>
-                             <div className="insight-content">
-                               <h3>Benefits of getting Contract Staffing</h3>
-                               <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                               <Link to="/insights" className="insight-btn">
-                                 Read More <ChevronRight size={18} />
-                               </Link>
-                             </div>
-                           </div>
-             
-                           <div className="insight-card">
-                             <div className="insight-image-wrap">
-                               <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
-                             </div>
-                             <div className="insight-content">
-                               <h3>How can Contract Staffing work at Your Advantage?</h3>
-                               <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                               <Link to="/insights" className="insight-btn">
-                                 Read More <ChevronRight size={18} />
-                               </Link>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
+            <h2 className="insights-title">Contract Staffing Insights</h2>
 
-          
+            <div className="insights-grid">
+              <div className="insight-card">
+                <div className="insight-image-wrap">
+                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+                </div>
+                <div className="insight-content">
+                  <h3>Brief Introduction to Contract Staffing</h3>
+                  <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                  <Link to="/insights" className="insight-btn">
+                    Read More <ChevronRight size={18} />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="insight-card">
+                <div className="insight-image-wrap">
+                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+                </div>
+                <div className="insight-content">
+                  <h3>Need of Contract Staffing</h3>
+                  <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
+                  <Link to="/insights" className="insight-btn">
+                    Read More <ChevronRight size={18} />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="insight-card">
+                <div className="insight-image-wrap">
+                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+                </div>
+                <div className="insight-content">
+                  <h3>Benefits of getting Contract Staffing</h3>
+                  <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
+                  <Link to="/insights" className="insight-btn">
+                    Read More <ChevronRight size={18} />
+                  </Link>
+                </div>
+              </div>
+
+              <div className="insight-card">
+                <div className="insight-image-wrap">
+                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+                </div>
+                <div className="insight-content">
+                  <h3>How can Contract Staffing work at Your Advantage?</h3>
+                  <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
+                  <Link to="/insights" className="insight-btn">
+                    Read More <ChevronRight size={18} />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 
         </div>
       </div>

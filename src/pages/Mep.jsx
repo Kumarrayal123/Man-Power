@@ -14,8 +14,8 @@ const Mep = () => {
               MEP (Mechanical, Electrical & Plumbing)<br />Sector
             </h1>
             <p className="home-hero__text">
-              Providing specialised MEP manpower for installations, maintenance
-              and commissioning across the UAE.
+              Providing specialized Mechanical, Electrical, and Plumbing manpower
+              for high-stakes installations, maintenance, and commissioning across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -47,18 +47,18 @@ const Mep = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Expert MEP Workforce</h2>
+              <h2>Expert MEP Workforce Deployment</h2>
               <p>
-                Our teams consist of certified mechanical, electrical, and
-                plumbing technicians ready for installation and service work.
+                The backbone of any modern building is its MEP infrastructure. We provide
+                the certified talent required to install, test, and maintain these complex systems.
               </p>
               <p>
-                We support HVAC, power distribution, fire protection, and
-                plumbing systems with skilled staff.
+                From massive district cooling plants and high-voltage power distribution to
+                intricate fire-suppression logic, our personnel bring verifiable technical expertise.
               </p>
               <p>
-                Personnel are accustomed to working on complex commercial and
-                industrial projects.
+                Our workforce is accustomed to coordinating with civil teams on fast-paced,
+                large-scale commercial, residential, and industrial mega-projects.
               </p>
             </div>
 
@@ -72,10 +72,10 @@ const Mep = () => {
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">POWERING</span>
-                <span className="cbs-ordinary">BUILDINGS</span>
-                <span className="cbs-find">WITH</span>
-                <span className="cbs-executives">EXPERTISE</span>
+                <span className="cbs-go-beyond">ENGINEERING</span>
+                <span className="cbs-ordinary">EXCELLENCE</span>
+                <span className="cbs-find">CERTIFIED</span>
+                <span className="cbs-executives">MEP TALENT</span>
               </div>
             </div>
           </div>
@@ -90,14 +90,14 @@ const Mep = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your MEP Team</h3>
+              <h3>Build Your Technical MEP Team</h3>
               <p>
-                From electricians to plumbers and HVAC technicians, we have the
-                manpower you need.
+                Whether you need a specialized commissioning crew or hundreds of
+                electricians and pipefitters for an ongoing build, we can supply them.
               </p>
               <p>
-                Every member is vetted for technical skills and safety
-                compliance.
+                Every member is trade-tested to comply with DEWA, ADDC, SEWA, and Civil Defense
+                standards, ensuring your installations pass inspection the first time.
               </p>
               <Link
                 to="/contact"
@@ -114,9 +114,10 @@ const Mep = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>HVAC & Refrigeration</h3>
+                <h3>Mechanical & HVAC</h3>
                 <p>
-                  Technicians experienced in climate control and cooling systems.
+                  Chiller technicians, duct fitters, and mechanical engineers specialized
+                  in climate control, ventilation, and district cooling systems.
                 </p>
               </div>
             </div>
@@ -124,9 +125,10 @@ const Mep = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Electrical Systems</h3>
+                <h3>Electrical Engineering</h3>
                 <p>
-                  Electricians for wiring, panels, and power distribution work.
+                  Industrial electricians, cable jointers, and panel builders for
+                  low current (ELV), low voltage (LV), and high voltage (HV) networks.
                 </p>
               </div>
             </div>
@@ -134,9 +136,10 @@ const Mep = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Plumbing & Drainage</h3>
+                <h3>Plumbing & Piping</h3>
                 <p>
-                  Plumbers skilled in piping, fixtures, and water systems.
+                  Certified plumbers and pipefitters executing complex water supply,
+                  drainage, and industrial piping networks.
                 </p>
               </div>
             </div>
@@ -144,9 +147,10 @@ const Mep = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Fire Protection</h3>
+                <h3>Fire & Life Safety</h3>
                 <p>
-                  Specialists in sprinklers, alarms, and safety equipment.
+                  Civil Defense-approved specialists for the installation and commissioning
+                  of fire alarms, sprinklers, and emergency suppression systems.
                 </p>
               </div>
             </div>
@@ -182,7 +186,7 @@ const Mep = () => {
             </div>
           </section>
 
-            <section className="clients-section">
+          <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>

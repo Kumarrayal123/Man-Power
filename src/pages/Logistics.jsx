@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import heroImage from "../assest/manpower-supply-meadia/logistics-hero.png";
 
 const Logistics = () => {
   return (
@@ -14,8 +15,8 @@ const Logistics = () => {
               Logistics<br />Sector
             </h1>
             <p className="home-hero__text">
-              Reliable logistics manpower solutions ensuring smooth supply chain
-              operations across the UAE.
+              Agile and scalable logistics manpower solutions driving efficiency
+              across transport, warehousing, and global supply chain operations in the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -25,7 +26,7 @@ const Logistics = () => {
           </div>
           <div className="home-hero__image">
             <img
-              src="https://manpower.ae/wp-content/uploads/2024/12/group_7-e1734330734971-600x511.png"
+              src={heroImage}
               alt="Logistics Team"
               className="hero-workers-img"
               style={{
@@ -47,18 +48,18 @@ const Logistics = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Expert Logistics Manpower</h2>
+              <h2>Expert Supply Chain Manpower</h2>
               <p>
-                From warehouse staff to supply chain coordinators, we provide
-                the personnel needed to keep goods moving.
+                As the UAE solidifies its position as a global logistics hub, the demand
+                for rapid, accurate, and scalable workforce solutions is higher than ever.
               </p>
               <p>
-                Our workforce supports transportation, inventory management,
-                and distribution tasks across multiple sectors.
+                From meticulous inventory clerks and skilled forklift operators to experienced
+                heavy vehicle drivers (License 3, 4, 6, 8), our talent pool keeps goods moving.
               </p>
               <p>
-                We supply qualified drivers, loaders, logistic coordinators, and
-                supply chain analysts compliant with UAE regulations.
+                We supply highly trained logistics personnel capable of operating 24/7, compliant
+                with internal HSE policies and international trade regulations.
               </p>
             </div>
 
@@ -72,8 +73,8 @@ const Logistics = () => {
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">MOVING</span>
-                <span className="cbs-ordinary">YOUR</span>
+                <span className="cbs-go-beyond">DRIVING</span>
+                <span className="cbs-ordinary">GLOBAL</span>
                 <span className="cbs-find">SUPPLY</span>
                 <span className="cbs-executives">FORWARD</span>
               </div>
@@ -90,14 +91,14 @@ const Logistics = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your Logistics Crew</h3>
+              <h3>Build Your Logistics Operations Crew</h3>
               <p>
-                Whether you need drivers, warehouse operators, or planners, we
-                have ready-to-go teams.
+                Whether staffing a 100,000 sq ft distribution center, or assembling a fleet
+                of delivery drivers for last-mile logistics, we possess the scale to support you.
               </p>
               <p>
-                Rigorous vetting ensures every staff member is trained in safety
-                and efficiency.
+                Rigorous testing ensures every team member understands modern WMS (Warehouse
+                Management Systems) and strict cargo handling safety protocols.
               </p>
               <Link
                 to="/contact"
@@ -114,9 +115,10 @@ const Logistics = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Transportation & Delivery</h3>
+                <h3>Fleet & Transportation</h3>
                 <p>
-                  Skilled drivers and couriers for timely, safe deliveries.
+                  Specialized operators for heavy duty trucks, light commercial vehicles,
+                  and last-mile courier delivery fleets.
                 </p>
               </div>
             </div>
@@ -126,8 +128,8 @@ const Logistics = () => {
               <div className="domain-content">
                 <h3>Warehouse Operations</h3>
                 <p>
-                  Forklift operators and inventory staff to manage storage
-                  facilities.
+                  Certified VNA/Forklift operators, order pickers, packers,
+                  and cargo loaders for high-volume distribution centers.
                 </p>
               </div>
             </div>
@@ -135,9 +137,10 @@ const Logistics = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Supply Chain Planning</h3>
+                <h3>Inventory & Planning</h3>
                 <p>
-                  Analysts and coordinators to optimise logistics networks.
+                  Data-driven inventory clerks, stock controllers, and supply chain
+                  analysts to optimize stock flow and minimize shrinkage.
                 </p>
               </div>
             </div>
@@ -145,9 +148,10 @@ const Logistics = () => {
             <div className="domain-box">
               <div className="domain-overlay"></div>
               <div className="domain-content">
-                <h3>Customs & Compliance</h3>
+                <h3>Freight & Customs</h3>
                 <p>
-                  Experts ensuring shipments meet regulatory requirements.
+                  Experienced documentation clerks, freight forwarders, and customs
+                  clearance specialists navigating complex international trade requirements.
                 </p>
               </div>
             </div>
@@ -185,7 +189,7 @@ const Logistics = () => {
 
 
 
-            <section className="clients-section">
+          <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>
