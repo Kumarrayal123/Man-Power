@@ -226,7 +226,7 @@ const Home = () => {
                         <h2 className="core-area-title">Industries We Empower</h2>
                         <p className="core-area-desc">
                             For over a decade, our enterprise has been the driving workforce engine behind monumental<br />
-                            projects across Hyderabad, Abu Dhabi, and the wider India. We provide hyper-specialized personnel<br />
+                            projects across Hyderabad, Mumbai, and the wider India. We provide hyper-specialized personnel<br />
                             solutions exclusively tailored to the rigorous demands of these pivotal sectors:
                         </p>
                     </div>

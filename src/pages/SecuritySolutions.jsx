@@ -24,11 +24,11 @@ const SecuritySolutions = () => {
     },
     {
       question: "3. What types of security roles do you staff for?",
-      answer: "We provide staffing across a wide spectrum of security roles including static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in the UAE."
+      answer: "We provide staffing across a wide spectrum of security roles including static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in India."
     },
     {
-      question: "4. How do you ensure compliance with UAE security regulations?",
-      answer: "All our security personnel hold valid SIRA (Security Industry Regulatory Agency) licenses as required by UAE law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf."
+      question: "4. How do you ensure compliance with Indian security regulations?",
+      answer: "All our security personnel hold valid licenses as required by Indian law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf."
     },
     {
       question: "5. Can you provide security staff for short-term events or projects?",
@@ -46,8 +46,8 @@ const SecuritySolutions = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Security Staffing<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking for professional, SIRA-licensed security personnel for your business or facility? Smaar Elysium provides trusted, industry-compliant security staffing solutions across the UAE.</p>
+            <h1 className="home-hero__title">Security Staffing<br />Solutions in India</h1>
+            <p className="home-hero__text">Looking for professional, licensed security personnel for your business or facility? Smaar Elysium provides trusted, industry-compliant security staffing solutions across India.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -144,7 +144,7 @@ const SecuritySolutions = () => {
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
                 <h3>SIRA-Licensed Personnel</h3>
-                <p>Every security officer we deploy is fully licensed by SIRA (Security Industry Regulatory Agency) as mandated by UAE law. We manage all licensing, renewals, and compliance documentation on your behalf.</p>
+                <p>Every security officer we deploy is fully licensed and compliant with Indian security regulations. We manage all licensing, renewals, and compliance documentation on your behalf.</p>
               </div>
 
               <div className="benefit-card bg-gray">
@@ -154,7 +154,7 @@ const SecuritySolutions = () => {
 
               <div className="benefit-card bg-red">
                 <h3>Rapid & Scalable Deployment</h3>
-                <p>Security needs can arise without warning. We maintain a ready pool of trained security professionals, enabling rapid deployment for emergency coverage, events, and new site setups across the UAE.</p>
+                <p>Security needs can arise without warning. We maintain a ready pool of trained security professionals, enabling rapid deployment for emergency coverage, events, and new site setups across India.</p>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ const SecuritySolutions = () => {
             </div>
             <div className="insight-content">
               <h3>The Growing Need for Security Solutions</h3>
-              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across the UAE...</p>
+              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across India...</p>
               {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
               </Link> */}
