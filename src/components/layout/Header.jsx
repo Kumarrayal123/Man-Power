@@ -58,7 +58,7 @@ const Header = () => {
                     <nav className="main-nav">
                         <ul className="main-nav__list">
                             <li className="main-nav__item has-dropdown">
-                                <Link to="/services">Manpower Services <ChevronDown size={14} /></Link>
+                                <span className="nav-dropdown-trigger">Manpower Services <ChevronDown size={14} /></span>
                                 <ul className="dropdown">
                                     <li><Link to="/">Manpower Supply</Link></li>
                                     <li><Link to="/recruitment">Recruitment</Link></li>
@@ -69,7 +69,7 @@ const Header = () => {
                                 </ul>
                             </li>
                             <li className="main-nav__item has-dropdown">
-                                <Link to="/sectors">Sectors We Serve <ChevronDown size={14} /></Link>
+                                <span className="nav-dropdown-trigger">Sectors We Serve <ChevronDown size={14} /></span>
                                 <ul className="dropdown">
                                     <li><Link to="/oil-gas">Oil and Gas</Link></li>
                                     <li><Link to="/civil-construction">Civil Construction</Link></li>
@@ -162,8 +162,8 @@ const Header = () => {
         
         .main-nav__list { display: flex; gap: 25px; margin-left: 40px; }
         .main-nav__item { position: relative; }
-        .main-nav__item > a { padding: 10px 0; font-weight: 500; font-size: 18px; color: #000; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
-        .main-nav__item > a:hover { color: var(--color-primary); }
+        .main-nav__item > a, .nav-dropdown-trigger { padding: 10px 0; font-weight: 500; font-size: 18px; color: #000; display: flex; align-items: center; gap: 8px; transition: 0.2s; cursor: pointer; }
+        .main-nav__item > a:hover, .nav-dropdown-trigger:hover { color: var(--color-primary); }
         
         .dropdown { position: absolute; top: 100%; left: 0; background: white; min-width: 240px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 3px solid var(--color-primary); opacity: 0; visibility: hidden; transform: translateY(15px); transition: 0.3s; padding: 10px 0; }
         .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }

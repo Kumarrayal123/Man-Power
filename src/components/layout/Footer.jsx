@@ -70,8 +70,7 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Smaar Elysium. All rights reserved.</p>
                     <div className="footer-bottom-links">
-                        <Link to="/privacy">Privacy Policy</Link>
-                        <Link to="/terms">Terms & Conditions</Link>
+                        <a href="https://thepatternscompany.com/" target="_blank" rel="noreferrer">Designed by The Patterns Company</a>
                     </div>
                 </div>
             </div>
