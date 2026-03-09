@@ -157,7 +157,7 @@ const ExecutiveSearch = () => {
           </div>
 
           {/* Executive Search Insights Section */}
-         
+
         </div>
       </div>
 
@@ -190,70 +190,70 @@ const ExecutiveSearch = () => {
       </section>
 
 
-       <div className="insights-section">
-            <h2 className="insights-title">Executive Search Insights</h2>
+      <div className="insights-section">
+        <h2 className="insights-title">Executive Search Insights</h2>
 
-            <div className="insights-grid">
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
-                </div>
-                <div className="insight-content">
-                  <h3>Brief Introduction to Executive Search</h3>
-                  <p>Executive Search is a specialized recruitment service focused on identifying and placing senior leaders and C-suite executives for organizations...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
-                </div>
-                <div className="insight-content">
-                  <h3>The Need for Executive Search</h3>
-                  <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the India partner with executive search firms...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
-                </div>
-                <div className="insight-content">
-                  <h3>Benefits of Executive Search Services</h3>
-                  <p>The advantages of dedicated executive search include access to passive talent, faster placements, higher retention, and a stronger organizational culture.</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
-                </div>
-                <div className="insight-content">
-                  <h3>How Executive Search Works at Your Advantage?</h3>
-                  <p>The competitive edge in business comes from exceptional leadership. A strategic executive search partner ensures your leadership pipeline is always future-ready...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
+        <div className="insights-grid">
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+            </div>
+            <div className="insight-content">
+              <h3>Brief Introduction to Executive Search</h3>
+              <p>Executive Search is a specialized recruitment service focused on identifying and placing senior leaders and C-suite executives for organizations...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
             </div>
           </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+            </div>
+            <div className="insight-content">
+              <h3>The Need for Executive Search</h3>
+              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the India partner with executive search firms...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+            </div>
+            <div className="insight-content">
+              <h3>Benefits of Executive Search Services</h3>
+              <p>The advantages of dedicated executive search include access to passive talent, faster placements, higher retention, and a stronger organizational culture.</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+            </div>
+            <div className="insight-content">
+              <h3>How Executive Search Works at Your Advantage?</h3>
+              <p>The competitive edge in business comes from exceptional leadership. A strategic executive search partner ensures your leadership pipeline is always future-ready...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
         .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         .hero-btn-main { background: #ffffff; color: #000; border: none; padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: 0.3s; text-decoration: none; }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }

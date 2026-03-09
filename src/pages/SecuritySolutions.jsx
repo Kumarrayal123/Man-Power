@@ -155,7 +155,7 @@ const SecuritySolutions = () => {
           </div>
 
           {/* Security Solutions Insights Section */}
-       
+
         </div>
       </div>
 
@@ -187,70 +187,70 @@ const SecuritySolutions = () => {
         </div>
       </section>
 
-         <div className="insights-section">
-            <h2 className="insights-title">Security Solutions Insights</h2>
+      <div className="insights-section">
+        <h2 className="insights-title">Security Solutions Insights</h2>
 
-            <div className="insights-grid">
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
-                </div>
-                <div className="insight-content">
-                  <h3>Brief Introduction to Security Staffing</h3>
-                  <p>Security Staffing involves deploying licensed, trained professionals to safeguard your premises, people, and assets around the clock...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
-                </div>
-                <div className="insight-content">
-                  <h3>The Growing Need for Security Solutions</h3>
-                  <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across the India...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
-                </div>
-                <div className="insight-content">
-                  <h3>Benefits of Professional Security Staffing</h3>
-                  <p>Professional security staffing reduces incidents, deters threats, protects assets, and gives management the confidence to operate at full capacity.</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
-                </div>
-                <div className="insight-content">
-                  <h3>How Security Solutions Work at Your Advantage</h3>
-                  <p>A robust security presence not only protects your facility but also boosts employee confidence, enhances your brand reputation, and ensures operational continuity...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
+        <div className="insights-grid">
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+            </div>
+            <div className="insight-content">
+              <h3>Brief Introduction to Security Staffing</h3>
+              <p>Security Staffing involves deploying licensed, trained professionals to safeguard your premises, people, and assets around the clock...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
             </div>
           </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+            </div>
+            <div className="insight-content">
+              <h3>The Growing Need for Security Solutions</h3>
+              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across the India...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+            </div>
+            <div className="insight-content">
+              <h3>Benefits of Professional Security Staffing</h3>
+              <p>Professional security staffing reduces incidents, deters threats, protects assets, and gives management the confidence to operate at full capacity.</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+            </div>
+            <div className="insight-content">
+              <h3>How Security Solutions Work at Your Advantage</h3>
+              <p>A robust security presence not only protects your facility but also boosts employee confidence, enhances your brand reputation, and ensures operational continuity...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
         .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         .hero-btn-main { background: #ffffff; color: #000; border: none; padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: 0.3s; text-decoration: none; }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }

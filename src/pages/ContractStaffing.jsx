@@ -161,7 +161,7 @@ const ContractStaffing = () => {
           </div>
 
           {/* Manpower Supply Insights Section */}
-        
+
         </div>
       </div>
 
@@ -194,70 +194,70 @@ const ContractStaffing = () => {
       </section>
 
 
-        <div className="insights-section">
-            <h2 className="insights-title">Contract Staffing Insights</h2>
+      <div className="insights-section">
+        <h2 className="insights-title">Contract Staffing Insights</h2>
 
-            <div className="insights-grid">
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight1Img} alt="Insight 1" />
-                </div>
-                <div className="insight-content">
-                  <h3>Brief Introduction to Contract Staffing</h3>
-                  <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight2Img} alt="Insight 2" />
-                </div>
-                <div className="insight-content">
-                  <h3>Need of Contract Staffing</h3>
-                  <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight3Img} alt="Insight 3" />
-                </div>
-                <div className="insight-content">
-                  <h3>Benefits of getting Contract Staffing</h3>
-                  <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight4Img} alt="Insight 4" />
-                </div>
-                <div className="insight-content">
-                  <h3>How can Contract Staffing work at Your Advantage?</h3>
-                  <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
+        <div className="insights-grid">
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight1Img} alt="Insight 1" />
+            </div>
+            <div className="insight-content">
+              <h3>Brief Introduction to Contract Staffing</h3>
+              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
             </div>
           </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight2Img} alt="Insight 2" />
+            </div>
+            <div className="insight-content">
+              <h3>Need of Contract Staffing</h3>
+              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight3Img} alt="Insight 3" />
+            </div>
+            <div className="insight-content">
+              <h3>Benefits of getting Contract Staffing</h3>
+              <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight4Img} alt="Insight 4" />
+            </div>
+            <div className="insight-content">
+              <h3>How can Contract Staffing work at Your Advantage?</h3>
+              <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
         .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         .hero-btn-main { background: #ffffff; color: #000; border: none; padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: 0.3s; text-decoration: none; }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }

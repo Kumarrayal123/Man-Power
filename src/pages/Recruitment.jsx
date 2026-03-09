@@ -41,8 +41,8 @@ const Recruitment = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Recruiting<br />Solutions in India</h1>
-            <p className="home-hero__text">Looking for expert recruitment services tailored to your business? Smaar Elysium provides top-tier talent acquisition for all industries.</p>
+            <h1 className="home-hero__title">Premier Recruitment<br />Solutions in India</h1>
+            <p className="home-hero__text">Empower your business with elite talent. We deliver strategic recruitment services to help you scale.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -63,12 +63,11 @@ const Recruitment = () => {
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Choose the best for you</h2>
-              <p>Step into the realm of our tailored recruitment services, where precision converges with excellence for an unparalleled experience. Our core features redefine manpower supply with a focus on tailored talent acquisition, meticulous candidate screening, and personalized recruitment strategies.</p>
-              <p>In the ever-evolving business environment, effective management of your workforce is a key determinant of success.</p>
-              <p>Our manpower supply services excel in delivering customized recruitment solutions crafted to suit the unique requirements of your organization. In this era of swift transformations, acquiring and retaining skilled talent holds greater significance than ever before.</p>
-              <p>Recognizing the pivotal role a qualified workforce plays in fostering business expansion, our committed team comprehensively caters to your recruitment needs. We ensure your company gains access to a diverse pool of talented professionals who are aligned with your objectives.</p>
-              <p>Allow us to serve as your strategic ally in constructing a proficient and motivated team, empowering your business to thrive amidst fierce competition in the market.</p>
+              <h2>Elevate Your Workforce with Precision Hiring</h2>
+              <p>Welcome to a new standard of recruitment. At Smaar Elysium, we blend industry expertise with a personalized touch to connect you with professionals who drive real business impact. Our approach is defined by meticulous screening, proactive sourcing, and an unwavering commitment to quality.</p>
+              <p>In today's fast-paced corporate landscape, having the right people is the ultimate competitive advantage.</p>
+              <p>We believe that successful hiring goes beyond matching resumes to job descriptions. It requires a deep understanding of your company culture, strategic objectives, and long-term vision. Our bespoke talent acquisition methods ensure we find candidates who seamlessly integrate with your team.</p>
+              <p>Partner with us to transform your hiring process. From specialized roles to volume recruitment, Smaar Elysium provides the strategic support you need to build a future-ready, high-performing organization.</p>
             </div>
 
             <div className="cbs-right">
@@ -121,10 +120,10 @@ const Recruitment = () => {
             </div>
 
             <div className="bts-right">
-              <h3>Build Your Efficient Team With Our Services</h3>
-              <p>Unleash potential begins with our commitment to understanding your unique needs. Our tailored talent acquisition ensures a seamless match between your requirements and the exceptional individuals we source.</p>
-              <p>Thorough candidate screening is the cornerstone of our process. We go beyond resumes, diving into the essence of each candidate. Our meticulous approach ensures that only the most qualified individuals make it to your shortlist.</p>
-              <p>Experience recruitment services that elevate your workforce to new heights. Let us navigate the complexities, so you can focus on building success.</p>
+              <h3>Build a High-Performing Team Tailored to You</h3>
+              <p>Unlocking your company's full potential starts with identifying your exact needs. Our precision-driven recruitment process guarantees alignment between your strategic goals and the top-tier professionals we deliver.</p>
+              <p>Rigorous candidate evaluation is the foundation of our success. We look far beyond the resume, evaluating technical skills, cultural fit, and long-term potential. This comprehensive methodology means you only interview the absolute best.</p>
+              <p>Elevate your business capabilities. Let Smaar Elysium manage the complexities of talent acquisition so that you can focus on what matters most—driving your business forward.</p>
             </div>
           </div>
 
@@ -152,11 +151,11 @@ const Recruitment = () => {
           </div>
 
           {/* Manpower Supply Insights Section */}
-         
+
         </div>
       </div>
 
-    
+
 
       {/* FAQ Section */}
       <section className="faq-section">
@@ -187,70 +186,70 @@ const Recruitment = () => {
 
 
 
-       <div className="insights-section">
-            <h2 className="insights-title">Manpower Supply Insights</h2>
+      <div className="insights-section">
+        <h2 className="insights-title">Manpower Supply Insights</h2>
 
-            <div className="insights-grid">
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
-                </div>
-                <div className="insight-content">
-                  <h3>Brief Introduction to Manpower Supply</h3>
-                  <p>Manpower Supply is when businesses hire an agency to provide for a team of experts for...</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
-                </div>
-                <div className="insight-content">
-                  <h3>Need of Manpower Supply</h3>
-                  <p>Maintaining flawless production while keeping up with the schedule is very important. This makes.....</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
-                </div>
-                <div className="insight-content">
-                  <h3>Benefits of getting Manpower Supply</h3>
-                  <p>There are tons of advantages to getting Manpower Supply from us. Some of these include:</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
-                </div>
-                <div className="insight-content">
-                  <h3>How can Manpower Supply work at Your Advantage?</h3>
-                  <p>Staying ahead in the competitive race is important for every organization. And having a strong……</p>
-                  <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link>
-                </div>
-              </div>
+        <div className="insights-grid">
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+            </div>
+            <div className="insight-content">
+              <h3>Brief Introduction to Manpower Supply</h3>
+              <p>Manpower Supply is when businesses hire an agency to provide for a team of experts for...</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
             </div>
           </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+            </div>
+            <div className="insight-content">
+              <h3>Need of Manpower Supply</h3>
+              <p>Maintaining flawless production while keeping up with the schedule is very important. This makes.....</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+            </div>
+            <div className="insight-content">
+              <h3>Benefits of getting Manpower Supply</h3>
+              <p>There are tons of advantages to getting Manpower Supply from us. Some of these include:</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+            </div>
+            <div className="insight-content">
+              <h3>How can Manpower Supply work at Your Advantage?</h3>
+              <p>Staying ahead in the competitive race is important for every organization. And having a strong……</p>
+              <Link to="/insights" className="insight-btn">
+                Read More <ChevronRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <style dangerouslySetInnerHTML={{
         __html: `
         .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         .hero-btn-main { background: #ffffff; color: #000; border: none; padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem; display: inline-block; transition: 0.3s; text-decoration: none; }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }

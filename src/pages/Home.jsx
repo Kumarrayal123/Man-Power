@@ -180,7 +180,7 @@ const Home = () => {
                         </div>
 
                         <div className="book-banner-action">
-                            <Link to="/book-manpower" className="book-banner-btn">Book Now</Link>
+                            <Link to="/contact" className="book-banner-btn">Book Now</Link>
                         </div>
                     </div>
                 </div>
@@ -275,7 +275,7 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="clients-section">
+            {/* <section className="clients-section">
                 <div className="container">
                     <div className="clients-logos-header">
                         <h2>Trusted By Industry Leaders</h2>
@@ -311,7 +311,7 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Request a Quote Section */}
             <section className="quote-section">
