@@ -53,7 +53,7 @@ const Footer = () => {
                         <ul className="footer-contact">
                             <li>
                                 <MapPin size={18} />
-                                <span>Office 103 & 104, Al Mozna Building, Al Qusais, Dubai, UAE</span>
+                                <span>Hyderabad</span>
                             </li>
                             <li>
                                 <Phone size={18} />

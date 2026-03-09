@@ -66,9 +66,7 @@ const ContactUs = () => {
               <a href="https://manpower.ae" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
 
               <p className="loc-address">
-                #1st Floor, Office No - 103 &amp; 104,<br />
-                Al Mozna Building, Near Al Nahda Metro Station, Al Qusais,<br />
-                Dubai, United Arab Emirates
+                Hyderabad
               </p>
 
               <Link to="/contact" className="loc-book-btn">Book Manpower</Link>

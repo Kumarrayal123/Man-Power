@@ -31,7 +31,7 @@ const Contact = () => {
                                 <div className="contact-card__icon"><MapPin /></div>
                                 <div className="contact-card__text">
                                     <h3>Our Office</h3>
-                                    <p>1st Floor, Office 103 & 104, Al Mozna Building, Dubai, UAE</p>
+                                    <p>Hyderabad</p>
                                 </div>
                             </div>
                             <div className="contact-card">
