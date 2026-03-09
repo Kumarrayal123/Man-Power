@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, Menu, X, ChevronDown } from 'lucide-react';
+import logo from '../../assest/logo.png';
+
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,11 +51,9 @@ const Header = () => {
             <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="container site-header__inner">
                     <Link to="/" className="site-header__logo">
-                        <div className="logo-text">
-                            <span className="logo-main">manpower</span>
-                            <div className="logo-slogan">ANY WORK. OUR MANPOWER!</div>
-                        </div>
+                        <img src={logo} alt="Manpower Logo" className="header-logo-img" />
                     </Link>
+
 
                     {/* Desktop Nav - 18px font size */}
                     <nav className="main-nav">
@@ -152,10 +152,14 @@ const Header = () => {
         .site-header.scrolled { height: 80px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); border-bottom-color: #f0f0f0; }
         .site-header__inner { display: flex; align-items: center; justify-content: space-between; width: 100%; }
         
-        .logo-text { display: flex; flex-direction: column; line-height: 1; }
-        .logo-main { font-weight: 900; font-size: 1.8rem; color: #000; text-transform: lowercase; letter-spacing: -1px; }
-        .logo-sub { color: var(--color-primary); font-weight: 900; font-size: 1.8rem; text-transform: lowercase; letter-spacing: -1px; margin-top: -5px; }
-        .logo-slogan { font-size: 0.55rem; font-weight: 800; color: var(--color-primary); letter-spacing: 0.5px; margin-top: 2px; }
+        .header-logo-img { 
+          height: 60px; 
+          width: auto; 
+          display: block;
+          transition: 0.3s;
+        }
+        .scrolled .header-logo-img { height: 50px; }
+
         
         .main-nav__list { display: flex; gap: 25px; margin-left: 40px; }
         .main-nav__item { position: relative; }

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import logo from '../../assest/logo.png';
+
 
 const Footer = () => {
     return (
@@ -9,7 +11,10 @@ const Footer = () => {
                 <div className="footer-grid">
                     {/* Brand Info */}
                     <div className="footer-col brand">
-                        <h2 className="footer-logo">MANPOWER<span>UAE</span></h2>
+                        <Link to="/" className="footer-logo-link">
+                            <img src={logo} alt="Manpower Logo" className="footer-logo-img" />
+                        </Link>
+
                         <p>Providing premium manpower solutions since 2003. We are leaders in recruitment, staffing, and HR outsourcing in the United Arab Emirates.</p>
                         <div className="social-links">
                             <a href="#"><Facebook size={18} /></a>
@@ -27,7 +32,7 @@ const Footer = () => {
                             <li><Link to="/recruitment">Recruitment</Link></li>
                             <li><Link to="/contract-staffing">Contract Staffing</Link></li>
                             <li><Link to="/executive-search">Executive Search</Link></li>
-                <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
+                            <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
                         </ul>
                     </div>
 
@@ -76,9 +81,10 @@ const Footer = () => {
         .site-footer { background: #1a1d21; color: #adb5bd; padding-top: 80px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 60px; }
         
-        .footer-logo { color: white; margin-bottom: 20px; font-weight: 800; }
-        .footer-logo span { color: var(--color-primary); }
+        .footer-logo-link { display: block; margin-bottom: 25px; }
+        .footer-logo-img { height: 70px; width: auto; filter: brightness(0) invert(1); }
         .footer-col.brand p { line-height: 1.8; margin-bottom: 25px; }
+
         
         .social-links { display: flex; gap: 10px; }
         .social-links a { width: 36px; height: 36px; background: #2a2e34; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s; }
