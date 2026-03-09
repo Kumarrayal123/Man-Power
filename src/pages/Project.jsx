@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import btsGroup7Img from "../assest/manpower-supply-meadia/project_bts.jpg";
+import btsGroup7Img from "../assest/manpower-supply-meadia/projecthero.png";
 
 const Project = () => {
   return (
@@ -79,7 +79,7 @@ const Project = () => {
       </section>
 
       {/* ── Our Clients Section (From Home Page) ── */}
-      <section className="clients-section">
+      {/* <section className="clients-section">
         <div className="container">
           <div className="clients-header">
             <h2>What Our Clients Says</h2>
@@ -119,7 +119,7 @@ const Project = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <style dangerouslySetInnerHTML={{
         __html: `

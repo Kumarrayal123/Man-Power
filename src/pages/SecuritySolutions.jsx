@@ -8,7 +8,8 @@ import secInsight1 from "../assest/manpower-supply-meadia/security_insight_intro
 import secInsight2 from "../assest/manpower-supply-meadia/security_insight_need.png";
 import secInsight3 from "../assest/manpower-supply-meadia/security_insight_benefits.png";
 import secInsight4 from "../assest/manpower-supply-meadia/security_insight_advantage.png";
-import secCbsBg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
+import secCbsBg from "../assest/manpower-supply-meadia/security_choose_best.png";
+import secBtsLeft from "../assest/manpower-supply-meadia/security_bts_left.png";
 
 const SecuritySolutions = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -108,14 +109,7 @@ const SecuritySolutions = () => {
 
           {/* Build Your Security Team Split Section */}
           <div className="build-team-split">
-            <div className="bts-left">
-              <div className="bts-workers-container">
-                <img
-                  src={btsGroup7Img}
-                  alt="Security Team"
-                  className="bts-workers-img"
-                />
-              </div>
+            <div className="bts-left" style={{ backgroundImage: `url(${secBtsLeft})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="bts-web-pill">www.smaarelysium.com</div>
               <div className="bts-contact-footer">
                 <div className="bts-contact-item">
@@ -289,8 +283,9 @@ const SecuritySolutions = () => {
         .cbs-left p { color: #888; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.7; }
         .cbs-right {
             flex: 1;
-            background-position: center;
             background-size: cover;
+            background-position: center top;
+            min-height: 500px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -352,7 +347,7 @@ const SecuritySolutions = () => {
         .service-intro h2 { font-size: 2.5rem; font-weight: 700; color: #333; }
 
         .build-team-split { display: flex; border-radius: 12px; overflow: hidden; margin-bottom: 80px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); background: transparent; position: relative; }
-        .bts-left { flex: 1; background-image: radial-gradient(circle, #ddd 1px, transparent 1px); background-size: 20px 20px; background-color: #f8f9fa; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-height: 450px; padding: 0; overflow: hidden; }
+        .bts-left { flex: 1; background-color: #111; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-height: 450px; padding: 0; overflow: hidden; }
         .bts-workers-container { width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 2; padding-top: 40px; margin-bottom: 40px; }
         .bts-workers-img { max-width: 450px; height: auto; object-fit: contain; display: block; }
         .bts-web-pill { position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); background: #fff; padding: 10px 30px; border-radius: 100px; font-weight: 600; color: #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); z-index: 3; font-size: 1.1rem; }
