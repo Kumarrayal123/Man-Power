@@ -250,7 +250,7 @@ const HROutsourcing = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
-        .home-hero { background: #dc2626; border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
+        .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
         .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
         .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
@@ -534,7 +534,7 @@ const HROutsourcing = () => {
         }
         .benefit-card h3 { font-size: 1.8rem; font-weight: 700; margin-bottom: 25px; line-height: 1.2; }
         .benefit-card p { font-size: 1.05rem; line-height: 1.6; }
-        .benefit-card.bg-red { background-color: #f23346; color: #fff; }
+        .benefit-card.bg-red { background-color: #FE7622; color: #fff; }
         .benefit-card.bg-gray { background-color: #e0e0e0; color: #333; }
         
         @media (max-width: 992px) {
@@ -575,7 +575,7 @@ const HROutsourcing = () => {
             padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px;
             color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff;
         }
-        .insight-btn:hover { border-color: #f23346; color: #f23346; background: #fdf2f3; }
+        .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
 
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .insights-grid { grid-template-columns: 1fr; } .insights-title { font-size: 2rem; } }
@@ -592,7 +592,7 @@ const HROutsourcing = () => {
         }
         .faq-icon { font-size: 1.5rem; margin-right: 15px; color: #888; font-weight: 300; width: 20px; display: inline-block; }
         .faq-question-text { font-size: 1.45rem; color: #777; font-weight: 400; transition: 0.3s; }
-        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #f23346; }
+        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #FE7622; }
         .faq-answer-container { overflow: hidden; transition: max-height 0.3s ease-in-out; background: #fafafa; }
         .faq-answer-content { padding: 30px 40px; }
         .faq-answer-content p { color: #000; font-size: 0.95rem; line-height: 1.7; margin: 0; font-weight: 400; letter-spacing: 0.2px; }

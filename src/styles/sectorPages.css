@@ -6,7 +6,7 @@
 }
 
 .home-hero {
-    background: #dc2626;
+    background: var(--color-primary);
     border-radius: 40px;
     color: white;
     padding: 80px 100px;
@@ -164,7 +164,7 @@
 
 .cbs-right {
     flex: 0.8;
-    background: #dc2626;
+    background: var(--color-primary);
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -249,7 +249,7 @@
 
 .bts-left {
     flex: 1;
-    background: #f8f9fa;
+    background: var(--color-light-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,7 +269,7 @@
 
 .bts-right {
     flex: 1;
-    background: #1f2937;
+    background: var(--color-dark);
     color: #fff;
     padding: 60px;
     display: flex;
@@ -327,7 +327,7 @@
     transform: translateX(-50%);
     width: 80px;
     height: 5px;
-    background: #dc2626;
+    background: var(--color-primary);
     border-radius: 5px;
 }
 
@@ -362,12 +362,12 @@
 }
 
 .benefit-card.bg-red {
-    background: #dc2626;
+    background: var(--color-primary);
     color: #fff;
 }
 
 .benefit-card.bg-gray {
-    background: #f3f4f6;
+    background: var(--color-light-bg);
     color: #111;
 }
 
@@ -384,7 +384,7 @@
 
 /* FAQ Section */
 .faq-section {
-    background: #f9fafb;
+    background: var(--color-light-bg);
     padding: 100px 0;
     border-radius: 40px;
 }
@@ -406,7 +406,7 @@
 
 .faq-item.active {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: #dc2626;
+    border-color: var(--color-primary);
 }
 
 .faq-question {

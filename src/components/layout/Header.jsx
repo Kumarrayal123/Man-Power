@@ -176,7 +176,7 @@ const Header = () => {
           padding: 10px 25px; border-radius: 100px; font-weight: 700; font-size: 15px;
           transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
         }
-        .nav-bk-btn:hover { background: var(--color-primary); color: #fff; box-shadow: 0 5px 15px rgba(242, 51, 70, 0.3); }
+        .nav-bk-btn:hover { background: var(--color-primary); color: #fff; box-shadow: 0 5px 15px rgba(254, 118, 34, 0.3); }
         
         .hamburger { display: none; background: none; border: none; cursor: pointer; color: #000; }
         .mobile-menu { position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: white; z-index: 999; transform: translateX(100%); transition: 0.4s; padding: 40px 0; overflow-y: auto; }

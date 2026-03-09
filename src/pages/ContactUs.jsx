@@ -140,7 +140,7 @@ const ContactUs = () => {
         /* Hero */
         .hero-wrapper { padding-top: 20px; padding-bottom: 10px; }
         .home-hero { 
-            background: #dc2626; 
+            background: var(--color-primary); 
             border-radius: 40px; 
             color: white; 
             padding: 80px 100px; 
@@ -207,7 +207,7 @@ const ContactUs = () => {
         }
         .loc-line { font-size: 1rem; color: #555; margin: 0 0 6px; line-height: 1.5; }
         .loc-line strong { color: #222; }
-        .loc-website { display: inline-block; color: #f23346; font-weight: 700; font-size: 1rem; text-decoration: none; margin: 10px 0 6px; }
+        .loc-website { display: inline-block; color: #FE7622; font-weight: 700; font-size: 1rem; text-decoration: none; margin: 10px 0 6px; }
         .loc-website:hover { text-decoration: underline; }
         .loc-address { font-size: 0.95rem; color: #777; line-height: 1.7; margin: 0 0 28px; }
         .loc-book-btn {
@@ -222,7 +222,7 @@ const ContactUs = () => {
             transition: 0.3s;
             width: fit-content;
         }
-        .loc-book-btn:hover { background: #f23346; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .loc-book-btn:hover { background: #FE7622; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
 
         @media (max-width: 900px) {
             .location-split-card { flex-direction: column; }

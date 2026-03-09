@@ -246,7 +246,7 @@ const AboutUs = () => {
         /* Hero */
         .hero-wrapper { padding-top: 20px; padding-bottom: 20px; }
         .home-hero { 
-            background: #dc2626; 
+            background: var(--color-primary); 
             border-radius: 40px; 
             color: white; 
             padding: 80px 100px; 
@@ -268,7 +268,7 @@ const AboutUs = () => {
         @media (max-width: 576px) { .home-hero { padding: 40px 25px; border-radius: 20px; } .home-hero__image { max-width: 100%; } }
 
         /* General Section Styles */
-        .section-label { color: #f23346; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; }
+        .section-label { color: #FE7622; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; }
         .section-title { font-size: 2.5rem; font-weight: 800; color: #111; margin-bottom: 20px; line-height: 1.2; }
         .section-subtitle { font-size: 1.1rem; color: #777; max-width: 600px; margin: 0 auto 50px; line-height: 1.6; }
         .text-center { text-align: center; }
@@ -281,7 +281,7 @@ const AboutUs = () => {
         .story-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .stat-box { background: #f8f9fa; padding: 40px 30px; border-radius: 20px; text-align: center; border: 1px solid #eee; transition: 0.3s; }
         .stat-box:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .stat-box.highlight { background: #f23346; color: white; border-color: #f23346; }
+        .stat-box.highlight { background: #FE7622; color: white; border-color: #FE7622; }
         .stat-number { font-size: 3rem; font-weight: 900; margin-bottom: 10px; color: #111; }
         .stat-box.highlight .stat-number, .stat-box.highlight .stat-label { color: white; }
         .stat-label { font-size: 1rem; color: #666; font-weight: 500; }
@@ -446,9 +446,9 @@ const AboutUs = () => {
         .values-section { padding: 80px 0 100px; background: #f8f9fa; }
         .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
         .value-card { background: #fff; padding: 40px 30px; border-radius: 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.04); transition: 0.4s; text-align: center; border-bottom: 4px solid transparent; }
-        .value-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: #f23346; }
-        .value-icon { width: 70px; height: 70px; background: #fff0f0; color: #f23346; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; transition: 0.4s; }
-        .value-card:hover .value-icon { background: #f23346; color: white; }
+        .value-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: #FE7622; }
+        .value-icon { width: 70px; height: 70px; background: #fff0f0; color: #FE7622; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; transition: 0.4s; }
+        .value-card:hover .value-icon { background: #FE7622; color: white; }
         .value-card h3 { font-size: 1.25rem; font-weight: 700; color: #111; margin-bottom: 15px; }
         .value-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
 
@@ -538,8 +538,8 @@ const AboutUs = () => {
             background: #fff;
         }
         .insight-btn:hover {
-            border-color: #f23346;
-            color: #f23346;
+            border-color: #FE7622;
+            color: #FE7622;
             background: #fdf2f3;
         }
 

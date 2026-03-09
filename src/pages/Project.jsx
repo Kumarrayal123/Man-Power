@@ -126,7 +126,7 @@ const Project = () => {
         /* Hero Styling */
         .hero-wrapper { padding-top: 20px; padding-bottom: 20px; }
         .home-hero { 
-            background: #dc2626; 
+            background: var(--color-primary); 
             border-radius: 40px; 
             color: white; 
             padding: 80px 100px; 

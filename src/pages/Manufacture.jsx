@@ -406,8 +406,8 @@ const Manufacture = () => {
           background: #fff;
         }
         .insight-btn:hover {
-          border-color: #f23346;
-          color: #f23346;
+          border-color: #FE7622;
+          color: #FE7622;
           background: #fdf2f3;
         }
 
@@ -466,9 +466,9 @@ const Manufacture = () => {
           border: 2px solid white;
         }
         .quote-btn:hover {
-          background: #f23346;
+          background: #FE7622;
           color: white;
-          border-color: #f23346;
+          border-color: #FE7622;
         }
 
         @media (max-width: 1200px) {

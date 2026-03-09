@@ -142,7 +142,7 @@ const Home = () => {
                             <div className="book-step">
                                 <div className="book-step-icon-wrapper">
                                     <div className="book-step-icon">
-                                        <LayoutGrid strokeWidth={1.5} size={32} color="#f23346" />
+                                        <LayoutGrid strokeWidth={1.5} size={32} color="#FE7622" />
                                     </div>
                                     <span className="book-step-badge">1</span>
                                 </div>
@@ -153,7 +153,7 @@ const Home = () => {
                             <div className="book-step">
                                 <div className="book-step-icon-wrapper">
                                     <div className="book-step-icon">
-                                        <MonitorCheck strokeWidth={1.5} size={32} color="#f23346" />
+                                        <MonitorCheck strokeWidth={1.5} size={32} color="#FE7622" />
                                     </div>
                                     <span className="book-step-badge">2</span>
                                 </div>
@@ -164,7 +164,7 @@ const Home = () => {
                             <div className="book-step">
                                 <div className="book-step-icon-wrapper">
                                     <div className="book-step-icon">
-                                        <Contact strokeWidth={1.5} size={32} color="#f23346" />
+                                        <Contact strokeWidth={1.5} size={32} color="#FE7622" />
                                     </div>
                                     <span className="book-step-badge">3</span>
                                 </div>
@@ -414,7 +414,7 @@ const Home = () => {
                 __html: `
         .hero-wrapper { padding-top: 20px; padding-bottom: 20px; }
         .home-hero { 
-            background: #dc2626; 
+            background: var(--color-primary); 
             border-radius: 40px; 
             color: white; 
             padding: 80px 100px; 
@@ -525,7 +525,7 @@ const Home = () => {
             color: #fff;
             transform: scale(1.01);
             z-index: 10;
-            box-shadow: 0 15px 30px rgba(242, 51, 70, 0.3);
+            box-shadow: 0 15px 30px rgba(254, 118, 34, 0.3);
             border-radius: 12px; 
             border-color: transparent;
         }
@@ -607,7 +607,7 @@ const Home = () => {
             right: -5px;
             width: 24px;
             height: 24px;
-            background: #f23346;
+            background: #FE7622;
             color: #fff;
             border-radius: 50%;
             display: flex;
@@ -654,11 +654,11 @@ const Home = () => {
         /* The Journey of manpower.ae Section */
         .journey-section { padding: 60px 0 80px; background: #fff; }
         .journey-grid-container {
-            background: linear-gradient(to right, #f23346, #b21b36);
+            background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
             border-radius: 20px;
             color: white;
             padding: 50px 0;
-            box-shadow: 0 15px 35px rgba(242, 51, 70, 0.2);
+            box-shadow: 0 15px 35px rgba(254, 118, 34, 0.2);
         }
         .journey-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
         .journey-item { 
@@ -784,7 +784,7 @@ const Home = () => {
         }
         .quote-form-side {
             flex: 1;
-            background: linear-gradient(135deg, #1d152a 0%, #b11d2b 100%);
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
             padding: 60px 50px;
             color: white;
             display: flex;
@@ -861,7 +861,7 @@ const Home = () => {
             font-weight: 400;
             transition: 0.3s;
         }
-        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #f23346; }
+        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #FE7622; }
         
         .faq-answer-container {
             overflow: hidden;

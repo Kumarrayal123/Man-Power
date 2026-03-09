@@ -410,8 +410,8 @@ const OilAndGas = () => {
           background: #fff;
         }
         .insight-btn:hover {
-          border-color: #f23346;
-          color: #f23346;
+          border-color: #FE7622;
+          color: #FE7622;
           background: #fdf2f3;
         }
         @media (max-width: 1200px) {

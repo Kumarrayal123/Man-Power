@@ -254,7 +254,7 @@ const ContractStaffing = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
-        .home-hero { background: #dc2626; border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
+        .home-hero { background: var(--color-primary); border-radius: 40px; color: white; padding: 80px 100px; display: flex; align-items: center; justify-content: space-between; position: relative; overflow: hidden; min-height: 500px; }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
         .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
         .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
@@ -597,7 +597,7 @@ const ContractStaffing = () => {
             line-height: 1.6;
         }
         .benefit-card.bg-red {
-            background-color: #f23346;
+            background-color: #FE7622;
             color: #fff;
         }
         .benefit-card.bg-gray {
@@ -702,8 +702,8 @@ const ContractStaffing = () => {
             background: #fff;
         }
         .insight-btn:hover {
-            border-color: #f23346;
-            color: #f23346;
+            border-color: #FE7622;
+            color: #FE7622;
             background: #fdf2f3;
         }
 
@@ -748,7 +748,7 @@ const ContractStaffing = () => {
             font-weight: 400;
             transition: 0.3s;
         }
-        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #f23346; }
+        .faq-item.active .faq-icon, .faq-item.active .faq-question-text { color: #FE7622; }
         
         .faq-answer-container {
             overflow: hidden;
