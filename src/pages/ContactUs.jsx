@@ -13,9 +13,9 @@ const ContactUs = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Contact Us<br />We're Here to Help</h1>
-            <p className="home-hero__text">Have a question, a staffing requirement, or need a consultation? Our expert team at manpower.ae is ready to assist you with the right workforce solutions.</p>
+            <p className="home-hero__text">Have a question, a staffing requirement, or need a consultation? Our expert team at Smaar Elysium is ready to assist you with the right workforce solutions.</p>
             <div className="home-hero__actions">
-              <a href="tel:+97142632006" className="hero-btn-main">Call Us Now</a>
+              <a href="tel:8885072259" className="hero-btn-main">Call Us Now</a>
             </div>
           </div>
           <div className="home-hero__image-wrapper">
@@ -59,11 +59,11 @@ const ContactUs = () => {
 
             {/* Right: Contact Details */}
             <div className="location-details-side">
-              <p className="loc-line">Tel: <strong>+971 4 2632006</strong></p>
+              <p className="loc-line">Tel: <strong>8885072259</strong></p>
               <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p>
-              <p className="loc-line">Email: <strong>info@manpower.ae</strong></p>
+              <p className="loc-line">Email: <strong>info@smaarelysium.com</strong></p>
 
-              <a href="https://manpower.ae" target="_blank" rel="noreferrer" className="loc-website">manpower.ae</a>
+              <a href="https://manpower.ae" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
 
               <p className="loc-address">
                 #1st Floor, Office No - 103 &amp; 104,<br />

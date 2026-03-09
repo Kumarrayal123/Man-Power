@@ -36,7 +36,7 @@ const Home = () => {
     return (
         <div className="home-page">
             <div className="container hero-wrapper">
-                {/* Hero Section - Refined to match manpower.ae */}
+                {/* Hero Section - Refined to match Smaar Elysium */}
                 <section className="home-hero">
                     <div className="home-hero__content">
                         <h1 className="home-hero__title">Premier Manpower &<br />Staffing Solutions in UAE</h1>
@@ -653,7 +653,7 @@ const Home = () => {
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
-        /* The Journey of manpower.ae Section */
+        /* The Journey of Smaar Elysium Section */
         .journey-section { padding: 60px 0 80px; background: #fff; }
         .journey-grid-container {
             background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));

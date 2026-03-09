@@ -59,7 +59,7 @@ const Manufacture = () => {
 
             <div className="cbs-right">
               <div className="cbs-logo">
-                <span className="logo-main">manpower</span>
+                <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-sub">.ae</span>
                 <span>®</span>
                 <span className="logo-slogan">

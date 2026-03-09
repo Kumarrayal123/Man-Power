@@ -42,7 +42,7 @@ const HROutsourcing = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">HR Outsourcing<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking to streamline your HR operations and reduce overhead? manpower.ae provides comprehensive HR Outsourcing services that keep your workforce compliant, motivated, and productive.</p>
+            <p className="home-hero__text">Looking to streamline your HR operations and reduce overhead? Smaar Elysium provides comprehensive HR Outsourcing services that keep your workforce compliant, motivated, and productive.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -78,7 +78,7 @@ const HROutsourcing = () => {
 
             <div className="cbs-right">
               <div className="cbs-logo">
-                <span className="logo-main">manpower</span><span className="logo-sub">.ae</span><span>®</span>
+                <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-slogan" style={{ display: 'block' }}>ANY WORK. OUR MANPOWER!</span>
               </div>
               <div className="cbs-overlay"></div>
@@ -91,11 +91,11 @@ const HROutsourcing = () => {
                 </div>
               </div>
               <div className="cbs-footer">
-                <div className="cbs-footer-pill">www.manpower.ae</div>
+                <div className="cbs-footer-pill">www.smaarelysium.com</div>
                 <div className="cbs-footer-info">
-                  <span><i className="fa-brands fa-whatsapp"></i> 0558777717</span>
+                  <span><i className="fa-brands fa-whatsapp"></i> 8885072259</span>
                   <span className="cbs-divider">|</span>
-                  <span>sales@manpower.ae</span>
+                  <span>sales@smaarelysium.com</span>
                 </div>
               </div>
             </div>
@@ -112,15 +112,15 @@ const HROutsourcing = () => {
                 />
               </div>
 
-              <div className="bts-web-pill">www.manpower.ae</div>
+              <div className="bts-web-pill">www.smaarelysium.com</div>
 
               <div className="bts-contact-footer">
                 <div className="bts-contact-item">
-                  <i className="fa-brands fa-whatsapp"></i> 0558777717
+                  <i className="fa-brands fa-whatsapp"></i> 8885072259
                 </div>
                 <div className="bts-contact-divider">|</div>
                 <div className="bts-contact-item">
-                  info@manpower.ae
+                  info@smaarelysium.com
                 </div>
               </div>
             </div>

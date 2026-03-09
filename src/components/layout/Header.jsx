@@ -40,9 +40,8 @@ const Header = () => {
                             <Link to="/insights">Insights</Link>
                         </nav>
                         <div className="info-bar__separator"></div>
-                        <a href="tel:+97142632006"><Phone size={14} className="icon-red" /> +971 4 2632006</a>
-                        <a href="tel:0558777717"><Phone size={14} className="icon-red" /> 055 - 8777717</a>
-                        <a href="mailto:info@manpower.ae"><Mail size={14} className="icon-red" /> info@manpower.ae</a>
+                        <a href="tel:8885072259"><Phone size={14} className="icon-red" /> 8885072259</a>
+                        <a href="mailto:info@smaarelysium.com"><Mail size={14} className="icon-red" /> info@smaarelysium.com</a>
                     </div>
                 </div>
             </div>

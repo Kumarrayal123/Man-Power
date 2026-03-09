@@ -35,14 +35,14 @@ const OilAndGas = () => {
           {/* <div className="choose-best-split">
             <div className="cbs-left">
               <h2>Expert Manpower for a Demanding Industry</h2>
-              <p>The Oil & Gas sector requires 100% precision, uncompromising safety, and deep technical expertise. At manpower.ae, we understand these critical demands and provide manpower solutions that power your operations without interruption.</p>
+              <p>The Oil & Gas sector requires 100% precision, uncompromising safety, and deep technical expertise. At Smaar Elysium, we understand these critical demands and provide manpower solutions that power your operations without interruption.</p>
               <p>From extraction and drilling to refining and distribution, our staff is equipped to handle the complexities of the energy landscape.</p>
               <p>We provide certified professionals who aren't just workers, but experts in their respective fields, ensuring that your projects in the UAE stay on track and compliant with all international energy standards.</p>
             </div>
 
             <div className="cbs-right">
               <div className="cbs-logo">
-                <span className="logo-main">manpower</span><span className="logo-sub">.ae</span><span>®</span>
+                <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-slogan" style={{ display: 'block' }}>ENERGY SECTOR SPECIALISTS</span>
               </div>
               <div className="cbs-overlay"></div>

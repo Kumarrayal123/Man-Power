@@ -57,18 +57,18 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Phone size={18} />
-                                <a href="tel:+97142632006">+971 4 2632006</a>
+                                <a href="tel:8885072259">8885072259</a>
                             </li>
                             <li>
                                 <Mail size={18} />
-                                <a href="mailto:info@manpower.ae">info@manpower.ae</a>
+                                <a href="mailto:info@smaarelysium.com">info@smaarelysium.com</a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Manpower UAE. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Smaar Elysium. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <Link to="/privacy">Privacy Policy</Link>
                         <Link to="/terms">Terms & Conditions</Link>

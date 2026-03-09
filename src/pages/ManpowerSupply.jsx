@@ -16,7 +16,7 @@ const ManpowerSupply = () => {
         },
         {
             title: "Electrical Manpower",
-            description: "No matter what industry or domain you work for, a secure electrical setup is the first layer of protection you can provide. To help you out, manpower.ae team provides experienced teams to work for you.",
+            description: "No matter what industry or domain you work for, a secure electrical setup is the first layer of protection you can provide. To help you out, Smaar Elysium team provides experienced teams to work for you.",
             roles: [
                 "Electrical Engineer", "Electrical Supervisor", "Electrical Foreman",
                 "Electrical Chargehand", "Industrial Electrician", "Normal Electrician",
@@ -34,7 +34,7 @@ const ManpowerSupply = () => {
         },
         {
             title: "Helper Manpower",
-            description: "You can already understand it from the name, a Helper is someone who assists you in timely finishing the task at hand. manpower.ae has a wide network of reliable help, who can work on your terms and requirements.",
+            description: "You can already understand it from the name, a Helper is someone who assists you in timely finishing the task at hand. Smaar Elysium has a wide network of reliable help, who can work on your terms and requirements.",
             roles: [
                 "Mechanical Helper", "Civil Helper", "Electrical Helper",
                 "General Helper", "Cleaner"

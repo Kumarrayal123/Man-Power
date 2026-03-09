@@ -43,7 +43,7 @@ const AboutUs = () => {
             <div className="journey-text-container">
               <h2 className="journey-page-heading">Our Journey</h2>
               <p className="journey-page-paragraph">
-                manpower.ae is an all-inclusive Manpower Supply Company in
+                Smaar Elysium is an all-inclusive Manpower Supply Company in
                 UAE providing the best manpower to any industries. We have
                 transformed and curated our Manpower services to fit the volatile
                 market of the region. After spending more than 15 years in this
@@ -71,7 +71,7 @@ const AboutUs = () => {
                 <h2 className="mv-title">Our Mission</h2>
                 <p className="mv-text">
                   We envision emerging as a brand that is synonymous with manpower
-                  and staffing service providing in the UAE. At manpower.ae, we
+                  and staffing service providing in the UAE. At Smaar Elysium, we
                   strive to be one-stop for all the manpower-related needs, be it
                   on-demand or contract staffing. Our team endeavors to offer skilled
                   and proficient Manpower for all the businesses requirements.

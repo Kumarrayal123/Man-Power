@@ -38,16 +38,15 @@ const Contact = () => {
                                 <div className="contact-card__icon"><Phone /></div>
                                 <div className="contact-card__text">
                                     <h3>Phone Number</h3>
-                                    <p>+971 4 2632006</p>
-                                    <p>055 - 8777717</p>
+                                    <p>8885072259</p>
                                 </div>
                             </div>
                             <div className="contact-card">
                                 <div className="contact-card__icon"><Mail /></div>
                                 <div className="contact-card__text">
                                     <h3>Email Address</h3>
-                                    <p>info@manpower.ae</p>
-                                    <p>support@manpower.ae</p>
+                                    <p>info@smaarelysium.com</p>
+                                    <p>support@smaarelysium.com</p>
                                 </div>
                             </div>
 
