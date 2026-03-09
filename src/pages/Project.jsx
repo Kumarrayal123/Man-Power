@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import btsGroup7Img from "../assest/manpower-supply-meadia/projecthero.png";
+import projectConstruction from "../assest/manpower-supply-meadia/project_construction.png";
+import projectFacility from "../assest/manpower-supply-meadia/project_facility.png";
+import projectIndustrial from "../assest/manpower-supply-meadia/project_industrial.png";
 
 const Project = () => {
   return (
@@ -11,7 +14,7 @@ const Project = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Manpower<br />Projects</h1>
-            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across the India.</p>
+            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across India — powering industries with the right workforce at the right time.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
@@ -27,48 +30,48 @@ const Project = () => {
         </section>
       </div>
 
-      {/* ── Featured Projects Grid (From Image) ── */}
+      {/* ── Featured Projects Grid ── */}
       <section className="featured-projects-section">
         <div className="container">
           <div className="custom-projects-grid">
 
             <div className="custom-project-card">
-              <div className="custom-project-image" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1512453979798-5ea4b73a88d0?q=80&w=800&auto=format&fit=crop')" }}>
+              <div className="custom-project-image" style={{ backgroundImage: `url(${projectConstruction})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Marsa Al Arab Hotel</h3>
+                  <h3 className="custom-project-title">Hyderabad Global Gateway – Construction Manpower</h3>
                   <p className="custom-project-desc">
-                    Marsa Al Arab Hotel, which is an upcoming premium hotel by Jumeirah Group, offering luxurious beachside living with panoramic view...
+                    Supplied 350+ skilled civil workers, masons, electricians, and site supervisors for a landmark commercial high-rise project in Hyderabad's HITEC City corridor, completed on schedule...
                   </p>
-                  <Link to="#" className="custom-project-link">
-                    Read More <ArrowRight size={20} strokeWidth={2} />
+                  <Link to="/contact" className="custom-project-link">
+                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="custom-project-card">
-              <div className="custom-project-image" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?q=80&w=800&auto=format&fit=crop')" }}>
+              <div className="custom-project-image" style={{ backgroundImage: `url(${projectFacility})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">The Palace</h3>
+                  <h3 className="custom-project-title">Tech Connect IT Park – Facility & Security Staffing</h3>
                   <p className="custom-project-desc">
-                    The Palace project is situated in the Hyderabad Creek Harbour district, comprising an elegant boutique hotel along with the branded...
+                    Deployed a dedicated team of 120+ facility management staff, housekeeping personnel, and licensed security officers across a 3-building IT campus in Bengaluru's Electronic City...
                   </p>
-                  <Link to="#" className="custom-project-link">
-                    Read More <ArrowRight size={20} strokeWidth={2} />
+                  <Link to="/contact" className="custom-project-link">
+                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>
             </div>
 
             <div className="custom-project-card">
-              <div className="custom-project-image" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1528702748617-c64d49f918af?q=80&w=800&auto=format&fit=crop')" }}>
+              <div className="custom-project-image" style={{ backgroundImage: `url(${projectIndustrial})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Creek Edge</h3>
+                  <h3 className="custom-project-title">Pune Industrial Plant – Manufacturing Workforce</h3>
                   <p className="custom-project-desc">
-                    The Creek Edge project is the latest development by Emaar in the Hyderabad Creek Harbour and comprises two residential towers...
+                    Provided end-to-end contract staffing of 200+ semi-skilled and skilled production workers, quality control technicians, and equipment operators for a major auto-component plant in Pune's MIDC zone...
                   </p>
-                  <Link to="#" className="custom-project-link">
-                    Read More <ArrowRight size={20} strokeWidth={2} />
+                  <Link to="/contact" className="custom-project-link">
+                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>
@@ -77,6 +80,7 @@ const Project = () => {
           </div>
         </div>
       </section>
+
 
       {/* ── Our Clients Section (From Home Page) ── */}
       {/* <section className="clients-section">
