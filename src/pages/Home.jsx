@@ -9,6 +9,12 @@ import img5 from "../assest/mp-5.jpg";
 import img6 from "../assest/mp-6.jpg";
 import img7 from "../assest/mp-7.jpg";
 import heroImage from "../assest/manpower-supply-meadia/homepagehero.png";
+import msHero from "../assest/manpower-supply-meadia/manpower-supply-hero.png";
+import rcHero from "../assest/manpower-supply-meadia/recruitment-hero.png";
+import csHero from "../assest/manpower-supply-meadia/contract-staffing-hero.png";
+import esHero from "../assest/manpower-supply-meadia/executive-search-hero.png";
+import hrHero from "../assest/manpower-supply-meadia/hr-hero.png";
+import ssHero from "../assest/manpower-supply-meadia/security-solutions-hero.png";
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(0);
 
@@ -33,8 +39,8 @@ const Home = () => {
                 {/* Hero Section - Refined to match manpower.ae */}
                 <section className="home-hero">
                     <div className="home-hero__content">
-                        <h1 className="home-hero__title">Manpower Supplier<br />in UAE</h1>
-                        <p className="home-hero__text">Looking for skilled manpower on Permanent or temporary basis? manpower.ae has got you covered!</p>
+                        <h1 className="home-hero__title">Premier Manpower &<br />Staffing Solutions in UAE</h1>
+                        <p className="home-hero__text">Empowering businesses with top-tier talent. Whether you need skilled professionals for permanent roles or a reliable workforce for temporary projects, we deliver excellence across all industries.</p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">Book Now</Link>
                         </div>
@@ -53,40 +59,40 @@ const Home = () => {
             <section className="services-section">
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label">What We Do</span>
-                        <h2 className="section-title">Our Specialized Services</h2>
+                        <span className="section-label">Our Expertise</span>
+                        <h2 className="section-title">Comprehensive Staffing Solutions</h2>
                     </div>
 
                     <div className="featured-services-grid">
                         {[
                             {
                                 title: "Manpower Supply",
-                                img: img4,
+                                img: msHero,
                                 link: "/manpower-supply"
                             },
                             {
                                 title: "Recruitment",
-                                img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800", // Office handshake
+                                img: rcHero,
                                 link: "/recruitment"
                             },
                             {
                                 title: "Contract Staffing",
-                                img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800", // Interview handshake
+                                img: csHero,
                                 link: "/contract-staffing"
                             },
                             {
                                 title: "Executive Search",
-                                img: img1,
+                                img: esHero,
                                 link: "/executive-search"
                             },
                             {
                                 title: "HR Outsourcing",
-                                img: img2,
+                                img: hrHero,
                                 link: "/hr-outsourcing"
                             },
                             {
                                 title: "Security Solutions",
-                                img: img3,
+                                img: ssHero,
                                 link: "/security-solutions"
                             }
                         ].map((service, i) => (
@@ -105,18 +111,18 @@ const Home = () => {
             <section className="supply-services-section">
                 <div className="container">
                     <div className="section-header" style={{ marginBottom: '40px' }}>
-                        <h2 className="section-title">Manpower Supply Services in Dubai, UAE</h2>
-                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>At manpower.ae, a trusted Manpower supplier in Dubai, UAE, our main aim is to supply skilled workers for short & long term at affordable rates. To attain this objective, we offer services like:</p>
+                        <h2 className="section-title">Industry-Leading Manpower Supply in Dubai</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>As a prominent staffing partner in the UAE, we specialize in deploying highly skilled, semi-skilled, and unskilled workforce customized to your project parameters. We guarantee quality personnel for optimal productivity across disciplines:</p>
                     </div>
 
                     <div className="supply-grid-container">
                         {[
-                            { title: "Civil Manpower Supply", desc: "For the Civil domain projects, we supply a professional team of Construction Manpower. Our team will ensure that you get the right quantity and quality of Manpower as per your requirements", icon: <Construction size={48} strokeWidth={1.2} />, link: "/services/civil-manpower" },
-                            { title: "Mechanical Manpower Supply", desc: "Working on a project with a deadline puts extra pressure on the existing team. Our Mechanical Manpower Supply will get you ready to deliver according to the due dates and achieve all your short term goals.", icon: <Hammer size={48} strokeWidth={1.2} />, link: "/services/mechanical-manpower" },
-                            { title: "Electrical Manpower Supply", desc: "No matter what industry or domain you work for, a secure electrical setup is the first layer of protection you can provide. As the leading Manpower Supply Company in Dubai, UAE we provides experienced teams to work for you for a designated time period.", icon: <ZapIcon size={48} />, link: "/services/electrical-manpower" },
-                            { title: "Plumbing Manpower Supply", desc: "We have been keen on the performance and quality of work of our professionals. Besides selecting adequately qualified plumbers, we conduct a periodic examination to confirm their capabilities. You may contact us for the best plumbing manpower in UAE.", icon: <Droplet size={48} strokeWidth={1.2} />, link: "/services/plumbing-manpower" },
-                            { title: "Helper Manpower Supply", desc: "Helper is someone who assists you in timely finishing the task at hand. manpower.ae has a large pool of reliable helpers, who can work on your terms and requirements.", icon: <Users size={48} strokeWidth={1.2} />, link: "/services/helper-manpower" },
-                            { title: "Cleaning Manpower Supply", desc: "Cleaner is someone who assists you in timely finishing the task at hand. manpower.ae has a large pool of reliable cleaners, who can work on your terms and requirements.", icon: <Sparkles size={48} strokeWidth={1.2} />, link: "/services/cleaning-manpower" }
+                            { title: "Civil Manpower Supply", desc: "Deploying expert construction professionals and robust labor forces to ensure structural integrity, site safety, and timely project completion for all civil engineering endeavors.", icon: <Construction size={48} strokeWidth={1.2} />, link: "/services/civil-manpower" },
+                            { title: "Mechanical Manpower Supply", desc: "Providing certified mechanical personnel equipped to handle complex industrial installations, routine maintenance, and manufacturing operations with precision.", icon: <Hammer size={48} strokeWidth={1.2} />, link: "/services/mechanical-manpower" },
+                            { title: "Electrical Manpower Supply", desc: "Supplying qualified electricians and technical specialists to execute safe, efficient, and compliant electrical installations and heavy-duty maintenance across all project scales.", icon: <ZapIcon size={48} />, link: "/services/electrical-manpower" },
+                            { title: "Plumbing Manpower Supply", desc: "Sourcing experienced and vetted plumbing professionals adept in comprehensive industrial, commercial, and residential piping and fluid systems management.", icon: <Droplet size={48} strokeWidth={1.2} />, link: "/services/plumbing-manpower" },
+                            { title: "Helper Manpower Supply", desc: "Delivering dependable, physically capable general support staff ready to assist site operations, handle logistics, and streamline your daily site requirements.", icon: <Users size={48} strokeWidth={1.2} />, link: "/services/helper-manpower" },
+                            { title: "Cleaning Manpower Supply", desc: "Deploying dedicated, trained cleaning personnel committed to maintaining pristine, hygienic, and organized environments for commercial and industrial facilities.", icon: <Sparkles size={48} strokeWidth={1.2} />, link: "/services/cleaning-manpower" }
                         ].map((item, i) => (
                             <div key={i} className="supply-card">
                                 <div className="supply-card-icon">{item.icon}</div>
@@ -134,8 +140,8 @@ const Home = () => {
                 <div className="container">
                     <div className="book-banner-inner">
                         <div className="book-banner-header">
-                            <h2>Book Manpower<br />Online in UAE</h2>
-                            <p>Quick and Easy Way to book Skilled & Unskilled labours to your<br />industry in Dubai or anywhere in the UAE</p>
+                            <h2>Seamless Resource<br />Acquisition</h2>
+                            <p>Deploy the perfect talent for your projects instantly. Our streamlined portal ensures you<br />get the exact workforce you need, anywhere across the UAE.</p>
                         </div>
 
                         <div className="book-steps-grid">
@@ -146,8 +152,8 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">1</span>
                                 </div>
-                                <h3>Select Required Category</h3>
-                                <p>You can select the categories of manpower by navigating to specified category list</p>
+                                <h3>Identify Requirements</h3>
+                                <p>Specify the distinct categories and operational domains required for your immediate project needs.</p>
                             </div>
 
                             <div className="book-step">
@@ -157,8 +163,8 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">2</span>
                                 </div>
-                                <h3>Select Trade & Quantity</h3>
-                                <p>Any type of trade and quantity can be mentioned at this stage as per your project requirements</p>
+                                <h3>Specify Volume & Scope</h3>
+                                <p>Define the exact workforce volume, precise trades, and the deployment timeframe tailored to your schedule.</p>
                             </div>
 
                             <div className="book-step">
@@ -168,8 +174,8 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">3</span>
                                 </div>
-                                <h3>Book the Manpower Online</h3>
-                                <p>Enter your contact details and Book the manpower</p>
+                                <h3>Mobilize Workforce</h3>
+                                <p>Submit your operational request and let our rapid-deployment team align the ideal personnel immediately.</p>
                             </div>
                         </div>
 
@@ -184,29 +190,29 @@ const Home = () => {
             <section className="journey-section">
                 <div className="container">
                     <div className="section-header" style={{ marginBottom: '40px' }}>
-                        <h2 className="section-title" style={{ color: '#666', fontWeight: '500' }}>The Journey of manpower.ae</h2>
+                        <h2 className="section-title" style={{ color: '#666', fontWeight: '500' }}>Our Operational Impact</h2>
                     </div>
                     <div className="journey-grid-container">
                         <div className="journey-grid">
                             <div className="journey-item">
                                 <span className="journey-num">250+</span>
-                                <h3 className="journey-label">Ongoing projects</h3>
-                                <p className="journey-desc">We believe in offering innovative and cutting-edge manpower supply services to help you get the best results.</p>
+                                <h3 className="journey-label">Active Deployments</h3>
+                                <p className="journey-desc">Currently managing and supporting massive workforces across major critical developments in the UAE.</p>
                             </div>
                             <div className="journey-item">
                                 <span className="journey-num">550+</span>
-                                <h3 className="journey-label">Happy clients</h3>
-                                <p className="journey-desc">manpower.ae has earned the trust of all its clients. We are known for having high satisfaction rates</p>
+                                <h3 className="journey-label">Partner Organizations</h3>
+                                <p className="journey-desc">Trusted by leading enterprises and conglomerates for consistent, compliant, and reliable staffing.</p>
                             </div>
                             <div className="journey-item">
                                 <span className="journey-num">1000+</span>
-                                <h3 className="journey-label">completed project</h3>
-                                <p className="journey-desc">Our team has worked in the backdrop of various industry-leading manpower supply projects in the UAE</p>
+                                <h3 className="journey-label">Projects Delivered</h3>
+                                <p className="journey-desc">A proven track record of successful manpower support and execution across highly diverse industrial sectors.</p>
                             </div>
                             <div className="journey-item">
                                 <span className="journey-num">10000+</span>
-                                <h3 className="journey-label">Trained manpower</h3>
-                                <p className="journey-desc">With a network of trained individuals, manpower.ae has also assisted in the successful completion of multiple projects.</p>
+                                <h3 className="journey-label">Professionals Deployed</h3>
+                                <p className="journey-desc">Maintaining a vast, rapidly scalable network of fully vetted, trained, and immediately available talent.</p>
                             </div>
                         </div>
                     </div>
@@ -217,11 +223,11 @@ const Home = () => {
             <section className="core-area-section">
                 <div className="container">
                     <div className="core-area-header">
-                        <h2 className="core-area-title">Our Core Area</h2>
+                        <h2 className="core-area-title">Industries We Empower</h2>
                         <p className="core-area-desc">
-                            Over the last 15 years, we have provided the best of manpower supply<br />
-                            across Dubai, Sharjah, Abu Dhabi, and other Emirates, in almost all sectors. Some of the main<br />
-                            sectors we cover include:
+                            For over a decade, our enterprise has been the driving workforce engine behind monumental<br />
+                            projects across Dubai, Abu Dhabi, and the wider UAE. We provide hyper-specialized personnel<br />
+                            solutions exclusively tailored to the rigorous demands of these pivotal sectors:
                         </p>
                     </div>
 
@@ -271,12 +277,8 @@ const Home = () => {
 
             <section className="clients-section">
                 <div className="container">
-                    <div className="clients-header">
-                        <h2>What Our Clients Says</h2>
-                    </div>
-                    <br />
                     <div className="clients-logos-header">
-                        <h2>Our Clients</h2>
+                        <h2>Trusted By Industry Leaders</h2>
                     </div>
                     <div className="marquee-container">
                         <div className="marquee-content left-to-right">
@@ -319,10 +321,10 @@ const Home = () => {
                             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000" alt="Dubai Architecture" />
                         </div>
                         <div className="quote-form-side">
-                            <span className="quote-label">Request a Quote</span>
-                            <h2 className="quote-title">Get a quick follow up!</h2>
+                            <span className="quote-label">Strategic Partnership</span>
+                            <h2 className="quote-title">Accelerate Your Projects Today</h2>
                             <p className="quote-desc">
-                                In case you have any queries or want to hire our adept manpower services, fill up this form, and our experts will get back to you!
+                                Ready to scale your operations with precision talent? Submit your requirements below, and our staffing architects will rapidly design a workforce strategy aligned seamlessly with your enterprise goals.
                             </p>
 
                             <form className="quote-form" onSubmit={(e) => e.preventDefault()}>
@@ -426,8 +428,8 @@ const Home = () => {
             min-height: 500px;
         }
         .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
-        .home-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
-        .home-hero__text { font-size: 1.2rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
+        .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
+        .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         
         .hero-btn-main { 
             background: #ffffff; color: #000; border: none; 
