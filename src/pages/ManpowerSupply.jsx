@@ -48,8 +48,8 @@ const ManpowerSupply = () => {
             <div className="service-hero">
                 <div className="container">
                     <div className="service-hero-content text-center">
-                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>Manpower Supply Company in UAE</h1>
-                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>No. 1 Manpower Supply Company in UAE, offering quality Labour Supply Services on an Hourly Basis across all the emirates. 15 Years of Service.</p>
+                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>Manpower Supply Company in India</h1>
+                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>No. 1 Manpower Supply Company in India, offering quality Labour Supply Services on an Hourly Basis across all the emirates. 15 Years of Service.</p>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <Link to="/book-manpower" className="hero-btn-main">Book Manpower Online</Link>
                         </div>

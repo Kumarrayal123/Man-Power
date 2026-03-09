@@ -41,8 +41,8 @@ const ExecutiveSearch = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Executive Search<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in the UAE.</p>
+            <h1 className="home-hero__title">Executive Search<br />Solutions in India</h1>
+            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in the India.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -213,7 +213,7 @@ const ExecutiveSearch = () => {
                 </div>
                 <div className="insight-content">
                   <h3>The Need for Executive Search</h3>
-                  <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the UAE partner with executive search firms...</p>
+                  <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the India partner with executive search firms...</p>
                   <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
                   </Link>

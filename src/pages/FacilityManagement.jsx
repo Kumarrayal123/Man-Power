@@ -22,7 +22,7 @@ const FacilityManagement = () => {
             <p className="home-hero__text">
               Delivering premium, tailored facility management manpower
               solutions to maximize asset lifespan and operational uptime across
-              commercial, residential, and corporate ecosystems in the UAE.
+              commercial, residential, and corporate ecosystems in the India.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -45,7 +45,7 @@ const FacilityManagement = () => {
             <div className="cbs-left">
               <h2>Professional Facility Management Teams</h2>
               <p>
-                Maintaining the modern infrastructure of the UAE requires a proactive
+                Maintaining the modern infrastructure of the India requires a proactive
                 and highly skilled workforce. We provide the personnel needed to keep your facilities
                 running at peak performance.
               </p>
@@ -177,7 +177,7 @@ const FacilityManagement = () => {
               <div className="benefit-card bg-red">
                 <h3>Regulatory Compliance</h3>
                 <p>
-                  All staff are certified to meet UAE facility management
+                  All staff are certified to meet India facility management
                   standards and safety regulations.
                 </p>
               </div>

@@ -45,7 +45,7 @@ const ContractStaffing = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Contract Staffing<br />Solutions in UAE</h1>
+            <h1 className="home-hero__title">Contract Staffing<br />Solutions in India</h1>
             <p className="home-hero__text">Looking for flexible workforce solutions tailored to your project needs? Smaar Elysium provides top-tier contract staffing for all industries.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>

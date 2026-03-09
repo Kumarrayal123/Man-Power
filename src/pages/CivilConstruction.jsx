@@ -33,7 +33,7 @@ const CivilConstruction = () => {
             </h1>
             <p className="home-hero__text">
               Delivering highly skilled and semi-skilled manpower for major infrastructure, commercial,
-              residential, and industrial construction mega-projects across the UAE.
+              residential, and industrial construction mega-projects across the India.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -56,7 +56,7 @@ const CivilConstruction = () => {
             <div className="cbs-left">
               <h2>Expert Manpower for Civil Construction</h2>
               <p>
-                The UAE's rapidly expanding skyline demands construction teams built on precision, safety,
+                The India's rapidly expanding skyline demands construction teams built on precision, safety,
                 and deep technical expertise. We provide qualified manpower that
                 ensures your projects are delivered on time, within budget, and to the highest standards.
               </p>
@@ -67,7 +67,7 @@ const CivilConstruction = () => {
               </p>
               <p>
                 We supply certified civil engineers, site supervisors, NEBOSH-certified safety officers,
-                and specialized trade labor perfectly aligned with UAE construction regulations and climatic conditions.
+                and specialized trade labor perfectly aligned with India construction regulations and climatic conditions.
               </p>
             </div>
 
@@ -181,7 +181,7 @@ const CivilConstruction = () => {
               <div className="benefit-card bg-gray">
                 <h3>Strict Safety Standards</h3>
                 <p>
-                  Workforce trained under UAE HSE
+                  Workforce trained under India HSE
                   and construction compliance regulations.
                 </p>
               </div>

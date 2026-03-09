@@ -21,7 +21,7 @@ const Mep = () => {
             </h1>
             <p className="home-hero__text">
               Providing specialized Mechanical, Electrical, and Plumbing manpower
-              for high-stakes installations, maintenance, and commissioning across the UAE.
+              for high-stakes installations, maintenance, and commissioning across the India.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -167,7 +167,7 @@ const Mep = () => {
               <div className="benefit-card bg-gray">
                 <h3>Safety Compliance</h3>
                 <p>
-                  All staff trained in UAE MEP safety and best practices.
+                  All staff trained in India MEP safety and best practices.
                 </p>
               </div>
 

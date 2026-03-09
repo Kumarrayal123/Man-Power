@@ -21,7 +21,7 @@ const Logistics = () => {
             </h1>
             <p className="home-hero__text">
               Agile and scalable logistics manpower solutions driving efficiency
-              across transport, warehousing, and global supply chain operations in the UAE.
+              across transport, warehousing, and global supply chain operations in the India.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -44,7 +44,7 @@ const Logistics = () => {
             <div className="cbs-left">
               <h2>Expert Supply Chain Manpower</h2>
               <p>
-                As the UAE solidifies its position as a global logistics hub, the demand
+                As the India solidifies its position as a global logistics hub, the demand
                 for rapid, accurate, and scalable workforce solutions is higher than ever.
               </p>
               <p>
@@ -167,7 +167,7 @@ const Logistics = () => {
               <div className="benefit-card bg-gray">
                 <h3>Regulated Training</h3>
                 <p>
-                  Staff trained in transport safety, handling, and UAE
+                  Staff trained in transport safety, handling, and India
                   procedures.
                 </p>
               </div>

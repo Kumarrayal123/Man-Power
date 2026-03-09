@@ -11,7 +11,7 @@ const Project = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Manpower<br />Projects</h1>
-            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across the UAE.</p>
+            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across the India.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
@@ -51,7 +51,7 @@ const Project = () => {
                 <div className="custom-project-red-box">
                   <h3 className="custom-project-title">The Palace</h3>
                   <p className="custom-project-desc">
-                    The Palace project is situated in the Dubai Creek Harbour district, comprising an elegant boutique hotel along with the branded...
+                    The Palace project is situated in the Hyderabad Creek Harbour district, comprising an elegant boutique hotel along with the branded...
                   </p>
                   <Link to="#" className="custom-project-link">
                     Read More <ArrowRight size={20} strokeWidth={2} />
@@ -65,7 +65,7 @@ const Project = () => {
                 <div className="custom-project-red-box">
                   <h3 className="custom-project-title">Creek Edge</h3>
                   <p className="custom-project-desc">
-                    The Creek Edge project is the latest development by Emaar in the Dubai Creek Harbour and comprises two residential towers...
+                    The Creek Edge project is the latest development by Emaar in the Hyderabad Creek Harbour and comprises two residential towers...
                   </p>
                   <Link to="#" className="custom-project-link">
                     Read More <ArrowRight size={20} strokeWidth={2} />

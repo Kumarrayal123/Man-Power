@@ -14,7 +14,7 @@ const AboutUs = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">About Us<br />Who We Are</h1>
-            <p className="home-hero__text">We are the leading manpower supply and recruitment agency in the UAE, dedicated to connecting exceptional talent with outstanding organizations.</p>
+            <p className="home-hero__text">We are the leading manpower supply and recruitment agency in the India, dedicated to connecting exceptional talent with outstanding organizations.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
@@ -22,7 +22,7 @@ const AboutUs = () => {
           <div className="home-hero__image-wrapper">
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop"
-              alt="Manpower UAE Team"
+              alt="Manpower India Team"
               className="home-hero__image" style={{ borderRadius: '24px' }}
             />
           </div>
@@ -36,7 +36,7 @@ const AboutUs = () => {
             <div className="journey-image-container">
               <img
                 src="https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=1000&auto=format&fit=crop"
-                alt="Dubai Skyscrapers"
+                alt="Hyderabad Skyscrapers"
                 className="journey-full-img"
               />
             </div>
@@ -44,7 +44,7 @@ const AboutUs = () => {
               <h2 className="journey-page-heading">Our Journey</h2>
               <p className="journey-page-paragraph">
                 Smaar Elysium is an all-inclusive Manpower Supply Company in
-                UAE providing the best manpower to any industries. We have
+                India providing the best manpower to any industries. We have
                 transformed and curated our Manpower services to fit the volatile
                 market of the region. After spending more than 15 years in this
                 industry, we have got both- extensive experience and a special
@@ -71,7 +71,7 @@ const AboutUs = () => {
                 <h2 className="mv-title">Our Mission</h2>
                 <p className="mv-text">
                   We envision emerging as a brand that is synonymous with manpower
-                  and staffing service providing in the UAE. At Smaar Elysium, we
+                  and staffing service providing in the India. At Smaar Elysium, we
                   strive to be one-stop for all the manpower-related needs, be it
                   on-demand or contract staffing. Our team endeavors to offer skilled
                   and proficient Manpower for all the businesses requirements.

@@ -17,7 +17,7 @@ const OilAndGas = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Oil & Gas<br />Sector</h1>
-            <p className="home-hero__text">Empowering the UAE energy sector with specialized engineering, technical, and operational experts. We provide reliable manpower solutions for upstream, midstream, and downstream operations.</p>
+            <p className="home-hero__text">Empowering the India energy sector with specialized engineering, technical, and operational experts. We provide reliable manpower solutions for upstream, midstream, and downstream operations.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
@@ -37,7 +37,7 @@ const OilAndGas = () => {
               <h2>Expert Manpower for a Demanding Industry</h2>
               <p>The Oil & Gas sector requires 100% precision, uncompromising safety, and deep technical expertise. At Smaar Elysium, we understand these critical demands and provide manpower solutions that power your operations without interruption.</p>
               <p>From extraction and drilling to refining and distribution, our staff is equipped to handle the complexities of the energy landscape.</p>
-              <p>We provide certified professionals who aren't just workers, but experts in their respective fields, ensuring that your projects in the UAE stay on track and compliant with all international energy standards.</p>
+              <p>We provide certified professionals who aren't just workers, but experts in their respective fields, ensuring that your projects in the India stay on track and compliant with all international energy standards.</p>
             </div>
 
             <div className="cbs-right">

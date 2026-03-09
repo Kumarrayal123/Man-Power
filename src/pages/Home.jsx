@@ -20,15 +20,15 @@ const Home = () => {
 
     const faqs = [
         {
-            question: "What is manpower supply in Dubai?",
-            answer: "Manpower supply in Dubai refers to the process of providing skilled and unskilled labor to companies and organizations in Dubai, UAE. This is done by manpower supply companies by first finding the right candidate and then employ them under their visa sponsorship. After adequate training these workers are supplied on temporary basis to the client companies."
+            question: "What is manpower supply in Hyderabad?",
+            answer: "Manpower supply in Hyderabad refers to the process of providing skilled and unskilled labor to companies and organizations in Hyderabad, India. This is done by manpower supply companies by first finding the right candidate and then employ them under their visa sponsorship. After adequate training these workers are supplied on temporary basis to the client companies."
         },
         {
-            question: "What are the benefits of using manpower supply services in Dubai?",
+            question: "What are the benefits of using manpower supply services in Hyderabad?",
             answer: "Benefits include flexibility in scaling workforce, reduced administrative and HR burdens, access to a wider talent pool, and cost savings on recruitment and visa processing."
         },
         {
-            question: "What types of industries in Dubai require manpower supply services?",
+            question: "What types of industries in Hyderabad require manpower supply services?",
             answer: "Various industries such as construction, facility management, logistics, manufacturing, healthcare, hospitality, and IT frequently rely on manpower supply services to meet their operational needs."
         }
     ];
@@ -39,7 +39,7 @@ const Home = () => {
                 {/* Hero Section - Refined to match Smaar Elysium */}
                 <section className="home-hero">
                     <div className="home-hero__content">
-                        <h1 className="home-hero__title">Premier Manpower &<br />Staffing Solutions in UAE</h1>
+                        <h1 className="home-hero__title">Premier Manpower &<br />Staffing Solutions in India</h1>
                         <p className="home-hero__text">Empowering businesses with top-tier talent. Whether you need skilled professionals for permanent roles or a reliable workforce for temporary projects, we deliver excellence across all industries.</p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">Book Now</Link>
@@ -111,8 +111,8 @@ const Home = () => {
             <section className="supply-services-section">
                 <div className="container">
                     <div className="section-header" style={{ marginBottom: '40px' }}>
-                        <h2 className="section-title">Industry-Leading Manpower Supply in Dubai</h2>
-                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>As a prominent staffing partner in the UAE, we specialize in deploying highly skilled, semi-skilled, and unskilled workforce customized to your project parameters. We guarantee quality personnel for optimal productivity across disciplines:</p>
+                        <h2 className="section-title">Industry-Leading Manpower Supply in Hyderabad</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>As a prominent staffing partner in the India, we specialize in deploying highly skilled, semi-skilled, and unskilled workforce customized to your project parameters. We guarantee quality personnel for optimal productivity across disciplines:</p>
                     </div>
 
                     <div className="supply-grid-container">
@@ -141,7 +141,7 @@ const Home = () => {
                     <div className="book-banner-inner">
                         <div className="book-banner-header">
                             <h2>Seamless Resource<br />Acquisition</h2>
-                            <p>Deploy the perfect talent for your projects instantly. Our streamlined portal ensures you<br />get the exact workforce you need, anywhere across the UAE.</p>
+                            <p>Deploy the perfect talent for your projects instantly. Our streamlined portal ensures you<br />get the exact workforce you need, anywhere across the India.</p>
                         </div>
 
                         <div className="book-steps-grid">
@@ -197,7 +197,7 @@ const Home = () => {
                             <div className="journey-item">
                                 <span className="journey-num">250+</span>
                                 <h3 className="journey-label">Active Deployments</h3>
-                                <p className="journey-desc">Currently managing and supporting massive workforces across major critical developments in the UAE.</p>
+                                <p className="journey-desc">Currently managing and supporting massive workforces across major critical developments in the India.</p>
                             </div>
                             <div className="journey-item">
                                 <span className="journey-num">550+</span>
@@ -226,7 +226,7 @@ const Home = () => {
                         <h2 className="core-area-title">Industries We Empower</h2>
                         <p className="core-area-desc">
                             For over a decade, our enterprise has been the driving workforce engine behind monumental<br />
-                            projects across Dubai, Abu Dhabi, and the wider UAE. We provide hyper-specialized personnel<br />
+                            projects across Hyderabad, Abu Dhabi, and the wider India. We provide hyper-specialized personnel<br />
                             solutions exclusively tailored to the rigorous demands of these pivotal sectors:
                         </p>
                     </div>
@@ -318,7 +318,7 @@ const Home = () => {
                 <div className="container">
                     <div className="quote-wrapper">
                         <div className="quote-image-side">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000" alt="Dubai Architecture" />
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000" alt="Hyderabad Architecture" />
                         </div>
                         <div className="quote-form-side">
                             <span className="quote-label">Strategic Partnership</span>
@@ -395,7 +395,7 @@ const Home = () => {
                         {[
                             { name: "Marsa Al Arab Hotel", tag: "Civil Construction", img: "https://images.unsplash.com/photo-1541976590-7139414bc5c4?q=80&w=800" },
                             { name: "The Palace Hotel", tag: "MEP Solutions", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800" },
-                            { name: "Dubai Canal Walk", tag: "Infrastructure", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=800" }
+                            { name: "Hyderabad Canal Walk", tag: "Infrastructure", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=800" }
                         ].map((project, i) => (
                             <div key={i} className="project-item">
                                 <img src={project.img} alt={project.name} />

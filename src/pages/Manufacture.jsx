@@ -21,7 +21,7 @@ const Manufacture = () => {
             </h1>
             <p className="home-hero__text">
               Supplying high-performance, skilled manpower for heavy manufacturing, assembly
-              lines, and precision industrial production facilities across the UAE.
+              lines, and precision industrial production facilities across the India.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -44,7 +44,7 @@ const Manufacture = () => {
             <div className="cbs-left">
               <h2>Manufacturing Manpower Solutions</h2>
               <p>
-                As industrial zones and smart manufacturing hubs expand across the UAE,
+                As industrial zones and smart manufacturing hubs expand across the India,
                 having a reliable, technically proficient workforce is the key to scalability.
               </p>
               <p>

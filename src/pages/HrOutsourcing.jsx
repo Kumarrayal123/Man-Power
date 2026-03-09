@@ -18,8 +18,8 @@ const HROutsourcing = () => {
       answer: "We can manage a comprehensive range of HR functions including payroll, leave and attendance tracking, employee onboarding and offboarding, benefits administration, labor law compliance, HR policy development, and performance review systems."
     },
     {
-      question: "3. How do you ensure compliance with UAE labor laws?",
-      answer: "Our HR specialists stay continuously updated with UAE labor law amendments, MOHRE regulations, and Ministerial Decrees. We proactively audit your HR practices and implement corrective measures to ensure full legal compliance at all times."
+      question: "3. How do you ensure compliance with India labor laws?",
+      answer: "Our HR specialists stay continuously updated with India labor law amendments, MOHRE regulations, and Ministerial Decrees. We proactively audit your HR practices and implement corrective measures to ensure full legal compliance at all times."
     },
     {
       question: "4. Can we outsource only specific HR functions?",
@@ -41,7 +41,7 @@ const HROutsourcing = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">HR Outsourcing<br />Solutions in UAE</h1>
+            <h1 className="home-hero__title">HR Outsourcing<br />Solutions in India</h1>
             <p className="home-hero__text">Looking to streamline your HR operations and reduce overhead? Smaar Elysium provides comprehensive HR Outsourcing services that keep your workforce compliant, motivated, and productive.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
@@ -62,7 +62,7 @@ const HROutsourcing = () => {
         <div className="service-main-content">
           <div className="service-intro">
             <h2>CHOOSE THE BEST FOR YOU</h2>
-            <p>Welcome to our HR Outsourcing Services — where operational efficiency meets workforce excellence. Our HR experts are deeply embedded in UAE labor regulations and deliver seamless, end-to-end human resources solutions.</p>
+            <p>Welcome to our HR Outsourcing Services — where operational efficiency meets workforce excellence. Our HR experts are deeply embedded in India labor regulations and deliver seamless, end-to-end human resources solutions.</p>
           </div>
 
           {/* Choose Best For You Banner */}
@@ -70,7 +70,7 @@ const HROutsourcing = () => {
             <div className="cbs-left">
               <h2>Choose the best for you</h2>
               <p>Step into the realm of our tailored HR Outsourcing services, where compliance converges with operational excellence for an unparalleled human resources experience. Our core strengths redefine HR management with a focus on payroll accuracy, regulatory compliance, and people-first strategies.</p>
-              <p>In the ever-evolving UAE business environment, effective management of your HR function is a critical determinant of organizational success and employee satisfaction.</p>
+              <p>In the ever-evolving India business environment, effective management of your HR function is a critical determinant of organizational success and employee satisfaction.</p>
               <p>Our HR Outsourcing services excel in delivering customized solutions crafted to suit the unique regulatory and cultural requirements of your organization. In this era of rapid change, maintaining a compliant and engaged workforce holds greater significance than ever before.</p>
               <p>Recognizing the strategic role that structured HR management plays in driving business performance, our expert team comprehensively manages your human resources needs — from day one through to long-term retention.</p>
               <p>Allow us to serve as your dedicated HR partner, empowering your business to reduce costs, eliminate compliance risks, and build a thriving workplace culture.</p>
@@ -128,7 +128,7 @@ const HROutsourcing = () => {
             <div className="bts-right">
               <h3>Build Your HR Foundation With Our Outsourcing Services</h3>
               <p>Unleash organizational efficiency by outsourcing your entire HR function to our specialist team. From payroll processing and leave management to MOHRE compliance and employee relations, we take full ownership of your human resources operations.</p>
-              <p>Eliminate compliance risks and administrative burden. Our dedicated HR professionals stay current with UAE labor law amendments ensuring your company is always protected, audit-ready, and aligned with the best industry practices.</p>
+              <p>Eliminate compliance risks and administrative burden. Our dedicated HR professionals stay current with India labor law amendments ensuring your company is always protected, audit-ready, and aligned with the best industry practices.</p>
               <p>Experience HR management that transforms your workforce into a competitive advantage. Let us handle the complexities of people operations, so you can focus entirely on growing your business.</p>
             </div>
           </div>
@@ -145,8 +145,8 @@ const HROutsourcing = () => {
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>UAE Labor Law Compliance</h3>
-                <p>Our HR specialists continuously monitor MOHRE regulations and UAE labor law updates. We proactively audit your HR practices and implement corrective measures before issues arise.</p>
+                <h3>India Labor Law Compliance</h3>
+                <p>Our HR specialists continuously monitor MOHRE regulations and India labor law updates. We proactively audit your HR practices and implement corrective measures before issues arise.</p>
               </div>
 
               <div className="benefit-card bg-red">
@@ -213,7 +213,7 @@ const HROutsourcing = () => {
                 </div>
                 <div className="insight-content">
                   <h3>The Need for HR Outsourcing</h3>
-                  <p>Managing HR in-house demands significant time, expertise, and resources. This is why organizations across the UAE choose to outsource their HR functions to specialists...</p>
+                  <p>Managing HR in-house demands significant time, expertise, and resources. This is why organizations across the India choose to outsource their HR functions to specialists...</p>
                   <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
                   </Link>
