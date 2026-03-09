@@ -4,6 +4,11 @@ import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/security-solutions-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/security_bts.jpg";
+import secInsight1 from "../assest/manpower-supply-meadia/security_insight_intro.png";
+import secInsight2 from "../assest/manpower-supply-meadia/security_insight_need.png";
+import secInsight3 from "../assest/manpower-supply-meadia/security_insight_benefits.png";
+import secInsight4 from "../assest/manpower-supply-meadia/security_insight_advantage.png";
+import secCbsBg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
 
 const SecuritySolutions = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -19,11 +24,11 @@ const SecuritySolutions = () => {
     },
     {
       question: "3. What types of security roles do you staff for?",
-      answer: "We provide staffing across a wide spectrum of security roles including static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in the India."
+      answer: "We provide staffing across a wide spectrum of security roles including static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in the UAE."
     },
     {
-      question: "4. How do you ensure compliance with India security regulations?",
-      answer: "All our security personnel hold valid SIRA (Security Industry Regulatory Agency) licenses as required by India law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf."
+      question: "4. How do you ensure compliance with UAE security regulations?",
+      answer: "All our security personnel hold valid SIRA (Security Industry Regulatory Agency) licenses as required by UAE law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf."
     },
     {
       question: "5. Can you provide security staff for short-term events or projects?",
@@ -41,8 +46,8 @@ const SecuritySolutions = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Security Staffing<br />Solutions in India</h1>
-            <p className="home-hero__text">Looking for professional, SIRA-licensed security personnel for your business or facility? Smaar Elysium provides trusted, industry-compliant security staffing solutions across the India.</p>
+            <h1 className="home-hero__title">Security Staffing<br />Solutions in UAE</h1>
+            <p className="home-hero__text">Looking for professional, SIRA-licensed security personnel for your business or facility? Smaar Elysium provides trusted, industry-compliant security staffing solutions across the UAE.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -76,7 +81,7 @@ const SecuritySolutions = () => {
               <p>Allow us to serve as your trusted security partner — deploying vetted, licensed, and battle-ready professionals who form a reliable shield around your business operations.</p>
             </div>
 
-            <div className="cbs-right">
+            <div className="cbs-right" style={{ backgroundImage: `url(${secCbsBg})` }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
@@ -139,7 +144,7 @@ const SecuritySolutions = () => {
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
                 <h3>SIRA-Licensed Personnel</h3>
-                <p>Every security officer we deploy is fully licensed by SIRA (Security Industry Regulatory Agency) as mandated by India law. We manage all licensing, renewals, and compliance documentation on your behalf.</p>
+                <p>Every security officer we deploy is fully licensed by SIRA (Security Industry Regulatory Agency) as mandated by UAE law. We manage all licensing, renewals, and compliance documentation on your behalf.</p>
               </div>
 
               <div className="benefit-card bg-gray">
@@ -149,7 +154,7 @@ const SecuritySolutions = () => {
 
               <div className="benefit-card bg-red">
                 <h3>Rapid & Scalable Deployment</h3>
-                <p>Security needs can arise without warning. We maintain a ready pool of trained security professionals, enabling rapid deployment for emergency coverage, events, and new site setups across the India.</p>
+                <p>Security needs can arise without warning. We maintain a ready pool of trained security professionals, enabling rapid deployment for emergency coverage, events, and new site setups across the UAE.</p>
               </div>
             </div>
           </div>
@@ -193,53 +198,53 @@ const SecuritySolutions = () => {
         <div className="insights-grid">
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+              <img src={secInsight1} alt="Security Staffing Introduction" />
             </div>
             <div className="insight-content">
               <h3>Brief Introduction to Security Staffing</h3>
               <p>Security Staffing involves deploying licensed, trained professionals to safeguard your premises, people, and assets around the clock...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+              <img src={secInsight2} alt="Security Solutions Need" />
             </div>
             <div className="insight-content">
               <h3>The Growing Need for Security Solutions</h3>
-              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across the India...</p>
-              <Link to="/insights" className="insight-btn">
+              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across the UAE...</p>
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+              <img src={secInsight3} alt="Security Staffing Benefits" />
             </div>
             <div className="insight-content">
               <h3>Benefits of Professional Security Staffing</h3>
               <p>Professional security staffing reduces incidents, deters threats, protects assets, and gives management the confidence to operate at full capacity.</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+              <img src={secInsight4} alt="Security Solutions Advantage" />
             </div>
             <div className="insight-content">
               <h3>How Security Solutions Work at Your Advantage</h3>
               <p>A robust security presence not only protects your facility but also boosts employee confidence, enhances your brand reputation, and ensures operational continuity...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -284,7 +289,8 @@ const SecuritySolutions = () => {
         .cbs-left p { color: #888; margin-bottom: 15px; font-size: 1.05rem; line-height: 1.7; }
         .cbs-right {
             flex: 1;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200') center/cover;
+            background-position: center;
+            background-size: cover;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -346,7 +352,7 @@ const SecuritySolutions = () => {
         .service-intro h2 { font-size: 2.5rem; font-weight: 700; color: #333; }
 
         .build-team-split { display: flex; border-radius: 12px; overflow: hidden; margin-bottom: 80px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); background: transparent; position: relative; }
-        .bts-left { flex: 1; background-image: url('https://manpower.ae/wp-content/themes/manpower/assets/images/dots-pattern.png'); background-color: #f8f9fa; background-size: cover; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-height: 450px; padding: 0; overflow: hidden; }
+        .bts-left { flex: 1; background-image: radial-gradient(circle, #ddd 1px, transparent 1px); background-size: 20px 20px; background-color: #f8f9fa; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-height: 450px; padding: 0; overflow: hidden; }
         .bts-workers-container { width: 100%; height: 100%; display: flex; align-items: flex-end; justify-content: center; position: relative; z-index: 2; padding-top: 40px; margin-bottom: 40px; }
         .bts-workers-img { max-width: 450px; height: auto; object-fit: contain; display: block; }
         .bts-web-pill { position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); background: #fff; padding: 10px 30px; border-radius: 100px; font-weight: 600; color: #333; box-shadow: 0 5px 15px rgba(0,0,0,0.1); z-index: 3; font-size: 1.1rem; }

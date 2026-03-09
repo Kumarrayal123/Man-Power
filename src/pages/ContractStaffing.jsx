@@ -80,7 +80,7 @@ const ContractStaffing = () => {
               <p>Allow us to serve as your strategic ally in constructing a proficient and motivated contract team, empowering your business to thrive amidst fierce competition in the market.</p>
             </div>
 
-            <div className="cbs-right">
+            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
@@ -306,7 +306,8 @@ const ContractStaffing = () => {
         }
         .cbs-right {
             flex: 1;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200') center/cover;
+            background-position: center;
+            background-size: cover;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -447,7 +448,8 @@ const ContractStaffing = () => {
         
         .bts-left {
             flex: 1;
-            background-image: url('https://manpower.ae/wp-content/themes/manpower/assets/images/dots-pattern.png');
+            background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+            background-size: 20px 20px;
             background-color: #f8f9fa;
             background-size: cover;
             position: relative;

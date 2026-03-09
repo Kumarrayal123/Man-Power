@@ -63,7 +63,7 @@ const ContactUs = () => {
               <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p>
               <p className="loc-line">Email: <strong>info@smaarelysium.com</strong></p>
 
-              <a href="https://manpower.ae" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
+              <a href="https://smaarelysium.com" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
 
               <p className="loc-address">
                 Hyderabad

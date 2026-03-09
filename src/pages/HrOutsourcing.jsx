@@ -447,7 +447,8 @@ const HROutsourcing = () => {
         }
         .bts-left {
             flex: 1;
-            background-image: url('https://manpower.ae/wp-content/themes/manpower/assets/images/dots-pattern.png');
+            background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+            background-size: 20px 20px;
             background-color: #f8f9fa;
             background-size: cover;
             position: relative;

@@ -443,7 +443,9 @@ const Recruitment = () => {
         }
         .bts-left {
             flex: 1;
-            background: #f4f5f7 url('https://manpower.ae/wp-content/themes/manpower/assets/images/dots-pattern.png') center;
+            background: #f4f5f7;
+            background-image: radial-gradient(circle, #ddd 1px, transparent 1px);
+            background-size: 20px 20px;
             padding: 40px;
             position: relative;
             display: flex;
