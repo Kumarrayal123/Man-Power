@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/recruitment-hero.png";
-import btsImg from "../assest/manpower-supply-meadia/recruitment_bts.jpg";
-import btsGroup7Img from "../assest/manpower-supply-meadia/recruitment_bts_new.jpg";
+import btsImg from "../assest/manpower-supply-meadia/recruitment_hiring.png";
+import btsGroup7Img from "../assest/manpower-supply-meadia/recruitment_team.png";
+import insight1 from "../assest/manpower-supply-meadia/insight_intro.png";
+import insight2 from "../assest/manpower-supply-meadia/insight_need.png";
+import insight3 from "../assest/manpower-supply-meadia/insight_benefits.png";
+import insight4 from "../assest/manpower-supply-meadia/insight_advantage.png";
 
 const Recruitment = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -70,10 +74,10 @@ const Recruitment = () => {
               <p>Partner with us to transform your hiring process. From specialized roles to volume recruitment, Smaar Elysium provides the strategic support you need to build a future-ready, high-performing organization.</p>
             </div>
 
-            <div className="cbs-right">
+            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>ANY WORK. OUR MANPOWER!</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
@@ -192,53 +196,53 @@ const Recruitment = () => {
         <div className="insights-grid">
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+              <img src={insight1} alt="Insight 1" />
             </div>
             <div className="insight-content">
               <h3>Brief Introduction to Manpower Supply</h3>
               <p>Manpower Supply is when businesses hire an agency to provide for a team of experts for...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+              <img src={insight2} alt="Insight 2" />
             </div>
             <div className="insight-content">
               <h3>Need of Manpower Supply</h3>
               <p>Maintaining flawless production while keeping up with the schedule is very important. This makes.....</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+              <img src={insight3} alt="Insight 3" />
             </div>
             <div className="insight-content">
               <h3>Benefits of getting Manpower Supply</h3>
               <p>There are tons of advantages to getting Manpower Supply from us. Some of these include:</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+              <img src={insight4} alt="Insight 4" />
             </div>
             <div className="insight-content">
               <h3>How can Manpower Supply work at Your Advantage?</h3>
               <p>Staying ahead in the competitive race is important for every organization. And having a strong……</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -298,7 +302,6 @@ const Recruitment = () => {
         }
         .cbs-right {
             flex: 1;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200') center/cover;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -337,6 +340,27 @@ const Recruitment = () => {
         .cbs-ordinary { font-size: 3rem; font-weight: 900; display: block; margin-top: -10px; color: #fff; letter-spacing: 1px; }
         .cbs-find { font-size: 1.8rem; font-weight: 600; color: #3b82f6; display: block; margin-top: 5px; }
         .cbs-executives { font-size: 3rem; color: #3b82f6; font-weight: 900; display: block; margin-top: -10px; }
+
+        @media (max-width: 768px) {
+            .cbs-left { padding: 40px 25px; }
+            .cbs-left h2 { font-size: 1.8rem; }
+            .cbs-text-block { transform: translateY(0); padding: 20px; text-align: center; }
+            .cbs-go-beyond { font-size: 1.5rem; }
+            .cbs-ordinary { font-size: 2.22rem; }
+            .cbs-find { font-size: 1.25rem; }
+            .cbs-executives { font-size: 2.22rem; }
+            .cbs-footer-info { font-size: 0.9rem; flex-direction: column; gap: 5px; }
+            .cbs-divider { display: none; }
+            .bts-right h3 { font-size: 1.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .cbs-go-beyond { font-size: 1.25rem; }
+            .cbs-ordinary { font-size: 1.8rem; }
+            .cbs-find { font-size: 1.1rem; }
+            .cbs-executives { font-size: 1.8rem; }
+            .cbs-footer-pill { font-size: 0.8rem; letter-spacing: 1px; top: -13px; }
+        }
 
         .cbs-footer {
             position: relative;

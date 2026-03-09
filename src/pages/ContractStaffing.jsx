@@ -83,7 +83,7 @@ const ContractStaffing = () => {
             <div className="cbs-right">
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>ANY WORK. OUR MANPOWER!</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
@@ -205,9 +205,9 @@ const ContractStaffing = () => {
             <div className="insight-content">
               <h3>Brief Introduction to Contract Staffing</h3>
               <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -218,9 +218,9 @@ const ContractStaffing = () => {
             <div className="insight-content">
               <h3>Need of Contract Staffing</h3>
               <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -231,9 +231,9 @@ const ContractStaffing = () => {
             <div className="insight-content">
               <h3>Benefits of getting Contract Staffing</h3>
               <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -244,9 +244,9 @@ const ContractStaffing = () => {
             <div className="insight-content">
               <h3>How can Contract Staffing work at Your Advantage?</h3>
               <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -345,6 +345,27 @@ const ContractStaffing = () => {
         .cbs-ordinary { font-size: 3rem; font-weight: 900; display: block; margin-top: -10px; color: #fff; letter-spacing: 1px; }
         .cbs-find { font-size: 1.8rem; font-weight: 600; color: #3b82f6; display: block; margin-top: 5px; }
         .cbs-executives { font-size: 3rem; color: #3b82f6; font-weight: 900; display: block; margin-top: -10px; }
+
+        @media (max-width: 768px) {
+            .cbs-left { padding: 40px 25px; }
+            .cbs-left h2 { font-size: 1.8rem; }
+            .cbs-text-block { transform: translateY(0); padding: 20px; text-align: center; }
+            .cbs-go-beyond { font-size: 1.5rem; }
+            .cbs-ordinary { font-size: 2.2rem; }
+            .cbs-find { font-size: 1.2rem; }
+            .cbs-executives { font-size: 2.2rem; }
+            .cbs-footer-info { font-size: 0.9rem; flex-direction: column; gap: 5px; }
+            .cbs-divider { display: none; }
+            .bts-right h3 { font-size: 1.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .cbs-go-beyond { font-size: 1.2rem; }
+            .cbs-ordinary { font-size: 1.7rem; }
+            .cbs-find { font-size: 1.1rem; }
+            .cbs-executives { font-size: 1.7rem; }
+            .cbs-footer-pill { font-size: 0.8rem; letter-spacing: 1px; top: -13px; }
+        }
 
         .cbs-footer {
             position: relative;

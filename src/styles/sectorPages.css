@@ -234,6 +234,54 @@
         padding: 40px;
         text-align: left;
     }
+
+    .cbs-text-block {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .cbs-go-beyond {
+        font-size: 1.4rem;
+    }
+
+    .cbs-ordinary {
+        font-size: 2rem;
+    }
+
+    .cbs-find {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .cbs-executives {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cbs-left {
+        padding: 30px 20px;
+    }
+
+    .cbs-left h2 {
+        font-size: 1.8rem;
+    }
+
+    .cbs-go-beyond {
+        font-size: 1.2rem;
+    }
+
+    .cbs-ordinary {
+        font-size: 1.7rem;
+    }
+
+    .cbs-find {
+        font-size: 1.1rem;
+    }
+
+    .cbs-executives {
+        font-size: 1.7rem;
+    }
 }
 
 /* Build Team Split */

@@ -79,7 +79,7 @@ const SecuritySolutions = () => {
             <div className="cbs-right">
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>ANY WORK. OUR MANPOWER!</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
@@ -301,6 +301,27 @@ const SecuritySolutions = () => {
         .cbs-ordinary { font-size: 3rem; font-weight: 900; display: block; margin-top: -10px; color: #fff; letter-spacing: 1px; }
         .cbs-find { font-size: 1.8rem; font-weight: 600; color: #3b82f6; display: block; margin-top: 5px; }
         .cbs-executives { font-size: 3rem; color: #3b82f6; font-weight: 900; display: block; margin-top: -10px; }
+
+        @media (max-width: 768px) {
+            .cbs-left { padding: 40px 25px; }
+            .cbs-left h2 { font-size: 1.8rem; }
+            .cbs-text-block { transform: translateY(0); padding: 20px; text-align: center; }
+            .cbs-go-beyond { font-size: 1.5rem; }
+            .cbs-ordinary { font-size: 2.2rem; }
+            .cbs-find { font-size: 1.2rem; }
+            .cbs-executives { font-size: 2.2rem; }
+            .cbs-footer-info { font-size: 0.9rem; flex-direction: column; gap: 5px; }
+            .cbs-divider { display: none; }
+            .bts-right h3 { font-size: 1.8rem; }
+        }
+
+        @media (max-width: 480px) {
+            .cbs-go-beyond { font-size: 1.2rem; }
+            .cbs-ordinary { font-size: 1.7rem; }
+            .cbs-find { font-size: 1.1rem; }
+            .cbs-executives { font-size: 1.7rem; }
+            .cbs-footer-pill { font-size: 0.8rem; letter-spacing: 1px; top: -13px; }
+        }
         .cbs-footer { position: relative; z-index: 2; background: #ac1420; color: #fff; display: flex; justify-content: center; padding: 25px; align-items: center; }
         .cbs-footer-pill { background: #fff; color: #ac1420; padding: 6px 30px; border-radius: 20px; font-weight: 600; position: absolute; top: -17px; font-size: 1rem; letter-spacing: 3px; }
         .cbs-footer-info { display: flex; gap: 20px; font-size: 1.1rem; font-weight: 400; margin-top: 10px; letter-spacing: 1px; }
