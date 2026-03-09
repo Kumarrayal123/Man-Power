@@ -4,6 +4,11 @@ import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/executivesearch_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/executive_search_bts.jpg";
+import insight1Img from "../assest/manpower-supply-meadia/exec_insight_intro.png";
+import insight2Img from "../assest/manpower-supply-meadia/exec_insight_need.png";
+import insight3Img from "../assest/manpower-supply-meadia/exec_insight_benefits.png";
+import insight4Img from "../assest/manpower-supply-meadia/exec_insight_advantage.png";
+import cbsBgImg from "../assest/manpower-supply-meadia/executive_search_choose_best.png";
 
 const ExecutiveSearch = () => {
   const [openFaq, setOpenFaq] = useState(0);
@@ -41,8 +46,8 @@ const ExecutiveSearch = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Executive Search<br />Solutions in India</h1>
-            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in the India.</p>
+            <h1 className="home-hero__title">Executive Search<br />Solutions in UAE</h1>
+            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in the UAE.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -76,7 +81,7 @@ const ExecutiveSearch = () => {
               <p>Allow us to serve as your trusted partner in building a world-class leadership team, empowering your business to thrive and achieve sustainable excellence.</p>
             </div>
 
-            <div className="cbs-right">
+            <div className="cbs-right" style={{ backgroundImage: `url(${cbsBgImg})` }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
                 <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
@@ -196,53 +201,53 @@ const ExecutiveSearch = () => {
         <div className="insights-grid">
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335548682.png" alt="Insight 1" />
+              <img src={insight1Img} alt="Insight 1" />
             </div>
             <div className="insight-content">
               <h3>Brief Introduction to Executive Search</h3>
               <p>Executive Search is a specialized recruitment service focused on identifying and placing senior leaders and C-suite executives for organizations...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_4-e1734335583764.png" alt="Insight 2" />
+              <img src={insight2Img} alt="Insight 2" />
             </div>
             <div className="insight-content">
               <h3>The Need for Executive Search</h3>
-              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the India partner with executive search firms...</p>
-              <Link to="/insights" className="insight-btn">
+              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across the UAE partner with executive search firms...</p>
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_1-e1734335607370.png" alt="Insight 3" />
+              <img src={insight3Img} alt="Insight 3" />
             </div>
             <div className="insight-content">
               <h3>Benefits of Executive Search Services</h3>
               <p>The advantages of dedicated executive search include access to passive talent, faster placements, higher retention, and a stronger organizational culture.</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src="https://manpower.ae/wp-content/uploads/2024/12/group_5-e1734335634676.png" alt="Insight 4" />
+              <img src={insight4Img} alt="Insight 4" />
             </div>
             <div className="insight-content">
               <h3>How Executive Search Works at Your Advantage?</h3>
               <p>The competitive edge in business comes from exceptional leadership. A strategic executive search partner ensures your leadership pipeline is always future-ready...</p>
-              <Link to="/insights" className="insight-btn">
+              {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
@@ -301,8 +306,8 @@ const ExecutiveSearch = () => {
             line-height: 1.7;
         }
         .cbs-right {
-            flex: 1;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200') center/cover;
+            background-position: center;
+            background-size: cover;
             position: relative;
             display: flex;
             flex-direction: column;
