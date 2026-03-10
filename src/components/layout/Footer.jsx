@@ -33,6 +33,7 @@ const Footer = () => {
                             <li><Link to="/contract-staffing">Contract Staffing</Link></li>
                             <li><Link to="/executive-search">Executive Search</Link></li>
                             <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
+                            <li><Link to="/security-solutions">Security Solutions</Link></li>
                         </ul>
                     </div>
 
@@ -40,10 +41,12 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 className="footer-title">Sectors</h4>
                         <ul className="footer-links">
-                            <li><Link to="/oil-gas">Oil & Gas</Link></li>
-                            <li><Link to="/oil-gas">Civil Construction</Link></li>
-                            <li><Link to="/oil-gas">Infrastructure</Link></li>
-                            <li><Link to="/oil-gas">MEP Solutions</Link></li>
+                            <li><Link to="/oil-gas">Oil &amp; Gas</Link></li>
+                            <li><Link to="/civil-construction">Civil Construction</Link></li>
+                            <li><Link to="/facility-management">Facility Management</Link></li>
+                            <li><Link to="/logistics">Logistics</Link></li>
+                            <li><Link to="/manufacture">Manufacture</Link></li>
+                            <li><Link to="/mep">MEP Solutions</Link></li>
                         </ul>
                     </div>
 
