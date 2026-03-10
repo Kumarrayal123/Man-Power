@@ -60,7 +60,7 @@ const Mep = () => {
             <div className="cbs-right">
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-sub">.ae</span>
+                {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
                   MEP SPECIALISTS
@@ -107,7 +107,7 @@ const Mep = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Mechanical & HVAC</h3>
                 <p>
@@ -118,7 +118,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Electrical Engineering</h3>
                 <p>
@@ -129,7 +129,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Plumbing & Piping</h3>
                 <p>
@@ -140,7 +140,7 @@ const Mep = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Fire & Life Safety</h3>
                 <p>
@@ -181,7 +181,7 @@ const Mep = () => {
             </div>
           </section>
 
-          <section className="clients-section">
+          {/* <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>
@@ -219,7 +219,7 @@ const Mep = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Request a Quote Section */}
           <div className="quote-section">
@@ -253,9 +253,9 @@ const Mep = () => {
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
                   <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -266,9 +266,9 @@ const Mep = () => {
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
                   <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -279,9 +279,9 @@ const Mep = () => {
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>
                   <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
