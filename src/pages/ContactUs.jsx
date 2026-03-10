@@ -59,8 +59,8 @@ const ContactUs = () => {
 
             {/* Right: Contact Details */}
             <div className="location-details-side">
-              <p className="loc-line">Tel: <strong>8885072259</strong></p>
-              <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p>
+              <p className="loc-line">Mobile: <strong>8885072259</strong></p>
+              {/* <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p> */}
               <p className="loc-line">Email: <strong>info@smaarelysium.com</strong></p>
 
               <a href="https://smaarelysium.com" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
