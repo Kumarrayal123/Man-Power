@@ -74,7 +74,7 @@ const CivilConstruction = () => {
             <div className="cbs-right">
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-sub">.ae</span>
+                {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
                   CONSTRUCTION SECTOR SPECIALISTS
@@ -121,7 +121,7 @@ const CivilConstruction = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Infrastructure & Earthworks</h3>
                 <p>
@@ -132,7 +132,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>High-Rise & Commercial</h3>
                 <p>
@@ -143,7 +143,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Finishing & Fit-Out</h3>
                 <p>
@@ -154,7 +154,7 @@ const CivilConstruction = () => {
             </div>
 
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Heavy Machinery Operators</h3>
                 <p>
@@ -196,7 +196,7 @@ const CivilConstruction = () => {
             </div>
           </section>
 
-          <section className="clients-section">
+          {/* <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>
@@ -234,7 +234,7 @@ const CivilConstruction = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Request a Quote Section */}
           <div className="quote-section">
@@ -268,9 +268,9 @@ const CivilConstruction = () => {
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
                   <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -281,9 +281,9 @@ const CivilConstruction = () => {
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
                   <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -294,9 +294,9 @@ const CivilConstruction = () => {
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>
                   <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

@@ -77,14 +77,14 @@ const OilAndGas = () => {
           {/* ── Focus on Domains Section (From User Image) ── */}
           <div className="domains-container">
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Upstream Extraction</h3>
                 <p>Skilled personnel for exploration and production, including drilling engineers, rig operators, geoscientists, and offshore survival-certified crews.</p>
               </div>
             </div>
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Midstream Logistics</h3>
                 <p>Expertise in storage and transportation with pipeline technicians, terminal operators, and logistics coordinators ensuring seamless energy distribution.</p>
@@ -93,7 +93,7 @@ const OilAndGas = () => {
 
             {/* New Card 3 */}
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Downstream Refining</h3>
                 <p>We provide chemical engineers, process operators, and maintenance technicians specialized in refinery production, petrochemicals, and facility turnarounds.</p>
@@ -102,7 +102,7 @@ const OilAndGas = () => {
 
             {/* New Card 4 */}
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Shutdowns & Turnarounds</h3>
                 <p>Rapid mobilization of large, multi-disciplinary workforces for scheduled plant maintenance, ensuring minimal downtime and strict operational safety.</p>
@@ -111,7 +111,7 @@ const OilAndGas = () => {
 
             {/* New Card 5 */}
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>HSE & Compliance</h3>
                 <p>Dedicated Safety Officers, QA/QC Inspectors, and Environmental Engineers ensuring your operations meet all local and international energy sector regulations.</p>
@@ -120,7 +120,7 @@ const OilAndGas = () => {
 
             {/* New Card 6 */}
             <div className="domain-box">
-              
+
               <div className="domain-content">
                 <h3>Technical Maintenance</h3>
                 <p>Supplying certified welders, pipefitters, electricians, and mechanical fitters experienced in maintaining complex oilfield and plant machinery.</p>
@@ -130,7 +130,7 @@ const OilAndGas = () => {
 
 
           {/* ── Our Clients Section (From Home Page) ── */}
-          <section className="clients-section">
+          {/* <section className="clients-section">
             <div className="clients-header">
               <h2 className="section-header-mobile">What Our Clients Says</h2>
             </div>
@@ -168,7 +168,7 @@ const OilAndGas = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* Request a Quote Section */}
           <div className="quote-section">
@@ -191,9 +191,9 @@ const OilAndGas = () => {
                 <div className="insight-content">
                   <h3>Brief Introduction to Contract Staffing</h3>
                   <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -204,9 +204,9 @@ const OilAndGas = () => {
                 <div className="insight-content">
                   <h3>Need of Contract Staffing</h3>
                   <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -217,9 +217,9 @@ const OilAndGas = () => {
                 <div className="insight-content">
                   <h3>Benefits of getting Contract Staffing</h3>
                   <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
 
@@ -230,9 +230,9 @@ const OilAndGas = () => {
                 <div className="insight-content">
                   <h3>How can Contract Staffing work at Your Advantage?</h3>
                   <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                  <Link to="/insights" className="insight-btn">
+                  {/* <Link to="/insights" className="insight-btn">
                     Read More <ChevronRight size={18} />
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
