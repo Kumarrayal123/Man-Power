@@ -28,7 +28,7 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 className="footer-title">Our Services</h4>
                         <ul className="footer-links">
-                            <li><Link to="/manpower-supply">Manpower Supply</Link></li>
+                            <li><Link to="/">Manpower Supply</Link></li>
                             <li><Link to="/recruitment">Recruitment</Link></li>
                             <li><Link to="/contract-staffing">Contract Staffing</Link></li>
                             <li><Link to="/executive-search">Executive Search</Link></li>
