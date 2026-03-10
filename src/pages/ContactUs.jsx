@@ -84,7 +84,14 @@ const ContactUs = () => {
                 Hyderabad
               </p>
 
-              <Link to="/contact" className="loc-book-btn">Book Manpower</Link>
+              <a
+                href="#contact-form"
+                className="loc-book-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >Book Manpower</a>
             </div>
           </div>
         </div>
@@ -106,7 +113,7 @@ const ContactUs = () => {
       </div>
 
 
-      <section className="quote-section">
+      <section id="contact-form" className="quote-section">
         <div className="container">
           <div className="quote-wrapper">
             <div className="quote-image-side">
