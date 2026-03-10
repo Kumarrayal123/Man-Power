@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
+import SEOHead from '../components/SEOHead';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart, ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/OilGasSector-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/oilandgas_bts.jpg";
@@ -12,6 +13,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/oilandgas_insigh
 const OilAndGas = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="Oil & Gas Sector Manpower Supply in India | Technical & Engineering Staff | Smaar Elysium"
+        description="Smaar Elysium supplies certified Oil & Gas sector professionals across India — drilling engineers, rig operators, HSE officers, pipeline technicians, and refinery specialists for upstream, midstream, and downstream operations."
+        keywords="oil gas manpower India, petroleum sector staffing, drilling engineers India, HSE officers oil gas, refinery manpower supply, upstream downstream staffing India, Smaar Elysium oil gas"
+        canonical="https://www.smaarelysium.com/oil-and-gas"
+      />
       {/* ── Home Page Style Hero ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

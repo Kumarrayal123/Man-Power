@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/recruitment-hero.png";
@@ -39,8 +40,25 @@ const Recruitment = () => {
     }
   ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer }
+    }))
+  };
+
   return (
     <div className="service-page recruitment-page">
+      <SEOHead
+        title="Premier Recruitment Solutions in India – Smaar Elysium"
+        description="Smaar Elysium offers expert recruitment services in India. From permanent hiring to volume recruitment, we connect the right talent to your business. Call +91-8885072259."
+        keywords="recruitment agency India, recruitment agency Hyderabad, talent acquisition India, permanent staffing Hyderabad"
+        canonical="https://smaarelysium.com/recruitment"
+        schema={faqSchema}
+      />
       {/* Hero Section - Using Home Page Style */}
       <div className="container hero-wrapper">
         <section className="home-hero">

@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
+import SEOHead from '../components/SEOHead';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
   return (
     <div className="contact-page">
+      <SEOHead
+        title="Contact Smaar Elysium | Manpower Supply & Staffing Agency in India"
+        description="Contact Smaar Elysium for manpower supply, contract staffing, executive search, HR outsourcing, and security staffing services across India. Reach us at 8885072259 or sales@smaarelysium.com."
+        keywords="contact Smaar Elysium, manpower agency contact India, staffing company Hyderabad, hire manpower India contact, workforce solutions contact, Smaar Elysium phone"
+        canonical="https://www.smaarelysium.com/contact"
+        faqSchema={[
+          { question: "How can I contact Smaar Elysium for manpower services?", answer: "You can reach Smaar Elysium by calling 8885072259, emailing sales@smaarelysium.com, or filling out the contact form on our website. Our team responds promptly to all enquiries." },
+          { question: "Where is Smaar Elysium located?", answer: "Smaar Elysium is headquartered in Hyderabad, India, and provides manpower supply and staffing services across all major cities and industrial zones throughout the country." },
+          { question: "How quickly can Smaar Elysium deploy manpower after contact?", answer: "Depending on the role and location, Smaar Elysium can mobilize manpower within 24 to 72 hours for urgent requirements. For large-scale deployments, our team will provide a detailed mobilization timeline upon enquiry." },
+          { question: "Does Smaar Elysium provide manpower for both small and large projects?", answer: "Yes. We serve businesses of all sizes — from small site contracts requiring a few workers to large-scale industrial projects requiring hundreds of skilled professionals across multiple locations." }
+        ]}
+      />
 
       {/* ── Home Page Style Hero ── */}
       <div className="container hero-wrapper">

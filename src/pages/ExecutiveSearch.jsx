@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/executivesearch_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/executive_search_bts.jpg";
@@ -42,6 +43,19 @@ const ExecutiveSearch = () => {
 
   return (
     <div className="service-page recruitment-page">
+      <SEOHead
+        title="Executive Search Services in India | C-Suite & Leadership Hiring | Smaar Elysium"
+        description="Smaar Elysium provides confidential executive search services across India. We identify and place senior leaders, directors, and C-suite executives for organizations in all major sectors."
+        keywords="executive search India, C-suite hiring India, leadership recruitment, senior management recruitment, headhunting services India, director level hiring, Smaar Elysium executive search"
+        canonical="https://www.smaarelysium.com/executive-search"
+        faqSchema={[
+          { question: "What makes your executive search process unique?", answer: "Our executive search process is distinguished by deep industry intelligence, confidential outreach, and a network of senior-level professionals, ensuring we identify and place leadership talent that drives long-term organizational success." },
+          { question: "How do you identify senior-level candidates?", answer: "We leverage an extensive proprietary network, market mapping techniques, and direct headhunting to identify passive senior candidates who are not actively job searching but are the ideal fit for your leadership role." },
+          { question: "What industries do you specialize in for executive placement?", answer: "Our executive search practice spans construction, engineering, finance, technology, healthcare, hospitality, and retail — providing cross-industry expertise for C-suite and director-level placements." },
+          { question: "How do you ensure confidentiality during the executive search?", answer: "We conduct all executive searches with the highest level of discretion. Our structured NDAs, private outreach protocols, and vetted communication procedures protect both the client and the candidate throughout every stage." },
+          { question: "What is the typical timeline for an executive placement?", answer: "Depending on the seniority and specificity of the role, executive searches typically conclude within 6 to 12 weeks. We provide regular progress updates and interim shortlists so you are always in control." }
+        ]}
+      />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">

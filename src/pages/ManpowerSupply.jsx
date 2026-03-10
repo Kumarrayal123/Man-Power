@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 const ManpowerSupply = () => {
     const supplyCategories = [
@@ -44,6 +45,12 @@ const ManpowerSupply = () => {
 
     return (
         <div className="service-page manpower-supply-page">
+            <SEOHead
+                title="Manpower Supply Services in India – Civil, Electrical & Mechanical"
+                description="Smaar Elysium is a top manpower supply company in India providing civil, electrical, mechanical, and helper manpower for construction and industrial projects. 15+ years of expertise."
+                keywords="manpower supply India, civil manpower Hyderabad, electrical manpower India, mechanical manpower supply, helper manpower India"
+                canonical="https://smaarelysium.com/services/manpower-supply"
+            />
             {/* Hero Section */}
             <div className="service-hero">
                 <div className="container">

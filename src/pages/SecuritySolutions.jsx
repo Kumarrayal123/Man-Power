@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/security-solutions-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/security_bts.jpg";
@@ -43,6 +44,19 @@ const SecuritySolutions = () => {
 
   return (
     <div className="service-page recruitment-page">
+      <SEOHead
+        title="Security Staffing Solutions in India | Licensed Security Personnel | Smaar Elysium"
+        description="Smaar Elysium provides licensed, trained security personnel for businesses across India. We deploy static guards, mobile patrol officers, CCTV operators, and event security teams with full compliance."
+        keywords="security staffing India, licensed security guards India, security personnel agency, corporate security solutions India, event security India, CCTV operators India, Smaar Elysium security"
+        canonical="https://www.smaarelysium.com/security-solutions"
+        faqSchema={[
+          { question: "What makes your security staffing solutions unique?", answer: "Our security staffing solutions stand out through a rigorous vetting process that filters for background integrity, physical fitness, and behavioral competency — ensuring we deploy only the most reliable and professionally trained security personnel." },
+          { question: "How thorough is your security personnel screening process?", answer: "We conduct extensive background checks, criminal record verification, employment history validation, and psychometric assessments. Each candidate undergoes security-specific competency testing before being presented to your organization." },
+          { question: "What types of security roles do you staff for?", answer: "We provide staffing across static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in India." },
+          { question: "How do you ensure compliance with Indian security regulations?", answer: "All our security personnel hold valid licenses as required by Indian law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf." },
+          { question: "Can you provide security staff for short-term events or projects?", answer: "Absolutely. We offer flexible security staffing solutions for both long-term operational needs and short-term assignments such as events, exhibitions, construction sites, and VIP visits — deploying vetted personnel rapidly when needed." }
+        ]}
+      />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">

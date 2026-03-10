@@ -13,6 +13,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/civilconstructionsector-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/civilconstruction_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/civilconstruction_insight_1.jpg";
@@ -23,6 +24,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/civilconstructio
 const CivilConstruction = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="Civil Construction Manpower Supply in India | Site Engineers & Skilled Labour | Smaar Elysium"
+        description="Smaar Elysium delivers skilled civil construction manpower across India including site engineers, masons, steel fixers, formwork carpenters, and heavy machinery operators for infrastructure and building projects."
+        keywords="civil construction manpower India, site engineers India, construction workers supply, building contractor manpower, skilled labour construction India, structural workers India, Smaar Elysium construction"
+        canonical="https://www.smaarelysium.com/civil-construction"
+      />
 
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">

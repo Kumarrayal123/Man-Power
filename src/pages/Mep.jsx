@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/plumbing-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/mep_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/mep_insight_1.jpg";
@@ -12,6 +13,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/mep_insight_4.jp
 const Mep = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="MEP Manpower Supply in India | Mechanical Electrical Plumbing Technicians | Smaar Elysium"
+        description="Smaar Elysium provides certified MEP technicians across India — HVAC engineers, industrial electricians, plumbers, pipefitters, and fire & life safety specialists for installation, commissioning, and maintenance projects."
+        keywords="MEP manpower India, HVAC technicians India, electricians staffing India, plumbers supply India, mechanical engineers India, fire safety technicians, MEP workers agency, Smaar Elysium MEP"
+        canonical="https://www.smaarelysium.com/mep"
+      />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

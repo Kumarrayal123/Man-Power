@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import btsGroup7Img from "../assest/manpower-supply-meadia/projecthero.png";
 import projectConstruction from "../assest/manpower-supply-meadia/project_construction.png";
 import projectFacility from "../assest/manpower-supply-meadia/project_facility.png";
@@ -9,6 +10,12 @@ import projectIndustrial from "../assest/manpower-supply-meadia/project_industri
 const Project = () => {
   return (
     <div className="project-page">
+      <SEOHead
+        title="Manpower Projects Portfolio | Staffing Case Studies in India | Smaar Elysium"
+        description="Explore Smaar Elysium's successful manpower supply projects across India — from construction mega-projects in Hyderabad to facility management in Bengaluru and manufacturing plant staffing in Pune."
+        keywords="manpower projects India, staffing case studies India, construction workforce projects, facility management staffing projects, manufacturing plant manpower, Smaar Elysium projects"
+        canonical="https://www.smaarelysium.com/projects"
+      />
       {/* ── Home Page Style Hero ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

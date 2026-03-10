@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/logistics-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/logistics_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/logistics_insight_1.jpg";
@@ -12,6 +13,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/logistics_insigh
 const Logistics = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="Logistics & Supply Chain Manpower in India | Warehouse & Transport Staffing | Smaar Elysium"
+        description="Smaar Elysium supplies skilled logistics professionals across India including forklift operators, warehouse staff, heavy vehicle drivers, freight forwarders, and inventory clerks for distribution and supply chain operations."
+        keywords="logistics manpower India, warehouse staffing India, supply chain workforce, forklift operators India, heavy vehicle drivers India, freight forwarding staff, Smaar Elysium logistics"
+        canonical="https://www.smaarelysium.com/logistics"
+      />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

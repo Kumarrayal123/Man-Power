@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/hr-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/hroutsourcing_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/hr_outsourcing_bts.jpg";
@@ -42,6 +43,19 @@ const HROutsourcing = () => {
 
   return (
     <div className="service-page recruitment-page">
+      <SEOHead
+        title="HR Outsourcing Services in India | Payroll & Compliance Management | Smaar Elysium"
+        description="Smaar Elysium offers comprehensive HR Outsourcing services in India including payroll processing, labour law compliance, employee lifecycle management, and HR policy development."
+        keywords="HR outsourcing India, payroll outsourcing India, HR management services, labour law compliance India, HR BPO India, employee management outsourcing, Smaar Elysium HR"
+        canonical="https://www.smaarelysium.com/hr-outsourcing"
+        faqSchema={[
+          { question: "What makes your HR Outsourcing service unique?", answer: "Our HR Outsourcing service stands out through a fully integrated approach that takes ownership of your entire HR function — from payroll processing and compliance to employee relations and performance management — so your internal team can focus on strategic priorities." },
+          { question: "Which HR functions can you manage on our behalf?", answer: "We can manage payroll, leave and attendance tracking, employee onboarding and offboarding, benefits administration, labor law compliance, HR policy development, and performance review systems." },
+          { question: "How do you ensure compliance with Indian labour laws?", answer: "Our HR specialists stay continuously updated with Indian labour law amendments, Ministry of Labour regulations, and statutory notifications. We proactively audit your HR practices and implement corrective measures to ensure full legal compliance at all times." },
+          { question: "Can we outsource only specific HR functions?", answer: "Absolutely. We offer flexible HR Outsourcing models — from full HR function management to selective outsourcing of specific areas such as payroll, recruitment, or compliance. You choose the scope that best suits your needs and budget." },
+          { question: "How do you handle confidentiality of employee data?", answer: "We operate with rigorous data protection protocols aligned with international standards. All employee information is stored securely, access is strictly controlled, and our agreements include comprehensive confidentiality and data privacy clauses." }
+        ]}
+      />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">

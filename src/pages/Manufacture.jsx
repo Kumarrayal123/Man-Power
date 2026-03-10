@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/manufacture_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/manufacture_insight_1.jpg";
@@ -12,6 +13,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/manufacture_insi
 const Manufacture = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="Manufacturing Sector Manpower in India | Industrial & Production Workers | Smaar Elysium"
+        description="Smaar Elysium delivers certified manufacturing manpower across India including CNC operators, welders, quality inspectors, assembly line workers, and industrial maintenance technicians for factories and production plants."
+        keywords="manufacturing manpower India, industrial workers supply, CNC operators India, welders staffing India, production workers agency, quality control technicians, Smaar Elysium manufacturing"
+        canonical="https://www.smaarelysium.com/manufacturing"
+      />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

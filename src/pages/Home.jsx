@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Construction, Hammer, Shield, Users, Briefcase, BarChart, Droplet, Sparkles, LayoutGrid, MonitorCheck, Contact } from 'lucide-react';
 import img1 from "../assest/mp-1.jpg";
@@ -33,8 +34,25 @@ const Home = () => {
         }
     ];
 
+    const homeFaqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map(f => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer }
+        }))
+    };
+
     return (
         <div className="home-page">
+            <SEOHead
+                title="Premier Manpower & Staffing Solutions in India"
+                description="Smaar Elysium is India's leading manpower supply and staffing agency based in Hyderabad. Trusted by 500+ companies for recruitment, contract staffing, and HR outsourcing since 2003."
+                keywords="manpower supply India, staffing agency Hyderabad, recruitment agency India, manpower company Hyderabad"
+                canonical="https://smaarelysium.com/"
+                schema={homeFaqSchema}
+            />
             <div className="container hero-wrapper">
                 {/* Hero Section - Refined to match Smaar Elysium */}
                 <section className="home-hero">

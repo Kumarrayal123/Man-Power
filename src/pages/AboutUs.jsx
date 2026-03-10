@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import sectorInsight1Img from "../assest/manpower-supply-meadia/aboutus_insight_1.jpg";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/aboutus_insight_2.jpg";
 import sectorInsight3Img from "../assest/manpower-supply-meadia/aboutus_insight_3.jpg";
@@ -13,6 +14,12 @@ import visionBg from "../assest/manpower-supply-meadia/contract_staffing_bts.jpg
 const AboutUs = () => {
   return (
     <div className="about-page">
+      <SEOHead
+        title="About Smaar Elysium | Premier Manpower & Staffing Agency in India"
+        description="Smaar Elysium is a trusted manpower supply and staffing agency based in India with 15+ years of expertise. We connect businesses with skilled professionals across construction, logistics, security, oil & gas, and more."
+        keywords="about Smaar Elysium, manpower agency India, staffing company India, workforce solutions India, HR consultancy India, labour supply company, best manpower agency Hyderabad"
+        canonical="https://www.smaarelysium.com/about"
+      />
 
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">

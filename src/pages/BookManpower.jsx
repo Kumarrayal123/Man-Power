@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Plus, Minus, CheckCircle, Info } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const tradesData = {
     Civil: [
@@ -58,6 +59,12 @@ const BookManpower = () => {
 
     return (
         <div className="booking-page">
+            <SEOHead
+                title="Book Manpower Online | Request Skilled Workers in India | Smaar Elysium"
+                description="Book your required manpower online with Smaar Elysium. Select trade categories, specify quantities, and submit your workforce request. We supply civil workers, MEP technicians, drivers, security guards, and more across India."
+                keywords="book manpower India, hire workers online India, request skilled labour, manpower booking form, civil workers booking, MEP technicians India, Smaar Elysium book"
+                canonical="https://www.smaarelysium.com/book-manpower"
+            />
             <section className="page-hero">
                 <div className="container">
                     <h1 className="page-hero__title">Book Manpower</h1>

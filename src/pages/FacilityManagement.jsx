@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector.png";
 import btsImg from "../assest/manpower-supply-meadia/facilitymanagement_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_1.jpg";
@@ -12,6 +13,12 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/facilitymanageme
 const FacilityManagement = () => {
   return (
     <div className="oil-gas-page">
+      <SEOHead
+        title="Facility Management Manpower in India | Hard & Soft Services Staffing | Smaar Elysium"
+        description="Smaar Elysium provides comprehensive facility management manpower across India including MEP technicians, cleaning crews, security personnel, and front-of-house staff for commercial and residential properties."
+        keywords="facility management manpower India, MEP technicians staffing, cleaning staff agency India, facility services staff, building maintenance workers India, housekeeping staff India, Smaar Elysium facility"
+        canonical="https://www.smaarelysium.com/facility-management"
+      />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">

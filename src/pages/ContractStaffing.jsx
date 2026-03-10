@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/contract-staffing-hero.png";
@@ -39,8 +40,25 @@ const ContractStaffing = () => {
     }
   ];
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(f => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer }
+    }))
+  };
+
   return (
     <div className="service-page recruitment-page">
+      <SEOHead
+        title="Contract Staffing Solutions in India – Smaar Elysium"
+        description="Smaar Elysium provides flexible contract staffing solutions across India. Scale your workforce quickly with skilled and verified contract professionals. Contact us today."
+        keywords="contract staffing India, temporary staffing Hyderabad, flexible workforce India, contract employees India"
+        canonical="https://smaarelysium.com/contract-staffing"
+        schema={faqSchema}
+      />
       {/* Hero Section - Using Home Page Style */}
       <div className="container hero-wrapper">
         <section className="home-hero">
