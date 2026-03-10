@@ -199,6 +199,19 @@ const ManpowerSupply = () => {
             .supply-category-block { padding: 25px; }
             .roles-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
             .category-header h2 { font-size: 1.6rem; }
+            .manpower-supply-page .service-hero { padding: 60px 0; }
+        }
+        @media (max-width: 576px) {
+            .manpower-supply-page .service-hero { padding: 50px 0; }
+            .manpower-supply-page .service-hero h1 { font-size: 1.8rem !important; }
+            .manpower-supply-page .service-hero p { font-size: 0.95rem !important; }
+            .supply-category-block { padding: 20px; }
+            .roles-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .category-header h2 { font-size: 1.4rem; }
+            .supply-content-section { padding: 50px 0; }
+        }
+        @media (max-width: 400px) {
+            .roles-grid { grid-template-columns: 1fr; }
         }
         `}} />
         </div>

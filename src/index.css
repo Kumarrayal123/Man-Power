@@ -39,6 +39,15 @@ body {
   line-height: 1.7;
   background: var(--color-white);
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent images and embeds from causing horizontal scroll */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 h1,

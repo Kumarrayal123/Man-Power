@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
+import contactHyderabadCity from "../assest/manpower-supply-meadia/contact_hyderabad_city.png";
+import contactQuoteOffice from "../assest/manpower-supply-meadia/contact_quote_office.png";
 import SEOHead from '../components/SEOHead';
 
 const ContactUs = () => {
@@ -63,7 +65,7 @@ const ContactUs = () => {
             {/* Left: Hyderabad City Image */}
             <div className="location-image-side">
               <img
-                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1400&auto=format&fit=crop"
+                src={contactHyderabadCity}
                 alt="Hyderabad India Skyline"
                 className="location-city-img"
               />
@@ -108,7 +110,7 @@ const ContactUs = () => {
         <div className="container">
           <div className="quote-wrapper">
             <div className="quote-image-side">
-              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000" alt="Hyderabad Architecture" />
+              <img src={contactQuoteOffice} alt="Smaar Elysium Office Meeting" />
             </div>
             <div className="quote-form-side">
               <span className="quote-label">Request a Quote</span>

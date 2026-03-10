@@ -108,11 +108,14 @@ const Footer = () => {
         .footer-bottom-links a:hover { color: white; }
         
         @media (max-width: 992px) {
-          .footer-grid { grid-template-columns: 1fr 1fr; }
+          .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
         }
         @media (max-width: 600px) {
-          .footer-grid { grid-template-columns: 1fr; }
-          .footer-bottom { flex-direction: column; text-align: center; gap: 15px; }
+          .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+          .footer-bottom-inner { flex-direction: column; text-align: center; gap: 10px; padding: 20px; }
+          .footer-bottom-links a { margin-left: 0; }
+          .footer-logo-img { height: 55px; }
+          .site-footer { padding-top: 50px; }
         }
       `}} />
         </footer>

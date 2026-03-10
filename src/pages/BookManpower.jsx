@@ -207,6 +207,15 @@ const BookManpower = () => {
           .booking-layout { grid-template-columns: 1fr; }
           .summary-card { position: static; }
         }
+        @media (max-width: 576px) {
+          .booking-page .page-hero { padding: 50px 0; }
+          .booking-page .page-hero__title { font-size: 1.8rem; }
+          .booking-page .page-hero p { font-size: 0.95rem; }
+          .category-tabs { gap: 6px; }
+          .cat-tab { padding: 10px 18px; font-size: 0.82rem; }
+          .trades-grid { grid-template-columns: 1fr; }
+          .summary-card { padding: 20px; }
+        }
       `}} />
         </div>
     );

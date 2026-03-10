@@ -195,6 +195,16 @@ const Header = () => {
         .mobile-dropdown li:last-child { margin-bottom: 0; }
         .mobile-dropdown a { font-size: 1.1rem; font-weight: 500; color: #444; }
         
+        @media (max-width: 1100px) {
+          .main-nav__list { gap: 15px; margin-left: 20px; }
+          .main-nav__item > a, .nav-dropdown-trigger { font-size: 15px; gap: 4px; }
+          .nav-bk-btn { padding: 9px 16px; font-size: 13px; letter-spacing: 0.5px; }
+          .header-logo-img { height: 50px; }
+          .scrolled .header-logo-img { height: 44px; }
+          .info-bar__contact { gap: 12px; }
+          .info-bar__contact a { font-size: 0.82rem; }
+          .info-bar__links a { font-size: 0.82rem; }
+        }
         @media (max-width: 992px) {
           .main-nav, .info-bar { display: none; }
           .hamburger { display: block; margin-left: 20px; }

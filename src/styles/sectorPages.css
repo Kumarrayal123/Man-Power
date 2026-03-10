@@ -353,6 +353,29 @@
     }
 }
 
+@media (max-width: 576px) {
+    .bts-right {
+        padding: 30px 20px;
+    }
+
+    .bts-right h3 {
+        font-size: 1.7rem;
+    }
+
+    .bts-right p {
+        font-size: 1rem;
+    }
+
+    .build-team-split {
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+
+    .bts-left {
+        height: 260px;
+    }
+}
+
 /* Why Choose Us Section */
 .why-choose-us-section {
     margin-bottom: 100px;
@@ -427,6 +450,21 @@
     .benefit-card {
         min-height: auto;
         padding: 60px 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefit-card {
+        padding: 40px 25px;
+    }
+
+    .benefit-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .faq-section {
+        border-radius: 20px;
+        padding: 60px 0;
     }
 }
 
@@ -664,4 +702,113 @@
     color: #666;
     margin-bottom: 20px;
     transition: 0.3s;
+}
+
+/* ── Global overflow prevention ── */
+.service-page,
+.oil-gas-page,
+.about-page,
+.contact-page,
+.project-page,
+.booking-page {
+    overflow-x: hidden;
+}
+
+/* ── cbs-left small phone fix ── */
+@media (max-width: 576px) {
+    .cbs-left {
+        padding: 30px 20px;
+    }
+
+    .cbs-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .cbs-left p {
+        font-size: 0.95rem;
+    }
+
+    .choose-best-split {
+        border-radius: 15px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ── FAQ text sizing on small phones ── */
+@media (max-width: 576px) {
+    .faq-question {
+        padding: 18px 20px;
+    }
+
+    .faq-question span {
+        font-size: 1rem;
+    }
+
+    .faq-answer p {
+        font-size: 0.95rem;
+        padding: 0 20px 20px;
+    }
+
+    .faq-container {
+        padding: 0 10px;
+    }
+}
+
+/* ── Domain boxes on phones ── */
+@media (max-width: 480px) {
+    .domain-box {
+        padding: 30px 25px;
+        border-radius: 20px;
+        min-height: auto;
+    }
+
+    .domain-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .domain-content p {
+        font-size: 0.95rem;
+    }
+
+    .domains-container {
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+}
+
+/* ── Hero image never wider than screen ── */
+@media (max-width: 480px) {
+    .home-hero {
+        padding: 35px 18px;
+        border-radius: 16px;
+    }
+
+    .home-hero__title {
+        font-size: 1.9rem;
+    }
+
+    .hero-btn-main {
+        padding: 12px 28px;
+        font-size: 1rem;
+    }
+
+    .hero-workers-img {
+        max-width: 100%;
+    }
+}
+
+/* ── Service content section padding on phones ── */
+@media (max-width: 480px) {
+    .service-content-section {
+        padding: 40px 0;
+    }
+
+    .clients-section {
+        padding: 50px 0 70px;
+    }
+
+    .why-choose-us-section {
+        margin-bottom: 50px;
+    }
 }
