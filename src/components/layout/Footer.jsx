@@ -66,8 +66,10 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div className="footer-bottom">
+            <div className="footer-bottom">
+                <div className="footer-bottom-inner">
                     <p>&copy; {new Date().getFullYear()} Smaar Elysium. All rights reserved.</p>
                     <div className="footer-bottom-links">
                         <a href="https://thepatternscompany.com/" target="_blank" rel="noreferrer">Designed by The Patterns Company</a>
@@ -97,7 +99,8 @@ const Footer = () => {
         .footer-contact i, .footer-contact svg { color: var(--color-primary); flex-shrink: 0; }
         .footer-contact span, .footer-contact a { color: #adb5bd; }
         
-        .footer-bottom { border-top: 1px solid #2a2e34; padding: 25px 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+        .footer-bottom { background: #fe7623; border-top: 1px solid #2a2e34; font-size: 0.85rem; color: #fff; width: 100%; }
+        .footer-bottom-inner { max-width: 1200px; margin: 0 auto; padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; }
         .footer-bottom-links a { margin-left: 20px; }
         .footer-bottom-links a:hover { color: white; }
         
