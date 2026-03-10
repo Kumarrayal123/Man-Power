@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, Menu, X, ChevronDown } from 'lucide-react';
 import logo from '../../assest/logo.png';
@@ -8,7 +8,9 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileDropdown, setMobileDropdown] = useState(null); // 'services' | 'sectors' | null
+    const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | null
     const location = useLocation();
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,7 +23,27 @@ const Header = () => {
     useEffect(() => {
         setIsMenuOpen(false);
         setMobileDropdown(null);
+        setActiveDropdown(null);
     }, [location]);
+
+    // Close dropdown when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (navRef.current && !navRef.current.contains(e.target)) {
+                setActiveDropdown(null);
+            }
+        };
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const toggleDesktopDropdown = (menu) => {
+        setActiveDropdown(activeDropdown === menu ? null : menu);
+    };
+
+    const closeDropdown = () => {
+        setActiveDropdown(null);
+    };
 
     const toggleMobileDropdown = (menu) => {
         setMobileDropdown(mobileDropdown === menu ? null : menu);
@@ -55,29 +77,29 @@ const Header = () => {
 
 
                     {/* Desktop Nav - 18px font size */}
-                    <nav className="main-nav">
+                    <nav className="main-nav" ref={navRef}>
                         <ul className="main-nav__list">
-                            <li className="main-nav__item has-dropdown">
-                                <span className="nav-dropdown-trigger">Manpower Services <ChevronDown size={14} /></span>
+                            <li className={`main-nav__item has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
+                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('services')}>Manpower Services <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'services' ? 'rotated' : ''}`} /></span>
                                 <ul className="dropdown">
-                                    <li><Link to="/">Manpower Supply</Link></li>
-                                    <li><Link to="/recruitment">Recruitment</Link></li>
-                                    <li><Link to="/contract-staffing">Contract Staffing</Link></li>
-                                    <li><Link to="/executive-search">Executive Search</Link></li>
-                                    <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
-                                    <li><Link to="/security-solutions">Security Solutions</Link></li>
+                                    <li><Link to="/" onClick={closeDropdown}>Manpower Supply</Link></li>
+                                    <li><Link to="/recruitment" onClick={closeDropdown}>Recruitment</Link></li>
+                                    <li><Link to="/contract-staffing" onClick={closeDropdown}>Contract Staffing</Link></li>
+                                    <li><Link to="/executive-search" onClick={closeDropdown}>Executive Search</Link></li>
+                                    <li><Link to="/hr-outsourcing" onClick={closeDropdown}>HR Outsourcing</Link></li>
+                                    <li><Link to="/security-solutions" onClick={closeDropdown}>Security Solutions</Link></li>
                                 </ul>
                             </li>
-                            <li className="main-nav__item has-dropdown">
-                                <span className="nav-dropdown-trigger">Sectors We Serve <ChevronDown size={14} /></span>
+                            <li className={`main-nav__item has-dropdown ${activeDropdown === 'sectors' ? 'dropdown-open' : ''}`}>
+                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>Sectors We Serve <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
                                 <ul className="dropdown">
-                                    <li><Link to="/oil-gas">Oil and Gas</Link></li>
-                                    <li><Link to="/civil-construction">Civil Construction</Link></li>
-                                    <li><Link to="/facility-management">Facility Management</Link></li>
+                                    <li><Link to="/oil-gas" onClick={closeDropdown}>Oil and Gas</Link></li>
+                                    <li><Link to="/civil-construction" onClick={closeDropdown}>Civil Construction</Link></li>
+                                    <li><Link to="/facility-management" onClick={closeDropdown}>Facility Management</Link></li>
                                     {/* <li><Link to="/oil-gas">Infrastructure</Link></li> */}
-                                    <li><Link to="/logistics">Logistics</Link></li>
-                                    <li><Link to="/manufacture">Manufacture</Link></li>
-                                    <li><Link to="/mep">Mechanical, Electrical & Plumbing- MEP</Link></li>
+                                    <li><Link to="/logistics" onClick={closeDropdown}>Logistics</Link></li>
+                                    <li><Link to="/manufacture" onClick={closeDropdown}>Manufacture</Link></li>
+                                    <li><Link to="/mep" onClick={closeDropdown}>Mechanical, Electrical & Plumbing- MEP</Link></li>
                                 </ul>
                             </li>
                             <li className="main-nav__item">
@@ -166,9 +188,11 @@ const Header = () => {
         .main-nav__item > a:hover, .nav-dropdown-trigger:hover { color: var(--color-primary); }
         
         .dropdown { position: absolute; top: 100%; left: 0; background: white; min-width: 240px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 3px solid var(--color-primary); opacity: 0; visibility: hidden; transform: translateY(15px); transition: 0.3s; padding: 10px 0; }
-        .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+        .has-dropdown.dropdown-open .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
         .dropdown li a { display: block; padding: 12px 25px; font-size: 16px; color: #333; font-weight: 500; transition: 0.3s; }
         .dropdown li a:hover { color: var(--color-primary); background: #fff8f8; padding-left: 30px; }
+        .dropdown-chevron { transition: transform 0.3s; }
+        .dropdown-chevron.rotated { transform: rotate(180deg); }
         
         .nav-bk-btn { 
           background: #ffffff; color: #000; border: 1px solid var(--color-primary); 
