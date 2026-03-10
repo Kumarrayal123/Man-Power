@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import btsGroup7Img from "../assest/manpower-supply-meadia/contact_bts.jpg";
+import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
