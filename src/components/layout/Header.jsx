@@ -36,8 +36,8 @@ const Header = () => {
                         <nav className="info-bar__links">
                             <Link to="/about">About us</Link>
                             <Link to="/projects">Projects</Link>
-                            <Link to="/clients">Clients</Link>
-                            <Link to="/insights">Insights</Link>
+                            {/* <Link to="/clients">Clients</Link>
+                            <Link to="/insights">Insights</Link> */}
                         </nav>
                         <div className="info-bar__separator"></div>
                         <a href="tel:8885072259"><Phone size={14} className="icon-red" /> 8885072259</a>
