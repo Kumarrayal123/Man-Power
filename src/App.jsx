@@ -21,6 +21,10 @@ import FacilityManagement from './pages/FacilityManagement';
 import Logistics from './pages/Logistics';
 import Manufacture from './pages/Manufacture';
 import Mep from './pages/Mep';
+import BuildingContract from './pages/BuildingContract';
+import RailwayContract from './pages/RailwayContract';
+import SteelConstructionContract from './pages/SteelConstructionContract';
+import ElectricMechanicContract from './pages/ElectricMechanicContract';
 // Simple placeholder components for other routes
 const Services = () => (
     <div style={{ padding: '100px 0', textAlign: 'center' }}>
@@ -68,6 +72,10 @@ function App() {
                     <Route path="/logistics" element={<Logistics />} />
                     <Route path="/manufacture" element={<Manufacture />} />
                     <Route path="/mep" element={<Mep />} />
+                    <Route path="/building-contract" element={<BuildingContract />} />
+                    <Route path="/railway-contract" element={<RailwayContract />} />
+                    <Route path="/steel-construction" element={<SteelConstructionContract />} />
+                    <Route path="/electric-mechanic" element={<ElectricMechanicContract />} />
                     {/* <Route path="/manpower-supply" element={<ManpowerSupply />} /> */}
                 </Route>
             </Routes>

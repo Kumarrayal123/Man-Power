@@ -93,6 +93,10 @@ const Header = () => {
                             <li className={`main-nav__item has-dropdown ${activeDropdown === 'sectors' ? 'dropdown-open' : ''}`}>
                                 <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>Sectors We Serve <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
                                 <ul className="dropdown">
+                                    <li><Link to="/building-contract" onClick={closeDropdown}>Building Contract</Link></li>
+                                    <li><Link to="/railway-contract" onClick={closeDropdown}>Railway Contract</Link></li>
+                                    <li><Link to="/steel-construction" onClick={closeDropdown}>Steel Construction</Link></li>
+                                    <li><Link to="/electric-mechanic" onClick={closeDropdown}>Electric Mechanic</Link></li>
                                     <li><Link to="/oil-gas" onClick={closeDropdown}>Oil and Gas</Link></li>
                                     <li><Link to="/civil-construction" onClick={closeDropdown}>Civil Construction</Link></li>
                                     <li><Link to="/facility-management" onClick={closeDropdown}>Facility Management</Link></li>
@@ -140,6 +144,10 @@ const Header = () => {
                                     <ChevronDown size={20} className="toggle-icon" />
                                 </div>
                                 <ul className="mobile-dropdown">
+                                    <li><Link to="/building-contract">Building Contract</Link></li>
+                                    <li><Link to="/railway-contract">Railway Contract</Link></li>
+                                    <li><Link to="/steel-construction">Steel Construction</Link></li>
+                                    <li><Link to="/electric-mechanic">Electric Mechanic</Link></li>
                                     <li><Link to="/oil-gas">Oil and Gas</Link></li>
                                     <li><Link to="/civil-construction">Civil Construction</Link></li>
                                     <li><Link to="/facility-management">Facility Management</Link></li>

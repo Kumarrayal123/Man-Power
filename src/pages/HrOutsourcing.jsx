@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import heroImage from "../assest/manpower-supply-meadia/hr-hero.png";
+import heroImage from "../assest/manpower-supply-meadia/hr-hero1.png";
 import btsImg from "../assest/manpower-supply-meadia/hroutsourcing_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/hr_outsourcing_bts.jpg";
 import insight1Img from "../assest/manpower-supply-meadia/hr_insight_intro.png";

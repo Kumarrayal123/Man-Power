@@ -15,7 +15,7 @@ const Footer = () => {
                             <img src={logo} alt="Manpower Logo" className="footer-logo-img" />
                         </Link>
 
-                        <p>Providing premium manpower solutions since 2003. We are leaders in recruitment, staffing, and HR outsourcing in the UAE.</p>
+                        <p>Providing premium manpower solutions since 2021. We are leaders in recruitment, staffing, and HR outsourcing in the UAE.</p>
                         <div className="social-links">
                             <a href="#"><Facebook size={18} /></a>
                             <a href="#"><Instagram size={18} /></a>
@@ -41,6 +41,10 @@ const Footer = () => {
                     <div className="footer-col">
                         <h4 className="footer-title">Sectors</h4>
                         <ul className="footer-links">
+                            <li><Link to="/building-contract">Building Contract</Link></li>
+                            <li><Link to="/railway-contract">Railway Contract</Link></li>
+                            <li><Link to="/steel-construction">Steel Construction</Link></li>
+                            <li><Link to="/electric-mechanic">Electric Mechanic</Link></li>
                             <li><Link to="/oil-gas">Oil &amp; Gas</Link></li>
                             <li><Link to="/civil-construction">Civil Construction</Link></li>
                             <li><Link to="/facility-management">Facility Management</Link></li>
@@ -111,7 +115,8 @@ const Footer = () => {
           .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
         }
         @media (max-width: 600px) {
-          .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+          .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+          .footer-col.brand, .footer-col:last-child { grid-column: 1 / -1; }
           .footer-bottom-inner { flex-direction: column; text-align: center; gap: 10px; padding: 20px; }
           .footer-bottom-links a { margin-left: 0; }
           .footer-logo-img { height: 55px; }
