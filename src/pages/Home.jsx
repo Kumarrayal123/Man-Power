@@ -900,10 +900,10 @@ const Home = () => {
             .featured-services-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 992px) {
-          .home-hero { flex-direction: column; text-align: center; padding: 60px 30px; min-height: auto; border-radius: 20px; }
-          .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; }
-          .home-hero__image { position: static; justify-content: center; }
-          .hero-workers-img { width: 100%; max-width: 400px; }
+          .home-hero { flex-direction: column; text-align: center; padding: 60px 30px 0; min-height: auto; border-radius: 20px; }
+          .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
+          .home-hero__image { position: relative; justify-content: center; width: 100%; display: flex; right: 0; bottom: 0; }
+          .hero-workers-img { width: 100%; max-width: 400px; display: block; margin-bottom: -12%; }
           .featured-services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
           .section-title { font-size: 2.2rem; }
           .journey-grid { grid-template-columns: 1fr 1fr; gap: 40px 0; }

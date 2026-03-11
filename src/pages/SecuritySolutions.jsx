@@ -274,13 +274,13 @@ const SecuritySolutions = () => {
             .hero-workers-img { width: 450px; } 
         }
         @media (max-width: 992px) { 
-            .home-hero { flex-direction: column; text-align: center; padding: 60px 30px; min-height: auto; border-radius: 20px; } 
-            .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; } 
-            .home-hero__image { position: static; justify-content: center; left: auto; right: auto; bottom: auto; } 
-            .hero-workers-img { width: 100%; max-width: 400px; } 
+            .home-hero { flex-direction: column; text-align: center; padding: 60px 30px 0; min-height: auto; border-radius: 20px; } 
+            .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom:  20px; } 
+            .home-hero__image { position: relative; width: 100%; display: flex; right: 0; bottom: 0; justify-content: center; left: auto; right: auto; bottom: auto; } 
+            .hero-workers-img { width: 100%; max-width: 400px; display: block; margin-bottom: -12%; } 
         }
         @media (max-width: 576px) { 
-            .home-hero { padding: 40px 25px; border-radius: 20px; } 
+            .home-hero { padding: 40px 25px 0; border-radius: 20px; } 
             .hero-workers-img { max-width: 100%; } 
         }
 
