@@ -53,9 +53,9 @@ const ContractStaffing = () => {
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Contract Staffing Solutions in India – Smaar Elysium"
-        description="Smaar Elysium provides flexible contract staffing solutions across India. Scale your workforce quickly with skilled and verified contract professionals. Contact us today."
-        keywords="contract staffing India, temporary staffing Hyderabad, flexible workforce India, contract employees India"
+        title="Contract Staffing Solutions in UAE – Smaar Elysium"
+        description="Smaar Elysium provides flexible contract staffing solutions across UAE. Scale your workforce quickly with skilled and verified contract professionals. Contact us today."
+        keywords="contract staffing UAE, temporary staffing Dubai, flexible workforce UAE, contract employees UAE"
         canonical="https://smaarelysium.com/contract-staffing"
         schema={faqSchema}
       />
@@ -63,7 +63,7 @@ const ContractStaffing = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Contract Staffing<br />Solutions in India</h1>
+            <h1 className="home-hero__title">Contract Staffing<br />Solutions in UAE</h1>
             <p className="home-hero__text">Looking for flexible workforce solutions tailored to your project needs? Smaar Elysium provides top-tier contract staffing for all industries.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>

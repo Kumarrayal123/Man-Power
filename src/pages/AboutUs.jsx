@@ -15,9 +15,9 @@ const AboutUs = () => {
   return (
     <div className="about-page">
       <SEOHead
-        title="About Smaar Elysium | Premier Manpower & Staffing Agency in India"
-        description="Smaar Elysium is a trusted manpower supply and staffing agency based in India with 15+ years of expertise. We connect businesses with skilled professionals across construction, logistics, security, oil & gas, and more."
-        keywords="about Smaar Elysium, manpower agency India, staffing company India, workforce solutions India, HR consultancy India, labour supply company, best manpower agency Hyderabad"
+        title="About Smaar Elysium | Premier Manpower & Staffing Agency in UAE"
+        description="Smaar Elysium is a trusted manpower supply and staffing agency based in UAE with 15+ years of expertise. We connect businesses with skilled professionals across construction, logistics, security, oil & gas, and more."
+        keywords="about Smaar Elysium, manpower agency UAE, staffing company UAE, workforce solutions UAE, HR consultancy UAE, labour supply company, best manpower agency Dubai"
         canonical="https://www.smaarelysium.com/about"
       />
 
@@ -27,7 +27,7 @@ const AboutUs = () => {
           <div className="home-hero__content">
             <h1 className="home-hero__title">About Us<br />Who We Are</h1>
             <p className="home-hero__text">
-              Smaar Elysium is a premier manpower supply and staffing agency based in India,
+              Smaar Elysium is a premier manpower supply and staffing agency based in UAE,
               dedicated to connecting exceptional talent with outstanding organizations across
               diverse industries throughout the country.
             </p>
@@ -38,7 +38,7 @@ const AboutUs = () => {
           <div className="home-hero__image-wrapper">
             <img
               src={heroTeamImg}
-              alt="Smaar Elysium Team India"
+              alt="Smaar Elysium Team UAE"
               className="home-hero__image"
               style={{ borderRadius: '24px' }}
             />
@@ -53,7 +53,7 @@ const AboutUs = () => {
             <div className="journey-image-container">
               <img
                 src={journeyImg}
-                alt="Smaar Elysium Journey India"
+                alt="Smaar Elysium Journey UAE"
                 className="journey-full-img"
               />
             </div>
@@ -61,7 +61,7 @@ const AboutUs = () => {
               <h2 className="journey-page-heading">Our Journey</h2>
               <p className="journey-page-paragraph">
                 Smaar Elysium began with a singular vision — to build a world-class manpower supply
-                company that truly understands the dynamic needs of businesses operating across India.
+                company that truly understands the dynamic needs of businesses operating across UAE.
                 Over the years, we have grown from a focused staffing consultancy into a comprehensive
                 workforce solutions partner trusted across multiple industries.
               </p>
@@ -73,7 +73,7 @@ const AboutUs = () => {
                 staffing outcomes that move businesses forward.
               </p>
               <p className="journey-page-paragraph">
-                Today, Smaar Elysium stands as one of India's most trusted names in manpower
+                Today, Smaar Elysium stands as one of UAE's most trusted names in manpower
                 supply, contract staffing, HR outsourcing, and executive search — serving clients
                 across construction, facilities management, logistics, security, and more.
               </p>
@@ -114,7 +114,7 @@ const AboutUs = () => {
               <div className="mv-content">
                 <h2 className="mv-title">Our Mission</h2>
                 <p className="mv-text">
-                  To be India's most reliable and forward-thinking manpower partner — delivering
+                  To be UAE's most reliable and forward-thinking manpower partner — delivering
                   tailored workforce solutions that empower businesses to scale confidently. We
                   are committed to connecting the right people with the right opportunities through
                   rigorous selection, compliance excellence, and a deep understanding of every
@@ -126,7 +126,7 @@ const AboutUs = () => {
               <div className="mv-content">
                 <h2 className="mv-title">Our Vision</h2>
                 <p className="mv-text">
-                  To emerge as India's most trusted end-to-end human capital solutions
+                  To emerge as UAE's most trusted end-to-end human capital solutions
                   provider — a name synonymous with quality talent, seamless compliance, and
                   transformative workforce strategies. We aspire to be the partner every ambitious
                   organization turns to when building teams that drive sustainable growth.
@@ -172,7 +172,7 @@ const AboutUs = () => {
             <div className="value-card">
               <div className="value-icon"><ShieldCheck /></div>
               <h3>Compliance</h3>
-              <p>We navigate Indian labour laws and regulatory frameworks with expertise, ensuring every placement is fully compliant and risk-free for your organization.</p>
+              <p>We navigate UAEn labour laws and regulatory frameworks with expertise, ensuring every placement is fully compliant and risk-free for your organization.</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><Heart /></div>
@@ -191,7 +191,7 @@ const AboutUs = () => {
             <h2 className="wwd-title">Comprehensive Workforce Solutions</h2>
             <p className="wwd-desc">
               From blue-collar manpower supply to executive-level recruitment, we offer a full suite
-              of workforce solutions designed for Indian businesses across all major industries.
+              of workforce solutions designed for UAEn businesses across all major industries.
             </p>
           </div>
           <div className="wwd-grid">
@@ -203,7 +203,7 @@ const AboutUs = () => {
             <div className="wwd-card">
               <div className="wwd-number">02</div>
               <h3>Recruitment & Talent Acquisition</h3>
-              <p>End-to-end permanent recruitment services powered by an extensive pan-India talent network and a rigorous multi-stage selection process.</p>
+              <p>End-to-end permanent recruitment services powered by an extensive pan-UAE talent network and a rigorous multi-stage selection process.</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">03</div>
@@ -223,7 +223,7 @@ const AboutUs = () => {
             <div className="wwd-card">
               <div className="wwd-number">06</div>
               <h3>Security Staffing</h3>
-              <p>SIRA-licensed security personnel deployed for static guard duties, mobile patrols, access control, and event security across India.</p>
+              <p>SIRA-licensed security personnel deployed for static guard duties, mobile patrols, access control, and event security across UAE.</p>
             </div>
           </div>
         </div>
@@ -236,11 +236,11 @@ const AboutUs = () => {
         <div className="insights-grid">
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src={sectorInsight1Img} alt="Indian Workforce Landscape" />
+              <img src={sectorInsight1Img} alt="UAEn Workforce Landscape" />
             </div>
             <div className="insight-content">
-              <h3>Understanding the Indian Workforce Landscape</h3>
-              <p>India's diversified and rapidly expanding economy creates unique manpower demands across construction, technology, hospitality, and manufacturing — and we are perfectly positioned to meet them all.</p>
+              <h3>Understanding the UAEn Workforce Landscape</h3>
+              <p>UAE's diversified and rapidly expanding economy creates unique manpower demands across construction, technology, hospitality, and manufacturing — and we are perfectly positioned to meet them all.</p>
             </div>
           </div>
 
@@ -250,17 +250,17 @@ const AboutUs = () => {
             </div>
             <div className="insight-content">
               <h3>Why Partnering With a Staffing Agency Matters</h3>
-              <p>For businesses expanding across India, a trusted local staffing partner provides critical advantages: faster hiring cycles, compliance assurance, and access to a pre-vetted talent pool.</p>
+              <p>For businesses expanding across UAE, a trusted local staffing partner provides critical advantages: faster hiring cycles, compliance assurance, and access to a pre-vetted talent pool.</p>
             </div>
           </div>
 
           <div className="insight-card">
             <div className="insight-image-wrap">
-              <img src={sectorInsight3Img} alt="Indian Labour Law Compliance" />
+              <img src={sectorInsight3Img} alt="UAEn Labour Law Compliance" />
             </div>
             <div className="insight-content">
-              <h3>Navigating Indian Labour Law Compliance</h3>
-              <p>Indian employment regulations are nuanced and constantly evolving. Our compliance experts ensure every hire meets current Ministry of Labour requirements — zero risk, full peace of mind.</p>
+              <h3>Navigating UAEn Labour Law Compliance</h3>
+              <p>UAEn employment regulations are nuanced and constantly evolving. Our compliance experts ensure every hire meets current Ministry of Labour requirements — zero risk, full peace of mind.</p>
             </div>
           </div>
 
@@ -269,7 +269,7 @@ const AboutUs = () => {
               <img src={sectorInsight4Img} alt="Building High Performance Teams" />
             </div>
             <div className="insight-content">
-              <h3>Building High-Performance Teams in India</h3>
+              <h3>Building High-Performance Teams in UAE</h3>
               <p>A high-performing team is the true engine of business growth. Smaar Elysium's structured recruitment methodology ensures you hire for both skillset and cultural alignment — every time.</p>
             </div>
           </div>

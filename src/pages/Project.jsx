@@ -11,9 +11,9 @@ const Project = () => {
   return (
     <div className="project-page">
       <SEOHead
-        title="Manpower Projects Portfolio | Staffing Case Studies in India | Smaar Elysium"
-        description="Explore Smaar Elysium's successful manpower supply projects across India — from construction mega-projects in Hyderabad to facility management in Bengaluru and manufacturing plant staffing in Pune."
-        keywords="manpower projects India, staffing case studies India, construction workforce projects, facility management staffing projects, manufacturing plant manpower, Smaar Elysium projects"
+        title="Manpower Projects Portfolio | Staffing Case Studies in UAE | Smaar Elysium"
+        description="Explore Smaar Elysium's successful manpower supply projects across UAE — from construction mega-projects in Dubai to facility management in Bengaluru and manufacturing plant staffing in Pune."
+        keywords="manpower projects UAE, staffing case studies UAE, construction workforce projects, facility management staffing projects, manufacturing plant manpower, Smaar Elysium projects"
         canonical="https://www.smaarelysium.com/projects"
       />
       {/* ── Home Page Style Hero ── */}
@@ -21,7 +21,7 @@ const Project = () => {
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">Manpower<br />Projects</h1>
-            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across India — powering industries with the right workforce at the right time.</p>
+            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across UAE — powering industries with the right workforce at the right time.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
             </div>
@@ -45,9 +45,9 @@ const Project = () => {
             <div className="custom-project-card">
               <div className="custom-project-image" style={{ backgroundImage: `url(${projectConstruction})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Hyderabad Global Gateway – Construction Manpower</h3>
+                  <h3 className="custom-project-title">Dubai Global Gateway – Construction Manpower</h3>
                   <p className="custom-project-desc">
-                    Supplied 350+ skilled civil workers, masons, electricians, and site supervisors for a landmark commercial high-rise project in Hyderabad's HITEC City corridor, completed on schedule...
+                    Supplied 350+ skilled civil workers, masons, electricians, and site supervisors for a landmark commercial high-rise project in Dubai's HITEC City corridor, completed on schedule...
                   </p>
                   <Link to="/contact" className="custom-project-link">
                     Get in Touch <ArrowRight size={20} strokeWidth={2} />

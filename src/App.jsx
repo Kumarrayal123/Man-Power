@@ -32,7 +32,7 @@ const Services = () => (
 const Sectors = () => (
     <div style={{ padding: '100px 0', textAlign: 'center' }}>
         <h1>Sectors We Serve</h1>
-        <p>Industry-specific expertise across the India.</p>
+        <p>Industry-specific expertise across the UAE.</p>
     </div>
 );
 

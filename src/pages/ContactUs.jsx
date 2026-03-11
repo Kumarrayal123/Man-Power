@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
-import contactHyderabadCity from "../assest/manpower-supply-meadia/contact_hyderabad_city.png";
+import contactDubaiCity from "../assest/manpower-supply-meadia/contact_dubai_city.png";
 import contactQuoteOffice from "../assest/manpower-supply-meadia/contact_quote_office.png";
 import SEOHead from '../components/SEOHead';
 
@@ -11,13 +11,13 @@ const ContactUs = () => {
   return (
     <div className="contact-page">
       <SEOHead
-        title="Contact Smaar Elysium | Manpower Supply & Staffing Agency in India"
-        description="Contact Smaar Elysium for manpower supply, contract staffing, executive search, HR outsourcing, and security staffing services across India. Reach us at 8885072259 or sales@smaarelysium.com."
-        keywords="contact Smaar Elysium, manpower agency contact India, staffing company Hyderabad, hire manpower India contact, workforce solutions contact, Smaar Elysium phone"
+        title="Contact Smaar Elysium | Manpower Supply & Staffing Agency in UAE"
+        description="Contact Smaar Elysium for manpower supply, contract staffing, executive search, HR outsourcing, and security staffing services across UAE. Reach us at 8885072259 or sales@smaarelysium.com."
+        keywords="contact Smaar Elysium, manpower agency contact UAE, staffing company Dubai, hire manpower UAE contact, workforce solutions contact, Smaar Elysium phone"
         canonical="https://www.smaarelysium.com/contact"
         faqSchema={[
           { question: "How can I contact Smaar Elysium for manpower services?", answer: "You can reach Smaar Elysium by calling 8885072259, emailing sales@smaarelysium.com, or filling out the contact form on our website. Our team responds promptly to all enquiries." },
-          { question: "Where is Smaar Elysium located?", answer: "Smaar Elysium is headquartered in Hyderabad, India, and provides manpower supply and staffing services across all major cities and industrial zones throughout the country." },
+          { question: "Where is Smaar Elysium located?", answer: "Smaar Elysium is headquartered in Dubai, UAE, and provides manpower supply and staffing services across all major cities and industrial zones throughout the country." },
           { question: "How quickly can Smaar Elysium deploy manpower after contact?", answer: "Depending on the role and location, Smaar Elysium can mobilize manpower within 24 to 72 hours for urgent requirements. For large-scale deployments, our team will provide a detailed mobilization timeline upon enquiry." },
           { question: "Does Smaar Elysium provide manpower for both small and large projects?", answer: "Yes. We serve businesses of all sizes — from small site contracts requiring a few workers to large-scale industrial projects requiring hundreds of skilled professionals across multiple locations." }
         ]}
@@ -36,7 +36,7 @@ const ContactUs = () => {
           <div className="home-hero__image-wrapper">
             <img
               src={btsGroup7Img}
-              alt="Contact Manpower India"
+              alt="Contact Manpower UAE"
               className="home-hero__image"
             />
           </div>
@@ -47,7 +47,7 @@ const ContactUs = () => {
       {/* <div className="container map-wrapper">
         <div className="fullwidth-map-card">
           <iframe
-            title="Manpower India Location"
+            title="Manpower UAE Location"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.3454!2d55.3764!3d25.2697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d68aaaaaa%3A0x0!2zMjXCsDE2JzEwLjkiTiA1NcKwMjInMzUuMCJF!5e0!3m2!1sen!2sae!4v1"
             width="100%"
             height="480"
@@ -58,18 +58,18 @@ const ContactUs = () => {
         </div>
       </div> */}
 
-      {/* ── Location Detail: Hyderabad City Image + Contact Card ── */}
+      {/* ── Location Detail: Dubai City Image + Contact Card ── */}
       <section className="location-detail-section">
         <div className="container">
           <div className="location-split-card">
-            {/* Left: Hyderabad City Image */}
+            {/* Left: Dubai City Image */}
             <div className="location-image-side">
               <img
-                src={contactHyderabadCity}
-                alt="Hyderabad India Skyline"
+                src={contactDubaiCity}
+                alt="Dubai UAE Skyline"
                 className="location-city-img"
               />
-              <div className="location-country-label">India</div>
+              <div className="location-country-label">UAE</div>
             </div>
 
             {/* Right: Contact Details */}
@@ -81,7 +81,7 @@ const ContactUs = () => {
               <a href="https://smaarelysium.com" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
 
               <p className="loc-address">
-                Hyderabad
+                Dubai
               </p>
 
               <a
@@ -100,8 +100,8 @@ const ContactUs = () => {
       <div className="container map-wrapper">
         <div className="fullwidth-map-card">
           <iframe
-            title="Hyderabad India Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243646.9040513437!2d78.24323080429685!3d17.412281024402787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710054000000!5m2!1sen!2sin"
+            title="Dubai UAE Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462562.847844238!2d54.89781604758778!3d25.075707324317073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1710123456789!5m2!1sen!2sae"
             width="100%"
             height="480"
             style={{ border: 0, display: 'block' }}

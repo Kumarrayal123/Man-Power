@@ -14,9 +14,9 @@ const FacilityManagement = () => {
   return (
     <div className="oil-gas-page">
       <SEOHead
-        title="Facility Management Manpower in India | Hard & Soft Services Staffing | Smaar Elysium"
-        description="Smaar Elysium provides comprehensive facility management manpower across India including MEP technicians, cleaning crews, security personnel, and front-of-house staff for commercial and residential properties."
-        keywords="facility management manpower India, MEP technicians staffing, cleaning staff agency India, facility services staff, building maintenance workers India, housekeeping staff India, Smaar Elysium facility"
+        title="Facility Management Manpower in UAE | Hard & Soft Services Staffing | Smaar Elysium"
+        description="Smaar Elysium provides comprehensive facility management manpower across UAE including MEP technicians, cleaning crews, security personnel, and front-of-house staff for commercial and residential properties."
+        keywords="facility management manpower UAE, MEP technicians staffing, cleaning staff agency UAE, facility services staff, building maintenance workers UAE, housekeeping staff UAE, Smaar Elysium facility"
         canonical="https://www.smaarelysium.com/facility-management"
       />
       {/* ── Hero Section ── */}
@@ -29,7 +29,7 @@ const FacilityManagement = () => {
             <p className="home-hero__text">
               Delivering premium, tailored facility management manpower
               solutions to maximize asset lifespan and operational uptime across
-              commercial, residential, and corporate ecosystems in the India.
+              commercial, residential, and corporate ecosystems in the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -52,7 +52,7 @@ const FacilityManagement = () => {
             <div className="cbs-left">
               <h2>Professional Facility Management Teams</h2>
               <p>
-                Maintaining the modern infrastructure of the India requires a proactive
+                Maintaining the modern infrastructure of the UAE requires a proactive
                 and highly skilled workforce. We provide the personnel needed to keep your facilities
                 running at peak performance.
               </p>
@@ -184,7 +184,7 @@ const FacilityManagement = () => {
               <div className="benefit-card bg-red">
                 <h3>Regulatory Compliance</h3>
                 <p>
-                  All staff are certified to meet India facility management
+                  All staff are certified to meet UAE facility management
                   standards and safety regulations.
                 </p>
               </div>

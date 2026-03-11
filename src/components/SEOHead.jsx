@@ -11,7 +11,7 @@ const SEOHead = ({
 }) => {
     const siteTitle = title
         ? `${title} | Smaar Elysium`
-        : 'Smaar Elysium – Premier Manpower & Staffing Agency in India';
+        : 'Smaar Elysium – Premier Manpower & Staffing Agency in UAE';
 
     return (
         <Helmet>

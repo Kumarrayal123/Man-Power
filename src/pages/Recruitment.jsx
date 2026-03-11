@@ -53,9 +53,9 @@ const Recruitment = () => {
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Premier Recruitment Solutions in India – Smaar Elysium"
-        description="Smaar Elysium offers expert recruitment services in India. From permanent hiring to volume recruitment, we connect the right talent to your business. Call +91-8885072259."
-        keywords="recruitment agency India, recruitment agency Hyderabad, talent acquisition India, permanent staffing Hyderabad"
+        title="Premier Recruitment Solutions in UAE – Smaar Elysium"
+        description="Smaar Elysium offers expert recruitment services in UAE. From permanent hiring to volume recruitment, we connect the right talent to your business. Call +91-8885072259."
+        keywords="recruitment agency UAE, recruitment agency Dubai, talent acquisition UAE, permanent staffing Dubai"
         canonical="https://smaarelysium.com/recruitment"
         schema={faqSchema}
       />
@@ -63,7 +63,7 @@ const Recruitment = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Premier Recruitment<br />Solutions in India</h1>
+            <h1 className="home-hero__title">Premier Recruitment<br />Solutions in UAE</h1>
             <p className="home-hero__text">Empower your business with elite talent. We deliver strategic recruitment services to help you scale.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>

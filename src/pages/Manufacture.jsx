@@ -14,9 +14,9 @@ const Manufacture = () => {
   return (
     <div className="oil-gas-page">
       <SEOHead
-        title="Manufacturing Sector Manpower in India | Industrial & Production Workers | Smaar Elysium"
-        description="Smaar Elysium delivers certified manufacturing manpower across India including CNC operators, welders, quality inspectors, assembly line workers, and industrial maintenance technicians for factories and production plants."
-        keywords="manufacturing manpower India, industrial workers supply, CNC operators India, welders staffing India, production workers agency, quality control technicians, Smaar Elysium manufacturing"
+        title="Manufacturing Sector Manpower in UAE | Industrial & Production Workers | Smaar Elysium"
+        description="Smaar Elysium delivers certified manufacturing manpower across UAE including CNC operators, welders, quality inspectors, assembly line workers, and industrial maintenance technicians for factories and production plants."
+        keywords="manufacturing manpower UAE, industrial workers supply, CNC operators UAE, welders staffing UAE, production workers agency, quality control technicians, Smaar Elysium manufacturing"
         canonical="https://www.smaarelysium.com/manufacturing"
       />
       {/* ── Hero Section ── */}
@@ -28,7 +28,7 @@ const Manufacture = () => {
             </h1>
             <p className="home-hero__text">
               Supplying high-performance, skilled manpower for heavy manufacturing, assembly
-              lines, and precision industrial production facilities across the India.
+              lines, and precision industrial production facilities across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -51,7 +51,7 @@ const Manufacture = () => {
             <div className="cbs-left">
               <h2>Manufacturing Manpower Solutions</h2>
               <p>
-                As industrial zones and smart manufacturing hubs expand across the India,
+                As industrial zones and smart manufacturing hubs expand across the UAE,
                 having a reliable, technically proficient workforce is the key to scalability.
               </p>
               <p>

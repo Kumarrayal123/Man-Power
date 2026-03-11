@@ -44,9 +44,9 @@ const ExecutiveSearch = () => {
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Executive Search Services in India | C-Suite & Leadership Hiring | Smaar Elysium"
-        description="Smaar Elysium provides confidential executive search services across India. We identify and place senior leaders, directors, and C-suite executives for organizations in all major sectors."
-        keywords="executive search India, C-suite hiring India, leadership recruitment, senior management recruitment, headhunting services India, director level hiring, Smaar Elysium executive search"
+        title="Executive Search Services in UAE | C-Suite & Leadership Hiring | Smaar Elysium"
+        description="Smaar Elysium provides confidential executive search services across UAE. We identify and place senior leaders, directors, and C-suite executives for organizations in all major sectors."
+        keywords="executive search UAE, C-suite hiring UAE, leadership recruitment, senior management recruitment, headhunting services UAE, director level hiring, Smaar Elysium executive search"
         canonical="https://www.smaarelysium.com/executive-search"
         faqSchema={[
           { question: "What makes your executive search process unique?", answer: "Our executive search process is distinguished by deep industry intelligence, confidential outreach, and a network of senior-level professionals, ensuring we identify and place leadership talent that drives long-term organizational success." },
@@ -60,8 +60,8 @@ const ExecutiveSearch = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Executive Search<br />Solutions in India</h1>
-            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in India.</p>
+            <h1 className="home-hero__title">Executive Search<br />Solutions in UAE</h1>
+            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in UAE.</p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">Book Now</Link>
             </div>
@@ -232,7 +232,7 @@ const ExecutiveSearch = () => {
             </div>
             <div className="insight-content">
               <h3>The Need for Executive Search</h3>
-              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across India partner with executive search firms...</p>
+              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across UAE partner with executive search firms...</p>
               {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
               </Link> */}

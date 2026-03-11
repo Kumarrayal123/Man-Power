@@ -14,9 +14,9 @@ const Logistics = () => {
   return (
     <div className="oil-gas-page">
       <SEOHead
-        title="Logistics & Supply Chain Manpower in India | Warehouse & Transport Staffing | Smaar Elysium"
-        description="Smaar Elysium supplies skilled logistics professionals across India including forklift operators, warehouse staff, heavy vehicle drivers, freight forwarders, and inventory clerks for distribution and supply chain operations."
-        keywords="logistics manpower India, warehouse staffing India, supply chain workforce, forklift operators India, heavy vehicle drivers India, freight forwarding staff, Smaar Elysium logistics"
+        title="Logistics & Supply Chain Manpower in UAE | Warehouse & Transport Staffing | Smaar Elysium"
+        description="Smaar Elysium supplies skilled logistics professionals across UAE including forklift operators, warehouse staff, heavy vehicle drivers, freight forwarders, and inventory clerks for distribution and supply chain operations."
+        keywords="logistics manpower UAE, warehouse staffing UAE, supply chain workforce, forklift operators UAE, heavy vehicle drivers UAE, freight forwarding staff, Smaar Elysium logistics"
         canonical="https://www.smaarelysium.com/logistics"
       />
       {/* ── Hero Section ── */}
@@ -28,7 +28,7 @@ const Logistics = () => {
             </h1>
             <p className="home-hero__text">
               Agile and scalable logistics manpower solutions driving efficiency
-              across transport, warehousing, and global supply chain operations in the India.
+              across transport, warehousing, and global supply chain operations in the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -51,7 +51,7 @@ const Logistics = () => {
             <div className="cbs-left">
               <h2>Expert Supply Chain Manpower</h2>
               <p>
-                As the India solidifies its position as a global logistics hub, the demand
+                As the UAE solidifies its position as a global logistics hub, the demand
                 for rapid, accurate, and scalable workforce solutions is higher than ever.
               </p>
               <p>
@@ -174,7 +174,7 @@ const Logistics = () => {
               <div className="benefit-card bg-gray">
                 <h3>Regulated Training</h3>
                 <p>
-                  Staff trained in transport safety, handling, and India
+                  Staff trained in transport safety, handling, and UAE
                   procedures.
                 </p>
               </div>

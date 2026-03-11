@@ -46,17 +46,17 @@ const ManpowerSupply = () => {
     return (
         <div className="service-page manpower-supply-page">
             <SEOHead
-                title="Manpower Supply Services in India – Civil, Electrical & Mechanical"
-                description="Smaar Elysium is a top manpower supply company in India providing civil, electrical, mechanical, and helper manpower for construction and industrial projects. 15+ years of expertise."
-                keywords="manpower supply India, civil manpower Hyderabad, electrical manpower India, mechanical manpower supply, helper manpower India"
+                title="Manpower Supply Services in UAE – Civil, Electrical & Mechanical"
+                description="Smaar Elysium is a top manpower supply company in UAE providing civil, electrical, mechanical, and helper manpower for construction and industrial projects. 15+ years of expertise."
+                keywords="manpower supply UAE, civil manpower Dubai, electrical manpower UAE, mechanical manpower supply, helper manpower UAE"
                 canonical="https://smaarelysium.com/services/manpower-supply"
             />
             {/* Hero Section */}
             <div className="service-hero">
                 <div className="container">
                     <div className="service-hero-content text-center">
-                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>Manpower Supply Company in India</h1>
-                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>No. 1 Manpower Supply Company in India, offering quality Labour Supply Services on an Hourly Basis across all the emirates. 15 Years of Service.</p>
+                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>Manpower Supply Company in UAE</h1>
+                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>No. 1 Manpower Supply Company in UAE, offering quality Labour Supply Services on an Hourly Basis across all the emirates. 15 Years of Service.</p>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
                             <Link to="/book-manpower" className="hero-btn-main">Book Manpower Online</Link>
                         </div>

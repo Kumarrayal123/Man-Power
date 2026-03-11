@@ -60,9 +60,9 @@ const BookManpower = () => {
     return (
         <div className="booking-page">
             <SEOHead
-                title="Book Manpower Online | Request Skilled Workers in India | Smaar Elysium"
-                description="Book your required manpower online with Smaar Elysium. Select trade categories, specify quantities, and submit your workforce request. We supply civil workers, MEP technicians, drivers, security guards, and more across India."
-                keywords="book manpower India, hire workers online India, request skilled labour, manpower booking form, civil workers booking, MEP technicians India, Smaar Elysium book"
+                title="Book Manpower Online | Request Skilled Workers in UAE | Smaar Elysium"
+                description="Book your required manpower online with Smaar Elysium. Select trade categories, specify quantities, and submit your workforce request. We supply civil workers, MEP technicians, drivers, security guards, and more across UAE."
+                keywords="book manpower UAE, hire workers online UAE, request skilled labour, manpower booking form, civil workers booking, MEP technicians UAE, Smaar Elysium book"
                 canonical="https://www.smaarelysium.com/book-manpower"
             />
             <section className="page-hero">

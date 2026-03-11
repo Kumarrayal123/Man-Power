@@ -14,9 +14,9 @@ const Mep = () => {
   return (
     <div className="oil-gas-page">
       <SEOHead
-        title="MEP Manpower Supply in India | Mechanical Electrical Plumbing Technicians | Smaar Elysium"
-        description="Smaar Elysium provides certified MEP technicians across India — HVAC engineers, industrial electricians, plumbers, pipefitters, and fire & life safety specialists for installation, commissioning, and maintenance projects."
-        keywords="MEP manpower India, HVAC technicians India, electricians staffing India, plumbers supply India, mechanical engineers India, fire safety technicians, MEP workers agency, Smaar Elysium MEP"
+        title="MEP Manpower Supply in UAE | Mechanical Electrical Plumbing Technicians | Smaar Elysium"
+        description="Smaar Elysium provides certified MEP technicians across UAE — HVAC engineers, industrial electricians, plumbers, pipefitters, and fire & life safety specialists for installation, commissioning, and maintenance projects."
+        keywords="MEP manpower UAE, HVAC technicians UAE, electricians staffing UAE, plumbers supply UAE, mechanical engineers UAE, fire safety technicians, MEP workers agency, Smaar Elysium MEP"
         canonical="https://www.smaarelysium.com/mep"
       />
       {/* ── Hero Section ── */}
@@ -28,7 +28,7 @@ const Mep = () => {
             </h1>
             <p className="home-hero__text">
               Providing specialized Mechanical, Electrical, and Plumbing manpower
-              for high-stakes installations, maintenance, and commissioning across the India.
+              for high-stakes installations, maintenance, and commissioning across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -174,7 +174,7 @@ const Mep = () => {
               <div className="benefit-card bg-gray">
                 <h3>Safety Compliance</h3>
                 <p>
-                  All staff trained in India MEP safety and best practices.
+                  All staff trained in UAE MEP safety and best practices.
                 </p>
               </div>
 

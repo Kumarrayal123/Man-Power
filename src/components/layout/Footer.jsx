@@ -15,7 +15,7 @@ const Footer = () => {
                             <img src={logo} alt="Manpower Logo" className="footer-logo-img" />
                         </Link>
 
-                        <p>Providing premium manpower solutions since 2003. We are leaders in recruitment, staffing, and HR outsourcing in the India.</p>
+                        <p>Providing premium manpower solutions since 2003. We are leaders in recruitment, staffing, and HR outsourcing in the UAE.</p>
                         <div className="social-links">
                             <a href="#"><Facebook size={18} /></a>
                             <a href="#"><Instagram size={18} /></a>
@@ -56,7 +56,7 @@ const Footer = () => {
                         <ul className="footer-contact">
                             <li>
                                 <MapPin size={18} />
-                                <span>Hyderabad</span>
+                                <span>Dubai</span>
                             </li>
                             <li>
                                 <Phone size={18} />

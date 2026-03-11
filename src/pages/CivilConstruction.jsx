@@ -25,9 +25,9 @@ const CivilConstruction = () => {
   return (
     <div className="oil-gas-page">
       <SEOHead
-        title="Civil Construction Manpower Supply in India | Site Engineers & Skilled Labour | Smaar Elysium"
-        description="Smaar Elysium delivers skilled civil construction manpower across India including site engineers, masons, steel fixers, formwork carpenters, and heavy machinery operators for infrastructure and building projects."
-        keywords="civil construction manpower India, site engineers India, construction workers supply, building contractor manpower, skilled labour construction India, structural workers India, Smaar Elysium construction"
+        title="Civil Construction Manpower Supply in UAE | Site Engineers & Skilled Labour | Smaar Elysium"
+        description="Smaar Elysium delivers skilled civil construction manpower across UAE including site engineers, masons, steel fixers, formwork carpenters, and heavy machinery operators for infrastructure and building projects."
+        keywords="civil construction manpower UAE, site engineers UAE, construction workers supply, building contractor manpower, skilled labour construction UAE, structural workers UAE, Smaar Elysium construction"
         canonical="https://www.smaarelysium.com/civil-construction"
       />
 
@@ -40,7 +40,7 @@ const CivilConstruction = () => {
             </h1>
             <p className="home-hero__text">
               Delivering highly skilled and semi-skilled manpower for major infrastructure, commercial,
-              residential, and industrial construction mega-projects across the India.
+              residential, and industrial construction mega-projects across the UAE.
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
@@ -63,7 +63,7 @@ const CivilConstruction = () => {
             <div className="cbs-left">
               <h2>Expert Manpower for Civil Construction</h2>
               <p>
-                The India's rapidly expanding skyline demands construction teams built on precision, safety,
+                The UAE's rapidly expanding skyline demands construction teams built on precision, safety,
                 and deep technical expertise. We provide qualified manpower that
                 ensures your projects are delivered on time, within budget, and to the highest standards.
               </p>
@@ -74,7 +74,7 @@ const CivilConstruction = () => {
               </p>
               <p>
                 We supply certified civil engineers, site supervisors, NEBOSH-certified safety officers,
-                and specialized trade labor perfectly aligned with India construction regulations and climatic conditions.
+                and specialized trade labor perfectly aligned with UAE construction regulations and climatic conditions.
               </p>
             </div>
 
@@ -188,7 +188,7 @@ const CivilConstruction = () => {
               <div className="benefit-card bg-gray">
                 <h3>Strict Safety Standards</h3>
                 <p>
-                  Workforce trained under India HSE
+                  Workforce trained under UAE HSE
                   and construction compliance regulations.
                 </p>
               </div>
