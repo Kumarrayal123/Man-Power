@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Construction, Hammer, Shield, Users, Briefcase, BarChart, Droplet, Sparkles, LayoutGrid, MonitorCheck, Contact } from 'lucide-react';
@@ -18,6 +18,57 @@ import hrHero from "../assest/manpower-supply-meadia/hr-hero.png";
 import ssHero from "../assest/manpower-supply-meadia/security-solutions-hero.png";
 import heroVideo from "../assest/manpower-supply-meadia/herovideo.mp4";
 import quoteHero from "../assest/manpower-supply-meadia/quote_section_architecture.png";
+
+// Custom hook for counting animation when in view
+const useCountUp = (end, duration = 2000) => {
+    const [count, setCount] = useState(0);
+    const countRef = useRef(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    let startTimestamp = null;
+                    const step = (timestamp) => {
+                        if (!startTimestamp) startTimestamp = timestamp;
+                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+                        // easeOutQuart easing function for smooth deceleration
+                        const easeOut = 1 - Math.pow(1 - progress, 4);
+                        setCount(Math.floor(easeOut * end));
+
+                        if (progress < 1) {
+                            window.requestAnimationFrame(step);
+                        } else {
+                            setHasAnimated(true);
+                        }
+                    };
+                    window.requestAnimationFrame(step);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (countRef.current) {
+            observer.observe(countRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [end, duration, hasAnimated]);
+
+    return { count, countRef };
+};
+
+const Counter = ({ end, suffix = "", duration = 2000 }) => {
+    const { count, countRef } = useCountUp(end, duration);
+    return (
+        <span ref={countRef} className="journey-num">
+            {count}{suffix}
+        </span>
+    );
+};
+
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(0);
 
@@ -214,22 +265,22 @@ const Home = () => {
                     <div className="journey-grid-container">
                         <div className="journey-grid">
                             <div className="journey-item">
-                                <span className="journey-num">250+</span>
+                                <Counter end={100} suffix="+" duration={2000} />
                                 <h3 className="journey-label">Active Deployments</h3>
                                 <p className="journey-desc">Currently managing and supporting massive workforces across major critical developments in the UAE.</p>
                             </div>
                             <div className="journey-item">
-                                <span className="journey-num">550+</span>
+                                <Counter end={100} suffix="+" duration={2000} />
                                 <h3 className="journey-label">Partner Organizations</h3>
                                 <p className="journey-desc">Trusted by leading enterprises and conglomerates for consistent, compliant, and reliable staffing.</p>
                             </div>
                             <div className="journey-item">
-                                <span className="journey-num">1000+</span>
+                                <Counter end={100} suffix="+" duration={2000} />
                                 <h3 className="journey-label">Projects Delivered</h3>
                                 <p className="journey-desc">A proven track record of successful manpower support and execution across highly diverse industrial sectors.</p>
                             </div>
                             <div className="journey-item">
-                                <span className="journey-num">10000+</span>
+                                <Counter end={1000} suffix="+" duration={2500} />
                                 <h3 className="journey-label">Professionals Deployed</h3>
                                 <p className="journey-desc">Maintaining a vast, rapidly scalable network of fully vetted, trained, and immediately available talent.</p>
                             </div>
@@ -928,7 +979,7 @@ const Home = () => {
           .featured-services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
           .section-title { font-size: 2.2rem; }
           .journey-grid { grid-template-columns: 1fr 1fr; gap: 40px 0; }
-          .journey-item:nth-child(2) { border-right: none; }
+          .journey-item:nth-child(even) { border-right: none; }
           .journey-item:nth-child(1), .journey-item:nth-child(2) { padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.15); }
           .supply-grid-container { border-radius: 15px; }
           .supply-card { padding: 30px 20px; }
@@ -948,9 +999,13 @@ const Home = () => {
           .featured-services-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
           .featured-service-card { height: 160px; border-radius: 12px; }
           .fs-card-title { font-size: 1.1rem; }
-          .journey-grid { grid-template-columns: 1fr; }
-          .journey-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 30px !important; }
-          .journey-item:last-child { border-bottom: none; }
+          .journey-grid { grid-template-columns: 1fr 1fr; gap: 20px 0; }
+          .journey-item { padding: 10px 15px !important; border-bottom: none !important; border-right: 1px solid rgba(255,255,255,0.15) !important; }
+          .journey-item:nth-child(even) { border-right: none !important; }
+          .journey-item:nth-child(1), .journey-item:nth-child(2) { padding-bottom: 25px !important; border-bottom: 1px solid rgba(255,255,255,0.15) !important; }
+          .journey-num { font-size: 1.8rem; margin-bottom: 5px; display: block; }
+          .journey-label { font-size: 0.95rem; margin-bottom: 8px; }
+          .journey-desc { font-size: 0.75rem; }
           .projects-grid { grid-template-columns: 1fr; }
           .core-area-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
           .core-area-item { height: 250px; grid-column: span 1 !important; }
