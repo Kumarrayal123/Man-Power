@@ -178,8 +178,8 @@ const ContactUs = () => {
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         .home-hero__image-wrapper { flex: 0 0 auto; }
         .home-hero__image { max-width: 450px; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3)); }
-        @media (max-width: 1024px) { .home-hero { flex-direction: column; text-align: center; padding: 60px 50px; } .home-hero__image { max-width: 300px; margin-top: 30px; } }
-        @media (max-width: 576px) { .home-hero { padding: 40px 25px; border-radius: 20px; } .home-hero__image { max-width: 220px; } }
+        @media (max-width: 1024px) { .home-hero { flex-direction: column; text-align: center; padding: 60px 30px 0; } .home-hero__image { max-width: 380px; margin-top: 30px; margin-bottom: -15%; } }
+        @media (max-width: 576px) { .home-hero { padding: 40px 25px 0; border-radius: 20px; } .home-hero__image { max-width: 100%; margin-bottom: -12%; } }
 
         /* Full-Width Map */
         .map-wrapper { padding-top: 30px; padding-bottom: 10px; }

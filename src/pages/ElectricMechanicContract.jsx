@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import heroImage from "../assest/manpower-supply-meadia/homepagehero.png";
+import heroImage from "../assest/manpower-supply-meadia/Electrichero.png";
 import btsImg from "../assest/manpower-supply-meadia/electric_mechanic_team.png";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/electric_mechanic_team.png";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/emc_insight_2.png";
