@@ -665,7 +665,7 @@ const ExecutiveSearch = () => {
         .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
 
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: 1fr; } .insights-title { font-size: 2rem; } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
         
         /* FAQ Section */
         .faq-section { padding: 60px 0 100px; background: #fff; }

@@ -715,7 +715,7 @@ const Recruitment = () => {
             .insights-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
-            .insights-grid { grid-template-columns: 1fr; }
+            .insights-grid { grid-template-columns: repeat(2, 1fr); }
             .insights-title { font-size: 2rem; }
         }
         

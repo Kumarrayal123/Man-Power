@@ -400,7 +400,7 @@ const SecuritySolutions = () => {
         .insight-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px; color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff; }
         .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: 1fr; } .insights-title { font-size: 2rem; } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
 
         .faq-section { padding: 60px 0 100px; background: #fff; }
         .faq-main-title { font-size: 3rem; font-weight: 400; color: #000; margin-bottom: 20px; text-transform: uppercase; }

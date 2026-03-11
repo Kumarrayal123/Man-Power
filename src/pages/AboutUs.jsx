@@ -466,7 +466,7 @@ const AboutUs = () => {
         .insight-content p { color: #777; font-size: 0.92rem; line-height: 1.6; flex-grow: 1; }
 
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: 1fr; } .insights-title { font-size: 2rem; } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
         @media (max-width: 480px) { .insights-section { padding: 0 4%; } .insights-title { font-size: 1.7rem; margin-bottom: 35px; } }
         `}} />
     </div>

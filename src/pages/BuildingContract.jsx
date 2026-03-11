@@ -233,7 +233,7 @@ const BuildingContract = () => {
         .quote-btn { background: white; color: #001a4d; padding: 14px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; white-space: nowrap; transition: all 0.3s ease; border: 2px solid white; }
         .quote-btn:hover { background: #FE7622; color: white; border-color: #FE7622; }
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .quote-container { padding: 40px 30px; gap: 30px; } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: 1fr; } .insights-title { font-size: 2rem; } .quote-container { flex-direction: column; text-align: center; padding: 35px 20px; gap: 20px; } .quote-title { margin-top: 20px; margin-bottom: 15px; } .quote-btn { width: 100%; text-align: center; } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } .quote-container { flex-direction: column; text-align: center; padding: 35px 20px; gap: 20px; } .quote-title { margin-top: 20px; margin-bottom: 15px; } .quote-btn { width: 100%; text-align: center; } }
       `}} />
         </div>
     );
