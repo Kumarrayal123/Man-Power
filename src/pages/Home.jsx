@@ -16,6 +16,7 @@ import csHero from "../assest/manpower-supply-meadia/contract-staffing-hero.png"
 import esHero from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import hrHero from "../assest/manpower-supply-meadia/hr-hero.png";
 import ssHero from "../assest/manpower-supply-meadia/security-solutions-hero.png";
+import heroVideo from "../assest/manpower-supply-meadia/herovideo.mp4";
 import quoteHero from "../assest/manpower-supply-meadia/quote_section_architecture.png";
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(0);
@@ -56,20 +57,19 @@ const Home = () => {
             />
             <div className="container hero-wrapper">
                 {/* Hero Section - Refined to match Smaar Elysium */}
-                <section className="home-hero">
+                <section className="home-hero video-slide">
+                    {/* Video Background */}
+                    <div className="hero-video-container active">
+                        <video src={heroVideo} autoPlay loop muted playsInline className="hero-video-bg" />
+                        <div className="hero-video-overlay"></div>
+                    </div>
+
                     <div className="home-hero__content">
-                        <h1 className="home-hero__title">Premier Manpower &<br />Staffing Solutions in UAE</h1>
-                        <p className="home-hero__text">Empowering businesses with top-tier talent. Whether you need skilled professionals for permanent roles or a reliable workforce for temporary projects, we deliver excellence across all industries.</p>
+                        <h1 className="home-hero__title">Premier Civil Construction<br />Staffing Solutions in UAE</h1>
+                        <p className="home-hero__text">Empowering the building sector with top-tier talent. Whether you need skilled engineers for permanent roles or a reliable workforce for massive temporary projects, we deliver excellence on time and on budget.</p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">Book Now</Link>
                         </div>
-                    </div>
-                    <div className="home-hero__image">
-                        <img
-                            src={heroImage}
-                            alt="Manpower Workers"
-                            className="hero-workers-img"
-                        />
                     </div>
                 </section>
             </div>
@@ -87,7 +87,7 @@ const Home = () => {
                             {
                                 title: "Manpower Supply",
                                 img: msHero,
-                                link: "/manpower-supply"
+                                link: "/"
                             },
                             {
                                 title: "Recruitment",
@@ -147,7 +147,7 @@ const Home = () => {
                                 <div className="supply-card-icon">{item.icon}</div>
                                 <h3 className="supply-card-title">{item.title}</h3>
                                 <p className="supply-card-desc">{item.desc}</p>
-                                <Link to={item.link} className="supply-card-link">Read More <ArrowRight size={18} /></Link>
+                                {/* <Link to={item.link} className="supply-card-link">Read More <ArrowRight size={18} /></Link> */}
                             </div>
                         ))}
                     </div>
@@ -446,18 +446,39 @@ const Home = () => {
             overflow: hidden;
             min-height: 500px;
         }
-        .home-hero__content { flex: 1; z-index: 2; max-width: 600px; }
+        .home-hero.video-slide { background: var(--color-dark); }
+        .hero-video-container {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+        }
+        .hero-video-bg {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .hero-video-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .home-hero__content { flex: 1; z-index: 3; max-width: 600px; position: relative; }
         .home-hero__title { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 25px; font-weight: 900; color: #fff; }
         .home-hero__text { font-size: 1.1rem; color: #fff; margin-bottom: 40px; max-width: 500px; line-height: 1.6; opacity: 0.95; }
         
         .hero-btn-main { 
             background: #ffffff; color: #000; border: none; 
             padding: 15px 45px; border-radius: 100px; font-weight: 700; font-size: 1.1rem;
-            display: inline-block; transition: 0.3s;
+            display: inline-block; transition: 0.3s; position: relative; z-index: 3;
         }
         .hero-btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
         
-        .home-hero__image { flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; position: absolute; right: 40px; bottom: 0; }
+        .home-hero__image { 
+            flex: 0.8; display: flex; justify-content: flex-end; align-items: flex-end; 
+            position: absolute; right: 40px; bottom: 0; z-index: 2;
+            opacity: 0; visibility: hidden; transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .home-hero__image.active { opacity: 1; visibility: visible; }
         .hero-workers-img { width: 550px; max-width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2)); }
         
         .services-section { background: var(--color-white); padding-top: 100px; padding-bottom: 60px; }
