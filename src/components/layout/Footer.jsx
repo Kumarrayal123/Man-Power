@@ -24,19 +24,6 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Quick Links */}
-                    <div className="footer-col">
-                        <h4 className="footer-title">Our Services</h4>
-                        <ul className="footer-links">
-                            <li><Link to="/">Manpower Supply</Link></li>
-                            <li><Link to="/recruitment">Recruitment</Link></li>
-                            <li><Link to="/contract-staffing">Contract Staffing</Link></li>
-                            <li><Link to="/executive-search">Executive Search</Link></li>
-                            <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
-                            <li><Link to="/security-solutions">Security Solutions</Link></li>
-                        </ul>
-                    </div>
-
                     {/* Sectors */}
                     <div className="footer-col">
                         <h4 className="footer-title">Sectors</h4>
@@ -51,6 +38,19 @@ const Footer = () => {
                             <li><Link to="/logistics">Logistics</Link></li>
                             <li><Link to="/manufacture">Manufacture</Link></li>
                             <li><Link to="/mep">MEP Solutions</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="footer-col">
+                        <h4 className="footer-title">Our Services</h4>
+                        <ul className="footer-links">
+                            <li><Link to="/">Manpower Supply</Link></li>
+                            <li><Link to="/recruitment">Recruitment</Link></li>
+                            <li><Link to="/contract-staffing">Contract Staffing</Link></li>
+                            <li><Link to="/executive-search">Executive Search</Link></li>
+                            <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
+                            <li><Link to="/security-solutions">Security Solutions</Link></li>
                         </ul>
                     </div>
 
