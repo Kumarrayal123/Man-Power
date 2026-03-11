@@ -790,7 +790,18 @@ Error generating stack: `+o.message+`
             justify-content: center;
         }
         .quote-label { font-size: 1rem; opacity: 0.9; margin-bottom: 5px; display: block; }
-        .quote-title { font-size: 2.8rem; font-weight: 600; margin-bottom: 20px; }
+        .quote-title { 
+            font-size: 2.8rem; 
+            font-weight: 600; 
+            margin-bottom: 20px; 
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .quote-title:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+            transform: scale(1.02);
+        }
         .quote-desc { font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin-bottom: 40px; max-width: 90%; }
         
         .quote-form input, .quote-form textarea {
