@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
@@ -10,6 +10,53 @@ import heroTeamImg from "../assest/manpower-supply-meadia/abouthero.png";
 import journeyImg from "../assest/manpower-supply-meadia/about1.png";
 import missionBg from "../assest/manpower-supply-meadia/hr_outsourcing_bts.jpg";
 import visionBg from "../assest/manpower-supply-meadia/contract_staffing_bts.jpg";
+
+const useCountUp = (end, duration = 2000) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 4);
+            setCount(Math.floor(easeOut * end));
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              setHasAnimated(true);
+            }
+          };
+          window.requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (countRef.current) {
+      observer.observe(countRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration, hasAnimated]);
+
+  return { count, countRef };
+};
+
+const Counter = ({ end, suffix = "", duration = 2000 }) => {
+  const { count, countRef } = useCountUp(end, duration);
+  return (
+    <span ref={countRef} className="stats-num">
+      {count.toLocaleString()}{suffix}
+    </span>
+  );
+};
 
 const AboutUs = () => {
   return (
@@ -66,11 +113,11 @@ const AboutUs = () => {
                 workforce solutions partner trusted across multiple industries.
               </p>
               <p className="journey-page-paragraph">
-                With more than 15 years of combined expertise, our leadership team has navigated
+                With more than 5 years of combined expertise, our leadership team has navigated
                 diverse market conditions and built a robust talent network that spans skilled
                 professionals, semi-skilled workers, and executive-level leaders. We pride ourselves
                 on blending deep local market knowledge with industry best practices — delivering
-                staffing outcomes that move businesses forward.
+                results that consistently exceed expectations.
               </p>
               <p className="journey-page-paragraph">
                 Today, Smaar Elysium stands as one of UAE's most trusted names in manpower
@@ -87,19 +134,19 @@ const AboutUs = () => {
         <div className="container">
           <div className="stats-banner-grid">
             <div className="stats-banner-item">
-              <span className="stats-num">15+</span>
+              <Counter end={5} suffix="+" />
               <span className="stats-label">Years of Experience</span>
             </div>
             <div className="stats-banner-item">
-              <span className="stats-num">5,000+</span>
+              <Counter end={1000} suffix="+" />
               <span className="stats-label">Professionals Placed</span>
             </div>
             <div className="stats-banner-item">
-              <span className="stats-num">200+</span>
+              <Counter end={100} suffix="+" />
               <span className="stats-label">Active Clients</span>
             </div>
             <div className="stats-banner-item">
-              <span className="stats-num">10+</span>
+              <Counter end={15} suffix="+" />
               <span className="stats-label">Industries Served</span>
             </div>
           </div>
@@ -299,8 +346,14 @@ const AboutUs = () => {
         .home-hero__image-wrapper { flex: 0 0 auto; }
         .home-hero__image { max-width: 450px; height: auto; display: block; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2)); }
         
-        @media (max-width: 1024px) { .home-hero { flex-direction: column; text-align: center; padding: 60px 50px; } .home-hero__image { max-width: 350px; margin-top: 40px; } }
-        @media (max-width: 576px) { .home-hero { padding: 40px 25px; border-radius: 20px; } .home-hero__image { max-width: 100%; } }
+        @media (max-width: 1024px) { 
+            .home-hero { flex-direction: column; text-align: center; padding: 60px 50px 0; } 
+            .home-hero__image { max-width: 350px; margin-top: 40px; margin-bottom: -12%; } 
+        }
+        @media (max-width: 576px) { 
+            .home-hero { padding: 40px 25px 0; border-radius: 20px; } 
+            .home-hero__image { max-width: 100%; margin-bottom: -12%; } 
+        }
 
         /* General Shared */
         .section-label { color: #FE7622; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; }
