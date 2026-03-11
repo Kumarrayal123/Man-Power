@@ -16,6 +16,7 @@ import csHero from "../assest/manpower-supply-meadia/contract-staffing-hero.png"
 import esHero from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import hrHero from "../assest/manpower-supply-meadia/hr-hero.png";
 import ssHero from "../assest/manpower-supply-meadia/security-solutions-hero.png";
+import quoteHero from "../assest/manpower-supply-meadia/quote_section_architecture.png";
 const Home = () => {
     const [openFaq, setOpenFaq] = useState(0);
 
@@ -336,7 +337,7 @@ const Home = () => {
                 <div className="container">
                     <div className="quote-wrapper">
                         <div className="quote-image-side">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1000" alt="Hyderabad Architecture" />
+                            <img src={quoteHero} alt="Strategic Partnership Architecture" />
                         </div>
                         <div className="quote-form-side">
                             <span className="quote-label">Strategic Partnership</span>
