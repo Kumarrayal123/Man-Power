@@ -484,7 +484,7 @@ const AboutUs = () => {
         .value-card p { font-size: 0.95rem; color: #666; line-height: 1.6; }
 
         @media (max-width: 1024px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .values-grid { grid-template-columns: 1fr; } .value-card { padding: 30px 25px; } }
+        @media (max-width: 600px) { .values-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .value-card { padding: 25px 15px; } .value-icon { width: 50px; height: 50px; } .value-card h3 { font-size: 1.1rem; } }
 
         /* ── What We Do Section ── */
         .what-we-do-section { padding: 80px 0 100px; background: #fff; }
@@ -503,7 +503,7 @@ const AboutUs = () => {
         .wwd-card p { font-size: 0.95rem; color: #666; line-height: 1.7; }
 
         @media (max-width: 1024px) { .wwd-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .wwd-grid { grid-template-columns: 1fr; } .wwd-title { font-size: 1.9rem; } }
+        @media (max-width: 600px) { .wwd-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .wwd-card { padding: 25px 20px; } .wwd-title { font-size: 1.9rem; } }
 
         /* ── Insights Section  ── */
         .insights-section { margin-top: 0; margin-bottom: 100px; padding: 0 5%; }
