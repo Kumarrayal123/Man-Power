@@ -930,10 +930,10 @@ const Home = () => {
           .journey-grid { grid-template-columns: 1fr 1fr; gap: 40px 0; }
           .journey-item:nth-child(2) { border-right: none; }
           .journey-item:nth-child(1), .journey-item:nth-child(2) { padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.15); }
-          .supply-grid-container { grid-template-columns: 1fr; border-radius: 15px; }
-          .supply-card { border-right: none; }
-          .supply-card:nth-last-child(-n+2) { border-bottom: 1px solid #e2e4e8; }
-          .supply-card:last-child { border-bottom: none; }
+          .supply-grid-container { border-radius: 15px; }
+          .supply-card { padding: 30px 20px; }
+          .supply-card-title { font-size: 1.1rem; margin-bottom: 15px; }
+          .supply-card-desc { font-size: 0.85rem; margin-bottom: 15px; min-height: auto; }
           .book-steps-grid { grid-template-columns: 1fr; gap: 50px; text-align: center; }
           .book-step { align-items: center; }
           .book-banner-inner { padding: 50px 30px; }
@@ -945,9 +945,9 @@ const Home = () => {
           .form-row { grid-template-columns: 1fr; gap: 0; }
         }
         @media (max-width: 600px) {
-          .featured-services-grid { grid-template-columns: 1fr; }
-          .featured-service-card { height: 240px; }
-          .fs-card-title { font-size: 1.5rem; }
+          .featured-services-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+          .featured-service-card { height: 160px; border-radius: 12px; }
+          .fs-card-title { font-size: 1.1rem; }
           .journey-grid { grid-template-columns: 1fr; }
           .journey-item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.15); padding: 30px !important; }
           .journey-item:last-child { border-bottom: none; }
@@ -956,6 +956,10 @@ const Home = () => {
           .core-area-item { height: 250px; grid-column: span 1 !important; }
           .quote-form-side { padding: 40px 25px; }
           .quote-title { font-size: 2.2rem; }
+          .supply-card { padding: 20px 15px; }
+          .supply-card-icon { margin-bottom: 15px; }
+          .supply-card-title { font-size: 1rem; margin-bottom: 10px; }
+          .supply-card-desc { font-size: 0.8rem; margin-bottom: 0; }
         }
       `}} />
         </div >
