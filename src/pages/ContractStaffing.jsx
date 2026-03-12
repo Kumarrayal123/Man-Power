@@ -678,7 +678,7 @@ const ContractStaffing = () => {
             gap: 25px;
         }
         .insight-card {
-            background: #f8f9fa;
+            background: #ff741f;
             border-radius: 25px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -692,8 +692,7 @@ const ContractStaffing = () => {
         }
         .insight-image-wrap {
             height: 250px;
-            background: #8e2de2; /* fallback purple from image */
-            background: linear-gradient(135deg, #8e2de2, #4a00e0);
+            background: #fa3e52;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -716,14 +715,14 @@ const ContractStaffing = () => {
         }
         .insight-content h3 {
             font-size: 1.3rem;
-            color: #333;
+            color: #fff;
             margin-bottom: 20px;
             line-height: 1.4;
             font-weight: 600;
             min-height: 3.5rem;
         }
         .insight-content p {
-            color: #777;
+            color: #fff;
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 25px;

@@ -416,14 +416,14 @@ const Mep = () => {
         .insights-section { margin-top: 60px; margin-bottom: 100px; padding: 0 5%; }
         .insights-title { text-align: center; font-size: 2.5rem; color: #555; margin-bottom: 60px; font-weight: 500; }
         .insights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .insight-card { background: #f8f9fa; border-radius: 25px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .insight-card { background: #ff741f; border-radius: 25px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
         .insight-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         .insight-image-wrap { height: 250px; background: #fa3e52; overflow: hidden; display: flex; align-items: center; justify-content: center; }
         .insight-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .insight-card:hover .insight-image-wrap img { transform: scale(1.1); }
         .insight-content { padding: 30px 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .insight-content h3 { font-size: 1.3rem; color: #333; margin-bottom: 20px; line-height: 1.4; font-weight: 600; min-height: 3.5rem; }
-        .insight-content p { color: #777; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+        .insight-content h3 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; line-height: 1.4; font-weight: 600; min-height: 3.5rem; }
+        .insight-content p { color: #fff; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
         .insight-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px; color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff; }
         .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
