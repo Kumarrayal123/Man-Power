@@ -5,10 +5,10 @@ import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/executivesearch_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/executive_search_bts.jpg";
-import insight1Img from "../assest/manpower-supply-meadia/exec_insight_intro.png";
-import insight2Img from "../assest/manpower-supply-meadia/exec_insight_need.png";
-import insight3Img from "../assest/manpower-supply-meadia/exec_insight_benefits.png";
-import insight4Img from "../assest/manpower-supply-meadia/exec_insight_advantage.png";
+import insight1Img from "../assest/manpower-supply-meadia/uae_exec_insight_1.png";
+import insight2Img from "../assest/manpower-supply-meadia/uae_exec_insight_2.png";
+import insight3Img from "../assest/manpower-supply-meadia/uae_exec_insight_3.png";
+import insight4Img from "../assest/manpower-supply-meadia/uae_exec_insight_4.png";
 import cbsBgImg from "../assest/manpower-supply-meadia/executive_search_choose_best.png";
 
 const ExecutiveSearch = () => {
