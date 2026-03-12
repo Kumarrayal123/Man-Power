@@ -187,71 +187,57 @@ const OilAndGas = () => {
             </div>
           </div>
 
-          <div className="insights-section">
-            <h2 className="insights-title">Contract Staffing Insights</h2>
-
-            <div className="insights-grid">
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight1Img} alt="Insight 1" />
-                </div>
-                <div className="insight-content">
-                  <h3>Brief Introduction to Contract Staffing</h3>
-                  <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-                  {/* <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link> */}
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight2Img} alt="Insight 2" />
-                </div>
-                <div className="insight-content">
-                  <h3>Need of Contract Staffing</h3>
-                  <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-                  {/* <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link> */}
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight3Img} alt="Insight 3" />
-                </div>
-                <div className="insight-content">
-                  <h3>Benefits of getting Contract Staffing</h3>
-                  <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-                  {/* <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link> */}
-                </div>
-              </div>
-
-              <div className="insight-card">
-                <div className="insight-image-wrap">
-                  <img src={sectorInsight4Img} alt="Insight 4" />
-                </div>
-                <div className="insight-content">
-                  <h3>How can Contract Staffing work at Your Advantage?</h3>
-                  <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-                  {/* <Link to="/insights" className="insight-btn">
-                    Read More <ChevronRight size={18} />
-                  </Link> */}
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
         </div>
       </div>
 
+      <div className="insights-section">
+        <h2 className="insights-title">Oil & Gas Insights</h2>
+        <div className="insights-grid">
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight1Img} alt="Insight 1" />
+            </div>
+            <div className="insight-content">
+              <h3>Brief Introduction to Contract Staffing</h3>
+              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+            </div>
+          </div>
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight2Img} alt="Insight 2" />
+            </div>
+            <div className="insight-content">
+              <h3>Need of Contract Staffing</h3>
+              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+            </div>
+          </div>
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight3Img} alt="Insight 3" />
+            </div>
+            <div className="insight-content">
+              <h3>Benefits of getting Contract Staffing</h3>
+              <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+            </div>
+          </div>
+          <div className="insight-card">
+            <div className="insight-image-wrap">
+              <img src={sectorInsight4Img} alt="Insight 4" />
+            </div>
+            <div className="insight-content">
+              <h3>How can Contract Staffing work at Your Advantage?</h3>
+              <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
       {/* Contract Staffing Insights Styles */}
-      <style dangerouslySetInnerHTML={{
+      < style dangerouslySetInnerHTML={{
         __html: `
         /* Quote Section Styles */
         .quote-section {
@@ -335,11 +321,7 @@ const OilAndGas = () => {
           }
         }
 
-        .insights-section {
-          margin-top: 60px;
-          margin-bottom: 100px;
-          padding: 0 5%;
-        }
+        .insights-section { margin-top: 60px; margin-bottom: 100px; padding: 0 40px; }
         .insights-title {
           text-align: center;
           font-size: 2.5rem;
@@ -429,7 +411,7 @@ const OilAndGas = () => {
           .insights-title { font-size: 2rem; }
         }
       `}} />
-    </div>
+    </div >
   );
 };
 
