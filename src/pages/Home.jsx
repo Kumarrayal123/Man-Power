@@ -573,6 +573,8 @@ const Home = () => {
         .supply-card-link {
             display: inline-flex; align-items: center; gap: 8px; font-weight: 400; font-size: 0.95rem; transition: 0.3s;
         }
+            .supply-card:hover .supply-card-title{
+            color:#fff;}
         .supply-card-link:hover { gap: 12px; }
         
         /* Book Manpower Banner Section */
