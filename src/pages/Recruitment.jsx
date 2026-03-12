@@ -5,10 +5,10 @@ import { ChevronRight } from 'lucide-react';
 import heroImage from "../assest/manpower-supply-meadia/recruitment-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/recruitment_hiring.png";
 import btsGroup7Img from "../assest/manpower-supply-meadia/recruitment_team.png";
-import insight1 from "../assest/manpower-supply-meadia/insight_intro.png";
-import insight2 from "../assest/manpower-supply-meadia/insight_need.png";
-import insight3 from "../assest/manpower-supply-meadia/insight_benefits.png";
-import insight4 from "../assest/manpower-supply-meadia/insight_advantage.png";
+import insight1 from "../assest/manpower-supply-meadia/uae_insight_intro.png";
+import insight2 from "../assest/manpower-supply-meadia/uae_insight_need.png";
+import insight3 from "../assest/manpower-supply-meadia/uae_insight_benefits.png";
+import insight4 from "../assest/manpower-supply-meadia/uae_insight_advantage.png";
 
 const Recruitment = () => {
   const [openFaq, setOpenFaq] = useState(0);
