@@ -86,11 +86,13 @@ const Footer = () => {
 
             <style dangerouslySetInnerHTML={{
                 __html: `
-        .site-footer { background: #1a1d21; color: #adb5bd; padding-top: 80px; }
+        .site-footer { background: #fff; color: #000000; padding-top: 80px;border-top: 1px solid #000000; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 60px; }
         
         .footer-logo-link { display: block; margin-bottom: 25px; }
-        .footer-logo-img { height: 70px; width: auto; filter: brightness(0) invert(1); }
+        .footer-logo-img { height: 70px; width: auto; 
+        // filter: brightness(0) invert(1); 
+        }
         .footer-col.brand p { line-height: 1.8; margin-bottom: 25px; }
 
         
@@ -98,17 +100,17 @@ const Footer = () => {
         .social-links a { width: 36px; height: 36px; background: #2a2e34; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: 0.3s; }
         .social-links a:hover { background: var(--color-primary); }
         
-        .footer-title { color: white; font-size: 1.1rem; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-title { color: #000000; font-size: 1.1rem; margin-bottom: 25px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
         .footer-links li { margin-bottom: 12px; }
         .footer-links a:hover { color: var(--color-primary); padding-left: 5px; }
         
         .footer-contact li { display: flex; gap: 15px; margin-bottom: 20px; line-height: 1.6; }
         .footer-contact i, .footer-contact svg { color: var(--color-primary); flex-shrink: 0; }
-        .footer-contact span, .footer-contact a { color: #adb5bd; }
+        .footer-contact span, .footer-contact a { color: #000000; }
         
         .footer-bottom { background: #fe7623; border-top: 1px solid #2a2e34; font-size: 0.85rem; color: #fff; width: 100%; }
         .footer-bottom-inner { max-width: 1200px; margin: 0 auto; padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom-links a { margin-left: 20px; }
+        .footer-bottom-links a { margin-left: 20px;color:#fff; }
         .footer-bottom-links a:hover { color: white; }
         
         @media (max-width: 992px) {
