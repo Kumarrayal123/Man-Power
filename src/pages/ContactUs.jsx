@@ -138,16 +138,7 @@ const ContactUs = () => {
                   <textarea placeholder="Comments" rows="4"></textarea>
                 </div>
 
-                {/* Placeholder for reCAPTCHA as shown in screenshot */}
-                <div className="recaptcha-placeholder">
-                  <div className="recaptcha-box">
-                    <input type="checkbox" id="robot" />
-                    <label htmlFor="robot">I'm not a robot</label>
-                    <div className="recaptcha-logo">
-                      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/RecaptchaLogo.svg" alt="reCAPTCHA" width="30" />
-                    </div>
-                  </div>
-                </div>
+
 
                 <button type="submit" className="quote-submit-btn">Book Now</button>
               </form>
