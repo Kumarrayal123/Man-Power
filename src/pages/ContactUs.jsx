@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
 import contactDubaiCity from "../assest/manpower-supply-meadia/contact_dubai_city.png";
-import contactQuoteOffice from "../assest/manpower-supply-meadia/contact_quote_office.png";
+import contactQuoteOffice from "../assest/manpower-supply-meadia/uae_contact_quote_office.png";
 import SEOHead from '../components/SEOHead';
 
 const ContactUs = () => {
@@ -117,7 +117,7 @@ const ContactUs = () => {
         <div className="container">
           <div className="quote-wrapper">
             <div className="quote-image-side">
-              <img src={contactQuoteOffice} alt="Smaar Elysium Office Meeting" />
+              <img src={contactQuoteOffice} alt="Professional Emirati business meeting in Dubai" />
             </div>
             <div className="quote-form-side">
               <span className="quote-label">Request a Quote</span>
