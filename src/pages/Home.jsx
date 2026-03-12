@@ -9,6 +9,9 @@ import img4 from "../assest/mp-4.jpg";
 import img5 from "../assest/mp-5.jpg";
 import img6 from "../assest/mp-6.jpg";
 import img7 from "../assest/mp-7.jpg";
+import Mechanical from "../assest/mechanical.jfif";
+import Facility from "../assest/Facility.jfif";
+import Logistics from "../assest/Logistics.jfif";
 import heroImage from "../assest/manpower-supply-meadia/homepagehero.png";
 import msHero from "../assest/manpower-supply-meadia/manpower-supply-hero.png";
 import rcHero from "../assest/manpower-supply-meadia/recruitment-hero.png";
@@ -318,7 +321,7 @@ const Home = () => {
 
                         {/* Bottom row - small blocks */}
                         <Link to="/oil-gas" className="core-area-item small">
-                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800" alt="Logistics" className="core-area-img" />
+                            <img src={Logistics} alt="Logistics" className="core-area-img" />
                             <div className="core-area-overlay">
                                 <h3 className="core-area-item-title">Logistics</h3>
                             </div>
@@ -330,13 +333,13 @@ const Home = () => {
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item small">
-                            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800" alt="Facility Management" className="core-area-img" />
+                            <img src={Facility} alt="Facility Management" className="core-area-img" />
                             <div className="core-area-overlay">
                                 <h3 className="core-area-item-title">Facility Management</h3>
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item small">
-                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" alt="Mechanical, Electrical & Plumbing - MEP" className="core-area-img" />
+                            <img src={Mechanical} alt="Mechanical, Electrical & Plumbing - MEP" className="core-area-img" />
                             <div className="core-area-overlay">
                                 <h3 className="core-area-item-title">Mechanical, Electrical &amp; Plumbing -<br />MEP</h3>
                             </div>
@@ -345,43 +348,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* <section className="clients-section">
-                <div className="container">
-                    <div className="clients-logos-header">
-                        <h2>Trusted By Industry Leaders</h2>
-                    </div>
-                    <div className="marquee-container">
-                        <div className="marquee-content left-to-right">
-                            <div className="marquee-group">
-                                {[
-                                    { name: "Client 1", img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-                                    { name: "Client 2", img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-                                    { name: "Client 3", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-                                    { name: "Client 4", img: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" },
-                                    { name: "Client 5", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/IBM_logo.svg" }
-                                ].map((client, i) => (
-                                    <div key={i} className="client-logo-box">
-                                        <img src={client.img} alt={client.name} />
-                                    </div>
-                                ))}
-                            </div>
-                            <div className="marquee-group" aria-hidden="true">
-                                {[
-                                    { name: "Client 1", img: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-                                    { name: "Client 2", img: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-                                    { name: "Client 3", img: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
-                                    { name: "Client 4", img: "https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" },
-                                    { name: "Client 5", img: "https://upload.wikimedia.org/wikipedia/commons/b/b2/IBM_logo.svg" }
-                                ].map((client, i) => (
-                                    <div key={'dup-' + i} className="client-logo-box">
-                                        <img src={client.img} alt={client.name} />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> */}
+
 
             {/* Request a Quote Section */}
             <section className="quote-section">
@@ -409,16 +376,7 @@ const Home = () => {
                                     <textarea placeholder="Comments" rows="4"></textarea>
                                 </div>
 
-                                {/* Placeholder for reCAPTCHA as shown in screenshot */}
-                                <div className="recaptcha-placeholder">
-                                    <div className="recaptcha-box">
-                                        <input type="checkbox" id="robot" />
-                                        <label htmlFor="robot">I'm not a robot</label>
-                                        <div className="recaptcha-logo">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/RecaptchaLogo.svg" alt="reCAPTCHA" width="30" />
-                                        </div>
-                                    </div>
-                                </div>
+
 
                                 <button type="submit" className="quote-submit-btn">Book Now</button>
                             </form>
@@ -454,33 +412,7 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* <section className="projects-section">
-                <div className="container">
-                    <div className="section-header">
-                        <span className="section-label">Success Stories</span>
-                        <h2 className="section-title">Showcasing Our Projects</h2>
-                    </div>
 
-                    <div className="projects-grid">
-                        {[
-                            { name: "Marsa Al Arab Hotel", tag: "Civil Construction", img: "https://images.unsplash.com/photo-1541976590-7139414bc5c4?q=80&w=800" },
-                            { name: "The Palace Hotel", tag: "MEP Solutions", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800" },
-                            { name: "Dubai Canal Walk", tag: "Infrastructure", img: "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?q=80&w=800" }
-                        ].map((project, i) => (
-                            <div key={i} className="project-item">
-                                <img src={project.img} alt={project.name} />
-                                <div className="project-overlay">
-                                    <span className="project-tag">{project.tag}</span>
-                                    <h4 className="project-name">{project.name}</h4>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                        <Link to="/projects" className="btn btn-primary">View All Projects</Link>
-                    </div>
-                </div>
-            </section> */}
 
             <style dangerouslySetInnerHTML={{
                 __html: `
@@ -995,6 +927,15 @@ const Home = () => {
             .featured-services-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 992px) {
+        .faq-question-text{
+        font-size: 0.95rem;
+        }
+        .faq-question-btn{
+        padding:15px 10px;
+        }
+        .faq-answer-content{
+        padding:15px 20px;
+        }
           .home-hero { flex-direction: column; text-align: center; padding: 60px 30px 0; min-height: auto; border-radius: 20px; }
           .home-hero__content { max-width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 20px; }
           .home-hero__image { position: relative; justify-content: center; width: 100%; display: flex; right: 0; bottom: 0; }
