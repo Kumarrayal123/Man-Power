@@ -277,7 +277,7 @@ const ContactUs = () => {
         }
         .quote-form-side {
             flex: 1;
-            background: linear-gradient(135deg, #1d152a 0%, #b11d2b 100%);
+            background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
             padding: 60px 50px;
             color: white;
             display: flex;
@@ -285,7 +285,19 @@ const ContactUs = () => {
             justify-content: center;
         }
         .quote-label { font-size: 1rem; opacity: 0.9; margin-bottom: 5px; display: block; }
-        .quote-title { font-size: 2.8rem; font-weight: 600; margin-bottom: 20px; }
+        .quote-title { 
+            font-size: 2.8rem; 
+            font-weight: 600; 
+            margin-bottom: 20px; 
+            color: #ffffff;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .quote-title:hover {
+            color: #FE7622;
+            text-shadow: 0 0 15px rgba(254, 118, 34, 0.4);
+            transform: translateX(10px);
+        }
         .quote-desc { font-size: 0.95rem; line-height: 1.6; opacity: 0.9; margin-bottom: 40px; max-width: 90%; }
         
         .quote-form input, .quote-form textarea {
@@ -297,10 +309,21 @@ const ContactUs = () => {
             color: white;
             font-size: 0.95rem;
             outline: none;
-            transition: 0.3s;
+            transition: all 0.3s ease;
         }
         .quote-form input::placeholder, .quote-form textarea::placeholder { color: rgba(255,255,255,0.5); }
-        .quote-form input:focus, .quote-form textarea:focus { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+        
+        .quote-form input:hover, .quote-form textarea:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 10px rgba(254, 118, 34, 0.3);
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .quote-form input:focus, .quote-form textarea:focus { 
+            border-color: var(--color-primary); 
+            background: rgba(255,255,255,0.1); 
+            box-shadow: 0 0 15px rgba(254, 118, 34, 0.5);
+        }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
         .form-group { margin-bottom: 20px; }
         .quote-form textarea { resize: none; }
