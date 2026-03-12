@@ -331,178 +331,101 @@ const Manufacture = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
-        .insights-section {
-          margin-top: 60px;
-          margin-bottom: 100px;
-          padding: 0 5%;
-        }
-        .insights-title {
-          text-align: center;
-          font-size: 2.5rem;
-          color: #555;
-          margin-bottom: 60px;
-          font-weight: 500;
-        }
-        .insights-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 25px;
-        }
-        .insight-card {
-          background: #f8f9fa;
-          border-radius: 25px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-          display: flex;
-          flex-direction: column;
-        }
-        .insight-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        .insight-image-wrap {
-          height: 250px;
-          background: #fa3e52;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .insight-image-wrap img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        .insight-card:hover .insight-image-wrap img {
-          transform: scale(1.1);
-        }
-        .insight-content {
-          padding: 30px 25px;
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-        }
-        .insight-content h3 {
-          font-size: 1.3rem;
-          color: #333;
-          margin-bottom: 20px;
-          line-height: 1.4;
-          font-weight: 600;
-          min-height: 3.5rem;
-        }
-        .insight-content p {
-          color: #777;
-          font-size: 0.95rem;
-          line-height: 1.6;
-          margin-bottom: 25px;
-          flex-grow: 1;
-        }
-        .insight-btn {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 12px 20px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          color: #555;
-          text-decoration: none;
-          font-weight: 500;
-          transition: all 0.3s ease;
-          background: #fff;
-        }
-        .insight-btn:hover {
-          border-color: #FE7622;
-          color: #FE7622;
-          background: #fdf2f3;
-        }
-
-        /* Request a Quote Section */
+        /* Quote Section Styles */
         .quote-section {
-          margin: 60px 0;
+          background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+          border-radius: 24px;
+          padding: 50px;
+          margin: 80px 0;
+          margin-top: 60px;
+          position: relative;
         }
         .quote-container {
-          background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
-          border-radius: 15px;
-          padding: 50px 40px;
-          position: relative;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 50px;
-          margin: 0 5%;
-          color: white;
+          gap: 40px;
         }
         .quote-label {
           position: absolute;
           top: -15px;
           left: 30px;
           background: #001a4d;
-          color: white;
-          padding: 8px 20px;
-          border-radius: 25px;
-          font-size: 0.85rem;
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-size: 0.8rem;
           font-weight: 600;
           text-transform: uppercase;
-          letter-spacing: 0.5px;
+          letter-spacing: 1px;
         }
         .quote-title {
           font-size: clamp(2rem, 5vw, 3rem);
-          font-weight: 600;
-          margin-bottom: 20px;
-          line-height: 1.3;
+          color: #fff;
+          font-weight: 700;
+          margin: 0;
+          line-height: 1.2;
         }
         .quote-text {
-          font-size: clamp(0.95rem, 2vw, 1.1rem);
+          color: #fff;
+          font-size: 1.05rem;
           line-height: 1.6;
-          margin-bottom: 0;
-          flex: 1;
+          margin: 20px 0 30px;
+          max-width: 600px;
         }
         .quote-btn {
-          background: white;
+          display: inline-block;
+          background: #fff;
           color: #001a4d;
           padding: 14px 40px;
-          border-radius: 8px;
+          border-radius: 50px;
           text-decoration: none;
-          font-weight: 600;
+          font-weight: 700;
           font-size: 1rem;
-          display: inline-block;
-          white-space: nowrap;
           transition: all 0.3s ease;
-          border: 2px solid white;
+          white-space: nowrap;
         }
         .quote-btn:hover {
-          background: #FE7622;
-          color: white;
-          border-color: #FE7622;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
-
-        @media (max-width: 1200px) {
-          .insights-grid { grid-template-columns: repeat(2, 1fr); }
-          .quote-container {
-            padding: 40px 30px;
-            gap: 30px;
-          }
-        }
+        
         @media (max-width: 768px) {
-          .insights-grid { grid-template-columns: repeat(2, 1fr); }
-          .insights-title { font-size: 2rem; }
+          .quote-section {
+            padding: 40px 25px;
+            margin: 60px 0;
+          }
           .quote-container {
             flex-direction: column;
             text-align: center;
-            padding: 35px 20px;
             gap: 20px;
           }
-          .quote-title {
-            margin-top: 20px;
-            margin-bottom: 15px;
+          .quote-label {
+            position: static;
+            display: inline-block;
+            margin-bottom: 20px;
           }
           .quote-btn {
             width: 100%;
             text-align: center;
           }
         }
+
+        .insights-section { margin-top: 60px; margin-bottom: 100px; padding: 0 5%; }
+        .insights-title { text-align: center; font-size: 2.5rem; color: #555; margin-bottom: 60px; font-weight: 500; }
+        .insights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .insight-card { background: #f8f9fa; border-radius: 25px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+        .insight-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .insight-image-wrap { height: 250px; background: #fa3e52; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .insight-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .insight-card:hover .insight-image-wrap img { transform: scale(1.1); }
+        .insight-content { padding: 30px 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .insight-content h3 { font-size: 1.3rem; color: #333; margin-bottom: 20px; line-height: 1.4; font-weight: 600; min-height: 3.5rem; }
+        .insight-content p { color: #777; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
+        .insight-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px; color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff; }
+        .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
+        @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
       `}} />
     </div>
   );

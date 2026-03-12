@@ -212,6 +212,86 @@ const RailwayContract = () => {
 
             <style dangerouslySetInnerHTML={{
                 __html: `
+        /* Quote Section Styles */
+        .quote-section {
+          background: linear-gradient(135deg, #001a4d 0%, #003d99 100%);
+          border-radius: 24px;
+          padding: 50px;
+          margin: 80px 0;
+          margin-top: 60px;
+          position: relative;
+        }
+        .quote-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 40px;
+        }
+        .quote-label {
+          position: absolute;
+          top: -15px;
+          left: 30px;
+          background: #001a4d;
+          color: #fff;
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .quote-title {
+          font-size: clamp(2rem, 5vw, 3rem);
+          color: #fff;
+          font-weight: 700;
+          margin: 0;
+          line-height: 1.2;
+        }
+        .quote-text {
+          color: #fff;
+          font-size: 1.05rem;
+          line-height: 1.6;
+          margin: 20px 0 30px;
+          max-width: 600px;
+        }
+        .quote-btn {
+          display: inline-block;
+          background: #fff;
+          color: #001a4d;
+          padding: 14px 40px;
+          border-radius: 50px;
+          text-decoration: none;
+          font-weight: 700;
+          font-size: 1rem;
+          transition: all 0.3s ease;
+          white-space: nowrap;
+        }
+        .quote-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+          .quote-section {
+            padding: 40px 25px;
+            margin: 60px 0;
+          }
+          .quote-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+          }
+          .quote-label {
+            position: static;
+            display: inline-block;
+            margin-bottom: 20px;
+          }
+          .quote-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
         .insights-section { margin-top: 60px; margin-bottom: 100px; padding: 0 5%; }
         .insights-title { text-align: center; font-size: 2.5rem; color: #555; margin-bottom: 60px; font-weight: 500; }
         .insights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
@@ -225,15 +305,8 @@ const RailwayContract = () => {
         .insight-content p { color: #777; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
         .insight-btn { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px; color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff; }
         .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
-        .quote-section { margin: 60px 0; }
-        .quote-container { background: linear-gradient(135deg, #001a4d 0%, #003d99 100%); border-radius: 15px; padding: 50px 40px; position: relative; display: flex; align-items: center; justify-content: space-between; gap: 50px; margin: 0 5%; color: white; }
-        .quote-label { position: absolute; top: -15px; left: 30px; background: #001a4d; color: white; padding: 8px 20px; border-radius: 25px; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .quote-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; margin-bottom: 20px; line-height: 1.3; }
-        .quote-text { font-size: clamp(0.95rem, 2vw, 1.1rem); line-height: 1.6; margin-bottom: 0; flex: 1; }
-        .quote-btn { background: white; color: #001a4d; padding: 14px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; white-space: nowrap; transition: all 0.3s ease; border: 2px solid white; }
-        .quote-btn:hover { background: #FE7622; color: white; border-color: #FE7622; }
-        @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .quote-container { padding: 40px 30px; gap: 30px; } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } .quote-container { flex-direction: column; text-align: center; padding: 35px 20px; gap: 20px; } .quote-title { margin-top: 20px; margin-bottom: 15px; } .quote-btn { width: 100%; text-align: center; } }
+        @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
       `}} />
         </div>
     );
