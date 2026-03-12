@@ -113,7 +113,7 @@ const Header = () => {
                     </nav>
 
                     <div className="site-header__actions">
-                        <Link to="/contact" className="nav-bk-btn d-none-mobile">BOOK MANPOWER</Link>
+                        <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">BOOK MANPOWER</Link>
                         <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             {isMenuOpen ? <X /> : <Menu />}
                         </button>
