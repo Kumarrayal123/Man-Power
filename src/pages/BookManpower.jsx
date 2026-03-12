@@ -440,18 +440,37 @@ const BookManpower = () => {
                 }
 
                 @media (max-width: 992px) {
-                    .booking-grid { grid-template-columns: 1fr; }
-                    .booking-summary-sidebar { order: -1; }
+                    .booking-grid { grid-template-columns: 1fr; gap: 30px; }
+                    .booking-summary-sidebar { order: 1; }
                     .summary-glass-card { position: static; }
-                    .hero-title { font-size: 2.5rem; }
+                    .hero-title { font-size: 2.8rem; }
+                    .hero-subtitle { font-size: 1.1rem; padding: 0 20px; }
                 }
+
+                @media (max-width: 768px) {
+                    .booking-hero { padding: 60px 0 100px; border-radius: 0 0 40px 40px; }
+                    .hero-title { font-size: 2.2rem; }
+                    .step-indicator { max-width: 90%; }
+                    .dot-label { font-size: 0.7rem; }
+                    .step-line { margin: 0 -10px 18px; }
+                    .dot-num { width: 30px; height: 30px; font-size: 0.9rem; }
+                }
+
                 @media (max-width: 576px) {
-                    .main-booking-area { padding: 25px; border-radius: 0; }
-                    .form-grid { grid-template-columns: 1fr; }
-                    .category-nav { margin: 0 -25px 25px; padding: 0 25px 10px; }
-                    .trades-cards-grid { grid-template-columns: 1fr; }
-                    .nav-btn-next { width: 100%; justify-content: center; }
-                    .step-navigation { flex-direction: column; gap: 15px; }
+                    .main-booking-area { padding: 25px 20px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+                    .step-header h2 { font-size: 1.6rem; }
+                    .form-grid { grid-template-columns: 1fr; gap: 15px; }
+                    .category-nav { gap: 5px; margin-bottom: 20px; }
+                    .nav-item { padding: 10px 15px; font-size: 0.9rem; }
+                    .trades-cards-grid { grid-template-columns: 1fr; gap: 12px; }
+                    .trade-item-card { padding: 15px; gap: 15px; }
+                    .item-icon { font-size: 2rem; }
+                    .item-name { font-size: 1rem; margin-bottom: 8px; }
+                    .nav-btn-next { width: 100%; justify-content: center; padding: 15px; margin-top: 10px; }
+                    .nav-btn-prev { padding: 12px 20px; }
+                    .step-navigation { flex-direction: column-reverse; gap: 15px; align-items: stretch; }
+                    .summary-glass-card { padding: 20px; }
+                    .total-val { font-size: 1.2rem; }
                 }
             `}} />
         </div>
