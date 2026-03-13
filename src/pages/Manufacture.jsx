@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/manufacture_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/manufacture_insight_1.jpg";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/manufacture_insi
 import sectorInsight4Img from "../assest/manpower-supply-meadia/manufacture_insight_4.jpg";
 
 const Manufacture = () => {
+  const { t } = useLanguage();
+  const [openFaq, setOpenFaq] = React.useState(0);
+
+  const faqs = [
+    { question: t.manFaqQ1, answer: t.manFaqA1 },
+    { question: t.manFaqQ2, answer: t.manFaqA2 },
+    { question: t.manFaqQ3, answer: t.manFaqA3 },
+    { question: t.manFaqQ4, answer: t.manFaqA4 },
+    { question: t.manFaqQ5, answer: t.manFaqA5 },
+    { question: t.manFaqQ6, answer: t.manFaqA6 }
+  ];
+
   return (
-    <div className="oil-gas-page">
+    <div className="oil-gas-page recruitment-page">
       <SEOHead
-        title="Manufacturing Sector Manpower in UAE | Industrial & Production Workers | Smaar Elysium"
-        description="Smaar Elysium delivers certified manufacturing manpower across UAE including CNC operators, welders, quality inspectors, assembly line workers, and industrial maintenance technicians for factories and production plants."
-        keywords="manufacturing manpower UAE, industrial workers supply, CNC operators UAE, welders staffing UAE, production workers agency, quality control technicians, Smaar Elysium manufacturing"
-        canonical="https://www.smaarelysium.com/manufacturing"
+        title={t.maSEOTitle}
+        description={t.maSEODesc}
+        keywords="manufacturing manpower UAE, factory workers Dubai, production line staff agency, machine operators UAE, manufacturing staffing solutions Dubai"
+        canonical="https://www.smaarelysium.com/manufacture"
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">
-              Manufacturing<br />Sector
+              {t.mnHeroTitle}
             </h1>
             <p className="home-hero__text">
-              Supplying high-performance, skilled manpower for heavy manufacturing, assembly
-              lines, and precision industrial production facilities across the UAE.
+              {t.mnHeroText}
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
-                Get in Touch
+                {t.getInTouch}
               </Link>
             </div>
           </div>
@@ -49,19 +65,10 @@ const Manufacture = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Manufacturing Manpower Solutions</h2>
-              <p>
-                As industrial zones and smart manufacturing hubs expand across the UAE,
-                having a reliable, technically proficient workforce is the key to scalability.
-              </p>
-              <p>
-                We provide certified CNC operators, industrial electricians, QA/QC inspectors,
-                and seasoned assembly line supervisors to keep your production operating around the clock.
-              </p>
-              <p>
-                Our personnel are meticulously trained to adhere strictly to
-                modern manufacturing methodologies, lean principles, and uncompromising factory safety standards.
-              </p>
+              <h2>{t.mnChooseTitle}</h2>
+              <p>{t.mnChooseP1}</p>
+              <p>{t.mnChooseP2}</p>
+              <p>{t.mnChooseP3}</p>
             </div>
 
             <div className="cbs-right">
@@ -70,14 +77,14 @@ const Manufacture = () => {
                 {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
-                  MANUFACTURING INDUSTRY EXPERTS
+                  {t.mnLogoSlogan}
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">ACCELERATING</span>
-                <span className="cbs-ordinary">PRODUCTION</span>
-                <span className="cbs-find">WITH</span>
-                <span className="cbs-executives">EXPERT LABOR</span>
+                <span className="cbs-go-beyond">{t.mnGrid1}</span>
+                <span className="cbs-ordinary">{t.mnGrid2}</span>
+                <span className="cbs-find">{t.mnGrid3}</span>
+                <span className="cbs-executives">{t.mnGrid4}</span>
               </div>
             </div>
           </div>
@@ -92,21 +99,15 @@ const Manufacture = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your Manufacturing Team</h3>
-              <p>
-                Whether launching a new production shift or supplementing your core
-                machining team, we provide precisely matched industrial talent.
-              </p>
-              <p>
-                All recruits undergo strict technical vetting and practical skills
-                assessments to ensure immediate on-site productivity and safety awareness.
-              </p>
+              <h3>{t.mnBtsTitle}</h3>
+              <p>{t.mnBtsP1}</p>
+              <p>{t.mnBtsP2}</p>
               <Link
                 to="/contact"
                 className="hero-btn-main"
                 style={{ background: '#fff', color: '#1f2937' }}
               >
-                Request Staff
+                {t.requestStaff}
               </Link>
             </div>
           </div>
@@ -114,74 +115,49 @@ const Manufacture = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Assembly & Production</h3>
-                <p>
-                  High-volume assembly line workers, packaging staff, and
-                  production supervisors ensuring output targets are consistently met.
-                </p>
+                <h3>{t.mnDom1Title}</h3>
+                <p>{t.mnDom1Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Machining & Fabrication</h3>
-                <p>
-                  Certified CNC programmers, welders (TIG/MIG), metal fabricators,
-                  and tool/die makers for precision engineering tasks.
-                </p>
+                <h3>{t.mnDom2Title}</h3>
+                <p>{t.mnDom2Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Quality Assurance (QC)</h3>
-                <p>
-                  Detail-oriented inspectors and metrology technicians ensuring zero
-                  defects and strict adherence to ISO manufacturing standards.
-                </p>
+                <h3>{t.mnDom3Title}</h3>
+                <p>{t.mnDom3Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Industrial Maintenance</h3>
-                <p>
-                  Preventative and reactive maintenance crews, including millwrights
-                  and heavy equipment mechanics, maximizing plant uptime.
-                </p>
+                <h3>{t.mnDom4Title}</h3>
+                <p>{t.mnDom4Desc}</p>
               </div>
             </div>
           </div>
 
           {/* ── Why Choose Us Section ── */}
           <section className="why-choose-us-section">
-            <h2 className="section-title">Why Choose Us</h2>
+            <h2 className="section-title">{t.whyChooseUs}</h2>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Industry Experience</h3>
-                <p>
-                  Teams familiar with manufacturing processes and equipment.
-                </p>
+                <h3>{t.mnBen1Title}</h3>
+                <p>{t.mnBen1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Safety First</h3>
-                <p>
-                  Workforce trained on factory safety protocols and PPE use.
-                </p>
+                <h3>{t.mnBen2Title}</h3>
+                <p>{t.mnBen2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Flexible Staffing</h3>
-                <p>
-                  Scale up or down according to production demands.
-                </p>
+                <h3>{t.mnBen3Title}</h3>
+                <p>{t.mnBen3Desc}</p>
               </div>
             </div>
           </section>
@@ -229,12 +205,37 @@ const Manufacture = () => {
           {/* Request a Quote Section */}
           <div className="quote-section">
             <div className="quote-container">
-              <div className="quote-label">Request a Quote</div>
-              <h2 className="quote-title">Get a quick follow up!</h2>
-              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-              <Link to="/contact" className="quote-btn">Book Now</Link>
+              <div className="quote-label">{t.requestQuote}</div>
+              <h2 className="quote-title">{t.quickFollowUp}</h2>
+              <p className="quote-text">{t.fillForm}</p>
+              <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
             </div>
           </div>
+
+          {/* FAQ Section */}
+          <section className="faq-section" style={{ margin: '60px 0' }}>
+            <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+            <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                  <div
+                    className="faq-question-btn"
+                    onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  >
+                    <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                    <span className="faq-question-text">{faq.question}</span>
+                  </div>
+                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                    <div className="faq-answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
         </div>
       </div>
@@ -247,8 +248,8 @@ const Manufacture = () => {
               <img src={sectorInsight1Img} alt="Insight 1" />
             </div>
             <div className="insight-content">
-              <h3>Brief Introduction to Contract Staffing</h3>
-              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+              <h3>{t.csInsight1Title}</h3>
+              <p>{t.csInsight1Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -256,8 +257,8 @@ const Manufacture = () => {
               <img src={sectorInsight2Img} alt="Insight 2" />
             </div>
             <div className="insight-content">
-              <h3>Need of Contract Staffing</h3>
-              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+              <h3>{t.csInsight2Title}</h3>
+              <p>{t.csInsight2Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -265,8 +266,8 @@ const Manufacture = () => {
               <img src={sectorInsight3Img} alt="Insight 3" />
             </div>
             <div className="insight-content">
-              <h3>Benefits of getting Contract Staffing</h3>
-              <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+              <h3>{t.csInsight3Title}</h3>
+              <p>{t.csInsight3Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -274,8 +275,8 @@ const Manufacture = () => {
               <img src={sectorInsight4Img} alt="Insight 4" />
             </div>
             <div className="insight-content">
-              <h3>How can Contract Staffing work at Your Advantage?</h3>
-              <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+              <h3>{t.csInsight4Title}</h3>
+              <p>{t.csInsight4Desc}</p>
             </div>
           </div>
         </div>
@@ -415,7 +416,7 @@ const Manufacture = () => {
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
       `}} />
-    </div >
+    </div>
   );
 };
 

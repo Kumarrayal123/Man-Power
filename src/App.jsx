@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/layout/Layout';
+import { LanguageProvider } from './context/LanguageContext';
 import Home from './pages/Home';
 // import Contact from './pages/Contact';
 import BookManpower from './pages/BookManpower';
@@ -43,42 +44,44 @@ const Sectors = () => (
 function App() {
     return (
         <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="services" element={<Services />} />
-                    <Route path="sectors" element={<Sectors />} />
-                    {/* <Route path="projects" element={<Home />} /> */}
-                    <Route path="clients" element={<Home />} />
-                    <Route path="insights" element={<Services />} />
-                    {/* <Route path="contact" element={<Contact />} /> */}
-                    <Route path="book-manpower" element={<BookManpower />} />
+            <LanguageProvider>
+                <ScrollToTop />
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="services" element={<Services />} />
+                        <Route path="sectors" element={<Sectors />} />
+                        {/* <Route path="projects" element={<Home />} /> */}
+                        <Route path="clients" element={<Home />} />
+                        <Route path="insights" element={<Services />} />
+                        {/* <Route path="contact" element={<Contact />} /> */}
+                        <Route path="book-manpower" element={<BookManpower />} />
 
-                    <Route path="services/manpower-supply" element={<ManpowerSupply />} />
-                    <Route path="services/:id" element={<Services />} />
-                    <Route path="sectors/:id" element={<Sectors />} />
-                    <Route path="/recruitment" element={<Recruitment />} />
-                    <Route path="/contract-staffing" element={<ContractStaffing />} />
-                    <Route path="/executive-search" element={<ExecutiveSearch />} />
-                    <Route path="/hr-outsourcing" element={<HROutsourcing />} />
-                    <Route path="/security-solutions" element={<SecuritySolutions />} />
-                    <Route path="/contact" element={<ContactUs />} />
-                    <Route path="/about" element={<AboutUs />} />
-                    <Route path="/projects" element={<Project />} />
-                    <Route path="/oil-gas" element={<OilAndGas />} />
-                    <Route path="/civil-construction" element={<CivilConstruction />} />
-                    <Route path="/facility-management" element={<FacilityManagement />} />
-                    <Route path="/logistics" element={<Logistics />} />
-                    <Route path="/manufacture" element={<Manufacture />} />
-                    <Route path="/mep" element={<Mep />} />
-                    <Route path="/building-contract" element={<BuildingContract />} />
-                    <Route path="/railway-contract" element={<RailwayContract />} />
-                    <Route path="/steel-construction" element={<SteelConstructionContract />} />
-                    <Route path="/electric-mechanic" element={<ElectricMechanicContract />} />
-                    {/* <Route path="/manpower-supply" element={<ManpowerSupply />} /> */}
-                </Route>
-            </Routes>
+                        <Route path="services/manpower-supply" element={<ManpowerSupply />} />
+                        <Route path="services/:id" element={<Services />} />
+                        <Route path="sectors/:id" element={<Sectors />} />
+                        <Route path="/recruitment" element={<Recruitment />} />
+                        <Route path="/contract-staffing" element={<ContractStaffing />} />
+                        <Route path="/executive-search" element={<ExecutiveSearch />} />
+                        <Route path="/hr-outsourcing" element={<HROutsourcing />} />
+                        <Route path="/security-solutions" element={<SecuritySolutions />} />
+                        <Route path="/contact" element={<ContactUs />} />
+                        <Route path="/about" element={<AboutUs />} />
+                        <Route path="/projects" element={<Project />} />
+                        <Route path="/oil-gas" element={<OilAndGas />} />
+                        <Route path="/civil-construction" element={<CivilConstruction />} />
+                        <Route path="/facility-management" element={<FacilityManagement />} />
+                        <Route path="/logistics" element={<Logistics />} />
+                        <Route path="/manufacture" element={<Manufacture />} />
+                        <Route path="/mep" element={<Mep />} />
+                        <Route path="/building-contract" element={<BuildingContract />} />
+                        <Route path="/railway-contract" element={<RailwayContract />} />
+                        <Route path="/steel-construction" element={<SteelConstructionContract />} />
+                        <Route path="/electric-mechanic" element={<ElectricMechanicContract />} />
+                        {/* <Route path="/manpower-supply" element={<ManpowerSupply />} /> */}
+                    </Route>
+                </Routes>
+            </LanguageProvider>
         </BrowserRouter>
     );
 }

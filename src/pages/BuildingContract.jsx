@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/Buildinghero.png";
 import btsImg from "../assest/manpower-supply-meadia/building_contract_team.png";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/building_contract_team.png";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/bc_insight_3.png
 import sectorInsight4Img from "../assest/manpower-supply-meadia/bc_insight_4.png";
 
 const BuildingContract = () => {
+    const { t } = useLanguage();
+    const [openFaq, setOpenFaq] = React.useState(0);
+
+    const faqs = [
+        { question: t.bcFaqQ1, answer: t.bcFaqA1 },
+        { question: t.bcFaqQ2, answer: t.bcFaqA2 },
+        { question: t.bcFaqQ3, answer: t.bcFaqA3 },
+        { question: t.bcFaqQ4, answer: t.bcFaqA4 },
+        { question: t.bcFaqQ5, answer: t.bcFaqA5 },
+        { question: t.bcFaqQ6, answer: t.bcFaqA6 }
+    ];
+
     return (
-        <div className="building-contract-page">
+        <div className="building-contract-page recruitment-page">
             <SEOHead
-                title="Building Contract Manpower in UAE | Construction Staffing | Smaar Elysium"
-                description="Smaar Elysium provides highly skilled building contract manpower across UAE, including civil engineers, project managers, and specialized construction staff."
+                title={t.bcSEOTitle}
+                description={t.bcSEODesc}
                 keywords="building contract manpower UAE, construction staffing Dubai, civil engineering workforce, building contractors UAE, construction site workers Dubai"
                 canonical="https://www.smaarelysium.com/building-contract"
+                faqSchema={faqs.map(f => ({
+                    question: f.question,
+                    answer: f.answer
+                }))}
             />
             {/* ── Hero Section ── */}
             <div className="container hero-wrapper">
                 <section className="home-hero">
                     <div className="home-hero__content">
                         <h1 className="home-hero__title">
-                            Building Contract<br />Sector
+                            {t.bcHeroTitle}
                         </h1>
                         <p className="home-hero__text">
-                            Delivering premium, tailored building contract and construction manpower
-                            solutions to drive major infrastructural projects across the UAE.
+                            {t.bcHeroText}
                         </p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">
-                                Get in Touch
+                                {t.getInTouch}
                             </Link>
                         </div>
                     </div>
@@ -48,16 +64,10 @@ const BuildingContract = () => {
 
                     <div className="choose-best-split">
                         <div className="cbs-left">
-                            <h2>Professional Building Contractors</h2>
-                            <p>
-                                Developing the modern skyline of the UAE requires a proactive, highly skilled workforce. We provide the personnel needed to bring your boldest architectural visions to life.
-                            </p>
-                            <p>
-                                From structural engineers to highly trained heavy machinery operators, our workforce is designed to accelerate timelines and uphold superior construction quality.
-                            </p>
-                            <p>
-                                With an unwavering focus on safety, structural integrity, and timeline management, our teams ensure your projects exceed regulatory standards.
-                            </p>
+                            <h2>{t.bcChooseTitle}</h2>
+                            <p>{t.bcChooseP1}</p>
+                            <p>{t.bcChooseP2}</p>
+                            <p>{t.bcChooseP3}</p>
                         </div>
 
                         <div className="cbs-right">
@@ -65,14 +75,14 @@ const BuildingContract = () => {
                                 <span className="logo-main">Smaar Elysium</span>
                                 <span>®</span>
                                 <span className="logo-slogan">
-                                    CONSTRUCTION EXPERTS
+                                    {t.bcLogoSlogan}
                                 </span>
                             </div>
                             <div className="cbs-text-block">
-                                <span className="cbs-go-beyond">BUILDING</span>
-                                <span className="cbs-ordinary">FUTURE</span>
-                                <span className="cbs-find">URBAN</span>
-                                <span className="cbs-executives">LANDSCAPES</span>
+                                <span className="cbs-go-beyond">{t.bcGrid1}</span>
+                                <span className="cbs-ordinary">{t.bcGrid2}</span>
+                                <span className="cbs-find">{t.bcGrid3}</span>
+                                <span className="cbs-executives">{t.bcGrid4}</span>
                             </div>
                         </div>
                     </div>
@@ -86,19 +96,15 @@ const BuildingContract = () => {
                             />
                         </div>
                         <div className="bts-right">
-                            <h3>Deploy Your Construction Crew</h3>
-                            <p>
-                                Whether you need a dedicated site management team or skilled tradesmen for a commercial high-rise, we deploy the exact talent you need.
-                            </p>
-                            <p>
-                                Every candidate undergoes rigorous safety checks and technical assessments to guarantee seamless project execution on site.
-                            </p>
+                            <h3>{t.bcBtsTitle}</h3>
+                            <p>{t.bcBtsP1}</p>
+                            <p>{t.bcBtsP2}</p>
                             <Link
                                 to="/contact"
                                 className="hero-btn-main"
                                 style={{ background: '#fff', color: '#1f2937' }}
                             >
-                                Request Staff
+                                {t.requestStaff}
                             </Link>
                         </div>
                     </div>
@@ -106,78 +112,95 @@ const BuildingContract = () => {
                     <div className="domains-container">
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Civil Engineering</h3>
-                                <p>
-                                    Specialized engineers for foundational planning, structural design, and large-scale project execution.
-                                </p>
+                                <h3>{t.bcDom1Title}</h3>
+                                <p>{t.bcDom1Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Site Management</h3>
-                                <p>
-                                    Experienced site managers and foremen to oversee daily operations and enforce safety protocols.
-                                </p>
+                                <h3>{t.bcDom2Title}</h3>
+                                <p>{t.bcDom2Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Heavy Machinery</h3>
-                                <p>
-                                    Certified crane operators, excavators, and heavy equipment drivers for earthmoving and lifting.
-                                </p>
+                                <h3>{t.bcDom3Title}</h3>
+                                <p>{t.bcDom3Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Skilled Trades</h3>
-                                <p>
-                                    Masons, carpenters, scaffolders, and painters delivering precision finishing details on all structures.
-                                </p>
+                                <h3>{t.bcDom4Title}</h3>
+                                <p>{t.bcDom4Desc}</p>
                             </div>
                         </div>
                     </div>
 
                     <section className="why-choose-us-section">
-                        <h2 className="section-title">Why Choose Us</h2>
+                        <h2 className="section-title">{t.whyChooseUs}</h2>
                         <div className="benefits-grid">
                             <div className="benefit-card bg-red">
-                                <h3>Safety First</h3>
-                                <p>Personnel trained under strict HSE standards to maintain zero-incident construction sites.</p>
+                                <h3>{t.bcBen1Title}</h3>
+                                <p>{t.bcBen1Desc}</p>
                             </div>
                             <div className="benefit-card bg-gray">
-                                <h3>Rapid Scaling</h3>
-                                <p>Flexible staffing that easily scales up during critical construction phases.</p>
+                                <h3>{t.bcBen2Title}</h3>
+                                <p>{t.bcBen2Desc}</p>
                             </div>
                             <div className="benefit-card bg-red">
-                                <h3>Proven Expertise</h3>
-                                <p>All staff are vetted tradesmen with experience in major Middle Eastern developments.</p>
+                                <h3>{t.bcBen3Title}</h3>
+                                <p>{t.bcBen3Desc}</p>
                             </div>
                         </div>
                     </section>
 
                     <div className="quote-section">
                         <div className="quote-container">
-                            <div className="quote-label">Request a Quote</div>
-                            <h2 className="quote-title">Get a quick follow up!</h2>
-                            <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-                            <Link to="/contact" className="quote-btn">Book Now</Link>
+                            <div className="quote-label">{t.requestQuote}</div>
+                            <h2 className="quote-title">{t.quickFollowUp}</h2>
+                            <p className="quote-text">{t.fillForm}</p>
+                            <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                        <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+                        <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+                        <div className="faq-list">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                                    <div
+                                        className="faq-question-btn"
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                                        <span className="faq-question-text">{faq.question}</span>
+                                    </div>
+                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                        <div className="faq-answer-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                 </div>
             </div>
 
             <div className="insights-section">
-                <h2 className="insights-title">Building Contract Insights</h2>
+                <h2 className="insights-title">{t.csInsightTitle}</h2>
                 <div className="insights-grid">
                     <div className="insight-card">
                         <div className="insight-image-wrap">
                             <img src={sectorInsight1Img} alt="Insight 1" />
                         </div>
                         <div className="insight-content">
-                            <h3>Brief Introduction to Contract Staffing</h3>
-                            <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                            <h3>{t.csInsight1Title}</h3>
+                            <p>{t.csInsight1Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -185,8 +208,8 @@ const BuildingContract = () => {
                             <img src={sectorInsight2Img} alt="Insight 2" />
                         </div>
                         <div className="insight-content">
-                            <h3>Need of Contract Staffing</h3>
-                            <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+                            <h3>{t.csInsight2Title}</h3>
+                            <p>{t.csInsight2Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -194,8 +217,8 @@ const BuildingContract = () => {
                             <img src={sectorInsight3Img} alt="Insight 3" />
                         </div>
                         <div className="insight-content">
-                            <h3>Benefits of getting Contract Staffing</h3>
-                            <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+                            <h3>{t.csInsight3Title}</h3>
+                            <p>{t.csInsight3Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -203,8 +226,8 @@ const BuildingContract = () => {
                             <img src={sectorInsight4Img} alt="Insight 4" />
                         </div>
                         <div className="insight-content">
-                            <h3>How can Contract Staffing work at Your Advantage?</h3>
-                            <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+                            <h3>{t.csInsight4Title}</h3>
+                            <p>{t.csInsight4Desc}</p>
                         </div>
                     </div>
                 </div>

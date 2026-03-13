@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/security-solutions-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/securitysolutions_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/security_bts.jpg";
@@ -14,57 +15,51 @@ import secBtsLeft from "../assest/manpower-supply-meadia/security_bts_left.png";
 
 const SecuritySolutions = () => {
   const [openFaq, setOpenFaq] = useState(0);
+  const { t } = useLanguage();
 
   const faqs = [
     {
-      question: "1. What makes your security staffing solutions unique?",
-      answer: "Our security staffing solutions stand out through a rigorous vetting process that filters for background integrity, physical fitness, and behavioral competency — ensuring we deploy only the most reliable and professionally trained security personnel."
+      question: t.ssFaqQ1,
+      answer: t.ssFaqA1
     },
     {
-      question: "2. How thorough is your security personnel screening process?",
-      answer: "We conduct extensive background checks, criminal record verification, employment history validation, and psychometric assessments. Each candidate undergoes security-specific competency testing before being presented to your organization."
+      question: t.ssFaqQ2,
+      answer: t.ssFaqA2
     },
     {
-      question: "3. What types of security roles do you staff for?",
-      answer: "We provide staffing across a wide spectrum of security roles including static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in UAE."
+      question: t.ssFaqQ3,
+      answer: t.ssFaqA3
     },
     {
-      question: "4. How do you ensure compliance with UAEn security regulations?",
-      answer: "All our security personnel hold valid licenses as required by UAEn law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf."
+      question: t.ssFaqQ4,
+      answer: t.ssFaqA4
     },
     {
-      question: "5. Can you provide security staff for short-term events or projects?",
-      answer: "Absolutely. We offer flexible security staffing solutions for both long-term operational needs and short-term assignments such as events, exhibitions, construction sites, and VIP visits — deploying vetted personnel rapidly when needed."
+      question: t.ssFaqQ5,
+      answer: t.ssFaqA5
     },
     {
-      question: "6. How do you handle training and readiness of security staff?",
-      answer: "All our security personnel complete a structured induction program covering emergency response protocols, conflict de-escalation, first aid, and site-specific briefings. We also provide ongoing refresher training to keep skills sharp and current."
+      question: t.ssFaqQ6,
+      answer: t.ssFaqA6
     }
   ];
 
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Security Staffing Solutions in UAE | Licensed Security Personnel | Smaar Elysium"
-        description="Smaar Elysium provides licensed, trained security personnel for businesses across UAE. We deploy static guards, mobile patrol officers, CCTV operators, and event security teams with full compliance."
+        title={t.ssSEOTitle}
+        description={t.ssSEODesc}
         keywords="security staffing UAE, licensed security guards UAE, security personnel agency, corporate security solutions UAE, event security UAE, CCTV operators UAE, Smaar Elysium security"
         canonical="https://www.smaarelysium.com/security-solutions"
-        faqSchema={[
-          { question: "What makes your security staffing solutions unique?", answer: "Our security staffing solutions stand out through a rigorous vetting process that filters for background integrity, physical fitness, and behavioral competency — ensuring we deploy only the most reliable and professionally trained security personnel." },
-          { question: "How thorough is your security personnel screening process?", answer: "We conduct extensive background checks, criminal record verification, employment history validation, and psychometric assessments. Each candidate undergoes security-specific competency testing before being presented to your organization." },
-          { question: "What types of security roles do you staff for?", answer: "We provide staffing across static guards, mobile patrol officers, CCTV operators, access control personnel, event security, and senior security supervisors across all industries in UAE." },
-          { question: "How do you ensure compliance with UAEn security regulations?", answer: "All our security personnel hold valid licenses as required by UAEn law. We manage all regulatory compliance, licensing renewals, and training certifications on your behalf." },
-          { question: "Can you provide security staff for short-term events or projects?", answer: "Absolutely. We offer flexible security staffing solutions for both long-term operational needs and short-term assignments such as events, exhibitions, construction sites, and VIP visits — deploying vetted personnel rapidly when needed." }
-        ]}
       />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Security Staffing<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking for professional, licensed security personnel for your business or facility? Smaar Elysium provides trusted, industry-compliant security staffing solutions across UAE.</p>
+            <h1 className="home-hero__title">{t.ssHeroTitle}</h1>
+            <p className="home-hero__text">{t.ssHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Book Now</Link>
+              <Link to="/contact" className="hero-btn-main">{t.bookNow}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -81,41 +76,41 @@ const SecuritySolutions = () => {
         {/* Main Content Area */}
         <div className="service-main-content">
           <div className="service-intro">
-            <h2>CHOOSE THE BEST FOR YOU</h2>
-            <p>Welcome to our Security Staffing Solutions — where safety meets professionalism. Our security experts are fully licensed, extensively trained, and equipped to protect your people, assets, and premises 24/7.</p>
+            <h2>{t.ssChooseTitle}</h2>
+            <p>{t.ssChooseP1}</p>
           </div>
 
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Choose the best for you</h2>
-              <p>Step into the realm of our tailored security staffing services, where vigilance converges with professionalism for an unparalleled protection experience. Our core strengths redefine security deployment with a focus on meticulous personnel vetting, regulatory compliance, and customized security strategies.</p>
-              <p>In today's high-stakes business environment, maintaining a safe and secure workplace is a fundamental requirement for operational continuity and stakeholder confidence.</p>
-              <p>Our security staffing services excel in delivering customized protection solutions suited to the unique risk profile and operational requirements of your organization. In this era of evolving security threats, deploying qualified and licensed security personnel holds greater significance than ever before.</p>
-              <p>Recognizing the critical role that professional security plays in protecting business assets and ensuring employee safety, our dedicated team comprehensively meets your security workforce needs with speed and precision.</p>
-              <p>Allow us to serve as your trusted security partner — deploying vetted, licensed, and battle-ready professionals who form a reliable shield around your business operations.</p>
+              <h2>{t.ssChooseTitle}</h2>
+              <p>{t.ssCbsP1}</p>
+              <p>{t.ssCbsP2}</p>
+              <p>{t.ssCbsP3}</p>
+              <p>{t.ssCbsP4}</p>
+              <p>{t.ssCbsP5}</p>
             </div>
 
             <div className="cbs-right" style={{ backgroundImage: `url(${secCbsBg})` }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>{t.ssLogoSlogan}</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">GO BEYOND THE</span>
-                  <span className="cbs-ordinary">ORDINARY</span>
-                  <span className="cbs-find">DEPLOY THE FINEST</span>
-                  <span className="cbs-executives">SECURITY STAFF</span>
+                  <span className="cbs-go-beyond">{t.ssGrid1}</span>
+                  <span className="cbs-ordinary">{t.ssGrid2}</span>
+                  <span className="cbs-find">{t.ssGrid3}</span>
+                  <span className="cbs-executives">{t.ssGrid4}</span>
                 </div>
               </div>
               <div className="cbs-footer">
                 <div className="cbs-footer-pill">www.smaarelysium.com</div>
                 <div className="cbs-footer-info">
-                  <span><i className="fa-brands fa-whatsapp"></i> 8885072259</span>
+                  <span><i className="fa-brands fa-whatsapp"></i> {t.phone}</span>
                   <span className="cbs-divider">|</span>
-                  <span>sales@smaarelysium.com</span>
+                  <span>{t.email}</span>
                 </div>
               </div>
             </div>
@@ -127,47 +122,55 @@ const SecuritySolutions = () => {
               <div className="bts-web-pill">www.smaarelysium.com</div>
               <div className="bts-contact-footer">
                 <div className="bts-contact-item">
-                  <i className="fa-brands fa-whatsapp"></i> 8885072259
+                  <i className="fa-brands fa-whatsapp"></i> {t.phone}
                 </div>
                 <div className="bts-contact-divider">|</div>
                 <div className="bts-contact-item">
-                  info@smaarelysium.com
+                  {t.email}
                 </div>
               </div>
             </div>
 
             <div className="bts-right">
-              <h3>Build Your Security Workforce With Our Expert Solutions</h3>
-              <p>Protect what matters most with our dedicated security staffing service. We source, vet, and deploy SIRA-licensed security officers who are trained to respond effectively to threats, manage access control, and maintain a safe environment for your business operations.</p>
-              <p>Compliance is at the core of everything we do. Every security professional we field carries valid regulatory certifications and has completed structured training in emergency response, conflict management, and first aid.</p>
-              <p>Experience security deployment that gives you true peace of mind. Let us handle the complexity of security workforce management so that you can focus entirely on running your business with confidence.</p>
+              <h3>{t.ssBtsTitle}</h3>
+              <p>{t.ssBtsP1}</p>
+              <p>{t.ssBtsP2}</p>
+              <p>{t.ssBtsP3}</p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="why-choose-us-section">
-            <h2 className="section-title">WHY CHOOSE US</h2>
-            <p className="section-intro">Choose us for security staffing that goes beyond ordinary guarding. Experience the difference of rigorous personnel vetting, guaranteed licensing compliance, and tailored security deployment strategies designed exclusively for your facility's safety needs.</p>
+            <h2 className="section-title">{t.whyChooseUs}</h2>
+            <p className="section-intro">{t.ssWhyIntro}</p>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>SIRA-Licensed Personnel</h3>
-                <p>Every security officer we deploy is fully licensed and compliant with UAEn security regulations. We manage all licensing, renewals, and compliance documentation on your behalf.</p>
+                <h3>{t.ssBen1Title}</h3>
+                <p>{t.ssBen1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Rigorous Background Screening</h3>
-                <p>Our commitment to safety begins at the screening stage. Every candidate undergoes thorough background checks, criminal verification, reference checks, and behavioral assessments before deployment.</p>
+                <h3>{t.ssBen2Title}</h3>
+                <p>{t.ssBen2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Rapid & Scalable Deployment</h3>
-                <p>Security needs can arise without warning. We maintain a ready pool of trained security professionals, enabling rapid deployment for emergency coverage, events, and new site setups across UAE.</p>
+                <h3>{t.ssBen3Title}</h3>
+                <p>{t.ssBen3Desc}</p>
               </div>
             </div>
           </div>
 
-          {/* Security Solutions Insights Section */}
+          {/* Standardized Quote Section */}
+          <div className="quote-section">
+            <div className="quote-container">
+              <div className="quote-label">{t.requestQuote}</div>
+              <h2 className="quote-title">{t.quickFollowUp}</h2>
+              <p className="quote-text">{t.fillForm}</p>
+              <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
+            </div>
+          </div>
 
         </div>
       </div>
@@ -176,8 +179,8 @@ const SecuritySolutions = () => {
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+          <h2 className="faq-main-title">{t.faqTitle}</h2>
+          <p className="faq-subtitle">{t.faqSubtitle}</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -201,7 +204,7 @@ const SecuritySolutions = () => {
       </section>
 
       <div className="insights-section">
-        <h2 className="insights-title">Security Solutions Insights</h2>
+        <h2 className="insights-title">{t.ssInsightTitle}</h2>
 
         <div className="insights-grid">
           <div className="insight-card">
@@ -209,11 +212,8 @@ const SecuritySolutions = () => {
               <img src={secInsight1} alt="Security Staffing Introduction" />
             </div>
             <div className="insight-content">
-              <h3>Brief Introduction to Security Staffing</h3>
-              <p>Security Staffing involves deploying licensed, trained professionals to safeguard your premises, people, and assets around the clock...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.ssInsight1Title}</h3>
+              <p>{t.ssInsight1Desc}</p>
             </div>
           </div>
 
@@ -222,11 +222,8 @@ const SecuritySolutions = () => {
               <img src={secInsight2} alt="Security Solutions Need" />
             </div>
             <div className="insight-content">
-              <h3>The Growing Need for Security Solutions</h3>
-              <p>As business environments become more complex, the demand for professional, licensed security personnel has grown significantly across UAE...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.ssInsight2Title}</h3>
+              <p>{t.ssInsight2Desc}</p>
             </div>
           </div>
 
@@ -235,11 +232,8 @@ const SecuritySolutions = () => {
               <img src={secInsight3} alt="Security Staffing Benefits" />
             </div>
             <div className="insight-content">
-              <h3>Benefits of Professional Security Staffing</h3>
-              <p>Professional security staffing reduces incidents, deters threats, protects assets, and gives management the confidence to operate at full capacity.</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.ssInsight3Title}</h3>
+              <p>{t.ssInsight3Desc}</p>
             </div>
           </div>
 
@@ -248,11 +242,8 @@ const SecuritySolutions = () => {
               <img src={secInsight4} alt="Security Solutions Advantage" />
             </div>
             <div className="insight-content">
-              <h3>How Security Solutions Work at Your Advantage</h3>
-              <p>A robust security presence not only protects your facility but also boosts employee confidence, enhances your brand reputation, and ensures operational continuity...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.ssInsight4Title}</h3>
+              <p>{t.ssInsight4Desc}</p>
             </div>
           </div>
         </div>

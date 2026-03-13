@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
@@ -11,32 +12,33 @@ import insight3 from "../assest/manpower-supply-meadia/uae_insight_benefits.png"
 import insight4 from "../assest/manpower-supply-meadia/uae_insight_advantage.png";
 
 const Recruitment = () => {
+  const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(0);
 
   const faqs = [
     {
-      question: "1. What makes your talent acquisition unique?",
-      answer: "Our hiring approach is distinguished by a customized strategy that aligns the right professionals with your company’s specific goals and culture."
+      question: t.faqRec1Q,
+      answer: t.faqRec1A
     },
     {
-      question: "2. How thorough is your candidate screening process?",
-      answer: "We follow a detailed evaluation process that includes skill assessments, background checks, and in-depth interviews to ensure only qualified candidates move forward."
+      question: t.faqRec2Q,
+      answer: t.faqRec2A
     },
     {
-      question: "3. What sets apart your recruitment strategies?",
-      answer: "Our recruitment methods combine market insights, advanced sourcing techniques, and industry expertise to attract top-tier talent efficiently."
+      question: t.faqRec3Q,
+      answer: t.faqRec3A
     },
     {
-      question: "4. How do you ensure a match between candidates and our requirements?",
-      answer: "We carefully analyze your job expectations and company culture to identify candidates whose skills, experience, and values align with your needs."
+      question: t.faqRec4Q,
+      answer: t.faqRec4A
     },
     {
-      question: "5. Can you elaborate on the concept of personalized recruitment?",
-      answer: "Personalized recruitment means adapting our hiring solutions to suit your business objectives, ensuring a more accurate and long-term placement."
+      question: t.faqRec5Q,
+      answer: t.faqRec5A
     },
     {
-      question: "6. How do you handle the challenges in the recruitment process?",
-      answer: "We proactively address recruitment challenges by maintaining clear communication, leveraging industry networks, and applying strategic problem-solving at every stage."
+      question: t.faqRec6Q,
+      answer: t.faqRec6A
     }
   ];
 
@@ -53,8 +55,8 @@ const Recruitment = () => {
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Premier Recruitment Solutions in UAE – Smaar Elysium"
-        description="Smaar Elysium offers expert recruitment services in UAE. From permanent hiring to volume recruitment, we connect the right talent to your business. Call +91-8885072259."
+        title={t.recHeroTitle}
+        description={t.recHeroText}
         keywords="recruitment agency UAE, recruitment agency Dubai, talent acquisition UAE, permanent staffing Dubai"
         canonical="https://smaarelysium.com/recruitment"
         schema={faqSchema}
@@ -63,10 +65,10 @@ const Recruitment = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Premier Recruitment<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Empower your business with elite talent. We deliver strategic recruitment services to help you scale.</p>
+            <h1 className="home-hero__title" dangerouslySetInnerHTML={{ __html: t.recHeroTitle.replace('Solutions', '<br />Solutions') }} />
+            <p className="home-hero__text">{t.recHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Book Now</Link>
+              <Link to="/contact" className="hero-btn-main">{t.bookNow}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -85,25 +87,25 @@ const Recruitment = () => {
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Elevate Your Workforce with Precision Hiring</h2>
-              <p>Welcome to a new standard of recruitment. At Smaar Elysium, we blend industry expertise with a personalized touch to connect you with professionals who drive real business impact. Our approach is defined by meticulous screening, proactive sourcing, and an unwavering commitment to quality.</p>
-              <p>In today's fast-paced corporate landscape, having the right people is the ultimate competitive advantage.</p>
-              <p>We believe that successful hiring goes beyond matching resumes to job descriptions. It requires a deep understanding of your company culture, strategic objectives, and long-term vision. Our bespoke talent acquisition methods ensure we find candidates who seamlessly integrate with your team.</p>
-              <p>Partner with us to transform your hiring process. From specialized roles to volume recruitment, Smaar Elysium provides the strategic support you need to build a future-ready, high-performing organization.</p>
+              <h2>{t.recChooseTitle}</h2>
+              <p>{t.recChooseP1}</p>
+              <p>{t.recChooseP2}</p>
+              <p>{t.recChooseP3}</p>
+              <p>{t.recChooseP4}</p>
             </div>
 
             <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>{t.recLogoSlogan}</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">GO BEYOND THE</span>
-                  <span className="cbs-ordinary">ORDINARY</span>
-                  <span className="cbs-find">FIND THE PRECISE</span>
-                  <span className="cbs-executives">EXECUTIVES</span>
+                  <span className="cbs-go-beyond">{t.recGrid1}</span>
+                  <span className="cbs-ordinary">{t.recGrid2}</span>
+                  <span className="cbs-find">{t.recGrid3}</span>
+                  <span className="cbs-executives">{t.recGrid4}</span>
                 </div>
               </div>
               <div className="cbs-footer">
@@ -142,32 +144,32 @@ const Recruitment = () => {
             </div>
 
             <div className="bts-right">
-              <h3>Build a High-Performing Team Tailored to You</h3>
-              <p>Unlocking your company's full potential starts with identifying your exact needs. Our precision-driven recruitment process guarantees alignment between your strategic goals and the top-tier professionals we deliver.</p>
-              <p>Rigorous candidate evaluation is the foundation of our success. We look far beyond the resume, evaluating technical skills, cultural fit, and long-term potential. This comprehensive methodology means you only interview the absolute best.</p>
-              <p>Elevate your business capabilities. Let Smaar Elysium manage the complexities of talent acquisition so that you can focus on what matters most—driving your business forward.</p>
+              <h3>{t.recBtsTitle}</h3>
+              <p>{t.recBtsP1}</p>
+              <p>{t.recBtsP2}</p>
+              <p>{t.recBtsP3}</p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="why-choose-us-section">
-            <h2 className="section-title">WHY CHOOSE US</h2>
-            <p className="section-intro">Choose us for recruitment that goes beyond the conventional. Experience the difference of personalized talent acquisition, meticulous candidate screening, and recruitment strategies designed exclusively for your success.</p>
+            <h2 className="section-title">{t.recWhyTitle}</h2>
+            <p className="section-intro">{t.recWhyIntro}</p>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Tailored Talent Acquisition</h3>
-                <p>We don't believe in one-size-fits-all. Our approach is custom-fit, ensuring the candidates we bring match not just the job requirements but also your unique organizational culture.</p>
+                <h3>{t.recBenefit1Title}</h3>
+                <p>{t.recBenefit1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Thorough Candidate Screening</h3>
-                <p>Our commitment to quality extends to our screening process. We delve deep to unearth not only skills but also the intangible qualities that make a candidate the right cultural fit for your team.</p>
+                <h3>{t.recBenefit2Title}</h3>
+                <p>{t.recBenefit2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Personalized Recruitment Strategies</h3>
-                <p>Recognizing that every client is distinct, we craft recruitment strategies tailored to your specific needs. Whether it's volume hiring or niche roles, we adapt our approach to maximize efficiency.</p>
+                <h3>{t.recBenefit3Title}</h3>
+                <p>{t.recBenefit3Desc}</p>
               </div>
             </div>
           </div>
@@ -182,8 +184,8 @@ const Recruitment = () => {
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+          <h2 className="faq-main-title">{t.faqTitle}</h2>
+          <p className="faq-subtitle">{t.faqSubtitle}</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -209,7 +211,7 @@ const Recruitment = () => {
 
 
       <div className="insights-section">
-        <h2 className="insights-title">Manpower Supply Insights</h2>
+        <h2 className="insights-title">{t.msInsightTitle}</h2>
 
         <div className="insights-grid">
           <div className="insight-card">
@@ -217,11 +219,8 @@ const Recruitment = () => {
               <img src={insight1} alt="Insight 1" />
             </div>
             <div className="insight-content">
-              <h3>Brief Introduction to Manpower Supply</h3>
-              <p>Manpower Supply is when businesses hire an agency to provide for a team of experts for...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.msInsight1Title}</h3>
+              <p>{t.msInsight1Desc}</p>
             </div>
           </div>
 
@@ -230,11 +229,8 @@ const Recruitment = () => {
               <img src={insight2} alt="Insight 2" />
             </div>
             <div className="insight-content">
-              <h3>Need of Manpower Supply</h3>
-              <p>Maintaining flawless production while keeping up with the schedule is very important. This makes.....</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.msInsight2Title}</h3>
+              <p>{t.msInsight2Desc}</p>
             </div>
           </div>
 
@@ -243,11 +239,8 @@ const Recruitment = () => {
               <img src={insight3} alt="Insight 3" />
             </div>
             <div className="insight-content">
-              <h3>Benefits of getting Manpower Supply</h3>
-              <p>There are tons of advantages to getting Manpower Supply from us. Some of these include:</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
+              <h3>{t.msInsight3Title}</h3>
+              <p>{t.msInsight3Desc}</p>
             </div>
           </div>
 
@@ -256,8 +249,8 @@ const Recruitment = () => {
               <img src={insight4} alt="Insight 4" />
             </div>
             <div className="insight-content">
-              <h3>How can Manpower Supply work at Your Advantage?</h3>
-              <p>Staying ahead in the competitive race is important for every organization. And having a strong……</p>
+              <h3>{t.msInsight4Title}</h3>
+              <p>{t.msInsight4Desc}</p>
               {/* <Link to="/insights" className="insight-btn">
                 Read More <ChevronRight size={18} />
               </Link> */}

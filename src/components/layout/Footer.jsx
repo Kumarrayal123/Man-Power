@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 import logo from '../../assest/logo.png';
 
 
 const Footer = () => {
+    const { t } = useLanguage();
     return (
         <footer className="site-footer">
             <div className="container">
@@ -15,7 +17,7 @@ const Footer = () => {
                             <img src={logo} alt="Manpower Logo" className="footer-logo-img" />
                         </Link>
 
-                        <p>Providing premium manpower solutions since 2021. We are leaders in recruitment, staffing, and HR outsourcing in the UAE.</p>
+                        <p>{t.footerDesc}</p>
                         <div className="social-links">
                             <a href="#"><Facebook size={18} /></a>
                             <a href="#"><Instagram size={18} /></a>
@@ -26,41 +28,41 @@ const Footer = () => {
 
                     {/* Sectors */}
                     <div className="footer-col">
-                        <h4 className="footer-title">Sectors</h4>
+                        <h4 className="footer-title">{t.sectorsTitle}</h4>
                         <ul className="footer-links">
-                            <li><Link to="/building-contract">Building Contract</Link></li>
-                            <li><Link to="/railway-contract">Railway Contract</Link></li>
-                            <li><Link to="/steel-construction">Steel Construction</Link></li>
-                            <li><Link to="/electric-mechanic">Electric Mechanic</Link></li>
-                            <li><Link to="/oil-gas">Oil &amp; Gas</Link></li>
-                            <li><Link to="/civil-construction">Civil Construction</Link></li>
-                            <li><Link to="/facility-management">Facility Management</Link></li>
-                            <li><Link to="/logistics">Logistics</Link></li>
-                            <li><Link to="/manufacture">Manufacture</Link></li>
-                            <li><Link to="/mep">MEP Solutions</Link></li>
+                            <li><Link to="/building-contract">{t.building}</Link></li>
+                            <li><Link to="/railway-contract">{t.railway}</Link></li>
+                            <li><Link to="/steel-construction">{t.steel}</Link></li>
+                            <li><Link to="/electric-mechanic">{t.electric}</Link></li>
+                            <li><Link to="/oil-gas">{t.oilGas}</Link></li>
+                            <li><Link to="/civil-construction">{t.civil}</Link></li>
+                            <li><Link to="/facility-management">{t.facility}</Link></li>
+                            <li><Link to="/logistics">{t.logistics}</Link></li>
+                            <li><Link to="/manufacture">{t.manufacture}</Link></li>
+                            <li><Link to="/mep">{t.mepSolutions}</Link></li>
                         </ul>
                     </div>
 
                     {/* Quick Links */}
                     <div className="footer-col">
-                        <h4 className="footer-title">Our Services</h4>
+                        <h4 className="footer-title">{t.services}</h4>
                         <ul className="footer-links">
-                            <li><Link to="/">Manpower Supply</Link></li>
-                            <li><Link to="/recruitment">Recruitment</Link></li>
-                            <li><Link to="/contract-staffing">Contract Staffing</Link></li>
-                            <li><Link to="/executive-search">Executive Search</Link></li>
-                            <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
-                            <li><Link to="/security-solutions">Security Solutions</Link></li>
+                            <li><Link to="/">{t.supply}</Link></li>
+                            <li><Link to="/recruitment">{t.recruitment}</Link></li>
+                            <li><Link to="/contract-staffing">{t.staffing}</Link></li>
+                            <li><Link to="/executive-search">{t.search}</Link></li>
+                            <li><Link to="/hr-outsourcing">{t.outsourcing}</Link></li>
+                            <li><Link to="/security-solutions">{t.security}</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div className="footer-col">
-                        <h4 className="footer-title">Contact Us</h4>
+                        <h4 className="footer-title">{t.contactUs}</h4>
                         <ul className="footer-contact">
                             <li>
                                 <MapPin size={18} />
-                                <span>Dubai</span>
+                                <span>{t.dubai}</span>
                             </li>
                             <li>
                                 <Phone size={18} />
@@ -77,9 +79,9 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <div className="footer-bottom-inner">
-                    <p>&copy; {new Date().getFullYear()} Smaar Elysium. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Smaar Elysium. {t.rightsReserved}</p>
                     <div className="footer-bottom-links">
-                        <a href="https://thepatternscompany.com/" target="_blank" rel="noreferrer">Designed by The Patterns Company</a>
+                        <a href="https://thepatternscompany.com/" target="_blank" rel="noreferrer">{t.designedBy}</a>
                     </div>
                 </div>
             </div>

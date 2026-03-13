@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/hr-hero1.png";
 import btsImg from "../assest/manpower-supply-meadia/hroutsourcing_bts.jpg";
@@ -12,58 +12,56 @@ import insight4Img from "../assest/manpower-supply-meadia/uae_hr_insight_4.png";
 import cbsBgImg from "../assest/manpower-supply-meadia/hr_outsourcing_choose_best.jpg";
 
 const HROutsourcing = () => {
+  const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(0);
 
   const faqs = [
     {
-      question: "1. What makes your HR Outsourcing service unique?",
-      answer: "Our HR Outsourcing service stands out through a fully integrated approach that takes ownership of your entire HR function — from payroll processing and compliance to employee relations and performance management — so your internal team can focus on strategic priorities."
+      question: t.hrFaqQ1,
+      answer: t.hrFaqA1
     },
     {
-      question: "2. Which HR functions can you manage on our behalf?",
-      answer: "We can manage a comprehensive range of HR functions including payroll, leave and attendance tracking, employee onboarding and offboarding, benefits administration, labor law compliance, HR policy development, and performance review systems."
+      question: t.hrFaqQ2,
+      answer: t.hrFaqA2
     },
     {
-      question: "3. How do you ensure compliance with UAEn labour laws?",
-      answer: "Our HR specialists stay continuously updated with UAEn labour law amendments, Ministry of Labour regulations, and statutory notifications. We proactively audit your HR practices and implement corrective measures to ensure full legal compliance at all times."
+      question: t.hrFaqQ3,
+      answer: t.hrFaqA3
     },
     {
-      question: "4. Can we outsource only specific HR functions?",
-      answer: "Absolutely. We offer flexible HR Outsourcing models — from full HR function management to selective outsourcing of specific areas such as payroll, recruitment, or compliance. You choose the scope that best suits your needs and budget."
+      question: t.hrFaqQ4,
+      answer: t.hrFaqA4
     },
     {
-      question: "5. How do you handle confidentiality of employee data?",
-      answer: "We operate with rigorous data protection protocols aligned with international standards. All employee information is stored securely, access is strictly controlled, and our agreements include comprehensive confidentiality and data privacy clauses."
+      question: t.hrFaqQ5,
+      answer: t.hrFaqA5
     },
     {
-      question: "6. What is the transition process when we start using your HR Outsourcing services?",
-      answer: "Our dedicated onboarding team conducts a thorough initial audit of your current HR processes, identifies gaps, and designs a tailored transition roadmap. We ensure a seamless handover with minimal disruption to your workforce and operations."
+      question: t.hrFaqQ6,
+      answer: t.hrFaqA6
     }
   ];
 
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="HR Outsourcing Services in UAE | Payroll & Compliance Management | Smaar Elysium"
-        description="Smaar Elysium offers comprehensive HR Outsourcing services in UAE including payroll processing, labour law compliance, employee lifecycle management, and HR policy development."
+        title={t.hrHeroTitle}
+        description={t.hrHeroText}
         keywords="HR outsourcing UAE, payroll outsourcing UAE, HR management services, labour law compliance UAE, HR BPO UAE, employee management outsourcing, Smaar Elysium HR"
         canonical="https://www.smaarelysium.com/hr-outsourcing"
-        faqSchema={[
-          { question: "What makes your HR Outsourcing service unique?", answer: "Our HR Outsourcing service stands out through a fully integrated approach that takes ownership of your entire HR function — from payroll processing and compliance to employee relations and performance management — so your internal team can focus on strategic priorities." },
-          { question: "Which HR functions can you manage on our behalf?", answer: "We can manage payroll, leave and attendance tracking, employee onboarding and offboarding, benefits administration, labor law compliance, HR policy development, and performance review systems." },
-          { question: "How do you ensure compliance with UAEn labour laws?", answer: "Our HR specialists stay continuously updated with UAEn labour law amendments, Ministry of Labour regulations, and statutory notifications. We proactively audit your HR practices and implement corrective measures to ensure full legal compliance at all times." },
-          { question: "Can we outsource only specific HR functions?", answer: "Absolutely. We offer flexible HR Outsourcing models — from full HR function management to selective outsourcing of specific areas such as payroll, recruitment, or compliance. You choose the scope that best suits your needs and budget." },
-          { question: "How do you handle confidentiality of employee data?", answer: "We operate with rigorous data protection protocols aligned with international standards. All employee information is stored securely, access is strictly controlled, and our agreements include comprehensive confidentiality and data privacy clauses." }
-        ]}
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">HR Outsourcing<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking to streamline your HR operations and reduce overhead? Smaar Elysium provides comprehensive HR Outsourcing services that keep your workforce compliant, motivated, and productive across UAE.</p>
+            <h1 className="home-hero__title">{t.hrHeroTitle.split(' ').slice(0, 2).join(' ')}<br />{t.hrHeroTitle.split(' ').slice(2).join(' ')}</h1>
+            <p className="home-hero__text">{t.hrHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Book Now</Link>
+              <Link to="/contact" className="hero-btn-main">{t.commonBookNow || 'Book Now'}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -80,33 +78,33 @@ const HROutsourcing = () => {
         {/* Main Content Area */}
         <div className="service-main-content">
           <div className="service-intro">
-            <h2>CHOOSE THE BEST FOR YOU</h2>
-            <p>Welcome to our HR Outsourcing Services — where operational efficiency meets workforce excellence. Our HR experts are deeply embedded in UAEn labour regulations and deliver seamless, end-to-end human resources solutions.</p>
+            <h2>{t.hrIntroTitle}</h2>
+            <p>{t.hrIntroText}</p>
           </div>
 
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Choose the best for you</h2>
-              <p>Step into the realm of our tailored HR Outsourcing services, where compliance converges with operational excellence for an unparalleled human resources experience. Our core strengths redefine HR management with a focus on payroll accuracy, regulatory compliance, and people-first strategies.</p>
-              <p>In the ever-evolving UAEn business environment, effective management of your HR function is a critical determinant of organizational success and employee satisfaction.</p>
-              <p>Our HR Outsourcing services excel in delivering customized solutions crafted to suit the unique regulatory and cultural requirements of your organization. In this era of rapid change, maintaining a compliant and engaged workforce holds greater significance than ever before.</p>
-              <p>Recognizing the strategic role that structured HR management plays in driving business performance, our expert team comprehensively manages your human resources needs — from day one through to long-term retention.</p>
-              <p>Allow us to serve as your dedicated HR partner, empowering your business to reduce costs, eliminate compliance risks, and build a thriving workplace culture.</p>
+              <h2>{t.hrChooseTitle}</h2>
+              <p>{t.hrChooseP1}</p>
+              <p>{t.hrChooseP2}</p>
+              <p>{t.hrChooseP3}</p>
+              <p>{t.hrChooseP4}</p>
+              <p>{t.hrChooseP5}</p>
             </div>
 
             <div className="cbs-right" style={{ backgroundImage: `url(${cbsBgImg})` }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>{t.hrLogoSlogan}</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">GO BEYOND THE</span>
-                  <span className="cbs-ordinary">ORDINARY</span>
-                  <span className="cbs-find">BUILD THE IDEAL</span>
-                  <span className="cbs-executives">HR SYSTEM</span>
+                  <span className="cbs-go-beyond">{t.hrGrid1}</span>
+                  <span className="cbs-ordinary">{t.hrGrid2}</span>
+                  <span className="cbs-find">{t.hrGrid3}</span>
+                  <span className="cbs-executives">{t.hrGrid4}</span>
                 </div>
               </div>
               <div className="cbs-footer">
@@ -145,47 +143,43 @@ const HROutsourcing = () => {
             </div>
 
             <div className="bts-right">
-              <h3>Build Your HR Foundation With Our Outsourcing Services</h3>
-              <p>Unleash organizational efficiency by outsourcing your entire HR function to our specialist team. From payroll processing and leave management to MOHRE compliance and employee relations, we take full ownership of your human resources operations.</p>
-              <p>Eliminate compliance risks and administrative burden. Our dedicated HR professionals stay current with UAEn labour law amendments ensuring your company is always protected, audit-ready, and aligned with the best industry practices.</p>
-              <p>Experience HR management that transforms your workforce into a competitive advantage. Let us handle the complexities of people operations, so you can focus entirely on growing your business.</p>
+              <h3>{t.hrBtsTitle}</h3>
+              <p>{t.hrBtsP1}</p>
+              <p>{t.hrBtsP2}</p>
+              <p>{t.hrBtsP3}</p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="why-choose-us-section">
-            <h2 className="section-title">WHY CHOOSE US</h2>
-            <p className="section-intro">Choose us for HR Outsourcing that goes beyond administrative processing. Experience the difference of strategic HR partnership, guaranteed compliance, and a people-first approach designed exclusively for your organization's long-term success.</p>
+            <h2 className="section-title">{t.hrWhyTitle}</h2>
+            <p className="section-intro">{t.hrWhyIntro}</p>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>End-to-End HR Management</h3>
-                <p>We don't just process payroll — we manage your full HR ecosystem. From onboarding and policy implementation to performance reviews and offboarding, we own every HR touchpoint.</p>
+                <h3>{t.hrBenefit1Title}</h3>
+                <p>{t.hrBenefit1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>UAEn Labour Law Compliance</h3>
-                <p>Our HR specialists continuously monitor Ministry of Labour regulations and UAEn labour law updates. We proactively audit your HR practices and implement corrective measures before issues arise.</p>
+                <h3>{t.hrBenefit2Title}</h3>
+                <p>{t.hrBenefit2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Scalable HR Solutions</h3>
-                <p>Whether you're a growing startup or an enterprise, our HR Outsourcing services scale with your needs. We adapt our service scope, team size, and technology tools as your workforce evolves.</p>
+                <h3>{t.hrBenefit3Title}</h3>
+                <p>{t.hrBenefit3Desc}</p>
               </div>
             </div>
           </div>
-
-          {/* HR Outsourcing Insights Section */}
-
         </div>
       </div>
-
 
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+          <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+          <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -208,62 +202,21 @@ const HROutsourcing = () => {
         </div>
       </section>
 
-
       <div className="insights-section">
-        <h2 className="insights-title">HR Outsourcing Insights</h2>
+        <h2 className="insights-title">{t.hrInsightTitle}</h2>
 
         <div className="insights-grid">
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight1Img} alt="Insight 1" />
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="insight-card">
+              <div className="insight-image-wrap">
+                <img src={num === 1 ? insight1Img : num === 2 ? insight2Img : num === 3 ? insight3Img : insight4Img} alt={`Insight ${num}`} />
+              </div>
+              <div className="insight-content">
+                <h3>{t[`hrInsight${num}Title`]}</h3>
+                <p>{t[`hrInsight${num}Desc`]}</p>
+              </div>
             </div>
-            <div className="insight-content">
-              <h3>Brief Introduction to HR Outsourcing</h3>
-              <p>HR Outsourcing is when businesses delegate their human resources functions to an external provider, enabling them to focus on core operations...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight2Img} alt="Insight 2" />
-            </div>
-            <div className="insight-content">
-              <h3>The Need for HR Outsourcing</h3>
-              <p>Managing HR in-house demands significant time, expertise, and resources. This is why organizations across UAE choose to outsource their HR functions to specialists...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight3Img} alt="Insight 3" />
-            </div>
-            <div className="insight-content">
-              <h3>Benefits of HR Outsourcing</h3>
-              <p>The key benefits of HR Outsourcing include reduced operational costs, improved compliance, access to specialist expertise, and a stronger focus on business productivity.</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight4Img} alt="Insight 4" />
-            </div>
-            <div className="insight-content">
-              <h3>How HR Outsourcing Drives Business Growth</h3>
-              <p>By delegating HR operations to a trusted partner, companies unlock more time for strategic planning, reduce risk, and build a more engaged, productive workforce...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

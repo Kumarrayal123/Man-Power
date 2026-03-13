@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/Railwayhero.png";
 import btsImg from "../assest/manpower-supply-meadia/railway_contract_team.png";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/railway_contract_team.png";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/rc_insight_3.png
 import sectorInsight4Img from "../assest/manpower-supply-meadia/rc_insight_4.png";
 
 const RailwayContract = () => {
+    const { t } = useLanguage();
+    const [openFaq, setOpenFaq] = React.useState(0);
+
+    const faqs = [
+        { question: t.rwFaqQ1, answer: t.rwFaqA1 },
+        { question: t.rwFaqQ2, answer: t.rwFaqA2 },
+        { question: t.rwFaqQ3, answer: t.rwFaqA3 },
+        { question: t.rwFaqQ4, answer: t.rwFaqA4 },
+        { question: t.rwFaqQ5, answer: t.rwFaqA5 },
+        { question: t.rwFaqQ6, answer: t.rwFaqA6 }
+    ];
+
     return (
-        <div className="railway-contract-page">
+        <div className="railway-contract-page recruitment-page">
             <SEOHead
-                title="Railway Contract Manpower in UAE | Infrastructure Staffing | Smaar Elysium"
-                description="Smaar Elysium provides highly skilled railway contract manpower across UAE, including railway engineers, track specialists, and transport infrastructure staff."
-                keywords="railway contract manpower UAE, railway engineering staffing, transport infrastructure workforce Dubai, track maintenance workers UAE"
+                title={t.rwSEOTitle}
+                description={t.rwSEODesc}
+                keywords="railway construction manpower UAE, track laying workers Dubai, OHE technicians staffing, signal and telecom railway staff, railway safety supervisors UAE"
                 canonical="https://www.smaarelysium.com/railway-contract"
+                faqSchema={faqs.map(f => ({
+                    question: f.question,
+                    answer: f.answer
+                }))}
             />
             {/* ── Hero Section ── */}
             <div className="container hero-wrapper">
                 <section className="home-hero">
                     <div className="home-hero__content">
                         <h1 className="home-hero__title">
-                            Railway Contract<br />Sector
+                            {t.rcHeroTitle}
                         </h1>
                         <p className="home-hero__text">
-                            Providing highly specialized railway engineering and infrastructure
-                            manpower to support the UAE’s rapidly expanding transit networks.
+                            {t.rcHeroText}
                         </p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">
-                                Get in Touch
+                                {t.getInTouch}
                             </Link>
                         </div>
                     </div>
@@ -48,16 +64,10 @@ const RailwayContract = () => {
 
                     <div className="choose-best-split">
                         <div className="cbs-left">
-                            <h2>Expert Railway Infrastructure Teams</h2>
-                            <p>
-                                As the UAE continues to connect its cities with world-class rail and metro networks, the demand for specialized rail professionals has never been higher. We supply the expertise needed.
-                            </p>
-                            <p>
-                                From signaling engineers and track laying specialists to safety officers focused on railway protocols, our personnel are trained for this highly regulated environment.
-                            </p>
-                            <p>
-                                We partner with global rail contractors to ensure steady, reliable workforce deployment across massive multi-year transit projects.
-                            </p>
+                            <h2>{t.rcChooseTitle}</h2>
+                            <p>{t.rcChooseP1}</p>
+                            <p>{t.rcChooseP2}</p>
+                            <p>{t.rcChooseP3}</p>
                         </div>
 
                         <div className="cbs-right">
@@ -65,14 +75,14 @@ const RailwayContract = () => {
                                 <span className="logo-main">Smaar Elysium</span>
                                 <span>®</span>
                                 <span className="logo-slogan">
-                                    RAILWAY EXPERTS
+                                    {t.rcLogoSlogan}
                                 </span>
                             </div>
                             <div className="cbs-text-block">
-                                <span className="cbs-go-beyond">CONNECTING</span>
-                                <span className="cbs-ordinary">TRANSIT</span>
-                                <span className="cbs-find">URBAN</span>
-                                <span className="cbs-executives">NETWORKS</span>
+                                <span className="cbs-go-beyond">{t.rcGrid1}</span>
+                                <span className="cbs-ordinary">{t.rcGrid2}</span>
+                                <span className="cbs-find">{t.rcGrid3}</span>
+                                <span className="cbs-executives">{t.rcGrid4}</span>
                             </div>
                         </div>
                     </div>
@@ -86,19 +96,15 @@ const RailwayContract = () => {
                             />
                         </div>
                         <div className="bts-right">
-                            <h3>Deploy Your Rail Crew</h3>
-                            <p>
-                                Deploying a team for railway construction or maintenance requires specific certifications. We handle the vetting of all technical professionals in this space.
-                            </p>
-                            <p>
-                                Maintain strict operational schedules and ensure complete safety compliance by augmenting your core staff with our contract rail workers.
-                            </p>
+                            <h3>{t.rcBtsTitle}</h3>
+                            <p>{t.rcBtsP1}</p>
+                            <p>{t.rcBtsP2}</p>
                             <Link
                                 to="/contact"
                                 className="hero-btn-main"
                                 style={{ background: '#fff', color: '#1f2937' }}
                             >
-                                Request Staff
+                                {t.requestStaff}
                             </Link>
                         </div>
                     </div>
@@ -106,78 +112,95 @@ const RailwayContract = () => {
                     <div className="domains-container">
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Track Laying & Maintenance</h3>
-                                <p>
-                                    Specialized workers for the installation, inspection, and ongoing maintenance of railway tracks.
-                                </p>
+                                <h3>{t.rcDom1Title}</h3>
+                                <p>{t.rcDom1Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Signaling & Comms</h3>
-                                <p>
-                                    Engineers and technicians to install and test complex railway signaling and communication systems.
-                                </p>
+                                <h3>{t.rcDom2Title}</h3>
+                                <p>{t.rcDom2Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Civil Rail Infrastructure</h3>
-                                <p>
-                                    Personnel for constructing platforms, tunnels, bridges, and stations associated with rail networks.
-                                </p>
+                                <h3>{t.rcDom3Title}</h3>
+                                <p>{t.rcDom3Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Rolling Stock Techs</h3>
-                                <p>
-                                    Mechanics and electricians focused on the maintenance and repair of the train carriages and engines.
-                                </p>
+                                <h3>{t.rcDom4Title}</h3>
+                                <p>{t.rcDom4Desc}</p>
                             </div>
                         </div>
                     </div>
 
                     <section className="why-choose-us-section">
-                        <h2 className="section-title">Why Choose Us</h2>
+                        <h2 className="section-title">{t.whyChooseUs}</h2>
                         <div className="benefits-grid">
                             <div className="benefit-card bg-red">
-                                <h3>Certified Talent</h3>
-                                <p>Personnel holding the necessary HSE and rail-specific technical certifications.</p>
+                                <h3>{t.rcBen1Title}</h3>
+                                <p>{t.rcBen1Desc}</p>
                             </div>
                             <div className="benefit-card bg-gray">
-                                <h3>Project Scalability</h3>
-                                <p>Ability to supply large cohorts of workers for major infrastructure milestones.</p>
+                                <h3>{t.rcBen2Title}</h3>
+                                <p>{t.rcBen2Desc}</p>
                             </div>
                             <div className="benefit-card bg-red">
-                                <h3>Safety First</h3>
-                                <p>We prioritize strict adherence to transit safety protocols in all workforce deployments.</p>
+                                <h3>{t.rcBen3Title}</h3>
+                                <p>{t.rcBen3Desc}</p>
                             </div>
                         </div>
                     </section>
 
                     <div className="quote-section">
                         <div className="quote-container">
-                            <div className="quote-label">Request a Quote</div>
-                            <h2 className="quote-title">Get a quick follow up!</h2>
-                            <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-                            <Link to="/contact" className="quote-btn">Book Now</Link>
+                            <div className="quote-label">{t.requestQuote}</div>
+                            <h2 className="quote-title">{t.quickFollowUp}</h2>
+                            <p className="quote-text">{t.fillForm}</p>
+                            <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                        <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+                        <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+                        <div className="faq-list">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                                    <div
+                                        className="faq-question-btn"
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                                        <span className="faq-question-text">{faq.question}</span>
+                                    </div>
+                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                        <div className="faq-answer-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                 </div>
             </div>
 
             <div className="insights-section">
-                <h2 className="insights-title">Railway Contract Insights</h2>
+                <h2 className="insights-title">{t.csInsightTitle}</h2>
                 <div className="insights-grid">
                     <div className="insight-card">
                         <div className="insight-image-wrap">
                             <img src={sectorInsight1Img} alt="Insight 1" />
                         </div>
                         <div className="insight-content">
-                            <h3>Brief Introduction to Contract Staffing</h3>
-                            <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                            <h3>{t.csInsight1Title}</h3>
+                            <p>{t.csInsight1Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -185,8 +208,8 @@ const RailwayContract = () => {
                             <img src={sectorInsight2Img} alt="Insight 2" />
                         </div>
                         <div className="insight-content">
-                            <h3>Need of Contract Staffing</h3>
-                            <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+                            <h3>{t.csInsight2Title}</h3>
+                            <p>{t.csInsight2Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -194,8 +217,8 @@ const RailwayContract = () => {
                             <img src={sectorInsight3Img} alt="Insight 3" />
                         </div>
                         <div className="insight-content">
-                            <h3>Benefits of getting Contract Staffing</h3>
-                            <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+                            <h3>{t.csInsight3Title}</h3>
+                            <p>{t.csInsight3Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -203,8 +226,8 @@ const RailwayContract = () => {
                             <img src={sectorInsight4Img} alt="Insight 4" />
                         </div>
                         <div className="insight-content">
-                            <h3>How can Contract Staffing work at Your Advantage?</h3>
-                            <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+                            <h3>{t.csInsight4Title}</h3>
+                            <p>{t.csInsight4Desc}</p>
                         </div>
                     </div>
                 </div>

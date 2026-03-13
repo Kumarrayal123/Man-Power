@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Mail, Menu, X, ChevronDown } from 'lucide-react';
+import { Phone, Mail, Menu, X, ChevronDown, Languages } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 import logo from '../../assest/logo.png';
-
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileDropdown, setMobileDropdown] = useState(null); // 'services' | 'sectors' | null
     const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | null
+    const { language, toggleLanguage, t } = useLanguage();
     const location = useLocation();
     const navRef = useRef(null);
 
@@ -49,6 +50,7 @@ const Header = () => {
         setMobileDropdown(mobileDropdown === menu ? null : menu);
     };
 
+
     return (
         <>
             {/* Top Info Bar - Now White with Light Border */}
@@ -56,14 +58,14 @@ const Header = () => {
                 <div className="container info-bar__inner">
                     <div className="info-bar__contact">
                         <nav className="info-bar__links">
-                            <Link to="/about">About us</Link>
-                            <Link to="/projects">Projects</Link>
+                            <Link to="/about">{t.aboutUs}</Link>
+                            <Link to="/projects">{t.projects}</Link>
                             {/* <Link to="/clients">Clients</Link>
                             <Link to="/insights">Insights</Link> */}
                         </nav>
                         <div className="info-bar__separator"></div>
-                        <a href="tel:8885072259"><Phone size={14} className="icon-red" /> 8885072259</a>
-                        <a href="mailto:info@smaarelysium.com"><Mail size={14} className="icon-red" /> info@smaarelysium.com</a>
+                        <a href="tel:8885072259"><Phone size={14} className="icon-red" /> {t.phone}</a>
+                        <a href="mailto:info@smaarelysium.com"><Mail size={14} className="icon-red" /> {t.email}</a>
                     </div>
                 </div>
             </div>
@@ -80,40 +82,44 @@ const Header = () => {
                     <nav className="main-nav" ref={navRef}>
                         <ul className="main-nav__list">
                             <li className={`main-nav__item has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
-                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('services')}>Manpower Services <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'services' ? 'rotated' : ''}`} /></span>
+                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('services')}>{t.services} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'services' ? 'rotated' : ''}`} /></span>
                                 <ul className="dropdown">
-                                    <li><Link to="/" onClick={closeDropdown}>Manpower Supply</Link></li>
-                                    <li><Link to="/recruitment" onClick={closeDropdown}>Recruitment</Link></li>
-                                    <li><Link to="/contract-staffing" onClick={closeDropdown}>Contract Staffing</Link></li>
-                                    <li><Link to="/executive-search" onClick={closeDropdown}>Executive Search</Link></li>
-                                    <li><Link to="/hr-outsourcing" onClick={closeDropdown}>HR Outsourcing</Link></li>
-                                    <li><Link to="/security-solutions" onClick={closeDropdown}>Security Solutions</Link></li>
+                                    <li><Link to="/" onClick={closeDropdown}>{t.supply}</Link></li>
+                                    <li><Link to="/recruitment" onClick={closeDropdown}>{t.recruitment}</Link></li>
+                                    <li><Link to="/contract-staffing" onClick={closeDropdown}>{t.staffing}</Link></li>
+                                    <li><Link to="/executive-search" onClick={closeDropdown}>{t.search}</Link></li>
+                                    <li><Link to="/hr-outsourcing" onClick={closeDropdown}>{t.outsourcing}</Link></li>
+                                    <li><Link to="/security-solutions" onClick={closeDropdown}>{t.security}</Link></li>
                                 </ul>
                             </li>
                             <li className={`main-nav__item has-dropdown ${activeDropdown === 'sectors' ? 'dropdown-open' : ''}`}>
-                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>Sectors We Serve <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
+                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>{t.sectors} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
                                 <ul className="dropdown">
-                                    <li><Link to="/building-contract" onClick={closeDropdown}>Building Contract</Link></li>
-                                    <li><Link to="/railway-contract" onClick={closeDropdown}>Railway Contract</Link></li>
-                                    <li><Link to="/steel-construction" onClick={closeDropdown}>Steel Construction</Link></li>
-                                    <li><Link to="/electric-mechanic" onClick={closeDropdown}>Electric Mechanic</Link></li>
-                                    <li><Link to="/oil-gas" onClick={closeDropdown}>Oil and Gas</Link></li>
-                                    <li><Link to="/civil-construction" onClick={closeDropdown}>Civil Construction</Link></li>
-                                    <li><Link to="/facility-management" onClick={closeDropdown}>Facility Management</Link></li>
+                                    <li><Link to="/building-contract" onClick={closeDropdown}>{t.building}</Link></li>
+                                    <li><Link to="/railway-contract" onClick={closeDropdown}>{t.railway}</Link></li>
+                                    <li><Link to="/steel-construction" onClick={closeDropdown}>{t.steel}</Link></li>
+                                    <li><Link to="/electric-mechanic" onClick={closeDropdown}>{t.electric}</Link></li>
+                                    <li><Link to="/oil-gas" onClick={closeDropdown}>{t.oilGas}</Link></li>
+                                    <li><Link to="/civil-construction" onClick={closeDropdown}>{t.civil}</Link></li>
+                                    <li><Link to="/facility-management" onClick={closeDropdown}>{t.facility}</Link></li>
                                     {/* <li><Link to="/oil-gas">Infrastructure</Link></li> */}
-                                    <li><Link to="/logistics" onClick={closeDropdown}>Logistics</Link></li>
-                                    <li><Link to="/manufacture" onClick={closeDropdown}>Manufacture</Link></li>
-                                    <li><Link to="/mep" onClick={closeDropdown}>Mechanical, Electrical & Plumbing- MEP</Link></li>
+                                    <li><Link to="/logistics" onClick={closeDropdown}>{t.logistics}</Link></li>
+                                    <li><Link to="/manufacture" onClick={closeDropdown}>{t.manufacture}</Link></li>
+                                    <li><Link to="/mep" onClick={closeDropdown}>{t.mep}</Link></li>
                                 </ul>
                             </li>
                             <li className="main-nav__item">
-                                <Link to="/contact">Contact Us</Link>
+                                <Link to="/contact">{t.contactUs}</Link>
                             </li>
                         </ul>
                     </nav>
 
                     <div className="site-header__actions">
-                        <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">BOOK MANPOWER</Link>
+                        <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle Language">
+                            <Languages size={18} className="lang-icon" />
+                            <span className="lang-text">{language === 'EN' ? 'AR' : 'EN'}</span>
+                        </button>
+                        <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">{t.bookManpower}</Link>
                         <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             {isMenuOpen ? <X /> : <Menu />}
                         </button>
@@ -126,40 +132,40 @@ const Header = () => {
                         <ul className="mobile-menu__list">
                             <li className={`mobile-menu__item ${mobileDropdown === 'services' ? 'active' : ''}`}>
                                 <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('services')}>
-                                    <span>Manpower Services</span>
+                                    <span>{t.services}</span>
                                     <ChevronDown size={20} className="toggle-icon" />
                                 </div>
                                 <ul className="mobile-dropdown">
-                                    <li><Link to="/">Manpower Supply</Link></li>
-                                    <li><Link to="/recruitment">Recruitment</Link></li>
-                                    <li><Link to="/contract-staffing">Contract Staffing</Link></li>
-                                    <li><Link to="/executive-search">Executive Search</Link></li>
-                                    <li><Link to="/hr-outsourcing">HR Outsourcing</Link></li>
-                                    <li><Link to="/security-solutions">Security Solutions</Link></li>
+                                    <li><Link to="/">{t.supply}</Link></li>
+                                    <li><Link to="/recruitment">{t.recruitment}</Link></li>
+                                    <li><Link to="/contract-staffing">{t.staffing}</Link></li>
+                                    <li><Link to="/executive-search">{t.search}</Link></li>
+                                    <li><Link to="/hr-outsourcing">{t.outsourcing}</Link></li>
+                                    <li><Link to="/security-solutions">{t.security}</Link></li>
                                 </ul>
                             </li>
                             <li className={`mobile-menu__item ${mobileDropdown === 'sectors' ? 'active' : ''}`}>
                                 <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('sectors')}>
-                                    <span>Sectors We Serve</span>
+                                    <span>{t.sectors}</span>
                                     <ChevronDown size={20} className="toggle-icon" />
                                 </div>
                                 <ul className="mobile-dropdown">
-                                    <li><Link to="/building-contract">Building Contract</Link></li>
-                                    <li><Link to="/railway-contract">Railway Contract</Link></li>
-                                    <li><Link to="/steel-construction">Steel Construction</Link></li>
-                                    <li><Link to="/electric-mechanic">Electric Mechanic</Link></li>
-                                    <li><Link to="/oil-gas">Oil and Gas</Link></li>
-                                    <li><Link to="/civil-construction">Civil Construction</Link></li>
-                                    <li><Link to="/facility-management">Facility Management</Link></li>
-                                    <li><Link to="/logistics">Logistics</Link></li>
-                                    <li><Link to="/manufacture">Manufacture</Link></li>
-                                    <li><Link to="/mep">Mechanical, Electrical & Plumbing- MEP</Link></li>
+                                    <li><Link to="/building-contract">{t.building}</Link></li>
+                                    <li><Link to="/railway-contract">{t.railway}</Link></li>
+                                    <li><Link to="/steel-construction">{t.steel}</Link></li>
+                                    <li><Link to="/electric-mechanic">{t.electric}</Link></li>
+                                    <li><Link to="/oil-gas">{t.oilGas}</Link></li>
+                                    <li><Link to="/civil-construction">{t.civil}</Link></li>
+                                    <li><Link to="/facility-management">{t.facility}</Link></li>
+                                    <li><Link to="/logistics">{t.logistics}</Link></li>
+                                    <li><Link to="/manufacture">{t.manufacture}</Link></li>
+                                    <li><Link to="/mep">{t.mep}</Link></li>
                                 </ul>
                             </li>
-                            <li><Link to="/about">About Us</Link></li>
-                            <li><Link to="/projects">Projects</Link></li>
-                            <li><Link to="/contact">Contact Us</Link></li>
-                            <li><Link to="/book-manpower" className="nav-bk-btn" style={{ display: 'inline-flex', width: '100%', justifyContent: 'center', marginTop: '20px' }}>BOOK MANPOWER</Link></li>
+                            <li><Link to="/about">{t.aboutUs}</Link></li>
+                            <li><Link to="/projects">{t.projects}</Link></li>
+                            <li><Link to="/contact">{t.contactUs}</Link></li>
+                            <li><Link to="/book-manpower" className="nav-bk-btn" style={{ display: 'inline-flex', width: '100%', justifyContent: 'center', marginTop: '20px' }}>{t.bookManpower}</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -202,6 +208,60 @@ const Header = () => {
         .dropdown-chevron { transition: transform 0.3s; }
         .dropdown-chevron.rotated { transform: rotate(180deg); }
         
+        .site-header__actions {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .lang-toggle {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          background: #ffffff;
+          border: 1px solid var(--color-primary);
+          padding: 8px 16px;
+          border-radius: 50px;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 14px;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          color: var(--color-primary);
+          position: relative;
+          overflow: hidden;
+          box-shadow: 0 2px 8px rgba(254, 118, 34, 0.1);
+        }
+        
+        .lang-toggle:hover {
+          background: var(--color-primary);
+          color: #fff;
+          box-shadow: 0 4px 12px rgba(254, 118, 34, 0.25);
+          transform: translateY(-1px);
+        }
+        
+        .lang-toggle:active {
+          transform: translateY(0);
+        }
+
+        .lang-icon { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .lang-toggle:hover .lang-icon { transform: rotate(180deg); }
+        
+        .lang-text {
+          min-width: 20px;
+          text-align: center;
+        }
+
+        @media (max-width: 992px) {
+          .site-header__actions { gap: 10px; }
+          .lang-toggle { padding: 6px 12px; font-size: 13px; }
+        }
+
+        @media (max-width: 480px) {
+          .lang-toggle { padding: 5px 10px; }
+          .lang-text { font-size: 12px; }
+          .site-header__actions { gap: 8px; }
+        }
+
         .nav-bk-btn { 
           background: #ffffff; color: #000; border: 1px solid var(--color-primary); 
           padding: 10px 25px; border-radius: 100px; font-weight: 700; font-size: 15px;

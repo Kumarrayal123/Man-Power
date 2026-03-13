@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/Electrichero.png";
 import btsImg from "../assest/manpower-supply-meadia/electric_mechanic_team.png";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/electric_mechanic_team.png";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/emc_insight_3.pn
 import sectorInsight4Img from "../assest/manpower-supply-meadia/emc_insight_4.png";
 
 const ElectricMechanicContract = () => {
+    const { t } = useLanguage();
+    const [openFaq, setOpenFaq] = React.useState(0);
+
+    const faqs = [
+        { question: t.emFaqQ1, answer: t.emFaqA1 },
+        { question: t.emFaqQ2, answer: t.emFaqA2 },
+        { question: t.emFaqQ3, answer: t.emFaqA3 },
+        { question: t.emFaqQ4, answer: t.emFaqA4 },
+        { question: t.emFaqQ5, answer: t.emFaqA5 },
+        { question: t.emFaqQ6, answer: t.emFaqA6 }
+    ];
+
     return (
-        <div className="electric-mechanic-page">
+        <div className="electric-mechanic-page recruitment-page">
             <SEOHead
-                title="Electric & Mechanic Contract Manpower UAE | MEP Staffing | Smaar Elysium"
-                description="Providing premier electric and mechanic contract manpower, including MEP engineers, HVAC technicians, and industrial electricians across the UAE."
-                keywords="electric mechanic contract UAE, MEP staffing Dubai, electricians agency UAE, HVAC technicians, mechanical engineers manpower"
+                title={t.emSEOTitle}
+                description={t.emSEODesc}
+                keywords="electrical mechanical manpower UAE, MEP staffing Dubai, industrial electricians UAE, mechanical fitters staffing, electrical engineering workforce Dubai"
                 canonical="https://www.smaarelysium.com/electric-mechanic-contract"
+                faqSchema={faqs.map(f => ({
+                    question: f.question,
+                    answer: f.answer
+                }))}
             />
             {/* ── Hero Section ── */}
             <div className="container hero-wrapper">
                 <section className="home-hero">
                     <div className="home-hero__content">
                         <h1 className="home-hero__title">
-                            Electric & Mechanic<br />Contract Sector
+                            {t.emHeroTitle}
                         </h1>
                         <p className="home-hero__text">
-                            Supplying world-class electro-mechanical engineers, HVAC
-                            technicians, and MEP specialists to power the UAE’s residential, commercial, and industrial ecosystems.
+                            {t.emHeroText}
                         </p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">
-                                Get in Touch
+                                {t.getInTouch}
                             </Link>
                         </div>
                     </div>
@@ -48,16 +64,10 @@ const ElectricMechanicContract = () => {
 
                     <div className="choose-best-split">
                         <div className="cbs-left">
-                            <h2>Expert MEP & Electro-Mechanical Teams</h2>
-                            <p>
-                                Behind every modern building and industrial facility lies a complex vascular system of electrical, mechanical, and plumbing networks. We provide the personnel who design, build, and maintain these vital systems.
-                            </p>
-                            <p>
-                                From massive district cooling plants requiring specialized HVAC technicians, to smart building infrastructure requiring low-voltage data cabling experts, our deployable workforce covers the complete MEP spectrum.
-                            </p>
-                            <p>
-                                Our technicians are rigorously tested and certified to ensure they meet the stringent energy, safety, and operational standards of the UAE.
-                            </p>
+                            <h2>{t.emChooseTitle}</h2>
+                            <p>{t.emChooseP1}</p>
+                            <p>{t.emChooseP2}</p>
+                            <p>{t.emChooseP3}</p>
                         </div>
 
                         <div className="cbs-right">
@@ -65,14 +75,14 @@ const ElectricMechanicContract = () => {
                                 <span className="logo-main">Smaar Elysium</span>
                                 <span>®</span>
                                 <span className="logo-slogan">
-                                    MEP EXPERTS
+                                    {t.emLogoSlogan}
                                 </span>
                             </div>
                             <div className="cbs-text-block">
-                                <span className="cbs-go-beyond">POWERING</span>
-                                <span className="cbs-ordinary">MODERN</span>
-                                <span className="cbs-find">URBAN</span>
-                                <span className="cbs-executives">INFRASTRUCTURE</span>
+                                <span className="cbs-go-beyond">{t.emGrid1}</span>
+                                <span className="cbs-ordinary">{t.emGrid2}</span>
+                                <span className="cbs-find">{t.emGrid3}</span>
+                                <span className="cbs-executives">{t.emGrid4}</span>
                             </div>
                         </div>
                     </div>
@@ -86,19 +96,15 @@ const ElectricMechanicContract = () => {
                             />
                         </div>
                         <div className="bts-right">
-                            <h3>Deploy Your MEP Crew</h3>
-                            <p>
-                                The success of an MEP project relies heavily on the technical proficiency of the boots on the ground. We provide vetted specialists ready for immediate deployment.
-                            </p>
-                            <p>
-                                Avoid project delays caused by a lack of specialized technicians. Our contract staffing model allows you to scale your electrical and mechanical teams perfectly in line with project phases.
-                            </p>
+                            <h3>{t.emBtsTitle}</h3>
+                            <p>{t.emBtsP1}</p>
+                            <p>{t.emBtsP2}</p>
                             <Link
                                 to="/contact"
                                 className="hero-btn-main"
                                 style={{ background: '#fff', color: '#1f2937' }}
                             >
-                                Request Staff
+                                {t.requestStaff}
                             </Link>
                         </div>
                     </div>
@@ -106,78 +112,95 @@ const ElectricMechanicContract = () => {
                     <div className="domains-container">
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Industrial Electricians</h3>
-                                <p>
-                                    High and low voltage specialists, control panel technicians, and industrial wiring experts.
-                                </p>
+                                <h3>{t.emDom1Title}</h3>
+                                <p>{t.emDom1Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>HVAC Technicians</h3>
-                                <p>
-                                    Experts in the installation, commissioning, and maintenance of massive cooling and ventilation systems.
-                                </p>
+                                <h3>{t.emDom2Title}</h3>
+                                <p>{t.emDom2Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Mechanical Engineers</h3>
-                                <p>
-                                    Engineers specializing in heavy machinery, fluid mechanics, pumps, and industrial piping networks.
-                                </p>
+                                <h3>{t.emDom3Title}</h3>
+                                <p>{t.emDom3Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Plumbing & Fire Fighting</h3>
-                                <p>
-                                    Certified plumbers and technicians specializing in complex water systems, drainage, and crucial fire suppression networks.
-                                </p>
+                                <h3>{t.emDom4Title}</h3>
+                                <p>{t.emDom4Desc}</p>
                             </div>
                         </div>
                     </div>
 
                     <section className="why-choose-us-section">
-                        <h2 className="section-title">Why Choose Us</h2>
+                        <h2 className="section-title">{t.whyChooseUs}</h2>
                         <div className="benefits-grid">
                             <div className="benefit-card bg-red">
-                                <h3>Technical Proficiency</h3>
-                                <p>Personnel tested rigorously on complex MEP system knowledge and safety protocols.</p>
+                                <h3>{t.emBen1Title}</h3>
+                                <p>{t.emBen1Desc}</p>
                             </div>
                             <div className="benefit-card bg-gray">
-                                <h3>Comprehensive Coverage</h3>
-                                <p>One agency for all your mechanical, electrical, and plumbing manpower needs.</p>
+                                <h3>{t.emBen2Title}</h3>
+                                <p>{t.emBen2Desc}</p>
                             </div>
                             <div className="benefit-card bg-red">
-                                <h3>Safety & Compliance</h3>
-                                <p>Personnel fully trained on UAE electrical safety and building codes.</p>
+                                <h3>{t.emBen3Title}</h3>
+                                <p>{t.emBen3Desc}</p>
                             </div>
                         </div>
                     </section>
 
                     <div className="quote-section">
                         <div className="quote-container">
-                            <div className="quote-label">Request a Quote</div>
-                            <h2 className="quote-title">Get a quick follow up!</h2>
-                            <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-                            <Link to="/contact" className="quote-btn">Book Now</Link>
+                            <div className="quote-label">{t.requestQuote}</div>
+                            <h2 className="quote-title">{t.quickFollowUp}</h2>
+                            <p className="quote-text">{t.fillForm}</p>
+                            <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                        <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+                        <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+                        <div className="faq-list">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                                    <div
+                                        className="faq-question-btn"
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                                        <span className="faq-question-text">{faq.question}</span>
+                                    </div>
+                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                        <div className="faq-answer-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                 </div>
             </div>
 
             <div className="insights-section">
-                <h2 className="insights-title">Electric & Mechanic Insights</h2>
+                <h2 className="insights-title">{t.csInsightTitle}</h2>
                 <div className="insights-grid">
                     <div className="insight-card">
                         <div className="insight-image-wrap">
                             <img src={sectorInsight1Img} alt="Insight 1" />
                         </div>
                         <div className="insight-content">
-                            <h3>Brief Introduction to Contract Staffing</h3>
-                            <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                            <h3>{t.csInsight1Title}</h3>
+                            <p>{t.csInsight1Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -185,8 +208,8 @@ const ElectricMechanicContract = () => {
                             <img src={sectorInsight2Img} alt="Insight 2" />
                         </div>
                         <div className="insight-content">
-                            <h3>Need of Contract Staffing</h3>
-                            <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+                            <h3>{t.csInsight2Title}</h3>
+                            <p>{t.csInsight2Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -194,8 +217,8 @@ const ElectricMechanicContract = () => {
                             <img src={sectorInsight3Img} alt="Insight 3" />
                         </div>
                         <div className="insight-content">
-                            <h3>Benefits of getting Contract Staffing</h3>
-                            <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+                            <h3>{t.csInsight3Title}</h3>
+                            <p>{t.csInsight3Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -203,8 +226,8 @@ const ElectricMechanicContract = () => {
                             <img src={sectorInsight4Img} alt="Insight 4" />
                         </div>
                         <div className="insight-content">
-                            <h3>How can Contract Staffing work at Your Advantage?</h3>
-                            <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+                            <h3>{t.csInsight4Title}</h3>
+                            <p>{t.csInsight4Desc}</p>
                         </div>
                     </div>
                 </div>

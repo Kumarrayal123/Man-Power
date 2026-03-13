@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import heroImage from "../assest/manpower-supply-meadia/executive-search-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/executivesearch_bts.jpg";
@@ -12,58 +12,56 @@ import insight4Img from "../assest/manpower-supply-meadia/uae_exec_insight_4.png
 import cbsBgImg from "../assest/manpower-supply-meadia/executive_search_choose_best.png";
 
 const ExecutiveSearch = () => {
+  const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(0);
 
   const faqs = [
     {
-      question: "1. What makes your executive search process unique?",
-      answer: "Our executive search process is distinguished by deep industry intelligence, confidential outreach, and a network of senior-level professionals, ensuring we identify and place leadership talent that drives long-term organizational success."
+      question: t.esFaqQ1,
+      answer: t.esFaqA1
     },
     {
-      question: "2. How do you identify senior-level candidates?",
-      answer: "We leverage an extensive proprietary network, market mapping techniques, and direct headhunting to identify passive senior candidates who are not actively job searching but are the ideal fit for your leadership role."
+      question: t.esFaqQ2,
+      answer: t.esFaqA2
     },
     {
-      question: "3. What industries do you specialize in for executive placement?",
-      answer: "Our executive search practice spans a wide range of sectors including construction, engineering, finance, technology, healthcare, hospitality, and retail — providing cross-industry expertise for C-suite and director-level placements."
+      question: t.esFaqQ3,
+      answer: t.esFaqA3
     },
     {
-      question: "4. How do you ensure confidentiality during the search?",
-      answer: "We conduct all executive searches with the highest level of discretion. Our structured NDAs, private outreach protocols, and vetted communication procedures protect both the client and the candidate throughout every stage."
+      question: t.esFaqQ4,
+      answer: t.esFaqA4
     },
     {
-      question: "5. What is the typical timeline for an executive placement?",
-      answer: "Depending on the seniority and specificity of the role, executive searches typically conclude within 6 to 12 weeks. We provide regular progress updates and interim shortlists so you're always in control."
+      question: t.esFaqQ5,
+      answer: t.esFaqA5
     },
     {
-      question: "6. How do you evaluate leadership potential in candidates?",
-      answer: "We go beyond credentials — using competency-based interviews, psychometric assessments, 360-degree feedback, and leadership profiling to present candidates with the vision, values, and drive to lead your organization forward."
+      question: t.esFaqQ6,
+      answer: t.esFaqA6
     }
   ];
 
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Executive Search Services in UAE | C-Suite & Leadership Hiring | Smaar Elysium"
-        description="Smaar Elysium provides confidential executive search services across UAE. We identify and place senior leaders, directors, and C-suite executives for organizations in all major sectors."
+        title={t.esHeroTitle}
+        description={t.esHeroText}
         keywords="executive search UAE, C-suite hiring UAE, leadership recruitment, senior management recruitment, headhunting services UAE, director level hiring, Smaar Elysium executive search"
         canonical="https://www.smaarelysium.com/executive-search"
-        faqSchema={[
-          { question: "What makes your executive search process unique?", answer: "Our executive search process is distinguished by deep industry intelligence, confidential outreach, and a network of senior-level professionals, ensuring we identify and place leadership talent that drives long-term organizational success." },
-          { question: "How do you identify senior-level candidates?", answer: "We leverage an extensive proprietary network, market mapping techniques, and direct headhunting to identify passive senior candidates who are not actively job searching but are the ideal fit for your leadership role." },
-          { question: "What industries do you specialize in for executive placement?", answer: "Our executive search practice spans construction, engineering, finance, technology, healthcare, hospitality, and retail — providing cross-industry expertise for C-suite and director-level placements." },
-          { question: "How do you ensure confidentiality during the executive search?", answer: "We conduct all executive searches with the highest level of discretion. Our structured NDAs, private outreach protocols, and vetted communication procedures protect both the client and the candidate throughout every stage." },
-          { question: "What is the typical timeline for an executive placement?", answer: "Depending on the seniority and specificity of the role, executive searches typically conclude within 6 to 12 weeks. We provide regular progress updates and interim shortlists so you are always in control." }
-        ]}
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Executive Search<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking for visionary leaders to steer your organization? Smaar Elysium provides confidential, high-quality executive search services across all industries in UAE.</p>
+            <h1 className="home-hero__title">{t.esHeroTitle.split(' ').slice(0, 2).join(' ')}<br />{t.esHeroTitle.split(' ').slice(2).join(' ')}</h1>
+            <p className="home-hero__text">{t.esHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Book Now</Link>
+              <Link to="/contact" className="hero-btn-main">{t.commonBookNow || 'Book Now'}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -80,33 +78,33 @@ const ExecutiveSearch = () => {
         {/* Main Content Area */}
         <div className="service-main-content">
           <div className="service-intro">
-            <h2>CHOOSE THE BEST FOR YOU</h2>
-            <p>Welcome to our Executive Search Services – where exceptional leadership begins. Our consultants are industry specialists who understand what it takes to find and attract the world's best executives.</p>
+            <h2>{t.esIntroTitle}</h2>
+            <p>{t.esIntroText}</p>
           </div>
 
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Choose the best for you</h2>
-              <p>Step into the realm of our tailored executive search services, where precision converges with discretion for an unparalleled leadership acquisition experience. Our core strengths redefine executive recruitment with a focus on confidential talent mapping, rigorous leadership assessments, and personalized C-suite strategies.</p>
-              <p>In today's competitive business landscape, the right leaders are the most critical determinant of your organization's success.</p>
-              <p>Our executive search services excel in delivering customized leadership solutions that address the unique vision and cultural requirements of your organization. In this era of swift business transformations, attracting the right executive talent holds greater significance than ever before.</p>
-              <p>Recognizing the transformative role senior leaders play in driving business growth, our expert consulting team comprehensively supports your executive hiring needs. We ensure your company gains access to a distinguished pool of high-caliber professionals aligned with your strategic goals.</p>
-              <p>Allow us to serve as your trusted partner in building a world-class leadership team, empowering your business to thrive and achieve sustainable excellence.</p>
+              <h2>{t.esChooseTitle}</h2>
+              <p>{t.esChooseP1}</p>
+              <p>{t.esChooseP2}</p>
+              <p>{t.esChooseP3}</p>
+              <p>{t.esChooseP4}</p>
+              <p>{t.esChooseP5}</p>
             </div>
 
             <div className="cbs-right" style={{ backgroundImage: `url(${cbsBgImg})` }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>{t.esLogoSlogan}</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">GO BEYOND THE</span>
-                  <span className="cbs-ordinary">ORDINARY</span>
-                  <span className="cbs-find">FIND THE PRECISE</span>
-                  <span className="cbs-executives">LEADERS</span>
+                  <span className="cbs-go-beyond">{t.esGrid1}</span>
+                  <span className="cbs-ordinary">{t.esGrid2}</span>
+                  <span className="cbs-find">{t.esGrid3}</span>
+                  <span className="cbs-executives">{t.esGrid4}</span>
                 </div>
               </div>
               <div className="cbs-footer">
@@ -145,47 +143,43 @@ const ExecutiveSearch = () => {
             </div>
 
             <div className="bts-right">
-              <h3>Build Your Leadership Team With Our Executive Search</h3>
-              <p>Unlocking potential starts with our commitment to understanding your organizational culture and strategic vision. Our tailored executive search process ensures a seamless match between your leadership requirements and the exceptional individuals we identify through our global network.</p>
-              <p>Rigorous leadership assessment is the cornerstone of our approach. We go far beyond credentials, evaluating strategic thinking, cultural alignment, and long-term impact. Our meticulous methodology ensures that only the most qualified leaders make it to your shortlist.</p>
-              <p>Experience executive recruitment services that elevate your leadership team to new heights. Let us navigate the complexities, so you can focus on driving strategic success.</p>
+              <h3>{t.esBtsTitle}</h3>
+              <p>{t.esBtsP1}</p>
+              <p>{t.esBtsP2}</p>
+              <p>{t.esBtsP3}</p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="why-choose-us-section">
-            <h2 className="section-title">WHY CHOOSE US</h2>
-            <p className="section-intro">Choose us for executive search that goes beyond the conventional. Experience the difference of discreet talent identification, rigorous leadership evaluation, and strategic placement solutions designed exclusively for your organization's success.</p>
+            <h2 className="section-title">{t.esWhyTitle}</h2>
+            <p className="section-intro">{t.esWhyIntro}</p>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Confidential Talent Mapping</h3>
-                <p>We conduct discreet, structured outreach to passive senior candidates, maintaining absolute confidentiality for both your organization and the candidates we engage on your behalf.</p>
+                <h3>{t.esBenefit1Title}</h3>
+                <p>{t.esBenefit1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Rigorous Leadership Assessment</h3>
-                <p>Our commitment goes beyond sourcing. We evaluate leadership competencies, cultural alignment, and long-term strategic fit using proven frameworks and psychometric tools.</p>
+                <h3>{t.esBenefit2Title}</h3>
+                <p>{t.esBenefit2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Bespoke Executive Strategies</h3>
-                <p>Every executive search is unique. We craft bespoke search strategies aligned to your industry, organizational culture, and growth vision — ensuring the right leader for the right moment.</p>
+                <h3>{t.esBenefit3Title}</h3>
+                <p>{t.esBenefit3Desc}</p>
               </div>
             </div>
           </div>
-
-          {/* Executive Search Insights Section */}
-
         </div>
       </div>
-
 
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+          <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+          <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -208,62 +202,21 @@ const ExecutiveSearch = () => {
         </div>
       </section>
 
-
       <div className="insights-section">
-        <h2 className="insights-title">Executive Search Insights</h2>
+        <h2 className="insights-title">{t.esInsightTitle}</h2>
 
         <div className="insights-grid">
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight1Img} alt="Insight 1" />
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="insight-card">
+              <div className="insight-image-wrap">
+                <img src={num === 1 ? insight1Img : num === 2 ? insight2Img : num === 3 ? insight3Img : insight4Img} alt={`Insight ${num}`} />
+              </div>
+              <div className="insight-content">
+                <h3>{t[`esInsight${num}Title`]}</h3>
+                <p>{t[`esInsight${num}Desc`]}</p>
+              </div>
             </div>
-            <div className="insight-content">
-              <h3>Brief Introduction to Executive Search</h3>
-              <p>Executive Search is a specialized recruitment service focused on identifying and placing senior leaders and C-suite executives for organizations...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight2Img} alt="Insight 2" />
-            </div>
-            <div className="insight-content">
-              <h3>The Need for Executive Search</h3>
-              <p>Finding senior leadership through conventional job boards rarely works. This is why organizations across UAE partner with executive search firms...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight3Img} alt="Insight 3" />
-            </div>
-            <div className="insight-content">
-              <h3>Benefits of Executive Search Services</h3>
-              <p>The advantages of dedicated executive search include access to passive talent, faster placements, higher retention, and a stronger organizational culture.</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={insight4Img} alt="Insight 4" />
-            </div>
-            <div className="insight-content">
-              <h3>How Executive Search Works at Your Advantage?</h3>
-              <p>The competitive edge in business comes from exceptional leadership. A strategic executive search partner ensures your leadership pipeline is always future-ready...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/plumbing-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/mep_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/mep_insight_1.jpg";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/mep_insight_3.jp
 import sectorInsight4Img from "../assest/manpower-supply-meadia/mep_insight_4.jpg";
 
 const Mep = () => {
+  const { t } = useLanguage();
+  const [openFaq, setOpenFaq] = React.useState(0);
+
+  const faqs = [
+    { question: t.mepFaqQ1, answer: t.mepFaqA1 },
+    { question: t.mepFaqQ2, answer: t.mepFaqA2 },
+    { question: t.mepFaqQ3, answer: t.mepFaqA3 },
+    { question: t.mepFaqQ4, answer: t.mepFaqA4 },
+    { question: t.mepFaqQ5, answer: t.mepFaqA5 },
+    { question: t.mepFaqQ6, answer: t.mepFaqA6 }
+  ];
+
   return (
-    <div className="oil-gas-page">
+    <div className="oil-gas-page recruitment-page">
       <SEOHead
-        title="MEP Manpower Supply in UAE | Mechanical Electrical Plumbing Technicians | Smaar Elysium"
-        description="Smaar Elysium provides certified MEP technicians across UAE — HVAC engineers, industrial electricians, plumbers, pipefitters, and fire & life safety specialists for installation, commissioning, and maintenance projects."
-        keywords="MEP manpower UAE, HVAC technicians UAE, electricians staffing UAE, plumbers supply UAE, mechanical engineers UAE, fire safety technicians, MEP workers agency, Smaar Elysium MEP"
+        title={t.mepSEOTitle}
+        description={t.mepSEODesc}
+        keywords="MEP manpower UAE, electrical technicians staffing, plumbing workers Dubai, HVAC specialists UAE, MEP supervisors staffing Dubai"
         canonical="https://www.smaarelysium.com/mep"
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">
-              MEP (Mechanical, Electrical & Plumbing)<br />Sector
+              {t.mpHeroTitle}
             </h1>
             <p className="home-hero__text">
-              Providing specialized Mechanical, Electrical, and Plumbing manpower
-              for high-stakes installations, maintenance, and commissioning across the UAE.
+              {t.mpHeroText}
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
-                Get in Touch
+                {t.getInTouch}
               </Link>
             </div>
           </div>
@@ -49,19 +65,10 @@ const Mep = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Expert MEP Workforce Deployment</h2>
-              <p>
-                The backbone of any modern building is its MEP infrastructure. We provide
-                the certified talent required to install, test, and maintain these complex systems.
-              </p>
-              <p>
-                From massive district cooling plants and high-voltage power distribution to
-                intricate fire-suppression logic, our personnel bring verifiable technical expertise.
-              </p>
-              <p>
-                Our workforce is accustomed to coordinating with civil teams on fast-paced,
-                large-scale commercial, residential, and industrial mega-projects.
-              </p>
+              <h2>{t.mpChooseTitle}</h2>
+              <p>{t.mpChooseP1}</p>
+              <p>{t.mpChooseP2}</p>
+              <p>{t.mpChooseP3}</p>
             </div>
 
             <div className="cbs-right">
@@ -70,14 +77,14 @@ const Mep = () => {
                 {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
-                  MEP SPECIALISTS
+                  {t.mpLogoSlogan}
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">ENGINEERING</span>
-                <span className="cbs-ordinary">EXCELLENCE</span>
-                <span className="cbs-find">CERTIFIED</span>
-                <span className="cbs-executives">MEP TALENT</span>
+                <span className="cbs-go-beyond">{t.mpGrid1}</span>
+                <span className="cbs-ordinary">{t.mpGrid2}</span>
+                <span className="cbs-find">{t.mpGrid3}</span>
+                <span className="cbs-executives">{t.mpGrid4}</span>
               </div>
             </div>
           </div>
@@ -92,21 +99,15 @@ const Mep = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your Technical MEP Team</h3>
-              <p>
-                Whether you need a specialized commissioning crew or hundreds of
-                electricians and pipefitters for an ongoing build, we can supply them.
-              </p>
-              <p>
-                Every member is trade-tested to comply with DEWA, ADDC, SEWA, and Civil Defense
-                standards, ensuring your installations pass inspection the first time.
-              </p>
+              <h3>{t.mpBtsTitle}</h3>
+              <p>{t.mpBtsP1}</p>
+              <p>{t.mpBtsP2}</p>
               <Link
                 to="/contact"
                 className="hero-btn-main"
                 style={{ background: '#fff', color: '#1f2937' }}
               >
-                Request Staff
+                {t.requestStaff}
               </Link>
             </div>
           </div>
@@ -114,76 +115,52 @@ const Mep = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Mechanical & HVAC</h3>
-                <p>
-                  Chiller technicians, duct fitters, and mechanical engineers specialized
-                  in climate control, ventilation, and district cooling systems.
-                </p>
+                <h3>{t.mpDom1Title}</h3>
+                <p>{t.mpDom1Desc}</p>
               </div>
             </div>
 
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Electrical Engineering</h3>
-                <p>
-                  Industrial electricians, cable jointers, and panel builders for
-                  low current (ELV), low voltage (LV), and high voltage (HV) networks.
-                </p>
+                <h3>{t.mpDom2Title}</h3>
+                <p>{t.mpDom2Desc}</p>
               </div>
             </div>
 
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Plumbing & Piping</h3>
-                <p>
-                  Certified plumbers and pipefitters executing complex water supply,
-                  drainage, and industrial piping networks.
-                </p>
+                <h3>{t.mpDom3Title}</h3>
+                <p>{t.mpDom3Desc}</p>
               </div>
             </div>
 
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Fire & Life Safety</h3>
-                <p>
-                  Civil Defense-approved specialists for the installation and commissioning
-                  of fire alarms, sprinklers, and emergency suppression systems.
-                </p>
+                <h3>{t.mpDom4Title}</h3>
+                <p>{t.mpDom4Desc}</p>
               </div>
             </div>
           </div>
 
           {/* ── Why Choose Us Section ── */}
           <section className="why-choose-us-section">
-            <h2 className="section-title">Why Choose Us</h2>
+            <h2 className="section-title">{t.whyChooseUs}</h2>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Technical Expertise</h3>
-                <p>
-                  Workforce with hands-on experience in MEP installations and
-                  maintenance.
-                </p>
+                <h3>{t.mpBen1Title}</h3>
+                <p>{t.mpBen1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Safety Compliance</h3>
-                <p>
-                  All staff trained in UAE MEP safety and best practices.
-                </p>
+                <h3>{t.mpBen2Title}</h3>
+                <p>{t.mpBen2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Project Flexibility</h3>
-                <p>
-                  Teams can be scaled from small contracts to large complex
-                  projects.
-                </p>
+                <h3>{t.mpBen3Title}</h3>
+                <p>{t.mpBen3Desc}</p>
               </div>
             </div>
           </section>
@@ -228,15 +205,30 @@ const Mep = () => {
             </div>
           </section> */}
 
-          {/* Request a Quote Section */}
-          <div className="quote-section">
-            <div className="quote-container">
-              <div className="quote-label">Request a Quote</div>
-              <h2 className="quote-title">Get a quick follow up!</h2>
-              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-              <Link to="/contact" className="quote-btn">Book Now</Link>
+          {/* FAQ Section */}
+          <section className="faq-section" style={{ margin: '60px 0' }}>
+            <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+            <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                  <div
+                    className="faq-question-btn"
+                    onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  >
+                    <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                    <span className="faq-question-text">{faq.question}</span>
+                  </div>
+                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                    <div className="faq-answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
+          </section>
 
         </div>
       </div>
@@ -244,73 +236,19 @@ const Mep = () => {
       <div className="insights-section">
         <h2 className="insights-title">MEP Insights</h2>
         <div className="insights-grid">
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight1Img} alt="Insight 1" />
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="insight-card">
+              <div className="insight-image-wrap">
+                <img src={num === 1 ? sectorInsight1Img : num === 2 ? sectorInsight2Img : num === 3 ? sectorInsight3Img : sectorInsight4Img} alt={`Insight ${num}`} />
+              </div>
+              <div className="insight-content">
+                <h3>{t[`csInsight${num}Title`]}</h3>
+                <p>{t[`csInsight${num}Desc`]}</p>
+              </div>
             </div>
-            <div className="insight-content">
-              <h3>Brief Introduction to Contract Staffing</h3>
-              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-            </div>
-          </div>
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight2Img} alt="Insight 2" />
-            </div>
-            <div className="insight-content">
-              <h3>Need of Contract Staffing</h3>
-              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
-            </div>
-          </div>
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight3Img} alt="Insight 3" />
-            </div>
-            <div className="insight-content">
-              <h3>Benefits of getting Contract Staffing</h3>
-              <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
-            </div>
-          </div>
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight4Img} alt="Insight 4" />
-            </div>
-            <div className="insight-content">
-              <h3>How can Contract Staffing work at Your Advantage?</h3>
-              <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* ── FAQ Section ── */}
-      {/* <section className="faq-section">
-            <div className="faq-container">
-              <div className="faq-item">
-                <div className="faq-question">
-                  <span>What MEP trades do you provide?</span>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    Electricians, HVAC technicians, plumbers, and fire protection
-                    specialists.
-                  </p>
-                </div>
-              </div>
-
-              <div className="faq-item">
-                <div className="faq-question">
-                  <span>Are your technicians certified?</span>
-                </div>
-                <div className="faq-answer">
-                  <p>
-                    Yes, all technicians hold relevant certifications for their
-                    trade.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section> */}
 
       {/* ── Clients Section (Same) ── */}
       {/* <section className="clients-section">

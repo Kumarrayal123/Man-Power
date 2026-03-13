@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/facilitymanagementsector.png";
 import btsImg from "../assest/manpower-supply-meadia/facilitymanagement_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_1.jpg";
@@ -11,29 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/facilitymanageme
 import sectorInsight4Img from "../assest/manpower-supply-meadia/facilitymanagement_insight_4.jpg";
 
 const FacilityManagement = () => {
+  const { t } = useLanguage();
+  const [openFaq, setOpenFaq] = React.useState(0);
+
+  const faqs = [
+    { question: t.fmFaqQ1, answer: t.fmFaqA1 },
+    { question: t.fmFaqQ2, answer: t.fmFaqA2 },
+    { question: t.fmFaqQ3, answer: t.fmFaqA3 },
+    { question: t.fmFaqQ4, answer: t.fmFaqA4 },
+    { question: t.fmFaqQ5, answer: t.fmFaqA5 },
+    { question: t.fmFaqQ6, answer: t.fmFaqA6 }
+  ];
+
   return (
-    <div className="oil-gas-page">
+    <div className="oil-gas-page recruitment-page">
       <SEOHead
-        title="Facility Management Manpower in UAE | Hard & Soft Services Staffing | Smaar Elysium"
-        description="Smaar Elysium provides comprehensive facility management manpower across UAE including MEP technicians, cleaning crews, security personnel, and front-of-house staff for commercial and residential properties."
+        title={t.fmSEOTitle}
+        description={t.fmSEODesc}
         keywords="facility management manpower UAE, MEP technicians staffing, cleaning staff agency UAE, facility services staff, building maintenance workers UAE, housekeeping staff UAE, Smaar Elysium facility"
         canonical="https://www.smaarelysium.com/facility-management"
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">
-              Facility Management<br />Sector
+              {t.fmHeroTitle}
             </h1>
             <p className="home-hero__text">
-              Delivering premium, tailored facility management manpower
-              solutions to maximize asset lifespan and operational uptime across
-              commercial, residential, and corporate ecosystems in the UAE.
+              {t.fmHeroText}
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
-                Get in Touch
+                {t.getInTouch}
               </Link>
             </div>
           </div>
@@ -50,20 +65,10 @@ const FacilityManagement = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Professional Facility Management Teams</h2>
-              <p>
-                Maintaining the modern infrastructure of the UAE requires a proactive
-                and highly skilled workforce. We provide the personnel needed to keep your facilities
-                running at peak performance.
-              </p>
-              <p>
-                From preventative maintenance technicians to hospitality-trained soft services staff,
-                our workforce is designed to enhance the end-user experience and protect your physical assets.
-              </p>
-              <p>
-                With an unwavering focus on sustainability, hygiene, and continuous uptime, our teams
-                ensure your properties exceed regulatory and occupant expectations.
-              </p>
+              <h2>{t.fmChooseTitle}</h2>
+              <p>{t.fmChooseP1}</p>
+              <p>{t.fmChooseP2}</p>
+              <p>{t.fmChooseP3}</p>
             </div>
 
             <div className="cbs-right">
@@ -72,14 +77,14 @@ const FacilityManagement = () => {
                 {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
-                  FACILITY MANAGEMENT EXPERTS
+                  {t.fmLogoSlogan}
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">ELEVATING</span>
-                <span className="cbs-ordinary">ASSETS</span>
-                <span className="cbs-find">OPTIMIZED</span>
-                <span className="cbs-executives">PERFORMANCE</span>
+                <span className="cbs-go-beyond">{t.fmGrid1}</span>
+                <span className="cbs-ordinary">{t.fmGrid2}</span>
+                <span className="cbs-find">{t.fmGrid3}</span>
+                <span className="cbs-executives">{t.fmGrid4}</span>
               </div>
             </div>
           </div>
@@ -94,21 +99,15 @@ const FacilityManagement = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your Facility Management Crew</h3>
-              <p>
-                Whether you need a dedicated hard services engineering team or a discreet
-                soft services crew for a luxury property, we deploy the right talent.
-              </p>
-              <p>
-                Every candidate undergoes rigorous background checks and customer-service
-                oriented training to guarantee seamless service delivery.
-              </p>
+              <h3>{t.fmBtsTitle}</h3>
+              <p>{t.fmBtsP1}</p>
+              <p>{t.fmBtsP2}</p>
               <Link
                 to="/contact"
                 className="hero-btn-main"
                 style={{ background: '#fff', color: '#1f2937' }}
               >
-                Request Staff
+                {t.requestStaff}
               </Link>
             </div>
           </div>
@@ -116,77 +115,49 @@ const FacilityManagement = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Hard Services (MEP)</h3>
-                <p>
-                  Specialized technicians for predictive and reactive maintenance
-                  of electrical, HVAC, and plumbing systems.
-                </p>
+                <h3>{t.fmDom1Title}</h3>
+                <p>{t.fmDom1Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Soft Services (Cleaning)</h3>
-                <p>
-                  BICS-trained cleaning crews, housekeepers, and deep-cleaning
-                  specialists ensuring immaculate environments.
-                </p>
+                <h3>{t.fmDom2Title}</h3>
+                <p>{t.fmDom2Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Security & Safety</h3>
-                <p>
-                  SIRA-certified security guards, CCTV operators, and life-safety
-                  personnel protecting your people and property.
-                </p>
+                <h3>{t.fmDom3Title}</h3>
+                <p>{t.fmDom3Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Front of House & Admin</h3>
-                <p>
-                  Polished receptionists, concierge staff, and facility coordinators
-                  acting as the welcoming face of your organization.
-                </p>
+                <h3>{t.fmDom4Title}</h3>
+                <p>{t.fmDom4Desc}</p>
               </div>
             </div>
           </div>
 
           {/* ── Why Choose Us Section ── */}
           <section className="why-choose-us-section">
-            <h2 className="section-title">Why Choose Us</h2>
+            <h2 className="section-title">{t.whyChooseUs}</h2>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Consistent Quality</h3>
-                <p>
-                  Personnel trained to deliver dependable facility
-                  management services around the clock.
-                </p>
+                <h3>{t.fmBen1Title}</h3>
+                <p>{t.fmBen1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Cost-Effective Teams</h3>
-                <p>
-                  Flexible staffing solutions that align with your budget and
-                  project scale.
-                </p>
+                <h3>{t.fmBen2Title}</h3>
+                <p>{t.fmBen2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Regulatory Compliance</h3>
-                <p>
-                  All staff are certified to meet UAE facility management
-                  standards and safety regulations.
-                </p>
+                <h3>{t.fmBen3Title}</h3>
+                <p>{t.fmBen3Desc}</p>
               </div>
             </div>
           </section>
@@ -234,12 +205,37 @@ const FacilityManagement = () => {
           {/* Request a Quote Section */}
           <div className="quote-section">
             <div className="quote-container">
-              <div className="quote-label">Request a Quote</div>
-              <h2 className="quote-title">Get a quick follow up!</h2>
-              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-              <Link to="/contact" className="quote-btn">Book Now</Link>
+              <div className="quote-label">{t.requestQuote}</div>
+              <h2 className="quote-title">{t.quickFollowUp}</h2>
+              <p className="quote-text">{t.fillForm}</p>
+              <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
             </div>
           </div>
+
+          {/* FAQ Section */}
+          <section className="faq-section" style={{ margin: '60px 0' }}>
+            <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+            <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                  <div
+                    className="faq-question-btn"
+                    onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  >
+                    <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                    <span className="faq-question-text">{faq.question}</span>
+                  </div>
+                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                    <div className="faq-answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
         </div>
       </div>
@@ -252,8 +248,8 @@ const FacilityManagement = () => {
               <img src={sectorInsight1Img} alt="Insight 1" />
             </div>
             <div className="insight-content">
-              <h3>Brief Introduction to Contract Staffing</h3>
-              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+              <h3>{t.csInsight1Title}</h3>
+              <p>{t.csInsight1Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -261,8 +257,8 @@ const FacilityManagement = () => {
               <img src={sectorInsight2Img} alt="Insight 2" />
             </div>
             <div className="insight-content">
-              <h3>Need of Contract Staffing</h3>
-              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+              <h3>{t.csInsight2Title}</h3>
+              <p>{t.csInsight2Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -270,8 +266,8 @@ const FacilityManagement = () => {
               <img src={sectorInsight3Img} alt="Insight 3" />
             </div>
             <div className="insight-content">
-              <h3>Benefits of getting Contract Staffing</h3>
-              <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+              <h3>{t.csInsight3Title}</h3>
+              <p>{t.csInsight3Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -279,8 +275,8 @@ const FacilityManagement = () => {
               <img src={sectorInsight4Img} alt="Insight 4" />
             </div>
             <div className="insight-content">
-              <h3>How can Contract Staffing work at Your Advantage?</h3>
-              <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+              <h3>{t.csInsight4Title}</h3>
+              <p>{t.csInsight4Desc}</p>
             </div>
           </div>
         </div>
@@ -420,7 +416,7 @@ const FacilityManagement = () => {
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
       `}} />
-    </div >
+    </div>
   );
 };
 

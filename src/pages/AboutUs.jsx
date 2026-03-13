@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 import sectorInsight1Img from "../assest/manpower-supply-meadia/uae_about_insight_1.png";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/uae_about_insight_2.png";
@@ -59,11 +60,12 @@ const Counter = ({ end, suffix = "", duration = 2000 }) => {
 };
 
 const AboutUs = () => {
+  const { t } = useLanguage();
   return (
     <div className="about-page">
       <SEOHead
-        title="About Smaar Elysium | Premier Manpower & Staffing Agency in UAE"
-        description="Smaar Elysium is a trusted manpower supply and staffing agency based in UAE with 15+ years of expertise. We connect businesses with skilled professionals across construction, logistics, security, oil & gas, and more."
+        title={t.aboutSEOTitle}
+        description={t.aboutSEODesc}
         keywords="about Smaar Elysium, manpower agency UAE, staffing company UAE, workforce solutions UAE, HR consultancy UAE, labour supply company, best manpower agency Dubai"
         canonical="https://www.smaarelysium.com/about"
       />
@@ -72,14 +74,12 @@ const AboutUs = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">About Us<br />Who We Are</h1>
+            <h1 className="home-hero__title">{t.aboutTitle}<br />{t.whoWeAre}</h1>
             <p className="home-hero__text">
-              Smaar Elysium is a premier manpower supply and staffing agency based in UAE,
-              dedicated to connecting exceptional talent with outstanding organizations across
-              diverse industries throughout the country.
+              {t.aboutDesc}
             </p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
+              <Link to="/contact" className="hero-btn-main">{t.getInTouch}</Link>
             </div>
           </div>
           <div className="home-hero__image-wrapper">
@@ -105,24 +105,15 @@ const AboutUs = () => {
               />
             </div>
             <div className="journey-text-container">
-              <h2 className="journey-page-heading">Our Journey</h2>
+              <h2 className="journey-page-heading">{t.ourJourney}</h2>
               <p className="journey-page-paragraph">
-                Smaar Elysium began with a singular vision — to build a world-class manpower supply
-                company that truly understands the dynamic needs of businesses operating across UAE.
-                Over the years, we have grown from a focused staffing consultancy into a comprehensive
-                workforce solutions partner trusted across multiple industries.
+                {t.journeyP1}
               </p>
               <p className="journey-page-paragraph">
-                With more than 5 years of combined expertise, our leadership team has navigated
-                diverse market conditions and built a robust talent network that spans skilled
-                professionals, semi-skilled workers, and executive-level leaders. We pride ourselves
-                on blending deep local market knowledge with industry best practices — delivering
-                results that consistently exceed expectations.
+                {t.journeyP2}
               </p>
               <p className="journey-page-paragraph">
-                Today, Smaar Elysium stands as one of UAE's most trusted names in manpower
-                supply, contract staffing, HR outsourcing, and executive search — serving clients
-                across construction, facilities management, logistics, security, and more.
+                {t.journeyP3}
               </p>
             </div>
           </div>
@@ -135,19 +126,19 @@ const AboutUs = () => {
           <div className="stats-banner-grid">
             <div className="stats-banner-item">
               <Counter end={5} suffix="+" />
-              <span className="stats-label">Years of Experience</span>
+              <span className="stats-label">{t.yearsExp}</span>
             </div>
             <div className="stats-banner-item">
               <Counter end={1000} suffix="+" />
-              <span className="stats-label">Professionals Placed</span>
+              <span className="stats-label">{t.profPlaced}</span>
             </div>
             <div className="stats-banner-item">
               <Counter end={100} suffix="+" />
-              <span className="stats-label">Active Clients</span>
+              <span className="stats-label">{t.activeClients}</span>
             </div>
             <div className="stats-banner-item">
               <Counter end={15} suffix="+" />
-              <span className="stats-label">Industries Served</span>
+              <span className="stats-label">{t.indServed}</span>
             </div>
           </div>
         </div>
@@ -159,24 +150,17 @@ const AboutUs = () => {
           <div className="mv-wrapper">
             <div className="mv-box mv-box-left" style={{ backgroundImage: `url(${missionBg})` }}>
               <div className="mv-content">
-                <h2 className="mv-title">Our Mission</h2>
+                <h2 className="mv-title">{t.ourMission}</h2>
                 <p className="mv-text">
-                  To be UAE's most reliable and forward-thinking manpower partner — delivering
-                  tailored workforce solutions that empower businesses to scale confidently. We
-                  are committed to connecting the right people with the right opportunities through
-                  rigorous selection, compliance excellence, and a deep understanding of every
-                  client's unique operational requirements.
+                  {t.missionDesc}
                 </p>
               </div>
             </div>
             <div className="mv-box mv-box-right" style={{ backgroundImage: `url(${visionBg})` }}>
               <div className="mv-content">
-                <h2 className="mv-title">Our Vision</h2>
+                <h2 className="mv-title">{t.ourVision}</h2>
                 <p className="mv-text">
-                  To emerge as UAE's most trusted end-to-end human capital solutions
-                  provider — a name synonymous with quality talent, seamless compliance, and
-                  transformative workforce strategies. We aspire to be the partner every ambitious
-                  organization turns to when building teams that drive sustainable growth.
+                  {t.visionDesc}
                 </p>
               </div>
             </div>
@@ -188,43 +172,43 @@ const AboutUs = () => {
       <section className="values-section">
         <div className="container">
           <div className="section-header text-center">
-            <span className="section-label">Why Choose Us</span>
-            <h2 className="section-title">Our Core Values</h2>
+            <span className="section-label">{t.whyChooseUs}</span>
+            <h2 className="section-title">{t.coreValues}</h2>
             <p className="section-subtitle">
-              The principles that guide every decision, every placement, and every partnership at Smaar Elysium.
+              {t.valuesSubtitle}
             </p>
           </div>
 
           <div className="values-grid">
             <div className="value-card">
               <div className="value-icon"><Target /></div>
-              <h3>Commitment</h3>
-              <p>We are unwaveringly dedicated to delivering results — placing the right talent with precision, speed, and professionalism every single time.</p>
+              <h3>{t.commitment}</h3>
+              <p>{t.commitmentDesc}</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><Activity /></div>
-              <h3>Agility</h3>
-              <p>We respond swiftly to the evolving demands of the market, offering flexible workforce solutions that adapt to your business rhythms.</p>
+              <h3>{t.agility}</h3>
+              <p>{t.agilityDesc}</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><Users /></div>
-              <h3>Partnership</h3>
-              <p>We see ourselves as an extension of your team — investing in your success with collaborative, long-term relationships built on shared goals.</p>
+              <h3>{t.partnership}</h3>
+              <p>{t.partnershipDesc}</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><Eye /></div>
-              <h3>Transparency</h3>
-              <p>Clear communication, honest assessments, and complete openness in every engagement — building the trust that underpins great partnerships.</p>
+              <h3>{t.transparency}</h3>
+              <p>{t.transparencyDesc}</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><ShieldCheck /></div>
-              <h3>Compliance</h3>
-              <p>We navigate UAEn labour laws and regulatory frameworks with expertise, ensuring every placement is fully compliant and risk-free for your organization.</p>
+              <h3>{t.compliance}</h3>
+              <p>{t.complianceDesc}</p>
             </div>
             <div className="value-card">
               <div className="value-icon"><Heart /></div>
-              <h3>People First</h3>
-              <p>We care genuinely about the candidates we place and the clients we serve — creating positive outcomes for every person and organization we work with.</p>
+              <h3>{t.peopleFirst}</h3>
+              <p>{t.peopleFirstDesc}</p>
             </div>
           </div>
         </div>
@@ -234,43 +218,42 @@ const AboutUs = () => {
       <section className="what-we-do-section">
         <div className="container">
           <div className="wwd-header">
-            <span className="section-label">Our Services</span>
-            <h2 className="wwd-title">Comprehensive Workforce Solutions</h2>
+            <span className="section-label">{t.services}</span>
+            <h2 className="wwd-title">{t.wwdSubtitle}</h2>
             <p className="wwd-desc">
-              From blue-collar manpower supply to executive-level recruitment, we offer a full suite
-              of workforce solutions designed for UAEn businesses across all major industries.
+              {t.wwdDesc}
             </p>
           </div>
           <div className="wwd-grid">
             <div className="wwd-card">
               <div className="wwd-number">01</div>
-              <h3>Manpower Supply</h3>
-              <p>Skilled, semi-skilled, and unskilled workforce deployed efficiently to match your operational timelines and site requirements.</p>
+              <h3>{t.manpowerSupply}</h3>
+              <p>{t.manpowerSupplyDesc}</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">02</div>
-              <h3>Recruitment & Talent Acquisition</h3>
-              <p>End-to-end permanent recruitment services powered by an extensive pan-UAE talent network and a rigorous multi-stage selection process.</p>
+              <h3>{t.recruitmentTalent}</h3>
+              <p>{t.recruitmentTalentDesc}</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">03</div>
-              <h3>Contract Staffing</h3>
-              <p>Flexible short-term and long-term contract staffing solutions that give you skilled professionals without the overhead of permanent hires.</p>
+              <h3>{t.contractStaffing}</h3>
+              <p>{t.contractStaffingDesc}</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">04</div>
-              <h3>Executive Search</h3>
-              <p>Confidential, high-calibre leadership hiring — identifying and securing top executive talent that drives your organizational vision forward.</p>
+              <h3>{t.exSearch}</h3>
+              <p>{t.exSearchDesc}</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">05</div>
-              <h3>HR Outsourcing</h3>
-              <p>End-to-end HR management services including payroll processing, compliance management, and employee lifecycle administration.</p>
+              <h3>{t.hrOut}</h3>
+              <p>{t.hrOutDesc}</p>
             </div>
             <div className="wwd-card">
               <div className="wwd-number">06</div>
-              <h3>Security Staffing</h3>
-              <p>SIRA-licensed security personnel deployed for static guard duties, mobile patrols, access control, and event security across UAE.</p>
+              <h3>{t.secStaffing}</h3>
+              <p>{t.secStaffingDesc}</p>
             </div>
           </div>
         </div>
@@ -278,7 +261,7 @@ const AboutUs = () => {
 
       {/* ── About Insights Section ── */}
       <div className="insights-section">
-        <h2 className="insights-title">Smaar Elysium Insights</h2>
+        <h2 className="insights-title">{t.insightsTitle}</h2>
 
         <div className="insights-grid">
           <div className="insight-card">
@@ -286,8 +269,8 @@ const AboutUs = () => {
               <img src={sectorInsight1Img} alt="UAEn Workforce Landscape" />
             </div>
             <div className="insight-content">
-              <h3>Understanding the UAEn Workforce Landscape</h3>
-              <p>UAE's diversified and rapidly expanding economy creates unique manpower demands across construction, technology, hospitality, and manufacturing — and we are perfectly positioned to meet them all.</p>
+              <h3>{t.insight1Title}</h3>
+              <p>{t.insight1Desc}</p>
             </div>
           </div>
 
@@ -296,8 +279,8 @@ const AboutUs = () => {
               <img src={sectorInsight2Img} alt="Why Partner With a Staffing Agency" />
             </div>
             <div className="insight-content">
-              <h3>Why Partnering With a Staffing Agency Matters</h3>
-              <p>For businesses expanding across UAE, a trusted local staffing partner provides critical advantages: faster hiring cycles, compliance assurance, and access to a pre-vetted talent pool.</p>
+              <h3>{t.insight2Title}</h3>
+              <p>{t.insight2Desc}</p>
             </div>
           </div>
 
@@ -306,8 +289,8 @@ const AboutUs = () => {
               <img src={sectorInsight3Img} alt="UAEn Labour Law Compliance" />
             </div>
             <div className="insight-content">
-              <h3>Navigating UAEn Labour Law Compliance</h3>
-              <p>UAEn employment regulations are nuanced and constantly evolving. Our compliance experts ensure every hire meets current Ministry of Labour requirements — zero risk, full peace of mind.</p>
+              <h3>{t.insight3Title}</h3>
+              <p>{t.insight3Desc}</p>
             </div>
           </div>
 
@@ -316,8 +299,8 @@ const AboutUs = () => {
               <img src={sectorInsight4Img} alt="Building High Performance Teams" />
             </div>
             <div className="insight-content">
-              <h3>Building High-Performance Teams in UAE</h3>
-              <p>A high-performing team is the true engine of business growth. Smaar Elysium's structured recruitment methodology ensures you hire for both skillset and cultural alignment — every time.</p>
+              <h3>{t.insight4Title}</h3>
+              <p>{t.insight4Desc}</p>
             </div>
           </div>
         </div>

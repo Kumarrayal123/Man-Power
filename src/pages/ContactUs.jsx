@@ -3,23 +3,25 @@ import { Link } from 'react-router-dom';
 import btsGroup7Img from "../assest/manpower-supply-meadia/contacthero.png";
 import contactDubaiCity from "../assest/manpower-supply-meadia/contact_dubai_city.png";
 import contactQuoteOffice from "../assest/manpower-supply-meadia/uae_contact_quote_office.png";
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 
 const ContactUs = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
   return (
     <div className="contact-page">
       <SEOHead
-        title="Contact Smaar Elysium | Manpower Supply & Staffing Agency in UAE"
-        description="Contact Smaar Elysium for manpower supply, contract staffing, executive search, HR outsourcing, and security staffing services across UAE. Reach us at 8885072259 or sales@smaarelysium.com."
+        title={t.contactSEOTitle}
+        description={t.contactSEODesc}
         keywords="contact Smaar Elysium, manpower agency contact UAE, staffing company Dubai, hire manpower UAE contact, workforce solutions contact, Smaar Elysium phone"
         canonical="https://www.smaarelysium.com/contact"
         faqSchema={[
-          { question: "How can I contact Smaar Elysium for manpower services?", answer: "You can reach Smaar Elysium by calling 8885072259, emailing sales@smaarelysium.com, or filling out the contact form on our website. Our team responds promptly to all enquiries." },
-          { question: "Where is Smaar Elysium located?", answer: "Smaar Elysium is headquartered in Dubai, UAE, and provides manpower supply and staffing services across all major cities and industrial zones throughout the country." },
-          { question: "How quickly can Smaar Elysium deploy manpower after contact?", answer: "Depending on the role and location, Smaar Elysium can mobilize manpower within 24 to 72 hours for urgent requirements. For large-scale deployments, our team will provide a detailed mobilization timeline upon enquiry." },
-          { question: "Does Smaar Elysium provide manpower for both small and large projects?", answer: "Yes. We serve businesses of all sizes — from small site contracts requiring a few workers to large-scale industrial projects requiring hundreds of skilled professionals across multiple locations." }
+          { question: t.cuFAQ1Q, answer: t.cuFAQ1A },
+          { question: t.cuFAQ2Q, answer: t.cuFAQ2A },
+          { question: t.cuFAQ3Q, answer: t.cuFAQ3A },
+          { question: t.cuFAQ4Q, answer: t.cuFAQ4A }
         ]}
       />
 
@@ -27,10 +29,10 @@ const ContactUs = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Contact Us<br />We're Here to Help</h1>
-            <p className="home-hero__text">Have a question, a staffing requirement, or need a consultation? Our expert team at Smaar Elysium is ready to assist you with the right workforce solutions.</p>
+            <h1 className="home-hero__title" dangerouslySetInnerHTML={{ __html: t.cuHeroTitle + '<br />' + t.cuHeroSubtitle }}></h1>
+            <p className="home-hero__text">{t.cuHeroText}</p>
             <div className="home-hero__actions">
-              <a href="tel:8885072259" className="hero-btn-main">Call Us Now</a>
+              <a href="tel:8885072259" className="hero-btn-main">{t.cuCallNow}</a>
             </div>
           </div>
           <div className="home-hero__image-wrapper">
@@ -54,19 +56,19 @@ const ContactUs = () => {
                 alt="Dubai UAE Skyline"
                 className="location-city-img"
               />
-              <div className="location-country-label">UAE</div>
+              <div className="location-country-label">{t.uae}</div>
             </div>
 
             {/* Right: Contact Details */}
             <div className="location-details-side">
-              <p className="loc-line">Mobile: <strong>8885072259</strong></p>
+              <p className="loc-line">{t.cuMobile} <strong>8885072259</strong></p>
               {/* <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p> */}
-              <p className="loc-line">Email: <strong>info@smaarelysium.com</strong></p>
+              <p className="loc-line">{t.cuEmail} <strong>info@smaarelysium.com</strong></p>
 
-              <a href="https://smaarelysium.com" target="_blank" rel="noreferrer" className="loc-website">smaarelysium.com</a>
+              <a href={"https://" + t.cuWebsite} target="_blank" rel="noreferrer" className="loc-website">{t.cuWebsite}</a>
 
               <p className="loc-address">
-                Dubai
+                {t.cuAddress}
               </p>
 
               <a
@@ -76,7 +78,7 @@ const ContactUs = () => {
                   e.preventDefault();
                   document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-              >Book Manpower</a>
+              >{t.cuBookBtn}</a>
             </div>
           </div>
         </div>
@@ -105,27 +107,25 @@ const ContactUs = () => {
               <img src={contactQuoteOffice} alt="Professional Emirati business meeting in Dubai" />
             </div>
             <div className="quote-form-side">
-              <span className="quote-label">Request a Quote</span>
-              <h2 className="quote-title">Get a quick follow up!</h2>
+              <span className="quote-label">{t.cuQuoteLabel}</span>
+              <h2 className="quote-title">{t.cuQuoteTitle}</h2>
               <p className="quote-desc">
-                In case you have any queries or want to hire our adept manpower services, fill up this form, and our experts will get back to you!
+                {t.cuQuoteDesc}
               </p>
 
               <form className="quote-form" onSubmit={(e) => e.preventDefault()}>
                 <div className="form-row">
-                  <input type="text" placeholder="Enter Name" required />
-                  <input type="email" placeholder="Enter Email" required />
+                  <input type="text" placeholder={t.enterName} required />
+                  <input type="email" placeholder={t.enterEmail} required />
                 </div>
                 <div className="form-group">
-                  <input type="tel" placeholder="Phone Number" required />
+                  <input type="tel" placeholder={t.phoneNum} required />
                 </div>
                 <div className="form-group">
-                  <textarea placeholder="Comments" rows="4"></textarea>
+                  <textarea placeholder={t.comments} rows="4"></textarea>
                 </div>
 
-
-
-                <button type="submit" className="quote-submit-btn">Book Now</button>
+                <button type="submit" className="quote-submit-btn">{t.bookNow}</button>
               </form>
             </div>
           </div>

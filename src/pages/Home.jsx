@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Construction, Hammer, Shield, Users, Briefcase, BarChart, Droplet, Sparkles, LayoutGrid, MonitorCheck, Contact } from 'lucide-react';
+import { ArrowRight, Construction, Hammer, Shield, Users, Briefcase, BarChart, Droplet, Sparkles, LayoutGrid, MonitorCheck, Contact, Zap as ZapIcon } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import img5 from "../assest/mp-5.jpg";
 import img6 from "../assest/mp-6.jpg";
 import img7 from "../assest/mp-7.jpg";
@@ -69,20 +70,21 @@ const Counter = ({ end, suffix = "", duration = 2000 }) => {
 };
 
 const Home = () => {
+    const { t } = useLanguage();
     const [openFaq, setOpenFaq] = useState(0);
 
     const faqs = [
         {
-            question: "What is manpower supply in Dubai?",
-            answer: "Manpower supply in Dubai refers to the process of providing skilled and unskilled labor to companies and organizations in Dubai, UAE. This is done by manpower supply companies by first finding the right candidate and then employ them under their visa sponsorship. After adequate training these workers are supplied on temporary basis to the client companies."
+            question: t.faq1Q,
+            answer: t.faq1A
         },
         {
-            question: "What are the benefits of using manpower supply services in Dubai?",
-            answer: "Benefits include flexibility in scaling workforce, reduced administrative and HR burdens, access to a wider talent pool, and cost savings on recruitment and visa processing."
+            question: t.faq2Q,
+            answer: t.faq2A
         },
         {
-            question: "What types of industries in Dubai require manpower supply services?",
-            answer: "Various industries such as construction, facility management, logistics, manufacturing, healthcare, hospitality, and IT frequently rely on manpower supply services to meet their operational needs."
+            question: t.faq3Q,
+            answer: t.faq3A
         }
     ];
 
@@ -99,10 +101,10 @@ const Home = () => {
     return (
         <div className="home-page">
             <SEOHead
-                title="Premier Manpower & Staffing Solutions in UAE"
-                description="Smaar Elysium is UAE's leading manpower supply and staffing agency based in Dubai. Trusted by 500+ companies for recruitment, contract staffing, and HR outsourcing since 2003."
-                keywords="manpower supply UAE, staffing agency Dubai, recruitment agency UAE, manpower company Dubai"
-                canonical="https://smaarelysium.com/"
+                title={t.homeSEOTitle}
+                description={t.homeSEODesc}
+                keywords="manpower supply UAE, staffing solutions Dubai, recruitment agency UAE, HR outsourcing Middle East"
+                canonical="https://www.smaarelysium.com"
                 schema={homeFaqSchema}
             />
             <div className="container hero-wrapper">
@@ -115,10 +117,10 @@ const Home = () => {
                     </div>
 
                     <div className="home-hero__content">
-                        <h1 className="home-hero__title">Premier Civil Construction<br />Staffing Solutions in UAE</h1>
-                        <p className="home-hero__text">Empowering the building sector with top-tier talent. Whether you need skilled engineers for permanent roles or a reliable workforce for massive temporary projects, we deliver excellence on time and on budget.</p>
+                        <h1 className="home-hero__title">{t.heroTitle}</h1>
+                        <p className="home-hero__text">{t.heroText}</p>
                         <div className="home-hero__actions">
-                            <Link to="/contact" className="hero-btn-main">Book Now</Link>
+                            <Link to="/contact" className="hero-btn-main">{t.bookNow}</Link>
                         </div>
                     </div>
                 </section>
@@ -128,39 +130,39 @@ const Home = () => {
             <section className="services-section">
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-label">Our Expertise</span>
-                        <h2 className="section-title">Comprehensive Staffing Solutions</h2>
+                        <span className="section-label">{t.expertise}</span>
+                        <h2 className="section-title">{t.compStaffing}</h2>
                     </div>
 
                     <div className="featured-services-grid">
                         {[
                             {
-                                title: "Manpower Supply",
+                                title: t.supply,
                                 img: msHero,
                                 link: "/"
                             },
                             {
-                                title: "Recruitment",
+                                title: t.recruitment,
                                 img: rcHero,
                                 link: "/recruitment"
                             },
                             {
-                                title: "Contract Staffing",
+                                title: t.staffing,
                                 img: csHero,
                                 link: "/contract-staffing"
                             },
                             {
-                                title: "Executive Search",
+                                title: t.search,
                                 img: esHero,
                                 link: "/executive-search"
                             },
                             {
-                                title: "HR Outsourcing",
+                                title: t.outsourcing,
                                 img: hrHero,
                                 link: "/hr-outsourcing"
                             },
                             {
-                                title: "Security Solutions",
+                                title: t.security,
                                 img: ssHero,
                                 link: "/security-solutions"
                             }
@@ -180,18 +182,18 @@ const Home = () => {
             <section className="supply-services-section">
                 <div className="container">
                     <div className="section-header" style={{ marginBottom: '40px' }}>
-                        <h2 className="section-title">Industry-Leading Manpower Supply in Dubai</h2>
-                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>As a prominent staffing partner in the UAE, we specialize in deploying highly skilled, semi-skilled, and unskilled workforce customized to your project parameters. We guarantee quality personnel for optimal productivity across disciplines:</p>
+                        <h2 className="section-title">{t.supplyInDubai}</h2>
+                        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555', fontSize: '1.1rem' }}>{t.supplyDesc}</p>
                     </div>
 
                     <div className="supply-grid-container">
                         {[
-                            { title: "Civil Manpower Supply", desc: "Deploying expert construction professionals and robust labor forces to ensure structural integrity, site safety, and timely project completion for all civil engineering endeavors.", icon: <Construction size={48} strokeWidth={1.2} />, link: "/services/civil-manpower" },
-                            { title: "Mechanical Manpower Supply", desc: "Providing certified mechanical personnel equipped to handle complex industrial installations, routine maintenance, and manufacturing operations with precision.", icon: <Hammer size={48} strokeWidth={1.2} />, link: "/services/mechanical-manpower" },
-                            { title: "Electrical Manpower Supply", desc: "Supplying qualified electricians and technical specialists to execute safe, efficient, and compliant electrical installations and heavy-duty maintenance across all project scales.", icon: <ZapIcon size={48} />, link: "/services/electrical-manpower" },
-                            { title: "Plumbing Manpower Supply", desc: "Sourcing experienced and vetted plumbing professionals adept in comprehensive industrial, commercial, and residential piping and fluid systems management.", icon: <Droplet size={48} strokeWidth={1.2} />, link: "/services/plumbing-manpower" },
-                            { title: "Helper Manpower Supply", desc: "Delivering dependable, physically capable general support staff ready to assist site operations, handle logistics, and streamline your daily site requirements.", icon: <Users size={48} strokeWidth={1.2} />, link: "/services/helper-manpower" },
-                            { title: "Cleaning Manpower Supply", desc: "Deploying dedicated, trained cleaning personnel committed to maintaining pristine, hygienic, and organized environments for commercial and industrial facilities.", icon: <Sparkles size={48} strokeWidth={1.2} />, link: "/services/cleaning-manpower" }
+                            { title: t.civilSupply, desc: t.civilSupplyDesc, icon: <Construction size={48} strokeWidth={1.2} />, link: "/services/civil-manpower" },
+                            { title: t.mechSupply, desc: t.mechSupplyDesc, icon: <Hammer size={48} strokeWidth={1.2} />, link: "/services/mechanical-manpower" },
+                            { title: t.elecSupply, desc: t.elecSupplyDesc, icon: <ZapIcon size={48} />, link: "/services/electrical-manpower" },
+                            { title: t.plumbSupply, desc: t.plumbSupplyDesc, icon: <Droplet size={48} strokeWidth={1.2} />, link: "/services/plumbing-manpower" },
+                            { title: t.helperSupply, desc: t.helperSupplyDesc, icon: <Users size={48} strokeWidth={1.2} />, link: "/services/helper-manpower" },
+                            { title: t.cleaningSupply, desc: t.cleaningSupplyDesc, icon: <Sparkles size={48} strokeWidth={1.2} />, link: "/services/cleaning-manpower" }
                         ].map((item, i) => (
                             <div key={i} className="supply-card">
                                 <div className="supply-card-icon">{item.icon}</div>
@@ -209,8 +211,8 @@ const Home = () => {
                 <div className="container">
                     <div className="book-banner-inner">
                         <div className="book-banner-header">
-                            <h2>Seamless Resource<br />Acquisition</h2>
-                            <p>Deploy the perfect talent for your projects instantly. Our streamlined portal ensures you<br />get the exact workforce you need, anywhere across the UAE.</p>
+                            <h2>{t.seamlessAcq}</h2>
+                            <p>{t.seamlessAcqDesc}</p>
                         </div>
 
                         <div className="book-steps-grid">
@@ -221,8 +223,8 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">1</span>
                                 </div>
-                                <h3>Identify Requirements</h3>
-                                <p>Specify the distinct categories and operational domains required for your immediate project needs.</p>
+                                <h3>{t.idReq}</h3>
+                                <p>{t.idReqDesc}</p>
                             </div>
 
                             <div className="book-step">
@@ -232,8 +234,8 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">2</span>
                                 </div>
-                                <h3>Specify Volume & Scope</h3>
-                                <p>Define the exact workforce volume, precise trades, and the deployment timeframe tailored to your schedule.</p>
+                                <h3>{t.specVolume}</h3>
+                                <p>{t.specVolumeDesc}</p>
                             </div>
 
                             <div className="book-step">
@@ -243,13 +245,13 @@ const Home = () => {
                                     </div>
                                     <span className="book-step-badge">3</span>
                                 </div>
-                                <h3>Mobilize Workforce</h3>
-                                <p>Submit your operational request and let our rapid-deployment team align the ideal personnel immediately.</p>
+                                <h3>{t.mobilize}</h3>
+                                <p>{t.mobilizeDesc}</p>
                             </div>
                         </div>
 
                         <div className="book-banner-action">
-                            <Link to="/contact" className="book-banner-btn">Book Now</Link>
+                            <Link to="/contact" className="book-banner-btn">{t.bookNow}</Link>
                         </div>
                     </div>
                 </div>
@@ -259,29 +261,29 @@ const Home = () => {
             <section className="journey-section">
                 <div className="container">
                     <div className="section-header" style={{ marginBottom: '40px' }}>
-                        <h2 className="section-title" style={{ color: '#666', fontWeight: '500' }}>Our Operational Impact</h2>
+                        <h2 className="section-title" style={{ color: '#666', fontWeight: '500' }}>{t.opImpact}</h2>
                     </div>
                     <div className="journey-grid-container">
                         <div className="journey-grid">
                             <div className="journey-item">
                                 <Counter end={100} suffix="+" duration={2000} />
-                                <h3 className="journey-label">Active Deployments</h3>
-                                <p className="journey-desc">Currently managing and supporting massive workforces across major critical developments in the UAE.</p>
+                                <h3 className="journey-label">{t.activeDeploy}</h3>
+                                <p className="journey-desc">{t.activeDeployDesc}</p>
                             </div>
                             <div className="journey-item">
                                 <Counter end={100} suffix="+" duration={2000} />
-                                <h3 className="journey-label">Partner Organizations</h3>
-                                <p className="journey-desc">Trusted by leading enterprises and conglomerates for consistent, compliant, and reliable staffing.</p>
+                                <h3 className="journey-label">{t.partnerOrg}</h3>
+                                <p className="journey-desc">{t.partnerOrgDesc}</p>
                             </div>
                             <div className="journey-item">
                                 <Counter end={100} suffix="+" duration={2000} />
-                                <h3 className="journey-label">Projects Delivered</h3>
-                                <p className="journey-desc">A proven track record of successful manpower support and execution across highly diverse industrial sectors.</p>
+                                <h3 className="journey-label">{t.projDelivered}</h3>
+                                <p className="journey-desc">{t.projDeliveredDesc}</p>
                             </div>
                             <div className="journey-item">
                                 <Counter end={1000} suffix="+" duration={2500} />
-                                <h3 className="journey-label">Professionals Deployed</h3>
-                                <p className="journey-desc">Maintaining a vast, rapidly scalable network of fully vetted, trained, and immediately available talent.</p>
+                                <h3 className="journey-label">{t.profDeployed}</h3>
+                                <p className="journey-desc">{t.profDeployedDesc}</p>
                             </div>
                         </div>
                     </div>
@@ -292,12 +294,8 @@ const Home = () => {
             <section className="core-area-section">
                 <div className="container">
                     <div className="core-area-header">
-                        <h2 className="core-area-title">Industries We Empower</h2>
-                        <p className="core-area-desc">
-                            For over a decade, our enterprise has been the driving workforce engine behind monumental<br />
-                            projects across Dubai, Mumbai, and the wider UAE. We provide hyper-specialized personnel<br />
-                            solutions exclusively tailored to the rigorous demands of these pivotal sectors:
-                        </p>
+                        <h2 className="core-area-title">{t.indEmpower}</h2>
+                        <p className="core-area-desc">{t.indEmpowerDesc}</p>
                     </div>
 
                     <div className="core-area-grid">
@@ -311,7 +309,7 @@ const Home = () => {
                         <Link to="/oil-gas" className="core-area-item large">
                             <img src={img6} alt="Civil Construction" className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Civil Construction</h3>
+                                <h3 className="core-area-item-title">{t.civil}</h3>
                             </div>
                         </Link>
 
@@ -319,25 +317,25 @@ const Home = () => {
                         <Link to="/oil-gas" className="core-area-item small">
                             <img src={Logistics} alt="Logistics" className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Logistics</h3>
+                                <h3 className="core-area-item-title">{t.logistics}</h3>
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item small">
                             <img src={img7} alt="Manufacture" className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Manufacture</h3>
+                                <h3 className="core-area-item-title">{t.manufacture}</h3>
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item small">
                             <img src={Facility} alt="Facility Management" className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Facility Management</h3>
+                                <h3 className="core-area-item-title">{t.facility}</h3>
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item small">
                             <img src={Mechanical} alt="Mechanical, Electrical & Plumbing - MEP" className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Mechanical, Electrical &amp; Plumbing -<br />MEP</h3>
+                                <h3 className="core-area-item-title">{t.mep}</h3>
                             </div>
                         </Link>
                     </div>
@@ -354,27 +352,25 @@ const Home = () => {
                             <img src={quoteHero} alt="Strategic Partnership Architecture" />
                         </div>
                         <div className="quote-form-side">
-                            <span className="quote-label">Strategic Partnership</span>
-                            <h2 className="quote-title">Accelerate Your Projects Today</h2>
-                            <p className="quote-desc">
-                                Ready to scale your operations with precision talent? Submit your requirements below, and our staffing architects will rapidly design a workforce strategy aligned seamlessly with your enterprise goals.
-                            </p>
+                            <span className="quote-label">{t.stratPartner}</span>
+                            <h2 className="quote-title">{t.accelProj}</h2>
+                            <p className="quote-desc">{t.accelProjDesc}</p>
 
                             <form className="quote-form" onSubmit={(e) => e.preventDefault()}>
                                 <div className="form-row">
-                                    <input type="text" placeholder="Enter Name" required />
-                                    <input type="email" placeholder="Enter Email" required />
+                                    <input type="text" placeholder={t.enterName} required />
+                                    <input type="email" placeholder={t.enterEmail} required />
                                 </div>
                                 <div className="form-group">
-                                    <input type="tel" placeholder="Phone Number" required />
+                                    <input type="tel" placeholder={t.phoneNum} required />
                                 </div>
                                 <div className="form-group">
-                                    <textarea placeholder="Comments" rows="4"></textarea>
+                                    <textarea placeholder={t.comments} rows="4"></textarea>
                                 </div>
 
 
 
-                                <button type="submit" className="quote-submit-btn">Book Now</button>
+                                <button type="submit" className="quote-submit-btn">{t.bookNow}</button>
                             </form>
                         </div>
                     </div>
@@ -384,8 +380,8 @@ const Home = () => {
             {/* FAQ Section */}
             <section className="faq-section">
                 <div className="container">
-                    <h2 className="faq-main-title">FAQ</h2>
-                    <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+                    <h2 className="faq-main-title">{t.faqTitle}</h2>
+                    <p className="faq-subtitle">{t.faqSubtitle}</p>
 
                     <div className="faq-list">
                         {faqs.map((faq, index) => (
@@ -983,9 +979,6 @@ const Home = () => {
     );
 };
 
-// Simple helper icon for Zap since it's common
-const ZapIcon = ({ size = 24 }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-);
+
 
 export default Home;

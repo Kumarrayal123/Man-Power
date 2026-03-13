@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/logistics-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/logistics_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/logistics_insight_1.jpg";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/logistics_insigh
 import sectorInsight4Img from "../assest/manpower-supply-meadia/logistics_insight_4.jpg";
 
 const Logistics = () => {
+  const { t } = useLanguage();
+  const [openFaq, setOpenFaq] = React.useState(0);
+
+  const faqs = [
+    { question: t.logFaqQ1, answer: t.logFaqA1 },
+    { question: t.logFaqQ2, answer: t.logFaqA2 },
+    { question: t.logFaqQ3, answer: t.logFaqA3 },
+    { question: t.logFaqQ4, answer: t.logFaqA4 },
+    { question: t.logFaqQ5, answer: t.logFaqA5 },
+    { question: t.logFaqQ6, answer: t.logFaqA6 }
+  ];
+
   return (
-    <div className="oil-gas-page">
+    <div className="oil-gas-page recruitment-page">
       <SEOHead
-        title="Logistics & Supply Chain Manpower in UAE | Warehouse & Transport Staffing | Smaar Elysium"
-        description="Smaar Elysium supplies skilled logistics professionals across UAE including forklift operators, warehouse staff, heavy vehicle drivers, freight forwarders, and inventory clerks for distribution and supply chain operations."
-        keywords="logistics manpower UAE, warehouse staffing UAE, supply chain workforce, forklift operators UAE, heavy vehicle drivers UAE, freight forwarding staff, Smaar Elysium logistics"
+        title={t.logSEOTitle}
+        description={t.logSEODesc}
+        keywords="logistics manpower UAE, warehouse staff Dubai, forklift operators staffing, inventory controllers UAE, supply chain workforce Dubai"
         canonical="https://www.smaarelysium.com/logistics"
+        faqSchema={faqs.map(f => ({
+          question: f.question,
+          answer: f.answer
+        }))}
       />
       {/* ── Hero Section ── */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
             <h1 className="home-hero__title">
-              Logistics<br />Sector
+              {t.lgHeroTitle}
             </h1>
             <p className="home-hero__text">
-              Agile and scalable logistics manpower solutions driving efficiency
-              across transport, warehousing, and global supply chain operations in the UAE.
+              {t.lgHeroText}
             </p>
             <div className="home-hero__actions">
               <Link to="/contact" className="hero-btn-main">
-                Get in Touch
+                {t.getInTouch}
               </Link>
             </div>
           </div>
@@ -49,19 +65,10 @@ const Logistics = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Expert Supply Chain Manpower</h2>
-              <p>
-                As the UAE solidifies its position as a global logistics hub, the demand
-                for rapid, accurate, and scalable workforce solutions is higher than ever.
-              </p>
-              <p>
-                From meticulous inventory clerks and skilled forklift operators to experienced
-                heavy vehicle drivers (License 3, 4, 6, 8), our talent pool keeps goods moving.
-              </p>
-              <p>
-                We supply highly trained logistics personnel capable of operating 24/7, compliant
-                with internal HSE policies and international trade regulations.
-              </p>
+              <h2>{t.lgChooseTitle}</h2>
+              <p>{t.lgChooseP1}</p>
+              <p>{t.lgChooseP2}</p>
+              <p>{t.lgChooseP3}</p>
             </div>
 
             <div className="cbs-right">
@@ -70,14 +77,14 @@ const Logistics = () => {
                 {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
-                  LOGISTICS SECTOR SPECIALISTS
+                  {t.lgLogoSlogan}
                 </span>
               </div>
               <div className="cbs-text-block">
-                <span className="cbs-go-beyond">DRIVING</span>
-                <span className="cbs-ordinary">GLOBAL</span>
-                <span className="cbs-find">SUPPLY</span>
-                <span className="cbs-executives">FORWARD</span>
+                <span className="cbs-go-beyond">{t.lgGrid1}</span>
+                <span className="cbs-ordinary">{t.lgGrid2}</span>
+                <span className="cbs-find">{t.lgGrid3}</span>
+                <span className="cbs-executives">{t.lgGrid4}</span>
               </div>
             </div>
           </div>
@@ -92,21 +99,15 @@ const Logistics = () => {
               />
             </div>
             <div className="bts-right">
-              <h3>Build Your Logistics Operations Crew</h3>
-              <p>
-                Whether staffing a 100,000 sq ft distribution center, or assembling a fleet
-                of delivery drivers for last-mile logistics, we possess the scale to support you.
-              </p>
-              <p>
-                Rigorous testing ensures every team member understands modern WMS (Warehouse
-                Management Systems) and strict cargo handling safety protocols.
-              </p>
+              <h3>{t.lgBtsTitle}</h3>
+              <p>{t.lgBtsP1}</p>
+              <p>{t.lgBtsP2}</p>
               <Link
                 to="/contact"
                 className="hero-btn-main"
                 style={{ background: '#fff', color: '#1f2937' }}
               >
-                Request Staff
+                {t.requestStaff}
               </Link>
             </div>
           </div>
@@ -114,75 +115,54 @@ const Logistics = () => {
           {/* ── Focus Domains Section ── */}
           <div className="domains-container">
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Fleet & Transportation</h3>
-                <p>
-                  Specialized operators for heavy duty trucks, light commercial vehicles,
-                  and last-mile courier delivery fleets.
-                </p>
+                <h3>{t.lgDom1Title}</h3>
+                <p>{t.lgDom1Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Warehouse Operations</h3>
-                <p>
-                  Certified VNA/Forklift operators, order pickers, packers,
-                  and cargo loaders for high-volume distribution centers.
-                </p>
+                <h3>{t.lgDom2Title}</h3>
+                <p>{t.lgDom2Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Inventory & Planning</h3>
-                <p>
-                  Data-driven inventory clerks, stock controllers, and supply chain
-                  analysts to optimize stock flow and minimize shrinkage.
-                </p>
+                <h3>{t.lgDom3Title}</h3>
+                <p>{t.lgDom3Desc}</p>
               </div>
             </div>
-
             <div className="domain-box">
-
               <div className="domain-content">
-                <h3>Freight & Customs</h3>
-                <p>
-                  Experienced documentation clerks, freight forwarders, and customs
-                  clearance specialists navigating complex international trade requirements.
-                </p>
+                <h3>{t.lgDom4Title}</h3>
+                <p>{t.lgDom4Desc}</p>
               </div>
             </div>
           </div>
 
           {/* ── Why Choose Us Section ── */}
           <section className="why-choose-us-section">
-            <h2 className="section-title">Why Choose Us</h2>
+            <h2 className="section-title">{t.whyChooseUs}</h2>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Fast Mobilization</h3>
+                <h3>{t.lgBen1Title}</h3>
                 <p>
-                  Quick deployment of logistics teams to keep your operations
-                  moving.
+                  {t.lgBen1Desc}
                 </p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Regulated Training</h3>
+                <h3>{t.lgBen2Title}</h3>
                 <p>
-                  Staff trained in transport safety, handling, and UAE
-                  procedures.
+                  {t.lgBen2Desc}
                 </p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Scalable Solutions</h3>
+                <h3>{t.lgBen3Title}</h3>
                 <p>
-                  Workforce expandable based on your supply chain demands.
+                  {t.lgBen3Desc}
                 </p>
               </div>
             </div>
@@ -233,12 +213,37 @@ const Logistics = () => {
           {/* Request a Quote Section */}
           <div className="quote-section">
             <div className="quote-container">
-              <div className="quote-label">Request a Quote</div>
-              <h2 className="quote-title">Get a quick follow up!</h2>
-              <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-              <Link to="/contact" className="quote-btn">Book Now</Link>
+              <div className="quote-label">{t.requestQuote}</div>
+              <h2 className="quote-title">{t.quickFollowUp}</h2>
+              <p className="quote-text">{t.fillForm}</p>
+              <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
             </div>
           </div>
+
+          {/* FAQ Section */}
+          <section className="faq-section" style={{ margin: '60px 0' }}>
+            <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+            <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                  <div
+                    className="faq-question-btn"
+                    onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                  >
+                    <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                    <span className="faq-question-text">{faq.question}</span>
+                  </div>
+                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                    <div className="faq-answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
         </div>
       </div>
@@ -251,8 +256,8 @@ const Logistics = () => {
               <img src={sectorInsight1Img} alt="Insight 1" />
             </div>
             <div className="insight-content">
-              <h3>Brief Introduction to Contract Staffing</h3>
-              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+              <h3>{t.csInsight1Title}</h3>
+              <p>{t.csInsight1Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -260,8 +265,8 @@ const Logistics = () => {
               <img src={sectorInsight2Img} alt="Insight 2" />
             </div>
             <div className="insight-content">
-              <h3>Need of Contract Staffing</h3>
-              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+              <h3>{t.csInsight2Title}</h3>
+              <p>{t.csInsight2Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -269,8 +274,8 @@ const Logistics = () => {
               <img src={sectorInsight3Img} alt="Insight 3" />
             </div>
             <div className="insight-content">
-              <h3>Benefits of getting Contract Staffing</h3>
-              <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+              <h3>{t.csInsight3Title}</h3>
+              <p>{t.csInsight3Desc}</p>
             </div>
           </div>
           <div className="insight-card">
@@ -278,8 +283,8 @@ const Logistics = () => {
               <img src={sectorInsight4Img} alt="Insight 4" />
             </div>
             <div className="insight-content">
-              <h3>How can Contract Staffing work at Your Advantage?</h3>
-              <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+              <h3>{t.csInsight4Title}</h3>
+              <p>{t.csInsight4Desc}</p>
             </div>
           </div>
         </div>
@@ -418,7 +423,7 @@ const Logistics = () => {
         @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
       `}} />
-    </div >
+    </div>
   );
 };
 

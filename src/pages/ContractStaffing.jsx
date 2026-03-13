@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Link } from 'react-router-dom';
-import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/contract-staffing-hero.png";
 import btsImg from "../assest/manpower-supply-meadia/contractstaffing_bts.jpg";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/contractstaffing_insight_1.jpg";
@@ -11,32 +11,33 @@ import sectorInsight4Img from "../assest/manpower-supply-meadia/contractstaffing
 import btsGroup7Img from "../assest/manpower-supply-meadia/contract_staffing_bts.jpg";
 
 const ContractStaffing = () => {
+  const { t } = useLanguage();
   const [openFaq, setOpenFaq] = useState(0);
 
   const faqs = [
     {
-      question: "1. What makes your contract staffing unique?",
-      answer: "Our approach is distinguished by a customized strategy that quickly aligns flexible professionals with your company’s immediate goals and culture."
+      question: t.csFaqQ1,
+      answer: t.csFaqA1
     },
     {
-      question: "2. How thorough is your temporary candidate screening process?",
-      answer: "We follow a detailed evaluation process that includes skill assessments, background checks, and in-depth interviews to ensure only qualified temporary candidates move forward."
+      question: t.csFaqQ2,
+      answer: t.csFaqA2
     },
     {
-      question: "3. What sets apart your flexible workforce strategies?",
-      answer: "Our contract staffing methods combine market insights, rapid sourcing techniques, and industry expertise to deploy top-tier talent efficiently."
+      question: t.csFaqQ3,
+      answer: t.csFaqA3
     },
     {
-      question: "4. How do you ensure a match for short-term projects?",
-      answer: "We carefully analyze your project expectations and company culture to identify contractors whose skills and flexibility align with your immediate needs."
+      question: t.csFaqQ4,
+      answer: t.csFaqA4
     },
     {
-      question: "5. Can you elaborate on the concept of scalable staffing?",
-      answer: "Scalable staffing means adapting our temporary hiring solutions to suit your fluctuating business objectives, ensuring cost-effective and timely placements."
+      question: t.csFaqQ5,
+      answer: t.csFaqA5
     },
     {
-      question: "6. How do you handle administrative challenges in contract staffing?",
-      answer: "We proactively manage payroll, compliance, and HR challenges by maintaining clear communication and applying strategic problem-solving throughout the contract duration."
+      question: t.csFaqQ6,
+      answer: t.csFaqA6
     }
   ];
 
@@ -53,20 +54,20 @@ const ContractStaffing = () => {
   return (
     <div className="service-page recruitment-page">
       <SEOHead
-        title="Contract Staffing Solutions in UAE – Smaar Elysium"
-        description="Smaar Elysium provides flexible contract staffing solutions across UAE. Scale your workforce quickly with skilled and verified contract professionals. Contact us today."
+        title={t.csHeroTitle}
+        description={t.csHeroText}
         keywords="contract staffing UAE, temporary staffing Dubai, flexible workforce UAE, contract employees UAE"
         canonical="https://smaarelysium.com/contract-staffing"
         schema={faqSchema}
       />
-      {/* Hero Section - Using Home Page Style */}
+      {/* Hero Section */}
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Contract Staffing<br />Solutions in UAE</h1>
-            <p className="home-hero__text">Looking for flexible workforce solutions tailored to your project needs? Smaar Elysium provides top-tier contract staffing for all industries.</p>
+            <h1 className="home-hero__title">{t.csHeroTitle.split(' ').slice(0, 2).join(' ')}<br />{t.csHeroTitle.split(' ').slice(2).join(' ')}</h1>
+            <p className="home-hero__text">{t.csHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Book Now</Link>
+              <Link to="/contact" className="hero-btn-main">{t.commonBookNow || 'Book Now'}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -83,33 +84,33 @@ const ContractStaffing = () => {
         {/* Main Content Area */}
         <div className="service-main-content">
           <div className="service-intro">
-            <h2>CHOOSE THE BEST FOR YOU</h2>
-            <p>Welcome to our Contract Staffing Services – where your business agility starts. Our team comprises industry experts who are well-versed with the intricacies of flexible workforce solutions.</p>
+            <h2>{t.csIntroTitle}</h2>
+            <p>{t.csIntroText}</p>
           </div>
 
           {/* Choose Best For You Banner */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>Choose the best for you</h2>
-              <p>Step into the realm of our tailored contract staffing services, where speed converges with precision for an unparalleled workforce experience. Our core strengths redefine temporary staffing with a focus on agile deployment, meticulous candidate screening, and scalable contract strategies.</p>
-              <p>In the ever-evolving business environment, effective management of your flexible workforce is a key determinant of success.</p>
-              <p>Our contract staffing services excel in delivering customized temporary solutions crafted to suit the unique project requirements of your organization. In this era of swift transformations, accessing skilled contract talent holds greater significance than ever before.</p>
-              <p>Recognizing the pivotal role a qualified flexible workforce plays in fostering business agility, our committed team comprehensively caters to your contract staffing needs. We ensure your company gains access to a diverse pool of talented professionals who are aligned with your project timelines.</p>
-              <p>Allow us to serve as your strategic ally in constructing a proficient and motivated contract team, empowering your business to thrive amidst fierce competition in the market.</p>
+              <h2>{t.csChooseTitle}</h2>
+              <p>{t.csChooseP1}</p>
+              <p>{t.csChooseP2}</p>
+              <p>{t.csChooseP3}</p>
+              <p>{t.csChooseP4}</p>
+              <p>{t.csChooseP5}</p>
             </div>
 
             <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                <span className="logo-slogan" style={{ display: 'block' }}>Your Trusted work force Partner</span>
+                <span className="logo-slogan" style={{ display: 'block' }}>{t.csLogoSlogan}</span>
               </div>
               <div className="cbs-overlay"></div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">GO BEYOND THE</span>
-                  <span className="cbs-ordinary">ORDINARY</span>
-                  <span className="cbs-find">FIND THE PRECISE</span>
-                  <span className="cbs-executives">CONTRACTORS</span>
+                  <span className="cbs-go-beyond">{t.csGrid1}</span>
+                  <span className="cbs-ordinary">{t.csGrid2}</span>
+                  <span className="cbs-find">{t.csGrid3}</span>
+                  <span className="cbs-executives">{t.csGrid4}</span>
                 </div>
               </div>
               <div className="cbs-footer">
@@ -123,7 +124,7 @@ const ContractStaffing = () => {
             </div>
           </div>
 
-          {/* Build Your Efficient Team Split Section - Simplified */}
+          {/* Build Your Efficient Team Split Section */}
           <div className="build-team-split">
             <div className="bts-left">
               <div className="bts-workers-container">
@@ -148,47 +149,43 @@ const ContractStaffing = () => {
             </div>
 
             <div className="bts-right">
-              <h3>Build Your Flexible Workforce With Our Services</h3>
-              <p>Unleash your business potential with short-term, contract-based staffing solutions designed to scale with your project demands. Our contract staffing ensures you have the right talent exactly when you need it.</p>
-              <p>Reduce overhead and minimize payroll complexities. We handle the administrative burden of contract employees so you can focus entirely on project execution and business growth.</p>
-              <p>Experience staffing agility that adapts to market fluctuations. Let us seamlessly integrate contract professionals into your team, ensuring continuous excellence and operational efficiency.</p>
+              <h3>{t.csBtsTitle}</h3>
+              <p>{t.csBtsP1}</p>
+              <p>{t.csBtsP2}</p>
+              <p>{t.csBtsP3}</p>
             </div>
           </div>
 
           {/* Why Choose Us Section */}
           <div className="why-choose-us-section">
-            <h2 className="section-title">WHY CHOOSE US</h2>
-            <p className="section-intro">Choose us for contract staffing that goes beyond the conventional. Experience the difference of flexible talent acquisition, rapid onboarding, and workforce strategies designed exclusively for your project's success.</p>
+            <h2 className="section-title">{t.csWhyTitle}</h2>
+            <p className="section-intro">{t.csWhyIntro}</p>
 
             <div className="benefits-grid">
               <div className="benefit-card bg-red">
-                <h3>Agile Talent Deployment</h3>
-                <p>We don't believe in long delays. Our approach ensures rapid sourcing and onboarding of contract professionals to meet immediate project deadlines.</p>
+                <h3>{t.csBenefit1Title}</h3>
+                <p>{t.csBenefit1Desc}</p>
               </div>
 
               <div className="benefit-card bg-gray">
-                <h3>Comprehensive Payroll Management</h3>
-                <p>Our commitment extends beyond sourcing. We handle all compliance, payroll, and HR administration for contract staff, reducing your operational burden.</p>
+                <h3>{t.csBenefit2Title}</h3>
+                <p>{t.csBenefit2Desc}</p>
               </div>
 
               <div className="benefit-card bg-red">
-                <h3>Scalable Staffing Strategies</h3>
-                <p>Recognizing that project needs fluctuate, we craft scalable strategies. Whether it's a seasonal spike or a specific project phase, we adapt to maximize efficiency.</p>
+                <h3>{t.csBenefit3Title}</h3>
+                <p>{t.csBenefit3Desc}</p>
               </div>
             </div>
           </div>
-
-          {/* Manpower Supply Insights Section */}
-
         </div>
       </div>
-
 
       {/* FAQ Section */}
       <section className="faq-section">
         <div className="container">
-          <h2 className="faq-main-title">FAQ</h2>
-          <p className="faq-subtitle">MOST ASKED QUESTIONS.</p>
+          <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+          <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
@@ -211,62 +208,21 @@ const ContractStaffing = () => {
         </div>
       </section>
 
-
       <div className="insights-section">
-        <h2 className="insights-title">Contract Staffing Insights</h2>
+        <h2 className="insights-title">{t.csInsightTitle}</h2>
 
         <div className="insights-grid">
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight1Img} alt="Insight 1" />
+          {[1, 2, 3, 4].map((num) => (
+            <div key={num} className="insight-card">
+              <div className="insight-image-wrap">
+                <img src={num === 1 ? sectorInsight1Img : num === 2 ? sectorInsight2Img : num === 3 ? sectorInsight3Img : sectorInsight4Img} alt={`Insight ${num}`} />
+              </div>
+              <div className="insight-content">
+                <h3>{t[`csInsight${num}Title`]}</h3>
+                <p>{t[`csInsight${num}Desc`]}</p>
+              </div>
             </div>
-            <div className="insight-content">
-              <h3>Brief Introduction to Contract Staffing</h3>
-              <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight2Img} alt="Insight 2" />
-            </div>
-            <div className="insight-content">
-              <h3>Need of Contract Staffing</h3>
-              <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes.....</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight3Img} alt="Insight 3" />
-            </div>
-            <div className="insight-content">
-              <h3>Benefits of getting Contract Staffing</h3>
-              <p>There are tons of advantages to getting Contract Staffing from us, including cost savings and agility.</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
-
-          <div className="insight-card">
-            <div className="insight-image-wrap">
-              <img src={sectorInsight4Img} alt="Insight 4" />
-            </div>
-            <div className="insight-content">
-              <h3>How can Contract Staffing work at Your Advantage?</h3>
-              <p>Staying lean and agile is important for every organization. And having a strong temporary workforce...</p>
-              {/* <Link to="/insights" className="insight-btn">
-                Read More <ChevronRight size={18} />
-              </Link> */}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 

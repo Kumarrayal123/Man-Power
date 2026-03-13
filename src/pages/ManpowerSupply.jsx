@@ -1,44 +1,59 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 
 const ManpowerSupply = () => {
+    const { t } = useLanguage();
+    const [openFaq, setOpenFaq] = React.useState(0);
+
+    const faqs = [
+        { question: t.msFaqQ1, answer: t.msFaqA1 },
+        { question: t.msFaqQ2, answer: t.msFaqA2 },
+        { question: t.msFaqQ3, answer: t.msFaqA3 },
+        { question: t.msFaqQ4, answer: t.msFaqA4 },
+        { question: t.msFaqQ5, answer: t.msFaqA5 },
+        { question: t.msFaqQ6, answer: t.msFaqA6 }
+    ];
+
     const supplyCategories = [
         {
-            title: "Civil Manpower",
-            description: "From laying the foundation to completing the finishing touches, civil manpower ensures that your construction projects are executed flawlessly.",
+            title: t.msCat1Title,
+            description: t.msCat1Desc,
             roles: [
-                "Civil Engineer", "Civil Supervisor", "Civil Foreman", "Chargehand",
-                "Scaffolder Normal", "Certified Scaffolder", "Steel Fixer", "Shuttering Carpenter",
-                "Gypsum Carpenter", "Finishing Carpenter", "Block Mason", "Plaster Mason",
-                "Tile Mason", "Sand Blaster", "Wall Painter", "Spray Painter",
-                "Wood Polisher", "Wood Painter", "Rigger", "Civil Helper", "Safety Officer"
+                t.msRoleCivilEngineer, t.msRoleCivilSupervisor, t.msRoleCivilForeman, t.msRoleChargehand,
+                t.msRoleScaffolderNormal, t.msRoleCertifiedScaffolder, t.msRoleSteelFixer, t.msRoleShutteringCarpenter,
+                t.msRoleGypsumCarpenter, t.msRoleFinishingCarpenter, t.msRoleBlockMason, t.msRolePlasterMason,
+                t.msRoleTileMason, t.msRoleSandBlaster, t.msRoleWallPainter, t.msRoleSprayPainter,
+                t.msRoleWoodPolisher, t.msRoleWoodPainter, t.msRoleRigger, t.msRoleCivilHelper, t.msRoleSafetyOfficer
             ]
         },
         {
-            title: "Electrical Manpower",
-            description: "No matter what industry or domain you work for, a secure electrical setup is the first layer of protection you can provide. To help you out, Smaar Elysium team provides experienced teams to work for you.",
+            title: t.msCat2Title,
+            description: t.msCat2Desc,
             roles: [
-                "Electrical Engineer", "Electrical Supervisor", "Electrical Foreman",
-                "Electrical Chargehand", "Industrial Electrician", "Normal Electrician",
-                "Electrical Helper"
+                t.msRoleElectricalEngineer, t.msRoleElectricalSupervisor, t.msRoleElectricalForeman,
+                t.msRoleElectrician, t.msRoleAssistantElectrician, t.msRoleInstrumentTechnician,
+                t.msRoleInstrumentFitter, t.msRoleLowVoltageTechnician, t.msRoleElectricalHelper
             ]
         },
         {
-            title: "Mechanical Manpower",
-            description: "Working on a project with a deadline puts extra pressure on the existing team. Our Mechanical Manpower Supply will get you ready to deliver according to the due dates and achieve all your short term goals.",
+            title: t.msCat3Title,
+            description: t.msCat3Desc,
             roles: [
-                "Pipe Fabricator", "Steel Fabricator", "Aluminum Fabricator", "Aluminum Fitter",
-                "3G Welder", "6G Welder", "MIG Welder", "ARC Welder", "TIG Welder",
-                "Insulator", "Pipe Fitter"
+                t.msRoleMechanicalEngineer, t.msRoleMechanicalSupervisor, t.msRoleMechanicalForeman,
+                t.msRoleMillwrightFitter, t.msRolePipeFitter, t.msRolePipeFabricator,
+                t.msRoleStructuralFabricator, t.msRolePlumber, t.msRole6GWelder,
+                t.msRoleArcWelder, t.msRoleDuctFitter, t.msRoleDuctFabricator,
+                t.msRoleInsulator, t.msRoleMechanicalHelper
             ]
         },
         {
-            title: "Helper Manpower",
-            description: "You can already understand it from the name, a Helper is someone who assists you in timely finishing the task at hand. Smaar Elysium has a wide network of reliable help, who can work on your terms and requirements.",
+            title: t.msCat4Title,
+            description: t.msCat4Desc,
             roles: [
-                "Mechanical Helper", "Civil Helper", "Electrical Helper",
-                "General Helper", "Cleaner"
+                t.msRoleGeneralHelper, t.msRoleLoadingUnloading, t.msRoleWarehouseHelper,
+                t.msRolePackingHelper, t.msRoleKitchenHelper, t.msRoleCleaningHelper
             ]
         }
     ];
@@ -46,19 +61,23 @@ const ManpowerSupply = () => {
     return (
         <div className="service-page manpower-supply-page">
             <SEOHead
-                title="Manpower Supply Services in UAE – Civil, Electrical & Mechanical"
-                description="Smaar Elysium is a top manpower supply company in UAE providing civil, electrical, mechanical, and helper manpower for construction and industrial projects. 15+ years of expertise."
+                title={t.msHeroTitle}
+                description={t.msHeroText}
                 keywords="manpower supply UAE, civil manpower Dubai, electrical manpower UAE, mechanical manpower supply, helper manpower UAE"
                 canonical="https://smaarelysium.com/services/manpower-supply"
+                faqSchema={faqs.map(f => ({
+                    question: f.question,
+                    answer: f.answer
+                }))}
             />
             {/* Hero Section */}
             <div className="service-hero">
                 <div className="container">
                     <div className="service-hero-content text-center">
-                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>Manpower Supply Company in UAE</h1>
-                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>No. 1 Manpower Supply Company in UAE, offering quality Labour Supply Services on an Hourly Basis across all the emirates. 15 Years of Service.</p>
+                        <h1 style={{ margin: '0 auto 20px', textAlign: 'center' }}>{t.msHeroTitle}</h1>
+                        <p style={{ margin: '0 auto 30px', textAlign: 'center' }}>{t.msHeroText}</p>
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            <Link to="/book-manpower" className="hero-btn-main">Book Manpower Online</Link>
+                            <Link to="/contact" className="hero-btn-main">{t.msBtnBook}</Link>
                         </div>
                     </div>
                 </div>
@@ -68,7 +87,7 @@ const ManpowerSupply = () => {
                 <div className="container">
                     <div className="supply-intro text-center">
                         <p style={{ maxWidth: '800px', margin: '0 auto 50px', fontSize: '1.2rem', color: '#555', lineHeight: '1.8' }}>
-                            Our quick-evolving and agile market constantly demands employing more experts to deliver optimal results. We provide comprehensive manpower supply services across multiple domains.
+                            {t.msIntroText}
                         </p>
                     </div>
 
@@ -91,6 +110,32 @@ const ManpowerSupply = () => {
                             </div>
                         </div>
                     ))}
+
+                    {/* FAQ Section */}
+                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                        <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+                        <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+                        <div className="faq-list">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                                    <div
+                                        className="faq-question-btn"
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                                        <span className="faq-question-text">{faq.question}</span>
+                                    </div>
+                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                        <div className="faq-answer-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                 </div>
             </div>
 

@@ -2,17 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import btsGroup7Img from "../assest/manpower-supply-meadia/projecthero.png";
 import projectConstruction from "../assest/manpower-supply-meadia/project_construction.png";
 import projectFacility from "../assest/manpower-supply-meadia/project_facility.png";
 import projectIndustrial from "../assest/manpower-supply-meadia/project_industrial.png";
 
 const Project = () => {
+  const { t } = useLanguage();
   return (
     <div className="project-page">
       <SEOHead
-        title="Manpower Projects Portfolio | Staffing Case Studies in UAE | Smaar Elysium"
-        description="Explore Smaar Elysium's successful manpower supply projects across UAE — from construction mega-projects in Dubai to facility management in Bengaluru and manufacturing plant staffing in Pune."
+        title={t.pjSEOTitle}
+        description={t.pjSEODesc}
         keywords="manpower projects UAE, staffing case studies UAE, construction workforce projects, facility management staffing projects, manufacturing plant manpower, Smaar Elysium projects"
         canonical="https://www.smaarelysium.com/projects"
       />
@@ -20,10 +22,10 @@ const Project = () => {
       <div className="container hero-wrapper">
         <section className="home-hero">
           <div className="home-hero__content">
-            <h1 className="home-hero__title">Manpower<br />Projects</h1>
-            <p className="home-hero__text">Explore our successful manpower supply and staffing deployments across UAE — powering industries with the right workforce at the right time.</p>
+            <h1 className="home-hero__title">{t.pjHeroTitle}</h1>
+            <p className="home-hero__text">{t.pjHeroText}</p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="hero-btn-main">Get in Touch</Link>
+              <Link to="/contact" className="hero-btn-main">{t.getInTouch}</Link>
             </div>
           </div>
           <div className="home-hero__image">
@@ -45,12 +47,12 @@ const Project = () => {
             <div className="custom-project-card">
               <div className="custom-project-image" style={{ backgroundImage: `url(${projectConstruction})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Dubai Global Gateway – Construction Manpower</h3>
+                  <h3 className="custom-project-title">{t.pjP1Title}</h3>
                   <p className="custom-project-desc">
-                    Supplied 350+ skilled civil workers, masons, electricians, and site supervisors for a landmark commercial high-rise project in Dubai's HITEC City corridor, completed on schedule...
+                    {t.pjP1Desc}
                   </p>
                   <Link to="/contact" className="custom-project-link">
-                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
+                    {t.getInTouch} <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>
@@ -59,12 +61,12 @@ const Project = () => {
             <div className="custom-project-card">
               <div className="custom-project-image" style={{ backgroundImage: `url(${projectFacility})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Tech Connect IT Park – Facility & Security Staffing</h3>
+                  <h3 className="custom-project-title">{t.pjP2Title}</h3>
                   <p className="custom-project-desc">
-                    Deployed a dedicated team of 120+ facility management staff, housekeeping personnel, and licensed security officers across a 3-building IT campus in Bengaluru's Electronic City...
+                    {t.pjP2Desc}
                   </p>
                   <Link to="/contact" className="custom-project-link">
-                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
+                    {t.getInTouch} <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>
@@ -73,12 +75,12 @@ const Project = () => {
             <div className="custom-project-card">
               <div className="custom-project-image" style={{ backgroundImage: `url(${projectIndustrial})` }}>
                 <div className="custom-project-red-box">
-                  <h3 className="custom-project-title">Pune Industrial Plant – Manufacturing Workforce</h3>
+                  <h3 className="custom-project-title">{t.pjP3Title}</h3>
                   <p className="custom-project-desc">
-                    Provided end-to-end contract staffing of 200+ semi-skilled and skilled production workers, quality control technicians, and equipment operators for a major auto-component plant in Pune's MIDC zone...
+                    {t.pjP3Desc}
                   </p>
                   <Link to="/contact" className="custom-project-link">
-                    Get in Touch <ArrowRight size={20} strokeWidth={2} />
+                    {t.getInTouch} <ArrowRight size={20} strokeWidth={2} />
                   </Link>
                 </div>
               </div>

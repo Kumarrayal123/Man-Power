@@ -1,43 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingCart, Plus, Minus, CheckCircle, Info, ArrowRight, ArrowLeft, User, Building, MapPin, Briefcase, Calendar, Clock, Send, Mail } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
 
 const tradesData = {
-    Civil: [
-        { id: 1, name: 'Mason', icon: '🧱' },
-        { id: 2, name: 'Carpenter', icon: '🪚' },
-        { id: 3, name: 'Steel Fixer', icon: '🏗️' },
-        { id: 4, name: 'Painter', icon: '🎨' },
-        { id: 5, name: 'Labor', icon: '👷' },
-        { id: 6, name: 'Civil Foreman', icon: '📋' },
+    catCivil: [
+        { id: 1, nameKey: 'bmTrade_mason', icon: '🧱' },
+        { id: 2, nameKey: 'bmTrade_carpenter', icon: '🪚' },
+        { id: 3, nameKey: 'bmTrade_steelFixer', icon: '🏗️' },
+        { id: 4, nameKey: 'bmTrade_painter', icon: '🎨' },
+        { id: 5, nameKey: 'bmTrade_labor', icon: '👷' },
+        { id: 6, nameKey: 'bmTrade_foreman', icon: '📋' },
     ],
-    MEP: [
-        { id: 7, name: 'Electrician', icon: '⚡' },
-        { id: 8, name: 'Plumber', icon: '🔧' },
-        { id: 9, name: 'HVAC Technician', icon: '❄️' },
-        { id: 10, name: 'Pipe Fitter', icon: '🔩' },
-        { id: 11, name: 'Welder', icon: '🔥' },
-        { id: 12, name: 'Duct Man', icon: '💨' },
+    catMEP: [
+        { id: 7, nameKey: 'bmTrade_electrician', icon: '⚡' },
+        { id: 8, nameKey: 'bmTrade_plumber', icon: '🔧' },
+        { id: 9, nameKey: 'bmTrade_hvac', icon: '❄️' },
+        { id: 10, nameKey: 'bmTrade_pipeFitter', icon: '🔩' },
+        { id: 11, nameKey: 'bmTrade_welder', icon: '🔥' },
+        { id: 12, nameKey: 'bmTrade_ductMan', icon: '💨' },
     ],
-    Infrastructure: [
-        { id: 13, name: 'Heavy Driver', icon: '🚛' },
-        { id: 14, name: 'Operator', icon: '🏗️' },
-        { id: 15, name: 'Rigger', icon: '⛓️' },
-        { id: 16, name: 'Flagman', icon: '🚩' },
-        { id: 17, name: 'Surveyor', icon: '📐' },
+    catInfra: [
+        { id: 13, nameKey: 'bmTrade_heavyDriver', icon: '🚛' },
+        { id: 14, nameKey: 'bmTrade_operator', icon: '🏗️' },
+        { id: 15, nameKey: 'bmTrade_rigger', icon: '⛓️' },
+        { id: 16, nameKey: 'bmTrade_flagman', icon: '🚩' },
+        { id: 17, nameKey: 'bmTrade_surveyor', icon: '📐' },
     ],
-    Others: [
-        { id: 18, name: 'Security Guard', icon: '🛡️' },
-        { id: 19, name: 'Warehouse Staff', icon: '📦' },
-        { id: 20, name: 'Cleaning Staff', icon: '🧹' },
-        { id: 21, name: 'Office Boy', icon: '☕' },
+    catOthers: [
+        { id: 18, nameKey: 'bmTrade_security', icon: '🛡️' },
+        { id: 19, nameKey: 'bmTrade_warehouse', icon: '📦' },
+        { id: 20, nameKey: 'bmTrade_cleaning', icon: '🧹' },
+        { id: 21, nameKey: 'bmTrade_officeBoy', icon: '☕' },
     ]
 };
 
 const BookManpower = () => {
+    const { t } = useLanguage();
     const [step, setStep] = useState(1);
-    const [activeCategory, setActiveCategory] = useState('Civil');
+    const [activeCategory, setActiveCategory] = useState('catCivil');
     const [quantities, setQuantities] = useState({});
     const [bookingData, setBookingData] = useState({
         location: '',
@@ -74,10 +76,10 @@ const BookManpower = () => {
         return Object.entries(quantities)
             .filter(([_, qty]) => qty > 0)
             .map(([id, qty]) => {
-                const trade = flatTrades.find(t => t.id === parseInt(id));
-                return trade ? { ...trade, qty } : { id: parseInt(id), name: 'Unknown', qty };
+                const trade = flatTrades.find(t_item => t_item.id === parseInt(id));
+                return trade ? { ...trade, name: t[trade.nameKey], qty } : { id: parseInt(id), name: 'Unknown', qty };
             });
-    }, [quantities]);
+    }, [quantities, t]);
 
     const totalPersonnel = selectedTrades.reduce((acc, curr) => acc + (curr.qty || 0), 0);
 
@@ -111,17 +113,17 @@ const BookManpower = () => {
                             <div className="success-icon">
                                 <CheckCircle size={80} color="#FE7622" />
                             </div>
-                            <h2>Booking Request Sent!</h2>
-                            <p>Thank you for choosing Smaar Elysium. Our experts will review your requirement and get back to you with a tailored quote within 24 hours.</p>
+                            <h2>{t.bmSuccessTitle}</h2>
+                            <p>{t.bmSuccessText}</p>
                             <div className="summary-preview">
-                                <h3>Booking Summary</h3>
+                                <h3>{t.bmSummaryTitle}</h3>
                                 <ul>
-                                    <li><strong>Total Personnel:</strong> {totalPersonnel}</li>
-                                    <li><strong>Project Location:</strong> {bookingData.location}</li>
-                                    <li><strong>Requested Start:</strong> {bookingData.startDate}</li>
+                                    <li><strong>{t.bmSummaryTotalPersonnel}</strong> {totalPersonnel}</li>
+                                    <li><strong>{t.bmSummaryLocation}</strong> {bookingData.location}</li>
+                                    <li><strong>{t.bmSummaryStart}</strong> {bookingData.startDate}</li>
                                 </ul>
                             </div>
-                            <Link to="/" className="btn btn-primary">Back to Home</Link>
+                            <Link to="/" className="btn btn-primary">{t.bmBackHome}</Link>
                         </div>
                     </div>
                 </section>
@@ -143,8 +145,8 @@ const BookManpower = () => {
     return (
         <div className="booking-page">
             <SEOHead
-                title="Book Manpower Online | Request Skilled Workers in UAE | Smaar Elysium"
-                description="Book your required manpower online with Smaar Elysium. Select trade categories, specify quantities, and submit your workforce request."
+                title={t.bookSEOTitle}
+                description={t.bookSEODesc}
                 keywords="book manpower UAE, hire workers online UAE, request skilled labour, manpower booking form"
                 canonical="https://www.smaarelysium.com/book-manpower"
             />
@@ -152,14 +154,14 @@ const BookManpower = () => {
             <section className="booking-hero">
                 <div className="container">
                     <div className="hero-content">
-                        <h1 className="hero-title">Hire the Best Talent</h1>
-                        <p className="hero-subtitle">Streamlined manpower booking for your visionary projects across UAE.</p>
+                        <h1 className="hero-title">{t.bmHeroTitle}</h1>
+                        <p className="hero-subtitle">{t.bmHeroSubtitle}</p>
                         <div className="step-indicator">
-                            <div className={`step-dot ${step >= 1 ? 'active' : ''}`}><span className="dot-num">1</span><span className="dot-label">Trades</span></div>
+                            <div className={`step-dot ${step >= 1 ? 'active' : ''}`}><span className="dot-num">1</span><span className="dot-label">{t.bmStep1}</span></div>
                             <div className="step-line"></div>
-                            <div className={`step-dot ${step >= 2 ? 'active' : ''}`}><span className="dot-num">2</span><span className="dot-label">Project</span></div>
+                            <div className={`step-dot ${step >= 2 ? 'active' : ''}`}><span className="dot-num">2</span><span className="dot-label">{t.bmStep2}</span></div>
                             <div className="step-line"></div>
-                            <div className={`step-dot ${step >= 3 ? 'active' : ''}`}><span className="dot-num">3</span><span className="dot-label">Contact</span></div>
+                            <div className={`step-dot ${step >= 3 ? 'active' : ''}`}><span className="dot-num">3</span><span className="dot-label">{t.bmStep3}</span></div>
                         </div>
                     </div>
                 </div>
@@ -173,19 +175,19 @@ const BookManpower = () => {
                             {step === 1 && (
                                 <div className="step-content animate-fade-in">
                                     <div className="step-header">
-                                        <h2>Select Manpower Trades</h2>
-                                        <p>Choose the categories and quantities of workers you need.</p>
+                                        <h2>{t.bmSelectTrades}</h2>
+                                        <p>{t.bmSelectTradesDesc}</p>
                                     </div>
 
                                     <div className="category-nav">
-                                        {Object.keys(tradesData).map(cat => (
+                                        {Object.keys(tradesData).map(catKey => (
                                             <button
-                                                key={cat}
-                                                className={`nav-item ${activeCategory === cat ? 'active' : ''}`}
-                                                onClick={() => setActiveCategory(cat)}
+                                                key={catKey}
+                                                className={`nav-item ${activeCategory === catKey ? 'active' : ''}`}
+                                                onClick={() => setActiveCategory(catKey)}
                                                 type="button"
                                             >
-                                                {cat}
+                                                {t[catKey]}
                                             </button>
                                         ))}
                                     </div>
@@ -195,7 +197,7 @@ const BookManpower = () => {
                                             <div key={trade.id} className={`trade-item-card ${quantities[trade.id] > 0 ? 'selected' : ''}`}>
                                                 <div className="item-icon">{trade.icon}</div>
                                                 <div className="item-info">
-                                                    <span className="item-name">{trade.name}</span>
+                                                    <span className="item-name">{t[trade.nameKey]}</span>
                                                     <div className="item-controls">
                                                         <button onClick={() => updateQuantity(trade.id, -1)} className="qty-btn" type="button"><Minus size={14} /></button>
                                                         <span className="qty-val">{quantities[trade.id] || 0}</span>
@@ -212,7 +214,7 @@ const BookManpower = () => {
                                             className="nav-btn-next"
                                             type="button"
                                         >
-                                            Next Step <ArrowRight size={18} />
+                                            {t.nextStep} <ArrowRight size={18} />
                                         </button>
                                     </div>
                                 </div>
@@ -221,28 +223,28 @@ const BookManpower = () => {
                             {step === 2 && (
                                 <div className="step-content animate-fade-in">
                                     <div className="step-header">
-                                        <h2>Project Details</h2>
-                                        <p>Tell us more about where and when you need the manpower.</p>
+                                        <h2>{t.bmProjectDetails}</h2>
+                                        <p>{t.bmProjectDetailsDesc}</p>
                                     </div>
 
                                     <div className="booking-form-wrap">
                                         <div className="form-grid">
                                             <div className="form-field">
-                                                <label><MapPin size={16} /> Location in UAE</label>
+                                                <label><MapPin size={16} /> {t.bmLocation}</label>
                                                 <input type="text" name="location" placeholder="e.g. Dubai South, Abu Dhabi" value={bookingData.location} onChange={handleInputChange} required />
                                             </div>
                                             <div className="form-field">
-                                                <label><Clock size={16} /> Expected Duration</label>
+                                                <label><Clock size={16} /> {t.bmDuration}</label>
                                                 <select name="duration" value={bookingData.duration} onChange={handleInputChange} required>
-                                                    <option value="">Select Duration</option>
-                                                    <option value="Short Term (< 1 month)">Short Term (&lt; 1 month)</option>
-                                                    <option value="Medium Term (1-6 months)">Medium Term (1-6 months)</option>
-                                                    <option value="Long Term (> 6 months)">Long Term (&gt; 6 months)</option>
-                                                    <option value="Ongoing / Contractual">Ongoing / Contractual</option>
+                                                    <option value="">{t.bmDurationSelect}</option>
+                                                    <option value="Short Term (< 1 month)">{t.bmDurationShort}</option>
+                                                    <option value="Medium Term (1-6 months)">{t.bmDurationMedium}</option>
+                                                    <option value="Long Term (> 6 months)">{t.bmDurationLong}</option>
+                                                    <option value="Ongoing / Contractual">{t.bmDurationOngoing}</option>
                                                 </select>
                                             </div>
                                             <div className="form-field full-width">
-                                                <label><Calendar size={16} /> Expected Start Date</label>
+                                                <label><Calendar size={16} /> {t.bmStartDate}</label>
                                                 <input type="date" name="startDate" value={bookingData.startDate} onChange={handleInputChange} required />
                                             </div>
                                         </div>
@@ -250,14 +252,14 @@ const BookManpower = () => {
 
                                     <div className="step-navigation">
                                         <button onClick={prevStep} className="nav-btn-prev" type="button">
-                                            <ArrowLeft size={18} /> Back
+                                            <ArrowLeft size={18} /> {t.back}
                                         </button>
                                         <button
                                             onClick={nextStep}
                                             className="nav-btn-next"
                                             type="button"
                                         >
-                                            Next Step <ArrowRight size={18} />
+                                            {t.nextStep} <ArrowRight size={18} />
                                         </button>
                                     </div>
                                 </div>
@@ -266,40 +268,40 @@ const BookManpower = () => {
                             {step === 3 && (
                                 <div className="step-content animate-fade-in">
                                     <div className="step-header">
-                                        <h2>Contact Information</h2>
-                                        <p>How should our experts reach you to confirm the booking?</p>
+                                        <h2>{t.bmContactInfo}</h2>
+                                        <p>{t.bmContactInfoDesc}</p>
                                     </div>
 
                                     <form onSubmit={handleSubmit} className="booking-form-wrap">
                                         <div className="form-grid">
                                             <div className="form-field">
-                                                <label><User size={16} /> Full Name</label>
-                                                <input type="text" name="name" placeholder="Enter your name" value={bookingData.name} onChange={handleInputChange} required />
+                                                <label><User size={16} /> {t.bmFullName}</label>
+                                                <input type="text" name="name" placeholder={t.enterName} value={bookingData.name} onChange={handleInputChange} required />
                                             </div>
                                             <div className="form-field">
-                                                <label><Building size={16} /> Company Name</label>
-                                                <input type="text" name="company" placeholder="Enter company name" value={bookingData.company} onChange={handleInputChange} required />
+                                                <label><Building size={16} /> {t.bmCompanyName}</label>
+                                                <input type="text" name="company" placeholder={t.enterName} value={bookingData.company} onChange={handleInputChange} required />
                                             </div>
                                             <div className="form-field">
-                                                <label><Mail size={16} /> Work Email</label>
-                                                <input type="email" name="email" placeholder="email@company.com" value={bookingData.email} onChange={handleInputChange} required />
+                                                <label><Mail size={16} /> {t.bmWorkEmail}</label>
+                                                <input type="email" name="email" placeholder={t.enterEmail} value={bookingData.email} onChange={handleInputChange} required />
                                             </div>
                                             <div className="form-field">
-                                                <label><Briefcase size={16} /> Phone Number</label>
+                                                <label><Briefcase size={16} /> {t.bmPhoneNum}</label>
                                                 <input type="tel" name="phone" placeholder="+971 -- --- ----" value={bookingData.phone} onChange={handleInputChange} required />
                                             </div>
                                             <div className="form-field full-width">
-                                                <label>Additional Requirements (Optional)</label>
-                                                <textarea name="message" rows="4" placeholder="Mention any specific certifications or skills needed..." value={bookingData.message} onChange={handleInputChange}></textarea>
+                                                <label>{t.bmAdditionalReq}</label>
+                                                <textarea name="message" rows="4" placeholder={t.bmAdditionalReqPlaceholder} value={bookingData.message} onChange={handleInputChange}></textarea>
                                             </div>
                                         </div>
 
                                         <div className="step-navigation">
                                             <button onClick={prevStep} className="nav-btn-prev" type="button">
-                                                <ArrowLeft size={18} /> Back
+                                                <ArrowLeft size={18} /> {t.back}
                                             </button>
                                             <button type="submit" className="complete-btn">
-                                                <Send size={18} /> Complete Booking Request
+                                                <Send size={18} /> {t.bmCompleteBtn}
                                             </button>
                                         </div>
                                     </form>
@@ -311,13 +313,13 @@ const BookManpower = () => {
                             <div className="summary-glass-card">
                                 <div className="summary-title">
                                     <ShoppingCart size={20} />
-                                    <h3>Order Summary</h3>
+                                    <h3>{t.bmOrderSummary}</h3>
                                 </div>
                                 <div className="summary-items">
                                     {selectedTrades.length === 0 ? (
                                         <div className="empty-state">
                                             <div className="empty-icon"><Info size={24} /></div>
-                                            <p>No trades selected. Start adding personnel to proceed.</p>
+                                            <p>{t.bmNoTrades}</p>
                                         </div>
                                     ) : (
                                         <div className="selected-items-list">
@@ -334,11 +336,11 @@ const BookManpower = () => {
                                     )}
                                 </div>
                                 <div className="summary-total">
-                                    <span>Total Manpower:</span>
+                                    <span>{t.bmTotalManpower}</span>
                                     <span className="total-val">{totalPersonnel}</span>
                                 </div>
                                 <div className="summary-info-box">
-                                    <p><Info size={14} /> Our team will provide a customized commercial proposal based on your selection.</p>
+                                    <p><Info size={14} /> {t.bmProposalInfo}</p>
                                 </div>
                             </div>
                         </aside>

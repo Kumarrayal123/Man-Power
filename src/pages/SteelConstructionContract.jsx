@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../styles/sectorPages.css';
 import { ChevronRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { useLanguage } from '../context/LanguageContext';
 import heroImage from "../assest/manpower-supply-meadia/homepagehero.png";
 import btsImg from "../assest/manpower-supply-meadia/steel_construction_team.png";
 import sectorInsight1Img from "../assest/manpower-supply-meadia/steel_construction_team.png";
@@ -11,28 +12,43 @@ import sectorInsight3Img from "../assest/manpower-supply-meadia/sc_insight_3.png
 import sectorInsight4Img from "../assest/manpower-supply-meadia/sc_insight_4.png";
 
 const SteelConstructionContract = () => {
+    const { t } = useLanguage();
+    const [openFaq, setOpenFaq] = React.useState(0);
+
+    const faqs = [
+        { question: t.scFaqQ1, answer: t.scFaqA1 },
+        { question: t.scFaqQ2, answer: t.scFaqA2 },
+        { question: t.scFaqQ3, answer: t.scFaqA3 },
+        { question: t.scFaqQ4, answer: t.scFaqA4 },
+        { question: t.scFaqQ5, answer: t.scFaqA5 },
+        { question: t.scFaqQ6, answer: t.scFaqA6 }
+    ];
+
     return (
-        <div className="steel-construction-page">
+        <div className="steel-construction-page recruitment-page">
             <SEOHead
-                title="Steel Construction Manpower UAE | Structural Steel Staffing | Smaar Elysium"
-                description="We provide expert steel construction manpower, including welders, fabricators, and structural steel erectors for heavy industrial and commercial projects in the UAE."
+                title={t.scSEOTitle}
+                description={t.scSEODesc}
                 keywords="steel construction manpower UAE, structural steel workers Dubai, welders staffing UAE, steel fabricators agency, metal construction workers Dubai"
                 canonical="https://www.smaarelysium.com/steel-construction-contract"
+                faqSchema={faqs.map(f => ({
+                    question: f.question,
+                    answer: f.answer
+                }))}
             />
             {/* ── Hero Section ── */}
             <div className="container hero-wrapper">
                 <section className="home-hero">
                     <div className="home-hero__content">
                         <h1 className="home-hero__title">
-                            Steel Construction<br />Sector
+                            {t.scHeroTitle}
                         </h1>
                         <p className="home-hero__text">
-                            Deploying elite steel workers, welders, and structural
-                            engineers to support the backbone of modern infrastructural development across the UAE.
+                            {t.scHeroText}
                         </p>
                         <div className="home-hero__actions">
                             <Link to="/contact" className="hero-btn-main">
-                                Get in Touch
+                                {t.getInTouch}
                             </Link>
                         </div>
                     </div>
@@ -48,16 +64,10 @@ const SteelConstructionContract = () => {
 
                     <div className="choose-best-split">
                         <div className="cbs-left">
-                            <h2>Master Steel Fabrication & Erection Teams</h2>
-                            <p>
-                                The structural integrity of modern megaprojects starts with steel. Our staffing agency specializes in sourcing and deploying top-tier steel construction professionals.
-                            </p>
-                            <p>
-                                From certified 6G welders mapping out critical joins, to heavy steel erectors balancing beams high above the city, we supply the grit and expertise required.
-                            </p>
-                            <p>
-                                We serve industrial fabrication yards and live commercial construction sites alike, ensuring your most demanding structural needs are met on schedule.
-                            </p>
+                            <h2>{t.scChooseTitle}</h2>
+                            <p>{t.scChooseP1}</p>
+                            <p>{t.scChooseP2}</p>
+                            <p>{t.scChooseP3}</p>
                         </div>
 
                         <div className="cbs-right">
@@ -65,14 +75,14 @@ const SteelConstructionContract = () => {
                                 <span className="logo-main">Smaar Elysium</span>
                                 <span>®</span>
                                 <span className="logo-slogan">
-                                    STEELWORK EXPERTS
+                                    {t.scLogoSlogan}
                                 </span>
                             </div>
                             <div className="cbs-text-block">
-                                <span className="cbs-go-beyond">FORGING</span>
-                                <span className="cbs-ordinary">STRUCTURAL</span>
-                                <span className="cbs-find">EXCELLENCE</span>
-                                <span className="cbs-executives">NATIONWIDE</span>
+                                <span className="cbs-go-beyond">{t.scGrid1}</span>
+                                <span className="cbs-ordinary">{t.scGrid2}</span>
+                                <span className="cbs-find">{t.scGrid3}</span>
+                                <span className="cbs-executives">{t.scGrid4}</span>
                             </div>
                         </div>
                     </div>
@@ -86,19 +96,15 @@ const SteelConstructionContract = () => {
                             />
                         </div>
                         <div className="bts-right">
-                            <h3>Hire Your Steel Crew</h3>
-                            <p>
-                                Don't let a shortage of skilled welders delay your critical path. We provide flexible, certified metalworking teams at a moment's notice.
-                            </p>
-                            <p>
-                                Our rigorous testing procedures ensure that every steelworker we provide holds the necessary safety and operational certifications for UAE sites.
-                            </p>
+                            <h3>{t.scBtsTitle}</h3>
+                            <p>{t.scBtsP1}</p>
+                            <p>{t.scBtsP2}</p>
                             <Link
                                 to="/contact"
                                 className="hero-btn-main"
                                 style={{ background: '#fff', color: '#1f2937' }}
                             >
-                                Request Staff
+                                {t.requestStaff}
                             </Link>
                         </div>
                     </div>
@@ -106,78 +112,95 @@ const SteelConstructionContract = () => {
                     <div className="domains-container">
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Certified Welders</h3>
-                                <p>
-                                    Expert SMAW, TIG, and MIG welders tested for precision and durability on structural steel joints.
-                                </p>
+                                <h3>{t.scDom1Title}</h3>
+                                <p>{t.scDom1Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Steel Erectors</h3>
-                                <p>
-                                    Specialists adept at reading blueprints and safely lifting, positioning, and securing heavy steel frameworks.
-                                </p>
+                                <h3>{t.scDom2Title}</h3>
+                                <p>{t.scDom2Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Fabrication Shop Staff</h3>
-                                <p>
-                                    Fabricators, cutters, and grinders for off-site steel preparation in industrial manufacturing yards.
-                                </p>
+                                <h3>{t.scDom3Title}</h3>
+                                <p>{t.scDom3Desc}</p>
                             </div>
                         </div>
                         <div className="domain-box">
                             <div className="domain-content">
-                                <h3>Quality Inspectors</h3>
-                                <p>
-                                    NDT inspectors and QA/QC personnel ensuring all steelwork meets stringent international standards.
-                                </p>
+                                <h3>{t.scDom4Title}</h3>
+                                <p>{t.scDom4Desc}</p>
                             </div>
                         </div>
                     </div>
 
                     <section className="why-choose-us-section">
-                        <h2 className="section-title">Why Choose Us</h2>
+                        <h2 className="section-title">{t.whyChooseUs}</h2>
                         <div className="benefits-grid">
                             <div className="benefit-card bg-red">
-                                <h3>Pre-Tested Skills</h3>
-                                <p>All welders and fabricators undergo practical trade tests before deployment.</p>
+                                <h3>{t.scBen1Title}</h3>
+                                <p>{t.scBen1Desc}</p>
                             </div>
                             <div className="benefit-card bg-gray">
-                                <h3>Heavy Industry Ready</h3>
-                                <p>Our workforce thrives in demanding, high-risk industrial environments.</p>
+                                <h3>{t.scBen2Title}</h3>
+                                <p>{t.scBen2Desc}</p>
                             </div>
                             <div className="benefit-card bg-red">
-                                <h3>Flexible Contracts</h3>
-                                <p>Hire specialized tradesmen only for the duration you need them.</p>
+                                <h3>{t.scBen3Title}</h3>
+                                <p>{t.scBen3Desc}</p>
                             </div>
                         </div>
                     </section>
 
                     <div className="quote-section">
                         <div className="quote-container">
-                            <div className="quote-label">Request a Quote</div>
-                            <h2 className="quote-title">Get a quick follow up!</h2>
-                            <p className="quote-text">In case you have any queries or want to hire our adept services, fill up this form, and our experts will get back to you!</p>
-                            <Link to="/contact" className="quote-btn">Book Now</Link>
+                            <div className="quote-label">{t.requestQuote}</div>
+                            <h2 className="quote-title">{t.quickFollowUp}</h2>
+                            <p className="quote-text">{t.fillForm}</p>
+                            <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                        <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
+                        <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
+
+                        <div className="faq-list">
+                            {faqs.map((faq, index) => (
+                                <div key={index} className={`faq-item ${openFaq === index ? 'active' : ''}`}>
+                                    <div
+                                        className="faq-question-btn"
+                                        onClick={() => setOpenFaq(openFaq === index ? -1 : index)}
+                                    >
+                                        <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
+                                        <span className="faq-question-text">{faq.question}</span>
+                                    </div>
+                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                        <div className="faq-answer-content">
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
 
                 </div>
             </div>
 
             <div className="insights-section">
-                <h2 className="insights-title">Steel Construction Insights</h2>
+                <h2 className="insights-title">{t.csInsightTitle}</h2>
                 <div className="insights-grid">
                     <div className="insight-card">
                         <div className="insight-image-wrap">
                             <img src={sectorInsight1Img} alt="Insight 1" />
                         </div>
                         <div className="insight-content">
-                            <h3>Brief Introduction to Contract Staffing</h3>
-                            <p>Contract Staffing is when businesses hire an agency to provide experts for a specific duration or project...</p>
+                            <h3>{t.csInsight1Title}</h3>
+                            <p>{t.csInsight1Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -185,8 +208,8 @@ const SteelConstructionContract = () => {
                             <img src={sectorInsight2Img} alt="Insight 2" />
                         </div>
                         <div className="insight-content">
-                            <h3>Need of Contract Staffing</h3>
-                            <p>Maintaining flexibility while keeping up with sudden demand spikes is very important. This makes it crucial for dynamic sectors like construction...</p>
+                            <h3>{t.csInsight2Title}</h3>
+                            <p>{t.csInsight2Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -194,8 +217,8 @@ const SteelConstructionContract = () => {
                             <img src={sectorInsight3Img} alt="Insight 3" />
                         </div>
                         <div className="insight-content">
-                            <h3>Benefits of getting Contract Staffing</h3>
-                            <p>There are tons of advantages to getting Contract Staffing from us, including massive cost savings and on-site agility.</p>
+                            <h3>{t.csInsight3Title}</h3>
+                            <p>{t.csInsight3Desc}</p>
                         </div>
                     </div>
                     <div className="insight-card">
@@ -203,8 +226,8 @@ const SteelConstructionContract = () => {
                             <img src={sectorInsight4Img} alt="Insight 4" />
                         </div>
                         <div className="insight-content">
-                            <h3>How can Contract Staffing work at Your Advantage?</h3>
-                            <p>Staying lean and agile is important for every organization. A responsive workforce allows you to bid on larger contracts without excessive fixed overhead.</p>
+                            <h3>{t.csInsight4Title}</h3>
+                            <p>{t.csInsight4Desc}</p>
                         </div>
                     </div>
                 </div>
