@@ -110,7 +110,7 @@ const HROutsourcing = () => {
               <div className="cbs-footer">
                 <div className="cbs-footer-pill">www.smaarelysium.com</div>
                 <div className="cbs-footer-info">
-                  <span><i className="fa-brands fa-whatsapp"></i> 8885072259</span>
+                  <span><i className="fa-brands fa-whatsapp"></i> {t.phone}</span>
                   <span className="cbs-divider">|</span>
                   <span>sales@smaarelysium.com</span>
                 </div>
@@ -133,7 +133,7 @@ const HROutsourcing = () => {
 
               <div className="bts-contact-footer">
                 <div className="bts-contact-item">
-                  <i className="fa-brands fa-whatsapp"></i> 8885072259
+                  <i className="fa-brands fa-whatsapp"></i> {t.phone}
                 </div>
                 <div className="bts-contact-divider">|</div>
                 <div className="bts-contact-item">

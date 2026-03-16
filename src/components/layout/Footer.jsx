@@ -66,7 +66,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <Phone size={18} />
-                                <a href="tel:8885072259">8885072259</a>
+                                <a href="tel:8885072259">{t.phone}</a>
                             </li>
                             <li>
                                 <Mail size={18} />

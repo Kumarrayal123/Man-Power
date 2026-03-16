@@ -75,16 +75,16 @@ const Home = () => {
 
     const faqs = [
         {
-            question: t.faq1Q,
-            answer: t.faq1A
-        },
-        {
             question: t.faq2Q,
             answer: t.faq2A
         },
         {
             question: t.faq3Q,
             answer: t.faq3A
+        },
+        {
+            question: t.faq1Q,
+            answer: t.faq1A
         }
     ];
 
@@ -301,9 +301,9 @@ const Home = () => {
                     <div className="core-area-grid">
                         {/* Top row - large blocks */}
                         <Link to="/oil-gas" className="core-area-item large">
-                            <img src={img5} alt="Oil & Gas" className="core-area-img" />
+                            <img src={img5} alt={t.oilGas} className="core-area-img" />
                             <div className="core-area-overlay">
-                                <h3 className="core-area-item-title">Oil &amp; Gas</h3>
+                                <h3 className="core-area-item-title">{t.oilGas}</h3>
                             </div>
                         </Link>
                         <Link to="/oil-gas" className="core-area-item large">

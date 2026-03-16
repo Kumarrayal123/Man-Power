@@ -53,7 +53,7 @@ const OilAndGas = () => {
             </div>
           </div>
           <div className="home-hero__image">
-            <img src={heroImage} alt="Oil & Gas Workers" className="hero-workers-img" />
+            <img src={heroImage} alt={t.oilGas} className="hero-workers-img" />
           </div>
         </section>
       </div>
@@ -67,7 +67,7 @@ const OilAndGas = () => {
             <div className="bts-left">
               <img
                 src={btsImg}
-                alt="Oil & Gas Technical Staff"
+                alt={t.oilGas}
                 className="bts-workers-img"
               />
             </div>
