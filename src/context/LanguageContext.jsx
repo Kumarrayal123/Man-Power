@@ -1235,7 +1235,7 @@ export const translations = {
         rwFaqA5: "Absolutely. We provide skilled S&T technicians. experienced in railway signaling systems, fiber optics, and control room equipment.",
         rwFaqQ6: "What is the mobilization time for a railway track laying team?",
         rwFaqA6: "Railway projects often require specialized mobilization. We can typically mobilize core track laying teams within 14-21 days.",
-        
+
         logFaqQ1: "What logistics and warehouse roles do you provide manpower for?",
         logFaqA1: "We supply a wide range of logistics personnel including warehouse assistants, forklift operators, inventory controllers, delivery drivers, and logistics coordinators.",
         logFaqQ2: "Do your forklift operators have valid UAE licenses?",
@@ -2081,9 +2081,23 @@ export const translations = {
 
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState('EN');
+    const [isChanging, setIsChanging] = useState(false);
 
     const toggleLanguage = () => {
-        setLanguage(prev => prev === 'EN' ? 'AR' : 'EN');
+        setIsChanging(true);
+        setTimeout(() => {
+            setLanguage(prev => prev === 'EN' ? 'AR' : 'EN');
+            setIsChanging(false);
+        }, 2000);
+    };
+
+    const changeLanguage = (newLang) => {
+        if (newLang === language) return;
+        setIsChanging(true);
+        setTimeout(() => {
+            setLanguage(newLang);
+            setIsChanging(false);
+        }, 2000);
     };
 
     const t = translations[language];
@@ -2093,7 +2107,7 @@ export const LanguageProvider = ({ children }) => {
     }, [language]);
 
     return (
-        <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+        <LanguageContext.Provider value={{ language, setLanguage: changeLanguage, toggleLanguage, t, isChanging }}>
             {children}
         </LanguageContext.Provider>
     );

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import LanguageTransition from '../LanguageTransition';
 
 const WHATSAPP_NUMBER = '918885072259';
 
@@ -18,6 +19,7 @@ const Layout = () => {
 
     return (
         <div className="app-wrapper">
+            <LanguageTransition />
             <Header />
             <main className="main-content">
                 <Outlet />
