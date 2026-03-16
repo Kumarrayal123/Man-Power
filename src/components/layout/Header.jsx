@@ -8,10 +8,11 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileDropdown, setMobileDropdown] = useState(null); // 'services' | 'sectors' | null
-    const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | null
-    const { language, toggleLanguage, t } = useLanguage();
+    const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | 'language' | null
+    const { language, setLanguage, t } = useLanguage();
     const location = useLocation();
     const navRef = useRef(null);
+    const langRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -30,7 +31,8 @@ const Header = () => {
     // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (e) => {
-            if (navRef.current && !navRef.current.contains(e.target)) {
+            if (navRef.current && !navRef.current.contains(e.target) &&
+                langRef.current && !langRef.current.contains(e.target)) {
                 setActiveDropdown(null);
             }
         };
@@ -48,6 +50,11 @@ const Header = () => {
 
     const toggleMobileDropdown = (menu) => {
         setMobileDropdown(mobileDropdown === menu ? null : menu);
+    };
+
+    const handleLanguageChange = (lang) => {
+        setLanguage(lang);
+        setActiveDropdown(null);
     };
 
 
@@ -115,10 +122,32 @@ const Header = () => {
                     </nav>
 
                     <div className="site-header__actions">
-                        <button className="lang-toggle" onClick={toggleLanguage} aria-label="Toggle Language">
-                            <Languages size={18} className="lang-icon" />
-                            <span className="lang-text">{language === 'EN' ? 'AR' : 'EN'}</span>
-                        </button>
+                        <div className={`lang-dropdown ${activeDropdown === 'language' ? 'active' : ''}`} ref={langRef}>
+                            <button
+                                className="lang-toggle"
+                                onClick={() => toggleDesktopDropdown('language')}
+                                aria-expanded={activeDropdown === 'language'}
+                                aria-label="Select Language"
+                            >
+                                <Languages size={18} className="lang-icon" />
+                                <span className="lang-text">{language}</span>
+                                <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'language' ? 'rotated' : ''}`} />
+                            </button>
+                            <div className="lang-menu">
+                                <button
+                                    className={`lang-option ${language === 'EN' ? 'active' : ''}`}
+                                    onClick={() => handleLanguageChange('EN')}
+                                >
+                                    English
+                                </button>
+                                <button
+                                    className={`lang-option ${language === 'AR' ? 'active' : ''}`}
+                                    onClick={() => handleLanguageChange('AR')}
+                                >
+                                    العربية
+                                </button>
+                            </div>
+                        </div>
                         <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">{t.bookManpower}</Link>
                         <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             {isMenuOpen ? <X /> : <Menu />}
@@ -254,6 +283,70 @@ const Header = () => {
         @media (max-width: 992px) {
           .site-header__actions { gap: 10px; }
           .lang-toggle { padding: 6px 12px; font-size: 13px; }
+        }
+
+        /* Language Dropdown Styles */
+        .lang-dropdown {
+          position: relative;
+        }
+        
+        .lang-menu {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background: #ffffff;
+          min-width: 140px;
+          border-radius: 12px;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+          border: 1px solid #f0f0f0;
+          margin-top: 10px;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(10px);
+          transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 1001;
+          padding: 8px;
+          overflow: hidden;
+        }
+
+        .lang-dropdown.active .lang-menu {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+
+        .lang-option {
+          display: block;
+          width: 100%;
+          padding: 10px 16px;
+          text-align: left;
+          background: none;
+          border: none;
+          border-radius: 8px;
+          font-weight: 600;
+          font-size: 14px;
+          color: #444;
+          cursor: pointer;
+          transition: 0.2s;
+        }
+
+        .lang-option:hover {
+          background: #fff8f5;
+          color: var(--color-primary);
+        }
+
+        .lang-option.active {
+          background: var(--color-primary);
+          color: #ffffff;
+        }
+
+        .lang-dropdown.active .lang-toggle {
+          background: var(--color-primary);
+          color: #fff;
+        }
+        
+        .lang-dropdown.active .lang-toggle .lang-icon {
+          transform: rotate(180deg);
         }
 
         @media (max-width: 480px) {
