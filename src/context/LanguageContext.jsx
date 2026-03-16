@@ -31,7 +31,7 @@ export const translations = {
         mep: "Mechanical, Electrical & Plumbing- MEP",
 
         // Home Page Body
-        heroTitle: "Premier Civil Construction Staffing Solutions in UAE",
+        heroTitle: "Premier Civil Construction Solutions in the UAE",
         heroText: "Empowering the building sector with top-tier talent. Whether you need skilled engineers for permanent roles or a reliable workforce for massive temporary projects, we deliver excellence on time and on budget.",
         bookNow: "Book Now",
         expertise: "Our Expertise",
@@ -1012,7 +1012,7 @@ export const translations = {
         mep: "الميكانيكا والكهرباء والسباكة - MEP",
 
         // Home Page Body
-        heroTitle: "حلول توظيف متميزة لإنشاءات مدنية في الإمارات",
+        heroTitle: "حلول متميزة للإنشاءات المدنية في الإمارات العربية المتحدة",
         heroText: "تمكين قطاع البناء بمواهب من الطراز الأول. سواء كنت بحاجة إلى مهندسين مهرة لأدوار دائمة أو قوة عاملة موثوقة لمشاريع مؤقتة ضخمة، فإننا نقدم التميز في الوقت المحدد وفي حدود الميزانية.",
         bookNow: "احجز الآن",
         expertise: "خبرتنا",
