@@ -276,12 +276,12 @@ const Home = () => {
                                 <p className="journey-desc">{t.partnerOrgDesc}</p>
                             </div>
                             <div className="journey-item">
-                                <Counter end={100} suffix="+" duration={2000} />
+                                <Counter end={150} suffix="+" duration={2000} />
                                 <h3 className="journey-label">{t.projDelivered}</h3>
                                 <p className="journey-desc">{t.projDeliveredDesc}</p>
                             </div>
                             <div className="journey-item">
-                                <Counter end={1000} suffix="+" duration={2500} />
+                                <Counter end={999} suffix="+" duration={2500} />
                                 <h3 className="journey-label">{t.profDeployed}</h3>
                                 <p className="journey-desc">{t.profDeployedDesc}</p>
                             </div>
