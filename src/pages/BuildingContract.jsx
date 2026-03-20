@@ -70,7 +70,8 @@ const BuildingContract = () => {
                             <p>{t.bcChooseP3}</p>
                         </div>
 
-                        <div className="cbs-right">
+                        <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                            <div className="cbs-overlay"></div>
                             <div className="cbs-logo">
                                 <span className="logo-main">Smaar Elysium</span>
                                 <span>®</span>
@@ -78,11 +79,13 @@ const BuildingContract = () => {
                                     {t.bcLogoSlogan}
                                 </span>
                             </div>
-                            <div className="cbs-text-block">
-                                <span className="cbs-go-beyond">{t.bcGrid1}</span>
-                                <span className="cbs-ordinary">{t.bcGrid2}</span>
-                                <span className="cbs-find">{t.bcGrid3}</span>
-                                <span className="cbs-executives">{t.bcGrid4}</span>
+                            <div className="cbs-content">
+                                <div className="cbs-text-block">
+                                    <span className="cbs-go-beyond">{t.bcGrid1}</span>
+                                    <span className="cbs-ordinary">{t.bcGrid2}</span>
+                                    <span className="cbs-find">{t.bcGrid3}</span>
+                                    <span className="cbs-executives">{t.bcGrid4}</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -164,7 +167,7 @@ const BuildingContract = () => {
                     </div>
 
                     {/* FAQ Section */}
-                    <section className="faq-section" style={{ margin: '60px 0' }}>
+                    <section className="faq-section">
                         <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
                         <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
@@ -178,7 +181,7 @@ const BuildingContract = () => {
                                         <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
                                         <span className="faq-question-text">{faq.question}</span>
                                     </div>
-                                    <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                                    <div className="faq-answer-container">
                                         <div className="faq-answer-content">
                                             <p>{faq.answer}</p>
                                         </div>

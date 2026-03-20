@@ -168,17 +168,22 @@
 .cbs-right {
     flex: 0.8;
     background: var(--color-primary);
-    padding: 60px;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     color: #fff;
     position: relative;
     text-align: right;
+    min-height: 480px;
 }
 
 .cbs-logo {
-    margin-bottom: 40px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    z-index: 2;
+    text-align: left;
 }
 
 .logo-main {
@@ -186,16 +191,38 @@
     font-weight: 900;
 }
 
-.logo-sub {
-    color: #fff;
-    opacity: 0.8;
+.logo-slogan {
+    font-size: 0.5rem;
+    font-weight: 800;
+    color: #d11a2a;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 5px;
 }
 
-.logo-slogan {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    margin-top: 5px;
-    opacity: 0.7;
+.cbs-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.cbs-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cbs-text-block {
+    text-align: right;
+    transform: translateY(20px);
 }
 
 .cbs-text-block span {
@@ -205,65 +232,100 @@
 }
 
 .cbs-go-beyond {
-    font-size: 1.8rem;
-    font-weight: 300;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
 }
 
 .cbs-ordinary {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
+    margin-top: -10px;
+    color: #fff;
+    letter-spacing: 1px;
 }
 
 .cbs-find {
-    font-size: 1.4rem;
-    color: #fff;
-    opacity: 0.8;
-    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-top: 5px;
 }
 
 .cbs-executives {
-    font-size: 2.2rem;
-    font-weight: 800;
-    font-style: italic;
+    font-size: 3rem;
+    color: #3b82f6;
+    font-weight: 900;
 }
 
-@media (max-width: 992px) {
+.cbs-footer {
+    position: relative;
+    z-index: 2;
+    background: #ac1420;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+}
+
+.cbs-footer-pill {
+    background: #fff;
+    color: #ac1420;
+    padding: 6px 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    position: absolute;
+    top: -17px;
+    font-size: 1rem;
+    letter-spacing: 3px;
+}
+
+.cbs-footer-info {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.cbs-divider {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
     .choose-best-split {
         flex-direction: column;
     }
 
-    .cbs-left,
     .cbs-right {
-        padding: 40px;
-        text-align: left;
-    }
-
-    .cbs-text-block {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .cbs-go-beyond {
-        font-size: 1.4rem;
-    }
-
-    .cbs-ordinary {
-        font-size: 2rem;
-    }
-
-    .cbs-find {
-        font-size: 1.2rem;
-        margin-top: 15px;
-    }
-
-    .cbs-executives {
-        font-size: 2rem;
+        min-height: 400px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+    .cbs-left,
+    .cbs-right {
+        padding: 40px;
+    }
+
+    .cbs-right {
+        padding: 0;
+    }
+
+    .cbs-text-block {
+        transform: translateY(0);
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
     .cbs-left {
-        padding: 30px 20px;
+        padding: 40px 25px;
     }
 
     .cbs-left h2 {
@@ -271,11 +333,39 @@
     }
 
     .cbs-go-beyond {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .cbs-ordinary {
-        font-size: 1.7rem;
+        font-size: 2.22rem;
+    }
+
+    .cbs-find {
+        font-size: 1.25rem;
+    }
+
+    .cbs-executives {
+        font-size: 2.22rem;
+    }
+
+    .cbs-footer-info {
+        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .cbs-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .cbs-go-beyond {
+        font-size: 1.25rem;
+    }
+
+    .cbs-ordinary {
+        font-size: 1.8rem;
     }
 
     .cbs-find {
@@ -283,9 +373,16 @@
     }
 
     .cbs-executives {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
+    }
+
+    .cbs-footer-pill {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        top: -13px;
     }
 }
+
 
 /* Build Team Split */
 .build-team-split {
@@ -473,72 +570,98 @@
 
 /* FAQ Section */
 .faq-section {
-    background: var(--color-light-bg);
-    padding: 100px 0;
-    border-radius: 40px;
+    padding: 60px 0 100px;
+    background: #fff;
 }
 
-.faq-container {
-    max-width: 900px;
-    margin: 0 auto;
+.faq-main-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.faq-subtitle {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.faq-list {
+    max-width: 100%;
+    border-top: 1px solid #f1f1f1;
 }
 
 .faq-item {
-    background: #fff;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid #f1f1f1;
     transition: 0.3s;
-    border: 1px solid #f3f4f6;
+    background: #ffffff;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    overflow: hidden;
 }
 
-.faq-item.active {
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border-color: var(--color-primary);
-}
-
-.faq-question {
-    padding: 25px 30px;
+.faq-question-btn {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 25px 20px;
+    background: none;
+    border: none;
     cursor: pointer;
-}
-
-.faq-question span {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #111;
+    text-align: left;
+    transition: 0.3s;
 }
 
 .faq-icon {
-    color: #9ca3af;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #888;
+    font-weight: 300;
+    width: 20px;
+    display: inline-block;
     transition: 0.3s;
 }
 
-.faq-item.active .faq-icon {
-    transform: rotate(90deg);
-    color: #dc2626;
+.faq-question-text {
+    font-size: 1.45rem;
+    color: #777;
+    font-weight: 400;
+    transition: 0.3s;
 }
 
-.faq-answer {
-    max-height: 0;
+.faq-item.active .faq-icon,
+.faq-item.active .faq-question-text {
+    color: var(--color-primary);
+}
+
+.faq-answer-container {
     overflow: hidden;
-    transition: 0.5s ease;
-    background: #fff;
+    transition: max-height 0.3s ease-in-out;
+    background: #fafafa;
+    max-height: 0;
 }
 
-.faq-item.active .faq-answer {
-    max-height: 300px;
+.faq-item.active .faq-answer-container {
+    max-height: 500px;
 }
 
-.faq-answer p {
-    padding: 0 30px 30px;
-    color: #4b5563;
+.faq-answer-content {
+    padding: 30px 40px;
+}
+
+.faq-answer-content p {
+    color: #000;
+    font-size: 0.95rem;
     line-height: 1.7;
-    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.2px;
 }
+
 
 /* ── Clients Marquee CSS ── */
 .clients-section {

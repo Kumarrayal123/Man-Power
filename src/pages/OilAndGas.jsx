@@ -61,6 +61,32 @@ const OilAndGas = () => {
       {/* ── Main Content Section ── */}
       <div className="service-content-section">
         <div className="container">
+          {/* ── Choose Best Split ── */}
+          <div className="choose-best-split">
+            <div className="cbs-left">
+              <h2>{t.ogChooseTitle}</h2>
+              <p>{t.ogChooseP1}</p>
+              <p>{t.ogChooseP2}</p>
+              <p>{t.ogChooseP3}</p>
+            </div>
+
+            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="cbs-overlay"></div>
+              <div className="cbs-logo">
+                <span className="logo-main">Smaar Elysium</span>
+                <span>®</span>
+                <span className="logo-slogan">{t.ogLogoSlogan}</span>
+              </div>
+              <div className="cbs-content">
+                <div className="cbs-text-block">
+                  <span className="cbs-go-beyond">{t.ogGrid1}</span>
+                  <span className="cbs-ordinary">{t.ogGrid2}</span>
+                  <span className="cbs-find">{t.ogGrid3}</span>
+                  <span className="cbs-executives">{t.ogGrid4}</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Build Team Split */}
           <div className="build-team-split">
@@ -80,6 +106,27 @@ const OilAndGas = () => {
               </Link>
             </div>
           </div>
+
+          <section className="why-choose-us-section">
+            <h2 className="section-title">{t.whyChooseUs}</h2>
+
+            <div className="benefits-grid">
+              <div className="benefit-card bg-red">
+                <h3>{t.ogBen1Title}</h3>
+                <p>{t.ogBen1Desc}</p>
+              </div>
+
+              <div className="benefit-card bg-gray">
+                <h3>{t.ogBen2Title}</h3>
+                <p>{t.ogBen2Desc}</p>
+              </div>
+
+              <div className="benefit-card bg-red">
+                <h3>{t.ogBen3Title}</h3>
+                <p>{t.ogBen3Desc}</p>
+              </div>
+            </div>
+          </section>
 
           {/* ── Focus on Domains Section (From User Image) ── */}
           <div className="domains-container">
@@ -132,7 +179,7 @@ const OilAndGas = () => {
           </div>
 
           {/* FAQ Section */}
-          <section className="faq-section" style={{ margin: '60px 0' }}>
+          <section className="faq-section">
             <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
             <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
@@ -146,7 +193,7 @@ const OilAndGas = () => {
                     <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
                     <span className="faq-question-text">{faq.question}</span>
                   </div>
-                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                  <div className="faq-answer-container">
                     <div className="faq-answer-content">
                       <p>{faq.answer}</p>
                     </div>

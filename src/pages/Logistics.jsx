@@ -27,8 +27,8 @@ const Logistics = () => {
   return (
     <div className="oil-gas-page recruitment-page">
       <SEOHead
-        title={t.logSEOTitle}
-        description={t.logSEODesc}
+        title={t.lgSEOTitle}
+        description={t.lgSEODesc}
         keywords="logistics manpower UAE, warehouse staff Dubai, forklift operators staffing, inventory controllers UAE, supply chain workforce Dubai"
         canonical="https://www.smaarelysium.com/logistics"
         faqSchema={faqs.map(f => ({
@@ -65,26 +65,28 @@ const Logistics = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>{t.lgChooseTitle}</h2>
-              <p>{t.lgChooseP1}</p>
-              <p>{t.lgChooseP2}</p>
-              <p>{t.lgChooseP3}</p>
+              <h2>{t.loChooseTitle}</h2>
+              <p>{t.loChooseP1}</p>
+              <p>{t.loChooseP2}</p>
+              <p>{t.loChooseP3}</p>
             </div>
 
-            <div className="cbs-right">
+            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+              <div className="cbs-overlay"></div>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
-                {/* <span className="logo-sub">.ae</span> */}
                 <span>®</span>
                 <span className="logo-slogan">
-                  {t.lgLogoSlogan}
+                  {t.loLogoSlogan}
                 </span>
               </div>
-              <div className="cbs-text-block">
-                <span className="cbs-go-beyond">{t.lgGrid1}</span>
-                <span className="cbs-ordinary">{t.lgGrid2}</span>
-                <span className="cbs-find">{t.lgGrid3}</span>
-                <span className="cbs-executives">{t.lgGrid4}</span>
+              <div className="cbs-content">
+                <div className="cbs-text-block">
+                  <span className="cbs-go-beyond">{t.loGrid1}</span>
+                  <span className="cbs-ordinary">{t.loGrid2}</span>
+                  <span className="cbs-find">{t.loGrid3}</span>
+                  <span className="cbs-executives">{t.loGrid4}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -221,7 +223,7 @@ const Logistics = () => {
           </div>
 
           {/* FAQ Section */}
-          <section className="faq-section" style={{ margin: '60px 0' }}>
+          <section className="faq-section">
             <h2 className="faq-main-title">{t.commonFaqTitle || 'FAQ'}</h2>
             <p className="faq-subtitle">{t.commonFaqSubtitle || 'MOST ASKED QUESTIONS.'}</p>
 
@@ -235,7 +237,7 @@ const Logistics = () => {
                     <span className="faq-icon">{openFaq === index ? '−' : '+'}</span>
                     <span className="faq-question-text">{faq.question}</span>
                   </div>
-                  <div className="faq-answer-container" style={{ maxHeight: openFaq === index ? '300px' : '0' }}>
+                  <div className="faq-answer-container">
                     <div className="faq-answer-content">
                       <p>{faq.answer}</p>
                     </div>

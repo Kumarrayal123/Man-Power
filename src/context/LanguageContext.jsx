@@ -264,6 +264,10 @@ export const translations = {
         // Oil & Gas (og)
         ogHeroTitle: "Oil & Gas Sector",
         ogHeroText: "Empowering the UAE energy sector with specialized engineering, technical, and operational experts. We provide reliable manpower solutions for upstream, midstream, and downstream operations.",
+        ogChooseTitle: "Professional Oil & Gas Manpower Solutions",
+        ogChooseP1: "The energy sector in the UAE requires a workforce that is not only highly skilled but also deeply familiar with the unique safety and technical demands of oil and gas operations. We provide the specialized talent needed to drive your projects forward.",
+        ogChooseP2: "Our personnel are experienced in the latest technologies and methodologies, ensuring that your upstream, midstream, and downstream operations are conducted with maximum efficiency and safety.",
+        ogChooseP3: "We work closely with major energy firms and contractors across the UAE to deliver comprehensive staffing solutions that meet the most demanding project requirements and timelines.",
         ogLogoSlogan: "ENERGY SECTOR SPECIALISTS",
         ogGrid1: "POWERING THE", ogGrid2: "FUTURE", ogGrid3: "UNMATCHED ENERGY", ogGrid4: "EXPERTISE",
         ogBtsTitle: "Build Your Expert Oil & Gas Team",
@@ -275,6 +279,9 @@ export const translations = {
         ogDom4Title: "Shutdowns & Turnarounds", ogDom4Desc: "Rapid mobilization of large, multi-disciplinary workforces for scheduled plant maintenance with minimal downtime.",
         ogDom5Title: "HSE & Compliance", ogDom5Desc: "Dedicated Safety Officers, QA/QC Inspectors, and Environmental Engineers ensuring operations meet energy sector regulations.",
         ogDom6Title: "Technical Maintenance", ogDom6Desc: "Certified welders, pipefitters, electricians, and mechanical fitters experienced in maintaining oilfield machinery.",
+        ogBen1Title: "Safety Excellence", ogBen1Desc: "All personnel are fully certified in BOSIET, H2S, and other oilfield-critical safety protocols.",
+        ogBen2Title: "Technical Expertise", ogBen2Desc: "Engineers and technicians with extensive experience in UAE's upstream and downstream operations.",
+        ogBen3Title: "Rapid Mobilization", ogBen3Desc: "Proven ability to hire and mobilize large, multi-disciplinary teams for urgent projects and shutdowns.",
 
         // --- Sector Pages Batch 2 ---
         // Railway Contract (rc)
@@ -293,6 +300,9 @@ export const translations = {
         rcDom2Title: "Signaling & Comms", rcDom2Desc: "Engineers and technicians to install and test complex railway signaling and communication systems.",
         rcDom3Title: "Civil Rail Infrastructure", rcDom3Desc: "Personnel for constructing platforms, tunnels, bridges, and stations associated with rail networks.",
         rcDom4Title: "Rolling Stock Techs", rcDom4Desc: "Mechanics and electricians focused on the maintenance and repair of the train carriages and engines.",
+        rcBen1Title: "Rail-Grade Standards", rcBen1Desc: "A workforce fully trained and approved to RTA, Etihad Rail, and international railway standards.",
+        rcBen2Title: "Specialized Skillsets", rcBen2Desc: "Access to signaling, OHE, and track laying technicians with experience in mass transit megaprojects.",
+        rcBen3Title: "Schedule Integrity", rcBen3Desc: "Dedicated teams focused on ensuring railway infrastructure projects stay on track and on time.",
 
         // Steel Construction (sc)
         scHeroTitle: "Steel Construction Sector",
@@ -310,6 +320,9 @@ export const translations = {
         scDom2Title: "Steel Erectors", scDom2Desc: "Specialists adept at reading blueprints and safely lifting, positioning, and securing heavy steel frameworks.",
         scDom3Title: "Fabrication Shop Staff", scDom3Desc: "Fabricators, cutters, and grinders for off-site steel preparation in industrial manufacturing yards.",
         scDom4Title: "Quality Inspectors", scDom4Desc: "NDT inspectors and QA/QC personnel ensuring all steelwork meets stringent international standards.",
+        scBen1Title: "Certified Master Welders", scBen1Desc: "AWS/ASME certified 6G welders ensuring the highest structural integrity on every steel joint.",
+        scBen2Title: "Rigging Precision", scBen2Desc: "Highly experienced lifting supervisors and riggers adept at handling complex, heavy steel components.",
+        scBen3Title: "Scalable Capacity", scBen3Desc: "A flexible workforce capable of scaling up to support massive fabrication yards and high-rise sites.",
 
         // Electric Mechanic (em)
         emHeroTitle: "Electric & Mechanic Contract Sector",
@@ -327,6 +340,9 @@ export const translations = {
         emDom2Title: "HVAC Technicians", emDom2Desc: "Experts in the installation, commissioning, and maintenance of massive cooling and ventilation systems.",
         emDom3Title: "Mechanical Engineers", emDom3Desc: "Engineers specializing in heavy machinery, fluid mechanics, pumps, and industrial piping networks.",
         emDom4Title: "Plumbing & Fire Fighting", emDom4Desc: "Certified plumbers and technicians specializing in complex water systems, drainage, and crucial fire suppression networks.",
+        emBen1Title: "Regulatory Compliance", emBen1Desc: "Vetted technicians ensuring full compliance with DEWA, ADDC, and other UAEn utility regulations.",
+        emBen2Title: "Broad Technical Reach", emBen2Desc: "Our workforce covers the complete MEP spectrum from basic electrical wiring to complex HVAC systems.",
+        emBen3Title: "Quality & Reliability", emBen3Desc: "Our rigorous vetting ensures you get technicians who minimize rework and optimize system performance.",
 
         // --- Sector Pages Batch 3 ---
         // Facility Management (fm)
@@ -345,6 +361,9 @@ export const translations = {
         fmDom2Title: "Soft Services (Cleaning)", fmDom2Desc: "BICS-trained cleaning crews, housekeepers, and deep-cleaning specialists ensuring immaculate environments.",
         fmDom3Title: "Security & Safety", fmDom3Desc: "SIRA-certified security guards, CCTV operators, and life-safety personnel protecting your people and property.",
         fmDom4Title: "Front of House & Admin", fmDom4Desc: "Polished receptionists, concierge staff, and facility coordinators acting as the welcoming face of your organization.",
+        fmBen1Title: "Asset Value Optimization", fmBen1Desc: "Proactive maintenance staff focused on preventative care to increase the lifespan of your facilities.",
+        fmBen2Title: "Hospitality Training", fmBen2Desc: "Soft services staff trained in customer service excellence to enhance occupant experience.",
+        fmBen3Title: "Round-the-Clock Support", fmBen3Desc: "Teams capable of supporting 24/7 facility management operations for continuous uptime.",
 
         // Logistics (lg)
         lgHeroTitle: "Logistics Sector",
@@ -362,6 +381,9 @@ export const translations = {
         lgDom2Title: "Warehouse Operations", lgDom2Desc: "Certified VNA/Forklift operators, order pickers, packers, and cargo loaders for high-volume distribution centers.",
         lgDom3Title: "Inventory & Planning", lgDom3Desc: "Data-driven inventory clerks, stock controllers, and supply chain analysts to optimize stock flow and minimize shrinkage.",
         lgDom4Title: "Freight & Customs", lgDom4Desc: "Experienced documentation clerks, freight forwarders, and customs clearance specialists navigating complex international trade requirements.",
+        lgBen1Title: "Operational Flexibility", lgBen1Desc: "Quick mobilization of warehouse labor and delivery drivers to handle seasonal demand peaks.",
+        lgBen2Title: "Efficiency Driven", lgBen2Desc: "Personnel trained on modern WMS systems and warehouse safety protocols to maximize throughput.",
+        lgBen3Title: "Fleet Compliance", lgBen3Desc: "Experienced drivers with valid UAEn licenses ensure goods are transported safely and on schedule.",
 
         // Manufacture/Manufacturing (mn)
         mnHeroTitle: "Manufacturing Sector",
@@ -379,6 +401,9 @@ export const translations = {
         mnDom2Title: "Machining & Fabrication", mnDom2Desc: "Certified CNC programmers, welders (TIG/MIG), metal fabricators, and tool/die makers for precision engineering tasks.",
         mnDom3Title: "Quality Assurance (QC)", mnDom3Desc: "Detail-oriented inspectors and metrology technicians ensuring zero defects and strict adherence to ISO manufacturing standards.",
         mnDom4Title: "Industrial Maintenance", mnDom4Desc: "Preventative and reactive maintenance crews, including millwrights and heavy equipment mechanics, maximizing plant uptime.",
+        mnBen1Title: "Industrial Productivity", mnBen1Desc: "Highly efficient operators and technicians focused on meeting production targets with minimal waste.",
+        mnBen2Title: "Quality Discipline", mnBen2Desc: "Rigorous QA/QC inspectors ensuring every product leaving the line meets international quality standards.",
+        mnBen3Title: "Safety Conscious", mnBen3Desc: "A workforce fully trained in factory safety protocols, machine guarding, and occupational health.",
 
         // MEP (mp)
         mpHeroTitle: "MEP (Mechanical, Electrical & Plumbing) Sector",
@@ -396,6 +421,9 @@ export const translations = {
         mpDom2Title: "Electrical Engineering", mpDom2Desc: "Industrial electricians, cable jointers, and panel builders for low current (ELV), low voltage (LV), and high voltage (HV) networks.",
         mpDom3Title: "Plumbing & Piping", mpDom3Desc: "Certified plumbers and pipefitters executing complex water supply, drainage, and industrial piping networks.",
         mpDom4Title: "Fire & Life Safety", mpDom4Desc: "Civil Defense-approved specialists for the installation and commissioning of fire alarms, sprinklers, and emergency suppression systems.",
+        mpBen1Title: "Integrated Systems Expertise", mpBen1Desc: "Skilled technicians adept at coordinating complex Mechanical, Electrical, and Plumbing installations on major projects.",
+        mpBen2Title: "Inspection Readiness", mpBen2Desc: "Staff trained to install systems that comply with Civil Defense and regulatory bodies for first-time success.",
+        mpBen3Title: "Rapid Resource Scaling", mpBen3Desc: "The ability to provide fast-track projects with large, technically proficient MEP teams on demand.",
 
         // Batch 4
         // Recruitment (rec)
@@ -1495,6 +1523,10 @@ export const translations = {
         // Oil & Gas (og)
         ogHeroTitle: "قطاع النفط والغاز",
         ogHeroText: "تمكين قطاع الطاقة في الإمارات بخبراء هندسيين وفنيين وتشغيليين متخصصين. نحن نقدم حلول قوى عاملة موثوقة لعمليات المنبع والمصب والمنتصف.",
+        ogChooseTitle: "حلول القوى العاملة الاحترافية لقطاع النفط والغاز",
+        ogChooseP1: "يتطلب قطاع الطاقة في الإمارات العربية المتحدة قوة عاملة ليست عالية المهارة فحسب ، بل مطلعة أيضاً بشكل عميق على المتطلبات الأمنية والفنية الفريدة لعمليات النفط والغاز. نحن نوفر المواهب المتخصصة اللازمة لدفع مشاريعك إلى الأمام.",
+        ogChooseP2: "يتمتع أفرادنا بخبرة في أحدث التقنيات والمنهجيات ، مما يضمن إجراء عمليات الخنق والنقل والتوزيع بأقصى قدر من الكفاءة والسلامة.",
+        ogChooseP3: "نحن نعمل وثيقاً مع كبرى شركات الطاقة والمقاولين في جميع أنحاء الإمارات لتقديم حلول توظيف شاملة تلبي أكثر متطلبات المشاريع والجداول الزمنية تطلباً.",
         ogLogoSlogan: "متخصصون في قطاع الطاقة",
         ogGrid1: "تمكين", ogGrid2: "المستقبل", ogGrid3: "خبرة طاقة", ogGrid4: "لا تضاهى",
         ogBtsTitle: "ابنِ فريقك الخبير في النفط والغاز",
@@ -1619,6 +1651,9 @@ export const translations = {
         mnDom2Title: "الآلات والتصنيع", mnDom2Desc: "مبرمجو CNC معتمدون، ولحامون (TIG/MIG)، ومصنعو معادن، وصناع أدوات/قوالب لمهام الهندسة الدقيقة.",
         mnDom3Title: "ضمان الجودة (QC)", mnDom3Desc: "مفتشون مهتمون بالتفاصيل وفنيو قياس يضمنون خلو الإنتاج من العيوب والالتزام الصارم بمعايير تصنيع ISO.",
         mnDom4Title: "الصيانة الصناعية", mnDom4Desc: "أطقم صيانة وقائية وتفاعلية، بما في ذلك برادو وميكانيكا المعدات الثقيلة، لزيادة وقت تشغيل المصنع.",
+        mnBen1Title: "الإنتاجية الصناعية", mnBen1Desc: "مشغلون وفنيون ذوو كفاءة عالية يركزون على تحقيق أهداف الإنتاج مع الحد الأدنى من الهدر.",
+        mnBen2Title: "الانضباط في الجودة", mnBen2Desc: "مفتشو QA/QC صارمون يضمنون أن كل منتج يخرج من خط الإنتاج يلبي معايير الجودة العالمية.",
+        mnBen3Title: "الوعي بالسلامة", mnBen3Desc: "قوة عاملة مدربة تدريباً كاملاً على بروتوكولات السلامة في المصانع وحماية الآلات.",
 
         // MEP (mp)
         mpHeroTitle: "قطاع MEP (الميكانيكا والكهرباء والسباكة)",
@@ -1636,6 +1671,21 @@ export const translations = {
         mpDom2Title: "الهندسة الكهربائية", mpDom2Desc: "كهربائيون صناعيون، ومركبو كابلات، وبناة لوحات لشبكات التيار المنخفض (ELV) والجهد المنخفض (LV) والجهد العالي (HV).",
         mpDom3Title: "السباكة والأنابيب", mpDom3Desc: "سباكون وفنيو أنابيب معتمدون ينفذون شبكات إمداد المياه المعقدة والصرف وشبكات الأنابيب الصناعية.",
         mpDom4Title: "الحريق وسلامة الأرواح", mpDom4Desc: "متخصصون معتمدون من الدفاع المدني لتركيب وتكليف أجهزة إنذار الحريق والرشاشات وأنظمة الإخماد في حالات الطوارئ.",
+        mpBen1Title: "تكامل الأنظمة", mpBen1Desc: "فنيون مهرة في تنسيق التركيبات المعقدة للميكانيكا والكهرباء والسباكة في المشاريع الكبرى.",
+        mpBen2Title: "جاهزية الفحص", mpBen2Desc: "موظفون مدربون على تركيب الأنظمة بما يتوافق مع الدفاع المدني والهيئات التنظيمية لضمان النجاح من أول مرة.",
+        mpBen3Title: "التعبئة السريعة", mpBen3Desc: "القدرة على تزويد المشاريع سريعة الوتيرة بفرق MEP كبيرة وذات خبرة فنية عالية.",
+        mpFaqQ1: "ما هي مهن MEP المحددة التي توفرون عمالة لها؟",
+        mpFaqA1: "نحن نوفر قوى عاملة متخصصة لجميع مهن MEP بما في ذلك الكهربائيين، والسباكين، وفنيي التكييف (HVAC)، وفنيي الدكت (Duct Fabricators)، ومشرفي MEP.",
+        mpFaqQ2: "هل لدى فنيي التكييف لديكم خبرة في محطات التبريد واسعة النطاق؟",
+        mpFaqA2: "نعم، فنيونا ذوو خبرة واسعة في العمل في محطات تبريد المناطق، والمبردات الصناعية، وأنظمة HVAC التجارية الكبرى في جميع أنحاء الإمارات.",
+        mpFaqQ3: "كيف تضمنون جودة تركيبات MEP؟",
+        mpFaqA3: "نحن نوظف فقط الفنيين ذوي المهارات المثبتة ونقوم بالفحص المستمر لضمان الالتزام بمواصفات المشروع ومعايير DEWA/ADDC والدفاع المدني.",
+        mpFaqQ4: "هل يمكنك توفير فرق MEP لمشاريع المستشفيات أو المختبرات؟",
+        mpFaqA4: "نعم، نحن نوفر فنيين متخصصين ومدركين للمتطلبات الصارمة لبيئات الرعاية الصحية، بما في ذلك أنظمة الغازات الطبية ومتطلبات التهوية المعينة.",
+        mpFaqQ5: "ما هو الوقت المعتاد لتعبئة فريق MEP كبيير؟",
+        mpFaqA5: "بالنسبة للفرق الكبيرة، يمكننا بدء التعبئة التدريجية في غضون 10-14 يوماً، مع توفر الفرق الأساسية بشكل أسرع اعتماداً على المتطلبات الفنية.",
+        mpFaqQ6: "هل توفرون مشرفين ومهندسين MEP؟",
+        mpFaqA6: "نعم، كادرنا من قوى MEP العاملة يشمل مهندسي MEP ذوي خبرة، ومشرفين، وفورمنية قادرين على قيادة الفرق وضمان تنفيذ المشروع بدقة.",
 
         // Batch 4
         // Recruitment (rec)
