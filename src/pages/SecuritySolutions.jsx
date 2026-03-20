@@ -163,21 +163,21 @@ const SecuritySolutions = () => {
           </div>
 
           {/* Standardized Quote Section */}
-          <div className="quote-section">
+          {/* <div className="quote-section">
             <div className="quote-container">
               <div className="quote-label">{t.requestQuote}</div>
               <h2 className="quote-title">{t.quickFollowUp}</h2>
               <p className="quote-text">{t.fillForm}</p>
               <Link to="/contact" className="quote-btn">{t.bookNow}</Link>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
 
 
       {/* FAQ Section */}
-      <section className="faq-section">
+      {/* <section className="faq-section">
         <div className="container">
           <h2 className="faq-main-title">{t.faqTitle}</h2>
           <p className="faq-subtitle">{t.faqSubtitle}</p>
@@ -201,7 +201,7 @@ const SecuritySolutions = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <div className="insights-section">
         <h2 className="insights-title">{t.ssInsightTitle}</h2>
