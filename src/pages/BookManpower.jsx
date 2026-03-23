@@ -97,11 +97,37 @@ const BookManpower = () => {
 
     const prevStep = () => setStep(prev => prev - 1);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Simulate email submission
-        console.log('Sending booking request:', { ...bookingData, trades: selectedTrades });
-        setIsSubmitted(true);
+        
+        const formData = new FormData();
+        formData.append('name', bookingData.name);
+        formData.append('company', bookingData.company);
+        formData.append('email', bookingData.email);
+        formData.append('phone', bookingData.phone);
+        formData.append('location', bookingData.location);
+        formData.append('duration', bookingData.duration);
+        formData.append('startDate', bookingData.startDate);
+        formData.append('message', bookingData.message);
+        formData.append('trades', JSON.stringify(selectedTrades));
+
+        try {
+            const response = await fetch('/book-man-power-form.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                console.log('Booking request sent successfully');
+                setIsSubmitted(true);
+            } else {
+                alert('There was an error sending your request. Please try again later.');
+                console.error('Submission failed:', response.statusText);
+            }
+        } catch (error) {
+            alert('There was an error connecting to the server. Please check your connection.');
+            console.error('Network error:', error);
+        }
     };
 
     if (isSubmitted) {
