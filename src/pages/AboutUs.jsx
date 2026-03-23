@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Target, Activity, Users, Eye, ShieldCheck, Heart } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import '../styles/sectorPages.css';
 import SEOHead from '../components/SEOHead';
 import sectorInsight1Img from "../assest/manpower-supply-meadia/uae_about_insight_1.png";
 import sectorInsight2Img from "../assest/manpower-supply-meadia/uae_about_insight_2.png";
@@ -487,64 +488,6 @@ const AboutUs = () => {
 
         @media (max-width: 1024px) { .wwd-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .wwd-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; } .wwd-card { padding: 25px 20px; } .wwd-title { font-size: 1.9rem; } }
-
-        /* ── Insights Section  ── */
-        .insights-section { margin-top: 0; margin-bottom: 100px; padding: 0 5%; }
-        .insights-title { text-align: center; font-size: 2.5rem; color: #555; margin-bottom: 60px; font-weight: 500; }
-        .insights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .insight-card {
-          background: #ff741f;
-          border-radius: 25px;
-          overflow: hidden;
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-          display: flex;
-          flex-direction: column;
-        }
-        .insight-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-        .insight-image-wrap {
-          height: 250px;
-          background: #fa3e52;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .insight-image-wrap img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-        .insight-card:hover .insight-image-wrap img {
-          transform: scale(1.1);
-        }
-        .insight-content {
-          padding: 30px 25px;
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-        }
-        .insight-content h3 {
-          font-size: 1.3rem;
-          color: #fff;
-          margin-bottom: 20px;
-          line-height: 1.4;
-          font-weight: 600;
-          min-height: 3.5rem;
-        }
-        .insight-content p {
-          color: #fff;
-          font-size: 0.95rem;
-          line-height: 1.6;
-          margin-bottom: 25px;
-          flex-grow: 1;
-        } @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
-        @media (max-width: 480px) { .insights-section { padding: 0 4%; } .insights-title { font-size: 1.7rem; margin-bottom: 35px; } }
         `}} />
     </div>
   );

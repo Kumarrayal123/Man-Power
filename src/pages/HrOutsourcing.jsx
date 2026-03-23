@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import SEOHead from '../components/SEOHead';
+import '../styles/sectorPages.css';
 import heroImage from "../assest/manpower-supply-meadia/hr-hero1.png";
 import btsImg from "../assest/manpower-supply-meadia/hroutsourcing_bts.jpg";
 import btsGroup7Img from "../assest/manpower-supply-meadia/hr_outsourcing_bts.jpg";
@@ -536,43 +537,6 @@ const HROutsourcing = () => {
             .benefit-card { min-height: auto; padding: 50px 30px; }
             .why-choose-us-section .section-title { font-size: 2.2rem; }
         }
-        
-        /* Insights Section */
-        .insights-section { margin-top: 60px; margin-bottom: 100px; }
-        .insights-title { text-align: center; font-size: 2.5rem; color: #555; margin-bottom: 60px; font-weight: 500; }
-        .insights-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
-        .insight-card {
-            background: #ff741f;
-            border-radius: 25px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-        .insight-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .insight-image-wrap {
-            height: 250px;
-            background: #fa3e52;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .insight-image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .insight-card:hover .insight-image-wrap img { transform: scale(1.1); }
-        .insight-content { padding: 30px 25px; flex-grow: 1; display: flex; flex-direction: column; }
-        .insight-content h3 { font-size: 1.3rem; color: #fff; margin-bottom: 20px; line-height: 1.4; font-weight: 600; min-height: 3.5rem; }
-        .insight-content p { color: #fff; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; flex-grow: 1; }
-        .insight-btn {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 12px 20px; border: 1px solid #ddd; border-radius: 8px;
-            color: #555; text-decoration: none; font-weight: 500; transition: all 0.3s ease; background: #fff;
-        }
-        .insight-btn:hover { border-color: #FE7622; color: #FE7622; background: #fdf2f3; }
-
-        @media (max-width: 1200px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .insights-grid { grid-template-columns: repeat(2, 1fr); } .insights-title { font-size: 2rem; } }
         
         /* FAQ Section */
         .faq-section { padding: 60px 0 100px; background: #fff; }
