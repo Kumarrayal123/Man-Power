@@ -122,6 +122,7 @@ const Header = () => {
                     </nav>
 
                     <div className="site-header__actions">
+                        <div id="google_translate_element" className="google-translate-container"></div>
                         <div className={`lang-dropdown ${activeDropdown === 'language' ? 'active' : ''}`} ref={langRef}>
                             <button
                                 className="lang-toggle"
@@ -241,6 +242,29 @@ const Header = () => {
           display: flex;
           align-items: center;
           gap: 15px;
+        }
+
+        .google-translate-container {
+          margin-right: 5px;
+        }
+
+        /* Hide the Google Translate attribution/powered by text if desired */
+        .goog-logo-link { display: none !important; }
+        .goog-te-gadget { color: transparent !important; }
+        .goog-te-gadget .goog-te-combo { 
+          padding: 8px 12px; 
+          border: 1px solid var(--color-primary); 
+          border-radius: 50px; 
+          font-family: inherit; 
+          font-weight: 600; 
+          font-size: 14px; 
+          color: var(--color-primary);
+          background: #ffffff;
+          outline: none;
+          cursor: pointer;
+        }
+        .goog-te-gadget .goog-te-combo:hover {
+          background: #fff8f5;
         }
 
         .lang-toggle {

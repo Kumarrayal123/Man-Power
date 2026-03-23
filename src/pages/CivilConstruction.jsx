@@ -83,8 +83,7 @@ const CivilConstruction = () => {
               <p>{t.ccChooseP3}</p>
             </div>
 
-            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <div className="cbs-overlay"></div>
+            <div className="cbs-right" style={{ backgroundColor: 'var(--color-primary)' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
                 <span>®</span>

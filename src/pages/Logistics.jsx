@@ -65,27 +65,26 @@ const Logistics = () => {
           {/* ── Choose Best Split (same layout) ── */}
           <div className="choose-best-split">
             <div className="cbs-left">
-              <h2>{t.loChooseTitle}</h2>
-              <p>{t.loChooseP1}</p>
-              <p>{t.loChooseP2}</p>
-              <p>{t.loChooseP3}</p>
+              <h2>{t.lgChooseTitle}</h2>
+              <p>{t.lgChooseP1}</p>
+              <p>{t.lgChooseP2}</p>
+              <p>{t.lgChooseP3}</p>
             </div>
 
-            <div className="cbs-right" style={{ backgroundImage: `url(${btsImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-              <div className="cbs-overlay"></div>
+            <div className="cbs-right" style={{ backgroundColor: 'var(--color-primary)' }}>
               <div className="cbs-logo">
                 <span className="logo-main">Smaar Elysium</span>
                 <span>®</span>
                 <span className="logo-slogan">
-                  {t.loLogoSlogan}
+                  {t.lgLogoSlogan}
                 </span>
               </div>
               <div className="cbs-content">
                 <div className="cbs-text-block">
-                  <span className="cbs-go-beyond">{t.loGrid1}</span>
-                  <span className="cbs-ordinary">{t.loGrid2}</span>
-                  <span className="cbs-find">{t.loGrid3}</span>
-                  <span className="cbs-executives">{t.loGrid4}</span>
+                  <span className="cbs-go-beyond">{t.lgGrid1}</span>
+                  <span className="cbs-ordinary">{t.lgGrid2}</span>
+                  <span className="cbs-find">{t.lgGrid3}</span>
+                  <span className="cbs-executives">{t.lgGrid4}</span>
                 </div>
               </div>
             </div>
