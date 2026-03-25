@@ -144,7 +144,7 @@ const ContractStaffing = () => {
                 </div>
                 <div className="bts-contact-divider">|</div>
                 <div className="bts-contact-item">
-                  info@smaarelysium.com
+                  smaarelysium.@gmail.com
                 </div>
               </div>
             </div>

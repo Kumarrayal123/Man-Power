@@ -63,7 +63,7 @@ const ContactUs = () => {
             <div className="location-details-side">
               <p className="loc-line">{t.cuMobile} <strong>{t.phone}</strong></p>
               {/* <p className="loc-line">Mobile: <strong>+971 55 8777717</strong></p> */}
-              <p className="loc-line">{t.cuEmail} <strong>info@smaarelysium.com</strong></p>
+              <p className="loc-line">{t.cuEmail} <strong>smaarelysium.@gmail.com</strong></p>
 
               <a href={"https://" + t.cuWebsite} target="_blank" rel="noreferrer" className="loc-website">{t.cuWebsite}</a>
 

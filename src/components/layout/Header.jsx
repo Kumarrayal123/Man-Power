@@ -5,204 +5,204 @@ import { useLanguage } from '../../context/LanguageContext';
 import logo from '../../assest/logo.png';
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [mobileDropdown, setMobileDropdown] = useState(null); // 'services' | 'sectors' | null
-    const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | 'language' | null
-    const { language, setLanguage, t } = useLanguage();
-    const location = useLocation();
-    const navRef = useRef(null);
-    const langRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null); // 'services' | 'sectors' | null
+  const [activeDropdown, setActiveDropdown] = useState(null); // 'services' | 'sectors' | 'language' | null
+  const { language, setLanguage, t } = useLanguage();
+  const location = useLocation();
+  const navRef = useRef(null);
+  const langRef = useRef(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-    useEffect(() => {
-        setIsMenuOpen(false);
-        setMobileDropdown(null);
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setMobileDropdown(null);
+    setActiveDropdown(null);
+  }, [location]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target) &&
+        langRef.current && !langRef.current.contains(e.target)) {
         setActiveDropdown(null);
-    }, [location]);
-
-    // Close dropdown when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (e) => {
-            if (navRef.current && !navRef.current.contains(e.target) &&
-                langRef.current && !langRef.current.contains(e.target)) {
-                setActiveDropdown(null);
-            }
-        };
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    }, []);
-
-    const toggleDesktopDropdown = (menu) => {
-        setActiveDropdown(activeDropdown === menu ? null : menu);
+      }
     };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-    const closeDropdown = () => {
-        setActiveDropdown(null);
-    };
+  const toggleDesktopDropdown = (menu) => {
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
 
-    const toggleMobileDropdown = (menu) => {
-        setMobileDropdown(mobileDropdown === menu ? null : menu);
-    };
+  const closeDropdown = () => {
+    setActiveDropdown(null);
+  };
 
-    const handleLanguageChange = (lang) => {
-        setLanguage(lang);
-        setActiveDropdown(null);
-    };
+  const toggleMobileDropdown = (menu) => {
+    setMobileDropdown(mobileDropdown === menu ? null : menu);
+  };
+
+  const handleLanguageChange = (lang) => {
+    setLanguage(lang);
+    setActiveDropdown(null);
+  };
 
 
-    return (
-        <>
-            {/* Top Info Bar - Now White with Light Border */}
-            <div className="info-bar">
-                <div className="container info-bar__inner">
-                    <div className="info-bar__contact">
-                        <nav className="info-bar__links">
-                            <Link to="/about">{t.aboutUs}</Link>
-                            <Link to="/projects">{t.projects}</Link>
-                            {/* <Link to="/clients">Clients</Link>
+  return (
+    <>
+      {/* Top Info Bar - Now White with Light Border */}
+      <div className="info-bar">
+        <div className="container info-bar__inner">
+          <div className="info-bar__contact">
+            <nav className="info-bar__links">
+              <Link to="/about">{t.aboutUs}</Link>
+              <Link to="/projects">{t.projects}</Link>
+              {/* <Link to="/clients">Clients</Link>
                             <Link to="/insights">Insights</Link> */}
-                        </nav>
-                        <div className="info-bar__separator"></div>
-                        <a href="tel:8885072259"><Phone size={14} className="icon-red" /> {t.phone}</a>
-                        <a href="mailto:info@smaarelysium.com"><Mail size={14} className="icon-red" /> {t.email}</a>
-                    </div>
-                </div>
+            </nav>
+            <div className="info-bar__separator"></div>
+            <a href="tel:8885072259"><Phone size={14} className="icon-red" /> {t.phone}</a>
+            <a href="mailto:smaarelysium.@gmail.com"><Mail size={14} className="icon-red" /> {t.email}</a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
+      <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
+        <div className="container site-header__inner">
+          <Link to="/" className="site-header__logo">
+            <img src={logo} alt="Manpower Logo" className="header-logo-img" />
+          </Link>
+
+
+          {/* Desktop Nav - 18px font size */}
+          <nav className="main-nav" ref={navRef}>
+            <ul className="main-nav__list">
+              <li className={`main-nav__item has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
+                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('services')}>{t.services} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'services' ? 'rotated' : ''}`} /></span>
+                <ul className="dropdown">
+                  <li><Link to="/" onClick={closeDropdown}>{t.supply}</Link></li>
+                  <li><Link to="/recruitment" onClick={closeDropdown}>{t.recruitment}</Link></li>
+                  <li><Link to="/contract-staffing" onClick={closeDropdown}>{t.staffing}</Link></li>
+                  <li><Link to="/executive-search" onClick={closeDropdown}>{t.search}</Link></li>
+                  <li><Link to="/hr-outsourcing" onClick={closeDropdown}>{t.outsourcing}</Link></li>
+                  <li><Link to="/security-solutions" onClick={closeDropdown}>{t.security}</Link></li>
+                </ul>
+              </li>
+              <li className={`main-nav__item has-dropdown ${activeDropdown === 'sectors' ? 'dropdown-open' : ''}`}>
+                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>{t.sectors} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
+                <ul className="dropdown">
+                  <li><Link to="/building-contract" onClick={closeDropdown}>{t.building}</Link></li>
+                  <li><Link to="/railway-contract" onClick={closeDropdown}>{t.railway}</Link></li>
+                  <li><Link to="/steel-construction" onClick={closeDropdown}>{t.steel}</Link></li>
+                  <li><Link to="/electric-mechanic" onClick={closeDropdown}>{t.electric}</Link></li>
+                  <li><Link to="/oil-gas" onClick={closeDropdown}>{t.oilGas}</Link></li>
+                  <li><Link to="/civil-construction" onClick={closeDropdown}>{t.civil}</Link></li>
+                  <li><Link to="/facility-management" onClick={closeDropdown}>{t.facility}</Link></li>
+                  {/* <li><Link to="/oil-gas">Infrastructure</Link></li> */}
+                  <li><Link to="/logistics" onClick={closeDropdown}>{t.logistics}</Link></li>
+                  <li><Link to="/manufacture" onClick={closeDropdown}>{t.manufacture}</Link></li>
+                  <li><Link to="/mep" onClick={closeDropdown}>{t.mep}</Link></li>
+                </ul>
+              </li>
+              <li className="main-nav__item">
+                <Link to="/contact">{t.contactUs}</Link>
+              </li>
+            </ul>
+          </nav>
+
+          <div className="site-header__actions">
+            <div id="google_translate_element" className="google-translate-container"></div>
+            <div className={`lang-dropdown ${activeDropdown === 'language' ? 'active' : ''}`} ref={langRef}>
+              <button
+                className="lang-toggle"
+                onClick={() => toggleDesktopDropdown('language')}
+                aria-expanded={activeDropdown === 'language'}
+                aria-label="Select Language"
+              >
+                <Languages size={18} className="lang-icon" />
+                <span className="lang-text">{language}</span>
+                <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'language' ? 'rotated' : ''}`} />
+              </button>
+              <div className="lang-menu">
+                <button
+                  className={`lang-option ${language === 'EN' ? 'active' : ''}`}
+                  onClick={() => handleLanguageChange('EN')}
+                >
+                  English
+                </button>
+                <button
+                  className={`lang-option ${language === 'AR' ? 'active' : ''}`}
+                  onClick={() => handleLanguageChange('AR')}
+                >
+                  العربية
+                </button>
+              </div>
             </div>
+            <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">{t.bookManpower}</Link>
+            <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
+          </div>
+        </div>
 
-            {/* Main Header */}
-            <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
-                <div className="container site-header__inner">
-                    <Link to="/" className="site-header__logo">
-                        <img src={logo} alt="Manpower Logo" className="header-logo-img" />
-                    </Link>
-
-
-                    {/* Desktop Nav - 18px font size */}
-                    <nav className="main-nav" ref={navRef}>
-                        <ul className="main-nav__list">
-                            <li className={`main-nav__item has-dropdown ${activeDropdown === 'services' ? 'dropdown-open' : ''}`}>
-                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('services')}>{t.services} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'services' ? 'rotated' : ''}`} /></span>
-                                <ul className="dropdown">
-                                    <li><Link to="/" onClick={closeDropdown}>{t.supply}</Link></li>
-                                    <li><Link to="/recruitment" onClick={closeDropdown}>{t.recruitment}</Link></li>
-                                    <li><Link to="/contract-staffing" onClick={closeDropdown}>{t.staffing}</Link></li>
-                                    <li><Link to="/executive-search" onClick={closeDropdown}>{t.search}</Link></li>
-                                    <li><Link to="/hr-outsourcing" onClick={closeDropdown}>{t.outsourcing}</Link></li>
-                                    <li><Link to="/security-solutions" onClick={closeDropdown}>{t.security}</Link></li>
-                                </ul>
-                            </li>
-                            <li className={`main-nav__item has-dropdown ${activeDropdown === 'sectors' ? 'dropdown-open' : ''}`}>
-                                <span className="nav-dropdown-trigger" onClick={() => toggleDesktopDropdown('sectors')}>{t.sectors} <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'sectors' ? 'rotated' : ''}`} /></span>
-                                <ul className="dropdown">
-                                    <li><Link to="/building-contract" onClick={closeDropdown}>{t.building}</Link></li>
-                                    <li><Link to="/railway-contract" onClick={closeDropdown}>{t.railway}</Link></li>
-                                    <li><Link to="/steel-construction" onClick={closeDropdown}>{t.steel}</Link></li>
-                                    <li><Link to="/electric-mechanic" onClick={closeDropdown}>{t.electric}</Link></li>
-                                    <li><Link to="/oil-gas" onClick={closeDropdown}>{t.oilGas}</Link></li>
-                                    <li><Link to="/civil-construction" onClick={closeDropdown}>{t.civil}</Link></li>
-                                    <li><Link to="/facility-management" onClick={closeDropdown}>{t.facility}</Link></li>
-                                    {/* <li><Link to="/oil-gas">Infrastructure</Link></li> */}
-                                    <li><Link to="/logistics" onClick={closeDropdown}>{t.logistics}</Link></li>
-                                    <li><Link to="/manufacture" onClick={closeDropdown}>{t.manufacture}</Link></li>
-                                    <li><Link to="/mep" onClick={closeDropdown}>{t.mep}</Link></li>
-                                </ul>
-                            </li>
-                            <li className="main-nav__item">
-                                <Link to="/contact">{t.contactUs}</Link>
-                            </li>
-                        </ul>
-                    </nav>
-
-                    <div className="site-header__actions">
-                        <div id="google_translate_element" className="google-translate-container"></div>
-                        <div className={`lang-dropdown ${activeDropdown === 'language' ? 'active' : ''}`} ref={langRef}>
-                            <button
-                                className="lang-toggle"
-                                onClick={() => toggleDesktopDropdown('language')}
-                                aria-expanded={activeDropdown === 'language'}
-                                aria-label="Select Language"
-                            >
-                                <Languages size={18} className="lang-icon" />
-                                <span className="lang-text">{language}</span>
-                                <ChevronDown size={14} className={`dropdown-chevron ${activeDropdown === 'language' ? 'rotated' : ''}`} />
-                            </button>
-                            <div className="lang-menu">
-                                <button
-                                    className={`lang-option ${language === 'EN' ? 'active' : ''}`}
-                                    onClick={() => handleLanguageChange('EN')}
-                                >
-                                    English
-                                </button>
-                                <button
-                                    className={`lang-option ${language === 'AR' ? 'active' : ''}`}
-                                    onClick={() => handleLanguageChange('AR')}
-                                >
-                                    العربية
-                                </button>
-                            </div>
-                        </div>
-                        <Link to="/book-manpower" className="nav-bk-btn d-none-mobile">{t.bookManpower}</Link>
-                        <button className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                            {isMenuOpen ? <X /> : <Menu />}
-                        </button>
-                    </div>
+        {/* Mobile menu */}
+        <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
+          <div className="container">
+            <ul className="mobile-menu__list">
+              <li className={`mobile-menu__item ${mobileDropdown === 'services' ? 'active' : ''}`}>
+                <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('services')}>
+                  <span>{t.services}</span>
+                  <ChevronDown size={20} className="toggle-icon" />
                 </div>
-
-                {/* Mobile menu */}
-                <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <div className="container">
-                        <ul className="mobile-menu__list">
-                            <li className={`mobile-menu__item ${mobileDropdown === 'services' ? 'active' : ''}`}>
-                                <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('services')}>
-                                    <span>{t.services}</span>
-                                    <ChevronDown size={20} className="toggle-icon" />
-                                </div>
-                                <ul className="mobile-dropdown">
-                                    <li><Link to="/">{t.supply}</Link></li>
-                                    <li><Link to="/recruitment">{t.recruitment}</Link></li>
-                                    <li><Link to="/contract-staffing">{t.staffing}</Link></li>
-                                    <li><Link to="/executive-search">{t.search}</Link></li>
-                                    <li><Link to="/hr-outsourcing">{t.outsourcing}</Link></li>
-                                    <li><Link to="/security-solutions">{t.security}</Link></li>
-                                </ul>
-                            </li>
-                            <li className={`mobile-menu__item ${mobileDropdown === 'sectors' ? 'active' : ''}`}>
-                                <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('sectors')}>
-                                    <span>{t.sectors}</span>
-                                    <ChevronDown size={20} className="toggle-icon" />
-                                </div>
-                                <ul className="mobile-dropdown">
-                                    <li><Link to="/building-contract">{t.building}</Link></li>
-                                    <li><Link to="/railway-contract">{t.railway}</Link></li>
-                                    <li><Link to="/steel-construction">{t.steel}</Link></li>
-                                    <li><Link to="/electric-mechanic">{t.electric}</Link></li>
-                                    <li><Link to="/oil-gas">{t.oilGas}</Link></li>
-                                    <li><Link to="/civil-construction">{t.civil}</Link></li>
-                                    <li><Link to="/facility-management">{t.facility}</Link></li>
-                                    <li><Link to="/logistics">{t.logistics}</Link></li>
-                                    <li><Link to="/manufacture">{t.manufacture}</Link></li>
-                                    <li><Link to="/mep">{t.mep}</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link to="/about">{t.aboutUs}</Link></li>
-                            <li><Link to="/projects">{t.projects}</Link></li>
-                            <li><Link to="/contact">{t.contactUs}</Link></li>
-                            <li><Link to="/book-manpower" className="nav-bk-btn" style={{ display: 'inline-flex', width: '100%', justifyContent: 'center', marginTop: '20px' }}>{t.bookManpower}</Link></li>
-                        </ul>
-                    </div>
+                <ul className="mobile-dropdown">
+                  <li><Link to="/">{t.supply}</Link></li>
+                  <li><Link to="/recruitment">{t.recruitment}</Link></li>
+                  <li><Link to="/contract-staffing">{t.staffing}</Link></li>
+                  <li><Link to="/executive-search">{t.search}</Link></li>
+                  <li><Link to="/hr-outsourcing">{t.outsourcing}</Link></li>
+                  <li><Link to="/security-solutions">{t.security}</Link></li>
+                </ul>
+              </li>
+              <li className={`mobile-menu__item ${mobileDropdown === 'sectors' ? 'active' : ''}`}>
+                <div className="mobile-menu__toggle" onClick={() => toggleMobileDropdown('sectors')}>
+                  <span>{t.sectors}</span>
+                  <ChevronDown size={20} className="toggle-icon" />
                 </div>
-            </header>
+                <ul className="mobile-dropdown">
+                  <li><Link to="/building-contract">{t.building}</Link></li>
+                  <li><Link to="/railway-contract">{t.railway}</Link></li>
+                  <li><Link to="/steel-construction">{t.steel}</Link></li>
+                  <li><Link to="/electric-mechanic">{t.electric}</Link></li>
+                  <li><Link to="/oil-gas">{t.oilGas}</Link></li>
+                  <li><Link to="/civil-construction">{t.civil}</Link></li>
+                  <li><Link to="/facility-management">{t.facility}</Link></li>
+                  <li><Link to="/logistics">{t.logistics}</Link></li>
+                  <li><Link to="/manufacture">{t.manufacture}</Link></li>
+                  <li><Link to="/mep">{t.mep}</Link></li>
+                </ul>
+              </li>
+              <li><Link to="/about">{t.aboutUs}</Link></li>
+              <li><Link to="/projects">{t.projects}</Link></li>
+              <li><Link to="/contact">{t.contactUs}</Link></li>
+              <li><Link to="/book-manpower" className="nav-bk-btn" style={{ display: 'inline-flex', width: '100%', justifyContent: 'center', marginTop: '20px' }}>{t.bookManpower}</Link></li>
+            </ul>
+          </div>
+        </div>
+      </header>
 
-            <style dangerouslySetInnerHTML={{
-                __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         .info-bar { background: #ffffff; color: #333; font-size: 0.85rem; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
         .info-bar__inner { display: flex; justify-content: flex-end; align-items: center; }
         .info-bar__contact { display: flex; align-items: center; gap: 20px; }
@@ -421,8 +421,8 @@ const Header = () => {
           .site-header { height: 80px; }
         }
       `}} />
-        </>
-    );
+    </>
+  );
 };
 
 export default Header;
