@@ -114,15 +114,30 @@ const BookManpower = () => {
         try {
             const response = await fetch('/book-man-power-form.php', {
                 method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
                 body: formData
             });
 
             if (response.ok) {
+                try {
+                    const data = await response.json();
+                    if (data.debug) console.log('SMTP Success Debug Log:', data.debug);
+                } catch (e) { /* Not JSON */ }
                 console.log('Booking request sent successfully');
                 setIsSubmitted(true);
             } else {
-                alert('There was an error sending your request. Please try again later.');
-                console.error('Submission failed:', response.statusText);
+                let errorMsg = response.statusText;
+                try {
+                    const errorData = await response.json();
+                    errorMsg = errorData.message || errorMsg;
+                    if (errorData.debug) console.log('SMTP Debug Log:', errorData.debug);
+                } catch (e) {
+                    // Not a JSON response
+                }
+                alert('There was an error sending your request: ' + errorMsg);
+                console.error('Submission failed:', errorMsg);
             }
         } catch (error) {
             alert('There was an error connecting to the server. Please check your connection.');
