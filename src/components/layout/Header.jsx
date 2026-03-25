@@ -72,7 +72,7 @@ const Header = () => {
             </nav>
             <div className="info-bar__separator"></div>
             <a href="tel:8885072259"><Phone size={14} className="icon-red" /> {t.phone}</a>
-            <a href="mailto:smaarelysium.@gmail.com"><Mail size={14} className="icon-red" /> {t.email}</a>
+            <a href="mailto:smaarelysium@gmail.com"><Mail size={14} className="icon-red" /> {t.email}</a>
           </div>
         </div>
       </div>

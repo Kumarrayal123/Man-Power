@@ -138,7 +138,7 @@ const HROutsourcing = () => {
                 </div>
                 <div className="bts-contact-divider">|</div>
                 <div className="bts-contact-item">
-                  smaarelysium.@gmail.com
+                  smaarelysium@gmail.com
                 </div>
               </div>
             </div>
